@@ -1,12 +1,12 @@
 // Expande el plan diario que escribe Claude (plan/AAAA-MM-DD.json) en recetas completas.
 // - Gemini escribe ingredientes y pasos detallados (lo "pesado").
-// - Pexels (opcional) pone una foto real.
+// - Pexels (si hay clave) o Wikimedia Commons pone una foto real con licencia libre.
 // - Escribe data.js y actualiza recetas/historial.json.
 // Lo ejecuta GitHub Actions (.github/workflows/expandir.yml). Sin dependencias: Node 20+.
 //
 // Variables de entorno:
 //   GEMINI_API_KEY   (obligatoria)  clave de Google AI Studio, guardada como secreto en GitHub
-//   PEXELS_API_KEY   (opcional)     clave gratuita de pexels.com/api para fotos reales
+//   PEXELS_API_KEY   (opcional)     clave gratuita de pexels.com/api; sin ella se usa Wikimedia Commons (sin clave)
 //   GEMINI_MODEL     (opcional)     por defecto gemini-2.5-flash
 //   PLAN             (opcional)     ruta del plan; por defecto, el más reciente de plan/
 //   MOCK_GEMINI      (solo pruebas) archivo JSON con una respuesta simulada de Gemini
@@ -137,7 +137,7 @@ async function redactar(recetas) {
   return { hechos, pendientes };
 }
 
-/* ---------------- Pexels ---------------- */
+/* ---------------- Fotos: Pexels (si hay clave) o Wikimedia Commons (sin clave) ---------------- */
 async function fotoPexels(consulta) {
   const key = process.env.PEXELS_API_KEY;
   if (!key || !consulta) return null;
@@ -148,6 +148,30 @@ async function fotoPexels(consulta) {
     if (!ph?.src?.original) return null;
     return { foto: `${ph.src.original}?auto=compress&cs=tinysrgb&w=600`, fotoCredito: `${ph.photographer} / Pexels` };
   } catch (e) { log("Pexels:", e.message); return null; }
+}
+const quitarHTML = (t) => String(t || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
+async function fotoWikimedia(consulta) {
+  if (!consulta) return null;
+  try {
+    const url = "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8" +
+      "&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=600&gsrsearch=" + encodeURIComponent(consulta + " filetype:bitmap");
+    const r = await fetch(url, { headers: { "User-Agent": "cenas-en-casa/1.0 (https://github.com/redpolasapps/cenas)" } });
+    if (!r.ok) { log("Wikimedia HTTP", r.status); return null; }
+    const pages = Object.values((await r.json()).query?.pages || {}).sort((x, y) => (x.index || 0) - (y.index || 0));
+    for (const pg of pages) {
+      const ii = pg.imageinfo?.[0];
+      if (!ii || !/jpeg/.test(ii.mime || "") || (ii.width || 0) < 600 || !ii.thumburl) continue;
+      const m = ii.extmetadata || {};
+      const lic = quitarHTML(m.LicenseShortName?.value);
+      if (!/CC|Public domain|PD/i.test(lic)) continue;
+      const autor = quitarHTML(m.Artist?.value).slice(0, 60) || "Autor desconocido";
+      return { foto: ii.thumburl, fotoCredito: `${autor} / Wikimedia Commons (${lic})` };
+    }
+    return null;
+  } catch (e) { log("Wikimedia:", e.message); return null; }
+}
+async function fotoLibre(consulta) {
+  return (await fotoPexels(consulta)) || (await fotoWikimedia(consulta));
 }
 
 /* ---------------- principal ---------------- */
@@ -196,7 +220,7 @@ async function main() {
   let nfotos = 0;
   for (const r of nuevas) {
     if (r.foto) continue;
-    const f = await fotoPexels(r.busqueda_foto || r.titulo);
+    const f = await fotoLibre(r.busqueda_foto || r.titulo);
     if (f) { Object.assign(r, f); nfotos++; }
   }
   log(`Fotos nuevas: ${nfotos}/${nuevas.length}`);

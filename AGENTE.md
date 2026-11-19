@@ -6,7 +6,7 @@ Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.js
 ## Cómo se reparte el trabajo
 
 - **Claude decide** (pocas palabras): qué 6 cenas, cuáles se repiten del recetario, el equilibrio de la semana, la explicación, el tipo de cocina, cuál es para el peque y cuál de capricho. Lo escribe como **plan** en `plan/AAAA-MM-DD.json`.
-- **Gemini redacta** (lo pesado): al subir un plan, GitHub Actions (`.github/workflows/expandir.yml` → `scripts/expandir.mjs`) le pide a Gemini los **ingredientes y los pasos detallados** de las recetas nuevas. También busca las fotos en Pexels si existe el secreto `PEXELS_API_KEY`, escribe `data.js` y actualiza `recetas/historial.json`. Necesita el secreto `GEMINI_API_KEY` en el repositorio.
+- **Gemini redacta** (lo pesado): al subir un plan, GitHub Actions (`.github/workflows/expandir.yml` → `scripts/expandir.mjs`) le pide a Gemini los **ingredientes y los pasos detallados** de las recetas nuevas. También busca las fotos en Pexels (si existe el secreto `PEXELS_API_KEY`) o, si no, en Wikimedia Commons, que no necesita clave; escribe `data.js` y actualiza `recetas/historial.json`. Necesita el secreto `GEMINI_API_KEY` en el repositorio.
 - **Modo plan (el normal):** sigue los pasos de abajo para decidir, pero **no escribas `ingredientes` ni `pasos` y no busques fotos**. Escribe solo el plan.
 - **Modo completo (reserva):** si la Action falla, Claude escribe `data.js` y el recetario él mismo, con todo, siguiendo el resto de este documento.
 
