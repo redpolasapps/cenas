@@ -66,9 +66,9 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
 
 ## Fotos reales (opcional)
 
-- Pon una foto en `foto` **solo si se parece de verdad al plato**. Tiene que tener una licencia libre que permita usarla: Wikimedia Commons (URL directa a `upload.wikimedia.org`), Unsplash o Pexels (URL directa a la imagen).
-- Escribe en `fotoCredito` el autor y la web, por ejemplo "Ana López / Wikimedia Commons".
-- Si no puedes comprobar la licencia o que la foto encaja, **deja `foto` vacío**: la app muestra la ilustración, que siempre está.
+- **No uses nunca el navegador ni ninguna herramienta del ordenador del usuario** (Claude_Browser, Chrome, computer use, remote-devices). Cada web que se abre ahí le pide un permiso, y esta tarea tiene que funcionar sin molestarle. Usa solo WebSearch y WebFetch.
+- Busca una foto como mucho por receta, con un par de búsquedas. Si no sale enseguida, deja `foto` vacío y sigue: la app muestra la ilustración, que siempre está.
+- Pon una foto en `foto` solo si se parece de verdad al plato y tiene una licencia libre: Wikimedia Commons (URL directa a `upload.wikimedia.org`), Unsplash o Pexels (URL directa a la imagen). Escribe en `fotoCredito` el autor y la web.
 - No uses fotos de blogs o webs de recetas.
 
 ## Menú del colegio
