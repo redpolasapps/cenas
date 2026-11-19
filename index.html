@@ -58,8 +58,13 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 .sinfoto .credito{display:none}
 .badge{z-index:2;position:absolute;right:12px;bottom:10px;width:54px;height:54px;background:#fff;border-radius:50%;padding:2px}
 .badge svg{width:50px;height:50px;display:block}
-.coc{z-index:2;position:absolute;top:12px;right:14px;background:#fff;border-radius:20px;padding:3px 11px;font-weight:800;font-size:14px;color:var(--ink)}
-.coc.coc2{position:static;display:inline-block;background:var(--crema)}
+.coc{z-index:2;position:absolute;left:12px;bottom:10px;min-width:60px;height:60px;border-radius:30px;padding:7px 9px 0;background:#fff;text-align:center;box-shadow:0 2px 6px rgba(80,50,20,.12)}
+.coc .ce{display:block;font-size:21px;line-height:24px}
+.coc .cn{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;color:var(--terra-d);line-height:12px;white-space:nowrap;overflow:hidden}
+.det-img .coc{min-width:72px;height:72px;border-radius:36px;left:10px;bottom:10px;padding-top:9px}
+.det-img .coc .ce{font-size:27px;line-height:30px}
+.det-img .coc .cn{font-size:11px}
+.credito{left:auto!important;right:74px}
 .num{z-index:2;position:absolute;top:12px;left:14px;background:#fff;border-radius:20px;padding:3px 11px;font-weight:800;font-size:14px;color:var(--terra-d)}
 .body{padding:14px 18px 18px}
 .peq{display:inline-block;background:#FFF1C9;color:#8A5A00;font-weight:800;font-size:13px;padding:3px 10px;border-radius:12px;margin-bottom:8px}
@@ -195,7 +200,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
   var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
   var COCINA = {'Española':'🥘','Mediterránea':'🍋','Italiana':'🍝','Japonesa':'🍜','Asiática':'🥢','Americana':'🍔','Mexicana':'🌮','Árabe':'🥙','Casera':'🏠'};
-  function cocina(r){ return r.cocina ? '<span class="coc">'+(COCINA[r.cocina]||'🍽')+' '+esc(r.cocina)+'</span>' : ''; }
+  function cocina(r){ return r.cocina ? '<span class="coc"><span class="ce">'+(COCINA[r.cocina]||'🍽')+'</span><span class="cn">'+esc(r.cocina)+'</span></span>' : ''; }
   var HEROBG = ['#FCE6DC','#E4F0DF','#FBEFD3','#E3ECF5'];
 
   function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
@@ -403,8 +408,8 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   function abrir(id){
     var r = RECETAS[id]; if(!r) return;
     var s = '<div class="barra"><button class="bbig" id="cerrar">‹ Volver</button><button class="bbig home" data-home="1">🏠 Inicio</button></div><div class="det">'+
-      '<div class="det-top"><div class="det-img" style="background:'+(r._bg||'#FCE6DC')+'">'+dish(r)+badge(r)+'</div><div><h1>'+esc(r.titulo)+'</h1>'+
-      (r.cocina?'<div style="margin-bottom:8px">'+cocina(r).replace('class="coc"','class="coc coc2"')+'</div>':'')+'<div class="meta" style="font-size:16px"><i>⏱ <b>'+esc(r.tiempo)+' min</b></i><i>👩‍🍳 <b>'+esc(r.dificultad)+'</b></i><i>🍽 <b>'+esc(r.raciones)+' raciones</b></i></div>'+
+      '<div class="det-top"><div class="det-img" style="background:'+(r._bg||'#FCE6DC')+'">'+dish(r)+badge(r)+cocina(r)+'</div><div><h1>'+esc(r.titulo)+'</h1>'+
+      '<div class="meta" style="font-size:16px"><i>⏱ <b>'+esc(r.tiempo)+' min</b></i><i>👩‍🍳 <b>'+esc(r.dificultad)+'</b></i><i>🍽 <b>'+esc(r.raciones)+' raciones</b></i></div>'+
       (r.porque?'<div class="por" style="font-size:16px">'+esc(r.porque)+'</div>':'')+(r.truco?'<div class="por" style="font-size:16px">🧒 <b>Para el peque:</b> '+esc(r.truco)+'</div>':'')+'</div></div>'+
       '<h2 class="sec">Ingredientes</h2><div class="ingr">';
     (r.ingredientes||[]).forEach(function(it){ s += '<div class="item"><span class="check" style="border-color:#7DB56F"></span>'+esc(it)+'</div>'; });
