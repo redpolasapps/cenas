@@ -65,6 +65,7 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
   "plato": { "verdura": 50, "proteina": 35, "hidratos": 15 },
   "porque": "Una frase de por qué encaja con lo que ha comido hoy.",
   "etiquetas": ["Huevo", "Sartén"],
+  "cocina": "Española",
   "peques": true,
   "gourmet": false,
   "truco": "Córtala en triángulos pequeños y que moje en tomate.",
@@ -77,6 +78,7 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
 }
 ```
 
+- `cocina`: el tipo de cocina, **uno de estos exactamente**: `Española`, `Mediterránea`, `Italiana`, `Japonesa`, `Asiática`, `Americana`, `Mexicana`, `Árabe` o `Casera`. Usa `Casera` para platos sencillos de casa sin un origen claro (por ejemplo, crema de verduras o pollo a la plancha). La app lo muestra como etiqueta en cada tarjeta.
 - `plato`: los porcentajes aproximados del plato de Harvard. Tienen que sumar 100.
 - `pasos`: de 4 a 7 pasos. `icono` es uno de estos: `cortar`, `sarten`, `horno`, `olla`, `mezclar`, `emplatar`, `envolver`, `lavar`. `min` es opcional y activa un temporizador en la app.
 - `imagen`: la ilustración del plato terminado que más se parezca. Puede ser `pescado`, `tortilla`, `crema`, `arroz`, `pasta`, `pizza`, `hamburguesa`, `pollo-horno`, `garbanzos`, `sopa`, `quesadilla` o `generico`.
