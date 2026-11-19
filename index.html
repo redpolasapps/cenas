@@ -59,6 +59,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 .num{z-index:2;position:absolute;top:12px;left:14px;background:#fff;border-radius:20px;padding:3px 11px;font-weight:800;font-size:14px;color:var(--terra-d)}
 .body{padding:14px 18px 18px}
 .peq{display:inline-block;background:#FFF1C9;color:#8A5A00;font-weight:800;font-size:13px;padding:3px 10px;border-radius:12px;margin-bottom:8px}
+.peq.gou{background:#EFE3F7;color:#6B3F8A}
 .body h3{font-size:21px;line-height:1.2}
 .body .sub{color:var(--soft);font-size:15px;margin-top:3px}
 .meta{margin-top:10px;font-size:14px;color:var(--soft);font-weight:700}
@@ -101,6 +102,10 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 /* Detalle receta */
 .ov{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:10;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
 .ov.on{display:block}
+.barra{position:-webkit-sticky;position:sticky;top:0;z-index:3;background:rgba(251,246,238,.96);border-bottom:1px solid var(--line);display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;padding:12px 24px}
+.bbig{background:#fff;box-shadow:0 2px 0 var(--line),0 4px 14px rgba(80,50,20,.08);border-radius:16px;padding:14px 22px;font-size:19px;font-weight:800;color:var(--terra-d);min-width:130px}
+.bbig:active{background:var(--crema)}
+.bbig.home{color:var(--ink)}
 .det{max-width:860px;margin:0 auto;padding:20px 24px 60px}
 .back{font-weight:800;color:var(--terra-d);font-size:17px;padding:10px 0}
 .det-top{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin:8px 0 20px}
@@ -118,7 +123,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 .cook{position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:20;display:none}
 .cook.on{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column}
 .cook-h{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;padding:16px 24px}
-.cook-h .t{font-family:"Fraunces",Georgia,serif;font-size:19px;color:var(--soft)}
+.cook-h .t{font-family:"Fraunces",Georgia,serif;font-size:19px;color:var(--soft);text-align:center;padding:0 12px}
 .x{font-size:16px;font-weight:800;color:var(--terra-d);padding:8px 4px}
 .dots{text-align:center;padding:0 0 4px}
 .dot{display:inline-block;width:10px;height:10px;border-radius:5px;background:var(--line);margin:0 4px}
@@ -248,7 +253,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     RECETAS[r.id] = r; r._bg = bg;
     return '<div class="card'+(mini?' mini':'')+'"><div class="card-in" data-r="'+esc(r.id)+'">'+
       '<div class="hero" style="background:'+bg+'">'+(n?'<span class="num">Opción '+n+'</span>':'')+dish(r)+badge(r)+'</div>'+
-      '<div class="body">'+(r.peques?'<div class="peq">🧒 Le encantará al peque</div>':'')+'<h3>'+esc(r.titulo)+'</h3>'+
+      '<div class="body">'+(r.peques?'<div class="peq">🧒 Le encantará al peque</div>':'')+(r.gourmet?'<div class="peq gou">✨ Para darse un capricho</div>':'')+'<h3>'+esc(r.titulo)+'</h3>'+
       (r.subtitulo?'<div class="sub">'+esc(r.subtitulo)+'</div>':'')+
       '<div class="meta"><i>⏱ <b>'+esc(r.tiempo)+' min</b></i><i>👩‍🍳 <b>'+esc(r.dificultad)+'</b></i></div>'+
       (!mini && r.porque?'<div class="por">'+esc(r.porque)+'</div>':'')+
@@ -258,7 +263,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   var LEYENDA = '<div class="leyenda">El círculo pequeño muestra el equilibrio:<i style="background:#7DB56F"></i>verdura<i style="background:#E07F63"></i>proteína<i style="background:#EDBB57"></i>hidratos</div>';
 
   function cabecera(titulo, dia){
-    return '<div class="top"><div><div class="dia">'+esc(dia)+'</div><h1>'+esc(titulo)+'</h1></div><div class="hora" id="hora">'+hora()+'</div></div>';
+    return '<div class="top"><div><div class="dia">'+esc(dia)+'</div><h1>'+esc(titulo)+'</h1></div><div>'+(vista!=='hoy'?'<button class="bbig home" data-home="1" style="margin-right:16px;vertical-align:middle">🏠 Inicio</button>':'')+'<span class="hora" id="hora" style="vertical-align:middle">'+hora()+'</span></div></div>';
   }
 
   function vHoy(){
@@ -389,7 +394,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   /* ---------- Detalle ---------- */
   function abrir(id){
     var r = RECETAS[id]; if(!r) return;
-    var s = '<div class="det"><button class="back" id="cerrar">‹ Volver</button>'+
+    var s = '<div class="barra"><button class="bbig" id="cerrar">‹ Volver</button><button class="bbig home" data-home="1">🏠 Inicio</button></div><div class="det">'+
       '<div class="det-top"><div class="det-img" style="background:'+(r._bg||'#FCE6DC')+'">'+dish(r)+badge(r)+'</div><div><h1>'+esc(r.titulo)+'</h1>'+
       '<div class="meta" style="font-size:16px"><i>⏱ <b>'+esc(r.tiempo)+' min</b></i><i>👩‍🍳 <b>'+esc(r.dificultad)+'</b></i><i>🍽 <b>'+esc(r.raciones)+' raciones</b></i></div>'+
       (r.porque?'<div class="por" style="font-size:16px">'+esc(r.porque)+'</div>':'')+(r.truco?'<div class="por" style="font-size:16px">🧒 <b>Para el peque:</b> '+esc(r.truco)+'</div>':'')+'</div></div>'+
@@ -412,7 +417,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     for(var i=0;i<n;i++) dots+='<span class="dot'+(i===cookI?' on':'')+'"></span>';
     var last = cookI===n-1;
     $('cook').innerHTML =
-      '<div class="cook-h"><span class="t">'+esc(r.titulo)+'</span><button class="x" id="salir">Salir ✕</button></div>'+
+      '<div class="cook-h"><button class="bbig" id="salir">✕ Salir</button><span class="t">'+esc(r.titulo)+'</span><button class="bbig home" data-home="1">🏠 Inicio</button></div>'+
       '<div class="dots">'+dots+'</div>'+
       '<div class="cook-b"><div class="ilu">'+icon(p.icono)+'</div>'+
       '<div class="pn">Paso '+(cookI+1)+' de '+n+'</div><div class="pt">'+esc(p.texto)+'</div>'+
@@ -439,6 +444,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     var t = e.target;
     while(t && t!==document){
       if(t.getAttribute){
+        if(t.getAttribute('data-home')){ paraTimer(); $('cook').className='cook'; $('ov').className='ov'; ir('hoy'); return; }
         if(t.getAttribute('data-r')){ abrir(t.getAttribute('data-r')); return; }
         if(t.getAttribute('data-v')){ ir(t.getAttribute('data-v')); return; }
         if(t.getAttribute('data-m')){

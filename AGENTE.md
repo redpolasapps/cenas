@@ -18,6 +18,7 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
    - **Al menos dos de las 6 tienen que ser "seguras" para el peque:** un formato que suelen aceptar todos los niños (tortilla, croquetas, albóndigas, pasta, crema con quesito, rebozados al horno, hamburguesitas, mini pizzas, nuggets caseros, quesadillas…), con la verdura escondida o en trocitos pequeños. Márcalas con `"peques": true`.
    - En cada receta, añade `"truco"`: una frase para que el niño se la coma (cómo presentarla, cómo esconder la verdura, cómo hacer que participe o cómo servirle su parte aparte). Por ejemplo: "Tritura la verdura en la salsa" o "Que él ponga el queso por encima".
    - Fáciles (30 minutos o menos y pocos cacharros), equilibradas y ricas.
+   - **La sexta (la última) es la opción "capricho":** una receta más elaborada y algo gourmet, para los días en que haya más ganas de cocinar. Puede llevar hasta 45–60 minutos, con algún ingrediente o técnica especial (un buen pescado o carne, una salsa, un horneado o un emplatado bonito), pero siempre factible en casa. Márcala con `"gourmet": true` y explica en `truco` cómo servirle al niño una versión que se coma (por ejemplo, la salsa aparte).
    - **Compensa el mediodía.** Si hubo legumbre y carne, cena pescado o huevo. Si hubo pescado, cena huevo o carne blanca. Si hubo mucho hidrato, cena poco. Siempre mucha verdura.
    - Las 6 tienen que ser distintas entre sí: usa proteínas diferentes y técnicas diferentes (horno, sartén, olla).
    - No repitas recetas que aparezcan en el `data.js` actual (`hoy.cenas`). Así se evita repetir lo de ayer.
@@ -26,7 +27,7 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
 5. **Los jueves (y siempre que `finde` sea de una semana pasada)**, rehaz `finde` para el sábado y domingo siguientes:
    - `fechas`: por ejemplo, "Sábado 21 y domingo 22 de noviembre".
    - `comidas`: 4 bloques en este orden: Sábado Comida, Sábado Cena, Domingo Comida y Domingo Cena. Cada uno lleva **3 `opciones`** (la app las muestra en una fila de 3).
-   - El fin de semana puede incluir platos algo más elaborados (de hasta 60 minutos), pero siguen siendo fáciles. Valen las mismas reglas del niño de 4 años, y en cada bloque al menos una opción lleva `"peques": true`. Ten en cuenta lo que ha comido en el cole esa semana para no repetir.
+   - El fin de semana puede incluir platos algo más elaborados (de hasta 60 minutos), pero siguen siendo fáciles. Valen las mismas reglas del niño de 4 años, y en cada bloque al menos una opción lleva `"peques": true`. **La tercera opción de cada bloque es la de capricho** (más elaborada y gourmet, con `"gourmet": true`), con las mismas reglas que la sexta cena entre semana. Ten en cuenta lo que ha comido en el cole esa semana para no repetir.
    - La lista de la compra la monta la app **por receta** a partir de `ingredientes`. Escribe los ingredientes con cantidades concretas ("3 calabacines", "200 g de queso rallado"), un ingrediente por línea. Ya no hace falta rellenar `compra`: déjalo como `[]`.
    - El resto de días, deja `finde` como está.
 6. Pon en `actualizado` la fecha y hora actual en ISO con zona horaria (+01:00 o +02:00).
@@ -50,6 +51,7 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
   "porque": "Una frase de por qué encaja con lo que ha comido hoy.",
   "etiquetas": ["Huevo", "Sartén"],
   "peques": true,
+  "gourmet": false,
   "truco": "Córtala en triángulos pequeños y que moje en tomate.",
   "ingredientes": ["5 huevos", "2 calabacines"],
   "pasos": [
