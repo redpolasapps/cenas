@@ -9,73 +9,179 @@
     "Fruta de temporada"
    ]
   },
-  "consejo": "Al mediodía ha comido legumbre (alubias) y pescado blanco (merluza), así que esta noche toca huevo o carne blanca, con mucha verdura y poco hidrato.",
-  "explicacion": "Hoy ha comido alubias y merluza, así que las cenas van de huevo y carne blanca con mucha verdura. En el cole, de lunes a jueves, la semana lleva 1 de pescado, 1 de legumbre, 1 de carne roja (albóndigas) y nada de huevo, y mañana hay huevo con bechamel; por eso hay dos cenas con huevo y ninguna de carne roja. El huevo de mañana y el pescado de las cenas de la semana irán cerrando lo que falta.",
+  "consejo": "Hoy ha tomado alubias y merluza al mediodía; para cenar conviene una opción ligera con huevo, ave o verduras suaves y pocos hidratos.",
+  "explicacion": "Hoy en el cole han comido legumbre y pescado blanco, sumando ya raciones clave de la semana. Por eso para cenar buscamos platos digestivos y ligeros basados en verduras, huevo y carnes blancas suaves.",
   "cenas": [
    {
-    "reutilizar": "tortilla-patata-espinacas"
-   },
-   {
-    "reutilizar": "nuggets-pollo-copos-maiz"
-   },
-   {
-    "id": "pollo-limon-horno-verduras",
-    "titulo": "Contramuslos de pollo al limón con verduras",
-    "subtitulo": "Al horno, en una sola bandeja",
-    "cocina": "Mediterránea",
-    "imagen": "pollo-horno",
-    "peques": false,
+    "id": "quesadillas-de-espinacas-y-queso-fundido",
+    "titulo": "Quesadillas de espinacas tiernas y queso fundido",
+    "subtitulo": "Crujientes por fuera, suaves y cremosas por dentro",
+    "cocina": "Mexicana",
+    "imagen": "quesadilla",
+    "peques": true,
+    "healthy": false,
     "gourmet": false,
-    "tiempo": 45,
+    "tiempo": 15,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 40,
+     "proteina": 25,
+     "hidratos": 35
+    },
+    "porque": "Aporta verdura de hoja verde en un formato divertido y fácil de masticar para compensar el mediodía.",
+    "truco": "Pica las espinacas muy finas y mézclalas con el queso antes de dorar la tortilla en la sartén para que queden totalmente integradas.",
+    "etiquetas": [
+     "quesadilla",
+     "rápida",
+     "espinacas",
+     "peques"
+    ],
+    "guia": "Saltear brevemente espinacas baby picadas, rellenar tortillas de trigo o maíz con queso gouda o mozzarella y dorar en sartén.",
+    "busqueda_foto": "cheese spinach quesadilla"
+   },
+   {
+    "id": "crema-de-coliflor-y-parmesano-con-jamon",
+    "titulo": "Crema suave de coliflor y parmesano con taquitos de jamón",
+    "subtitulo": "Cremosa, templada y sin sabor fuerte",
+    "cocina": "Mediterránea",
+    "imagen": "crema",
+    "peques": true,
+    "healthy": true,
+    "gourmet": false,
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 60,
+     "proteina": 25,
+     "hidratos": 15
+    },
+    "porque": "Una cena reconstituyente y muy ligera en hidratos que ayuda a digerir bien las legumbres del almuerzo.",
+    "truco": "Añade un quesito suave o un poco de leche al triturar para que la textura quede como una papilla fina y dulce.",
+    "etiquetas": [
+     "crema",
+     "coliflor",
+     "healthy",
+     "jamón"
+    ],
+    "guia": "Cocer coliflor con puerro y una patata pequeña, triturar con parmesano rallado y servir con daditos de jamón salteados.",
+    "busqueda_foto": "cauliflower soup parmesan"
+   },
+   {
+    "id": "solomillo-de-pavo-salteado-con-verduras",
+    "titulo": "Solomillo de pavo salteado con calabacín y maíz dulce",
+    "subtitulo": "Tierno, colorido y listo en pocos minutos",
+    "cocina": "Casera",
+    "imagen": "generico",
+    "peques": false,
+    "healthy": true,
+    "gourmet": false,
+    "tiempo": 20,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
      "verdura": 50,
-     "proteina": 30,
-     "hidratos": 20
+     "proteina": 40,
+     "hidratos": 10
     },
-    "porque": "Carne blanca después de las alubias y la merluza, con mucha verdura asada.",
-    "truco": "Deshuesa su contramuslo y córtalo en tiras; la verdura asada, en trocitos.",
+    "porque": "Aporta proteína blanca magra para completar el día sin sumar pesadez tras el guiso escolar.",
+    "truco": "Corta el pavo en tiras finas y saltéalo a fuego vivo para que quede jugoso y no se reseque.",
     "etiquetas": [
-     "Pollo",
-     "Horno"
+     "pavo",
+     "salteado",
+     "healthy",
+     "rápido"
     ],
-    "guia": "Contramuslos de pollo deshuesados al horno con limón, ajo y romero sobre calabacín, pimiento rojo y cebolla en trozos; 200 °C.",
-    "busqueda_foto": "roasted chicken thighs lemon vegetables"
+    "guia": "Saltear tiras de solomillo de pavo con dados pequeños de calabacín, zanahoria y maíz dulce en sartén amplia.",
+    "busqueda_foto": "sauteed turkey zucchini"
    },
    {
-    "reutilizar": "mini-pizzas-pita-jamon-verduras"
+    "id": "tortilla-de-calabacin-y-queso-suave",
+    "titulo": "Tortilla francesa jugosa de calabacín rallado y queso fresco",
+    "subtitulo": "Esponjosa y suave para una cena ligera",
+    "cocina": "Española",
+    "imagen": "tortilla",
+    "peques": true,
+    "healthy": true,
+    "gourmet": false,
+    "tiempo": 20,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 50,
+     "proteina": 35,
+     "hidratos": 15
+    },
+    "porque": "Introduce huevo de forma suave con una gran proporción de verdura tierna cocinada a fuego lento.",
+    "truco": "Ralla el calabacín muy fino para que se deshaga con el huevo batido y el peque casi no note la textura.",
+    "etiquetas": [
+     "tortilla",
+     "calabacín",
+     "huevo",
+     "peques"
+    ],
+    "guia": "Pocher calabacín rallado en sartén, mezclar con huevos batidos y dados de queso fresco, y cuajar jugosa.",
+    "busqueda_foto": "zucchini french omelet"
    },
    {
-    "reutilizar": "yakitori-pavo-arroz-brocoli"
+    "id": "gnocchis-salteados-con-tomate-dulce-y-mozzarella",
+    "titulo": "Ñoquis salteados con tomate dulce y mozzarella fundida",
+    "subtitulo": "Un bocado tierno y reconfortante que gusta a todos",
+    "cocina": "Italiana",
+    "imagen": "pasta",
+    "peques": true,
+    "healthy": false,
+    "gourmet": false,
+    "tiempo": 20,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 40,
+     "proteina": 20,
+     "hidratos": 40
+    },
+    "porque": "Ofrece una opción reconfortante y rápida, con salsa casera rica en tomate triturado y queso tierno.",
+    "truco": "Deja que la mozzarella se funda tapando la sartén al final para que cree hilos suaves que diviertan al peque.",
+    "etiquetas": [
+     "gnocchi",
+     "pasta",
+     "tomate",
+     "peques"
+    ],
+    "guia": "Hervir ñoquis dos minutos, saltearlos con salsa de tomate casera suave y dados de mozzarella fresca hasta fundir.",
+    "busqueda_foto": "gnocchi tomato mozzarella"
    },
    {
-    "id": "bacalao-costra-pure-coliflor",
-    "titulo": "Bacalao con costra de hierbas y puré de coliflor",
-    "subtitulo": "Fino y suave",
-    "cocina": "Mediterránea",
-    "imagen": "pescado",
+    "id": "solomillo-de-cerdo-con-manzana-y-chalotas",
+    "titulo": "Medallones de solomillo de cerdo con manzana caramelizada y chalotas",
+    "subtitulo": "Carne tierna con contraste agridulce delicado",
+    "cocina": "Española",
+    "imagen": "generico",
     "peques": false,
+    "healthy": false,
     "gourmet": true,
-    "tiempo": 50,
+    "tiempo": 40,
     "dificultad": "Media",
     "raciones": 3,
     "plato": {
-     "verdura": 45,
+     "verdura": 40,
      "proteina": 35,
-     "hidratos": 20
+     "hidratos": 25
     },
-    "porque": "Capricho ligero para la noche, con una costra crujiente.",
-    "truco": "Al peque, el bacalao sin costra y desmigado sobre el puré.",
+    "porque": "Plato gourmet pero muy accesible, con carne magra y fruta templada que resulta suave y deliciosa.",
+    "truco": "Para el niño, corta su ración de solomillo en bocaditos muy tiernos y sírvele la manzana en compota suave a un lado.",
     "etiquetas": [
-     "Pescado",
-     "Horno",
-     "Capricho"
+     "solomillo",
+     "cerdo",
+     "manzana",
+     "gourmet"
     ],
-    "guia": "Lomos de bacalao desalado sin espinas con costra de pan rallado, perejil, ajo y aceite, al horno; puré cremoso de coliflor con un poco de patata y aceite de oliva.",
-    "busqueda_foto": "baked cod herb crust"
+    "guia": "Marcar medallones de solomillo de cerdo, pochar chalotas con gajos de manzana en la misma sartén y reducir con un toque de caldo.",
+    "busqueda_foto": "pork tenderloin apple"
    }
   ]
  },
- "finde": null
+ "finde": null,
+ "autor": "gemini (emergencia)"
 }

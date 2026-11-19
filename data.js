@@ -1,6 +1,6 @@
 // Lo genera scripts/expandir.mjs a partir del plan de Claude. Ver AGENTE.md
 window.MENU_DATA = {
- "actualizado": "2026-11-19T22:54:36+01:00",
+ "actualizado": "2026-11-19T23:29:59+01:00",
  "plan": "2026-11-19.json",
  "hoy": {
   "fecha": "2026-11-19",
@@ -12,453 +12,596 @@ window.MENU_DATA = {
     "Fruta de temporada"
    ]
   },
-  "consejo": "Al mediodía ha comido legumbre (alubias) y pescado blanco (merluza), así que esta noche toca huevo o carne blanca, con mucha verdura y poco hidrato.",
-  "explicacion": "Hoy ha comido alubias y merluza, así que las cenas van de huevo y carne blanca con mucha verdura. En el cole, de lunes a jueves, la semana lleva 1 de pescado, 1 de legumbre, 1 de carne roja (albóndigas) y nada de huevo, y mañana hay huevo con bechamel; por eso hay dos cenas con huevo y ninguna de carne roja. El huevo de mañana y el pescado de las cenas de la semana irán cerrando lo que falta.",
+  "consejo": "Hoy ha tomado alubias y merluza al mediodía; para cenar conviene una opción ligera con huevo, ave o verduras suaves y pocos hidratos.",
+  "explicacion": "Hoy en el cole han comido legumbre y pescado blanco, sumando ya raciones clave de la semana. Por eso para cenar buscamos platos digestivos y ligeros basados en verduras, huevo y carnes blancas suaves.",
   "cenas": [
    {
-    "id": "tortilla-patata-espinacas",
-    "imagen": "tortilla",
-    "foto": "https://images.pexels.com/photos/14941247/pexels-photo-14941247.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "MikeGz / Pexels",
-    "titulo": "Tortilla de patata y espinacas",
-    "subtitulo": "Con ensalada de lechuga y zanahoria rallada",
-    "tiempo": 30,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 45,
-     "proteina": 35,
-     "hidratos": 20
-    },
-    "porque": "Huevo para completar un día de legumbre y pescado, con la verdura dentro.",
-    "etiquetas": [
-     "Huevo",
-     "Sartén"
-    ],
-    "cocina": "Española",
+    "id": "quesadillas-de-espinacas-y-queso-fundido",
+    "titulo": "Quesadillas de espinacas tiernas y queso fundido",
+    "subtitulo": "Crujientes por fuera, suaves y cremosas por dentro",
+    "cocina": "Mexicana",
+    "imagen": "quesadilla",
     "peques": true,
+    "healthy": false,
     "gourmet": false,
-    "truco": "Pica las espinacas muy finas para que casi no se vean y córtale la tortilla en triángulos pequeños.",
-    "ingredientes": [
-     "5 huevos",
-     "2 patatas medianas",
-     "150 g de espinacas frescas",
-     "1/2 cebolla",
-     "1 lechuga",
-     "2 zanahorias",
-     "Aceite de oliva",
-     "1 pizca de sal"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Pela las patatas y córtalas en láminas finas; pica la cebolla y las espinacas."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Pocha la patata y la cebolla a fuego medio con un poco de aceite, tapadas.",
-      "min": 15
-     },
-     {
-      "icono": "sarten",
-      "texto": "Añade las espinacas hasta que se ablanden.",
-      "min": 2
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Bate los huevos, mezcla con la patata y las espinacas."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Cuaja la tortilla por los dos lados.",
-      "min": 5
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve con la ensalada de lechuga y zanahoria rallada."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "nuggets-pollo-copos-maiz",
-    "imagen": "pollo-horno",
-    "foto": "https://images.pexels.com/photos/10183543/pexels-photo-10183543.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Nadin Sh / Pexels",
-    "titulo": "Nuggets de pollo caseros al horno",
-    "subtitulo": "Rebozados con copos de maíz y bastones de calabacín",
-    "tiempo": 30,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 45,
-     "proteina": 40,
-     "hidratos": 15
-    },
-    "porque": "Carne blanca suave para cenar después de alubias y merluza.",
-    "etiquetas": [
-     "Pollo",
-     "Horno"
-    ],
-    "cocina": "Casera",
-    "peques": true,
-    "gourmet": false,
-    "truco": "Que él rompa los copos de maíz en la bolsa y reboce sus nuggets: lo que cocina, se lo come.",
-    "ingredientes": [
-     "400 g de pechuga de pollo",
-     "60 g de copos de maíz sin azúcar",
-     "1 huevo",
-     "2 calabacines",
-     "1 cucharada de aceite de oliva",
-     "1 pizca de pimentón dulce",
-     "Tomate triturado para mojar"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Corta el pollo en tiras y el calabacín en bastones."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Machaca los copos de maíz con el pimentón; pasa el pollo por huevo batido y por los copos."
-     },
-     {
-      "icono": "horno",
-      "texto": "Hornea los nuggets y los bastones en la misma bandeja a 200 °C.",
-      "min": 18
-     },
-     {
-      "icono": "olla",
-      "texto": "Calienta el tomate triturado unos minutos para hacer una salsa para mojar.",
-      "min": 5
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve los nuggets con los bastones y la salsa en un cuenquito."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "pollo-limon-horno-verduras",
-    "titulo": "Contramuslos de pollo al limón con verduras",
-    "subtitulo": "Al horno, en una sola bandeja",
-    "cocina": "Mediterránea",
-    "imagen": "pollo-horno",
-    "peques": false,
-    "gourmet": false,
-    "tiempo": 45,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 50,
-     "proteina": 30,
-     "hidratos": 20
-    },
-    "porque": "Carne blanca después de las alubias y la merluza, con mucha verdura asada.",
-    "truco": "Deshuesa su contramuslo y córtalo en tiras; la verdura asada, en trocitos.",
-    "etiquetas": [
-     "Pollo",
-     "Horno"
-    ],
-    "foto": "",
-    "fotoCredito": "",
-    "fotosUrl": "",
-    "ingredientes": [
-     "500 g de contramuslos de pollo deshuesados y sin piel",
-     "1 calabacín mediano (250 g)",
-     "1 pimiento rojo mediano (200 g)",
-     "1 cebolla dulce mediana (150 g)",
-     "2 dientes de ajo",
-     "1 limón",
-     "1 ramita de romero fresco",
-     "3 cucharadas de aceite de oliva virgen extra (45 ml)",
-     "1/2 cucharadita de sal (2 g)",
-     "1 pizca de pimienta negra molida"
-    ],
-    "pasos": [
-     {
-      "icono": "horno",
-      "texto": "Enciende el horno a 200 °C con calor arriba y abajo para que vaya cogiendo temperatura mientras preparas los ingredientes. Saca la bandeja del horno para trabajar directamente sobre ella o sobre una tabla."
-     },
-     {
-      "icono": "lavar",
-      "texto": "Lava bajo el grifo con agua fría el calabacín y el pimiento rojo, y sécalos con un paño limpio o papel de cocina.",
-      "usa": [
-       "1 calabacín mediano (250 g)",
-       "1 pimiento rojo mediano (200 g)"
-      ]
-     },
-     {
-      "icono": "cortar",
-      "texto": "Pela la cebolla y córtala en gajos medianos. Quita el rabito y las semillas al pimiento y córtalo en trozos cuadrados de unos 3 cm. Corta los dos extremos del calabacín y córtalo en rodajas de 1 cm de grosor.",
-      "usa": [
-       "1 cebolla dulce mediana (150 g)",
-       "1 pimiento rojo mediano (200 g)",
-       "1 calabacín mediano (250 g)"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Pela y pica los 2 dientes de ajo muy pequeñitos. En un cuenco, exprime el jugo de todo el limón y bátelo con un tenedor junto con el ajo picado, las 3 cucharadas de aceite de oliva, las hojitas de romero picadas, la sal y una pizca suave de pimienta.",
-      "usa": [
-       "2 dientes de ajo",
-       "1 limón",
-       "3 cucharadas de aceite de oliva virgen extra (45 ml)",
-       "1 ramita de romero fresco",
-       "1/2 cucharadita de sal (2 g)",
-       "1 pizca de pimienta negra molida"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Distribuye todas las verduras cortadas en la bandeja del horno formando una base. Coloca encima los contramuslos de pollo estirados y riega todo de manera uniforme con el aliño de limón que preparaste.",
-      "usa": [
-       "500 g de contramuslos de pollo deshuesados y sin piel"
-      ],
-      "consejo": "Procura que las verduras queden repartidas en una sola capa para que se asen bien y no se cuezan."
-     },
-     {
-      "icono": "horno",
-      "texto": "Introduce la bandeja a media altura en el horno precalentado a 200 °C y hornea durante 35 minutos. El pollo estará listo cuando la carne se vea bien doradita y al pincharla el jugo salga totalmente transparente y sin rastro de sangre.",
-      "min": 35,
-      "consejo": "Si ves que las verduras se doran demasiado rápido antes de tiempo, puedes tapar la bandeja con papel de aluminio los últimos 10 minutos."
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Saca la bandeja con cuidado de no quemarte. Para los adultos, sirve los contramuslos acompañados de las verduras; para el niño de 4 años, corta su contramuslo en tiritas fáciles de agarrar y parte su verdura asada en daditos muy pequeños.",
-      "consejo": "Revisa siempre al cortar el pollo del peque que no quede ningún cartílago ni trocito duro."
-     }
-    ]
-   },
-   {
-    "id": "mini-pizzas-pita-jamon-verduras",
-    "imagen": "pizza",
-    "foto": "https://images.pexels.com/photos/16258091/pexels-photo-16258091.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Muhammad Fawdy / Pexels",
-    "titulo": "Mini pizzas de pan de pita",
-    "subtitulo": "Con jamón cocido, champiñón y pimiento",
-    "tiempo": 20,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 45,
-     "proteina": 30,
-     "hidratos": 25
-    },
-    "porque": "Cena divertida con mucha verdura picada y poca carga de hidrato.",
-    "etiquetas": [
-     "Jamón cocido",
-     "Horno"
-    ],
-    "cocina": "Italiana",
-    "peques": true,
-    "gourmet": false,
-    "truco": "Ponle los ingredientes en cuencos y que él monte su pizza haciendo una cara con las verduras.",
-    "ingredientes": [
-     "3 panes de pita pequeños",
-     "150 g de tomate triturado",
-     "100 g de mozzarella rallada",
-     "100 g de jamón cocido",
-     "150 g de champiñones",
-     "1/2 pimiento rojo",
-     "Orégano",
-     "Ensalada verde para acompañar"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Pica muy fino el champiñón, el pimiento y el jamón."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Saltea un momento el champiñón y el pimiento para que suelten el agua.",
-      "min": 4
-     },
-     {
-      "icono": "envolver",
-      "texto": "Unta las pitas con tomate y reparte la verdura, el jamón y la mozzarella."
-     },
-     {
-      "icono": "horno",
-      "texto": "Hornea a 200 °C hasta que el queso se funda.",
-      "min": 8
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Córtalas en cuartos y sirve con ensalada."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "yakitori-pavo-arroz-brocoli",
-    "imagen": "arroz",
-    "foto": "https://images.pexels.com/photos/17692191/pexels-photo-17692191.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Đức Trung Đào / Pexels",
-    "titulo": "Yakitori de pavo",
-    "subtitulo": "Brochetas a la plancha con arroz y brócoli",
-    "tiempo": 30,
+    "tiempo": 15,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
      "verdura": 40,
-     "proteina": 35,
-     "hidratos": 25
+     "proteina": 25,
+     "hidratos": 35
     },
-    "porque": "El toque japonés del día: carne blanca a la plancha con mucho brócoli.",
+    "porque": "Aporta verdura de hoja verde en un formato divertido y fácil de masticar para compensar el mediodía.",
+    "truco": "Pica las espinacas muy finas y mézclalas con el queso antes de dorar la tortilla en la sartén para que queden totalmente integradas.",
     "etiquetas": [
-     "Pavo",
-     "Plancha",
-     "Japonés"
-    ],
-    "cocina": "Japonesa",
-    "peques": false,
-    "gourmet": false,
-    "truco": "Sácale los trocitos del palo y dale su salsa aparte para mojar; el brócoli en arbolitos pequeños.",
-    "ingredientes": [
-     "400 g de pechuga de pavo",
-     "1 puerro",
-     "2 cucharadas de salsa de soja baja en sal",
-     "1 cucharada de miel",
-     "1 cucharadita de jengibre rallado (opcional)",
-     "120 g de arroz",
-     "1 brócoli",
-     "Palitos de brocheta"
-    ],
-    "pasos": [
-     {
-      "icono": "olla",
-      "texto": "Cuece el arroz.",
-      "min": 15
-     },
-     {
-      "icono": "cortar",
-      "texto": "Corta el pavo en dados y el puerro en trozos; ensártalos en los palitos."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Mezcla la soja, la miel y una cucharada de agua para la salsa."
-     },
-     {
-      "icono": "olla",
-      "texto": "Cuece el brócoli al vapor.",
-      "min": 6
-     },
-     {
-      "icono": "sarten",
-      "texto": "Haz las brochetas a la plancha y píntalas con la salsa al final.",
-      "min": 8
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve sobre el arroz con el brócoli al lado."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "bacalao-costra-pure-coliflor",
-    "titulo": "Bacalao con costra de hierbas y puré de coliflor",
-    "subtitulo": "Fino y suave",
-    "cocina": "Mediterránea",
-    "imagen": "pescado",
-    "peques": false,
-    "gourmet": true,
-    "tiempo": 50,
-    "dificultad": "Media",
-    "raciones": 3,
-    "plato": {
-     "verdura": 45,
-     "proteina": 35,
-     "hidratos": 20
-    },
-    "porque": "Capricho ligero para la noche, con una costra crujiente.",
-    "truco": "Al peque, el bacalao sin costra y desmigado sobre el puré.",
-    "etiquetas": [
-     "Pescado",
-     "Horno",
-     "Capricho"
+     "quesadilla",
+     "rápida",
+     "espinacas",
+     "peques"
     ],
     "foto": "",
     "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "3 lomos de bacalao desalado y sin espinas (450 g)",
-     "1 coliflor pequeña limpia de hojas (500 g)",
-     "1 patata mediana (150 g)",
-     "3 dientes de ajo",
-     "4 cucharadas de pan rallado (40 g)",
-     "4 ramitas de perejil fresco",
-     "4 cucharadas de aceite de oliva virgen extra (60 ml)",
-     "50 ml de leche tibia",
-     "1/2 cucharadita de sal (2 g)"
+     "150 g de espinacas baby",
+     "1 cucharada de aceite de oliva virgen extra",
+     "1 pizca de sal",
+     "180 g de queso gouda o mozzarella rallado",
+     "6 tortillas de trigo medianas"
+    ],
+    "pasos": [
+     {
+      "icono": "lavar",
+      "texto": "Lava las hojas de espinaca bajo el grifo con agua fría y sécalas muy bien con papel de cocina o un centrifugador.",
+      "usa": [
+       "150 g de espinacas baby"
+      ]
+     },
+     {
+      "icono": "cortar",
+      "texto": "Coloca las espinacas sobre una tabla de cortar y pícalas muy menuditas con un cuchillo para que se integren fácilmente en el queso.",
+      "usa": [
+       "150 g de espinacas baby"
+      ],
+      "consejo": "Cuanto más finas las piques, más desapercibidas pasarán para el peque."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Pon una sartén a fuego medio con el aceite de oliva, echa las espinacas picadas con una pizca de sal y saltéalas (cocinar removiendo) hasta que reduzcan de tamaño.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "150 g de espinacas baby",
+       "1 pizca de sal"
+      ],
+      "fuego": "medio",
+      "min": 2,
+      "consejo": "Estarán listas en un par de minutos cuando hayan perdido casi todo su volumen."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Pasa las espinacas cocinadas a un bol y mézclalas bien con el queso rallado hasta formar un relleno uniforme.",
+      "usa": [
+       "180 g de queso gouda o mozzarella rallado"
+      ]
+     },
+     {
+      "icono": "envolver",
+      "texto": "Extiende las tortillas en la encimera, reparte la mezcla de queso y espinacas en una sola mitad de cada tortilla y dóblalas por la mitad en forma de media luna.",
+      "usa": [
+       "6 tortillas de trigo medianas"
+      ]
+     },
+     {
+      "icono": "sarten",
+      "texto": "Calienta una sartén limpia sin aceite a fuego medio y tuesta las quesadillas de dos en dos, dorándolas 2 minutos por cada lado hasta que queden crujientes y el queso se derrita.",
+      "fuego": "medio",
+      "min": 4,
+      "consejo": "Presiona suavemente con una espátula para que el queso selle bien los bordes."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Pasa las quesadillas a una tabla, córtalas en triángulos pequeños o tiritas manejables para el niño y sírvelas templadas.",
+      "consejo": "Espera un par de minutos antes de darle su trozo al niño para evitar que el queso caliente le queme la boca."
+     }
+    ]
+   },
+   {
+    "id": "crema-de-coliflor-y-parmesano-con-jamon",
+    "titulo": "Crema suave de coliflor y parmesano con taquitos de jamón",
+    "subtitulo": "Cremosa, templada y sin sabor fuerte",
+    "cocina": "Mediterránea",
+    "imagen": "crema",
+    "peques": true,
+    "healthy": true,
+    "gourmet": false,
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 60,
+     "proteina": 25,
+     "hidratos": 15
+    },
+    "porque": "Una cena reconstituyente y muy ligera en hidratos que ayuda a digerir bien las legumbres del almuerzo.",
+    "truco": "Añade un quesito suave o un poco de leche al triturar para que la textura quede como una papilla fina y dulce.",
+    "etiquetas": [
+     "crema",
+     "coliflor",
+     "healthy",
+     "jamón"
+    ],
+    "foto": "",
+    "fotoCredito": "",
+    "fotosUrl": "",
+    "ingredientes": [
+     "500 g de coliflor limpia cortada en ramilletes",
+     "1 patata pequeña (100 g)",
+     "1 puerro mediano (solo la parte blanca, unos 100 g)",
+     "2 cucharadas de aceite de oliva virgen extra",
+     "500 ml de caldo de verduras suave",
+     "1 pizca de sal",
+     "1 quesito suave en porciones",
+     "40 g de queso parmesano rallado",
+     "60 g de taquitos pequeños de jamón serrano"
+    ],
+    "pasos": [
+     {
+      "icono": "lavar",
+      "texto": "Lava la coliflor y el puerro bajo el grifo. Pela la patata.",
+      "usa": [
+       "500 g de coliflor limpia cortada en ramilletes",
+       "1 patata pequeña (100 g)",
+       "1 puerro mediano (solo la parte blanca, unos 100 g)"
+      ]
+     },
+     {
+      "icono": "cortar",
+      "texto": "Corta la parte blanca del puerro en rodajas finas y la patata en dados pequeños de unos 2 cm sobre la tabla de cortar.",
+      "usa": [
+       "1 patata pequeña (100 g)",
+       "1 puerro mediano (solo la parte blanca, unos 100 g)"
+      ]
+     },
+     {
+      "icono": "olla",
+      "texto": "En una olla mediana, calienta 1 cucharada de aceite a fuego suave y pocha el puerro (cocinar despacio sin que tome color oscuro) durante 3 minutos.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "1 puerro mediano (solo la parte blanca, unos 100 g)"
+      ],
+      "fuego": "suave",
+      "min": 3
+     },
+     {
+      "icono": "olla",
+      "texto": "Añade a la olla los ramilletes de coliflor, la patata troceada, el caldo de verduras suave y la pizca de sal. Tapa y cocina a fuego medio hasta que la verdura esté muy blanda.",
+      "usa": [
+       "500 g de coliflor limpia cortada en ramilletes",
+       "1 patata pequeña (100 g)",
+       "500 ml de caldo de verduras suave",
+       "1 pizca de sal"
+      ],
+      "fuego": "medio",
+      "min": 15,
+      "consejo": "Pincha la patata con la punta de un cuchillo: si entra sin resistencia, ya está lista."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Mientras cuece la verdura, pon una sartén pequeña a fuego medio con la otra cucharada de aceite y saltea los taquitos de jamón 2 minutos hasta que cambien de color; resérvalos en un plato.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "60 g de taquitos pequeños de jamón serrano"
+      ],
+      "fuego": "medio",
+      "min": 2
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Retira la olla del fuego, añade el queso parmesano rallado y el quesito suave, y tritura todo con la batidora de mano hasta lograr una textura muy fina y sin grumos.",
+      "usa": [
+       "1 quesito suave en porciones",
+       "40 g de queso parmesano rallado"
+      ],
+      "consejo": "Si queda demasiado espesa para el niño, puedes añadir un chorrito de leche tibia para aligerarla."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Sirve la crema tibia en boles y coloca por encima los taquitos de jamón crujiente, picando muy finita la porción que vaya al plato del peque.",
+      "usa": [
+       "60 g de taquitos pequeños de jamón serrano"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "solomillo-de-pavo-salteado-con-verduras",
+    "titulo": "Solomillo de pavo salteado con calabacín y maíz dulce",
+    "subtitulo": "Tierno, colorido y listo en pocos minutos",
+    "cocina": "Casera",
+    "imagen": "generico",
+    "peques": false,
+    "healthy": true,
+    "gourmet": false,
+    "tiempo": 20,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 50,
+     "proteina": 40,
+     "hidratos": 10
+    },
+    "porque": "Aporta proteína blanca magra para completar el día sin sumar pesadez tras el guiso escolar.",
+    "truco": "Corta el pavo en tiras finas y saltéalo a fuego vivo para que quede jugoso y no se reseque.",
+    "etiquetas": [
+     "pavo",
+     "salteado",
+     "healthy",
+     "rápido"
+    ],
+    "foto": "",
+    "fotoCredito": "",
+    "fotosUrl": "",
+    "ingredientes": [
+     "450 g de solomillo de pavo limpio",
+     "1 calabacín pequeño (150 g)",
+     "1 zanahoria mediana (100 g)",
+     "100 g de maíz dulce en grano cocido",
+     "2 cucharadas de aceite de oliva virgen extra",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "lavar",
+      "texto": "Lava bien el calabacín y la zanahoria con agua fría.",
+      "usa": [
+       "1 calabacín pequeño (150 g)",
+       "1 zanahoria mediana (100 g)"
+      ]
+     },
+     {
+      "icono": "cortar",
+      "texto": "Pela la zanahoria. Corta el calabacín y la zanahoria en daditos diminutos (de medio centímetro) y el solomillo de pavo en tiras finas de tamaño bocado.",
+      "usa": [
+       "450 g de solomillo de pavo limpio",
+       "1 calabacín pequeño (150 g)",
+       "1 zanahoria mediana (100 g)"
+      ],
+      "consejo": "Hacer los dados de verdura tan pequeños ayuda a que se cocinen rápido y el niño los mastique con facilidad."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Calienta 1 cucharada de aceite en una sartén amplia a fuego medio y añade los dados de zanahoria y calabacín con una pizca de sal, removiendo a menudo.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "1 calabacín pequeño (150 g)",
+       "1 zanahoria mediana (100 g)",
+       "1 pizca de sal"
+      ],
+      "fuego": "medio",
+      "min": 6
+     },
+     {
+      "icono": "sarten",
+      "texto": "Añade el maíz dulce bien escurrido a la sartén con las verduras, remueve durante 1 minuto para que tome calor y pasa todas las verduras a un plato hondo.",
+      "usa": [
+       "100 g de maíz dulce en grano cocido"
+      ],
+      "fuego": "medio",
+      "min": 1
+     },
+     {
+      "icono": "sarten",
+      "texto": "En la misma sartén, añade la otra cucharada de aceite y sube a fuego fuerte; saltea las tiras de pavo removiendo sin parar hasta que se doren por fuera pero sigan tiernas por dentro.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "450 g de solomillo de pavo limpio"
+      ],
+      "fuego": "fuerte",
+      "min": 4,
+      "consejo": "No lo cocines de más para evitar que la carne de pavo pierda su jugo y quede seca."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Reincorpora las verduras y el maíz a la sartén con el pavo, baja a fuego medio y mezcla todo junto durante 2 minutos para que se mezclen bien los sabores.",
+      "fuego": "medio",
+      "min": 2
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Sirve en los platos comprobando que las tiras de pavo del niño no queden largas, cortándolas en bocaditos con las tijeras si es necesario."
+     }
+    ]
+   },
+   {
+    "id": "tortilla-de-calabacin-y-queso-suave",
+    "titulo": "Tortilla francesa jugosa de calabacín rallado y queso fresco",
+    "subtitulo": "Esponjosa y suave para una cena ligera",
+    "cocina": "Española",
+    "imagen": "tortilla",
+    "peques": true,
+    "healthy": true,
+    "gourmet": false,
+    "tiempo": 20,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 50,
+     "proteina": 35,
+     "hidratos": 15
+    },
+    "porque": "Introduce huevo de forma suave con una gran proporción de verdura tierna cocinada a fuego lento.",
+    "truco": "Ralla el calabacín muy fino para que se deshaga con el huevo batido y el peque casi no note la textura.",
+    "etiquetas": [
+     "tortilla",
+     "calabacín",
+     "huevo",
+     "peques"
+    ],
+    "foto": "",
+    "fotoCredito": "",
+    "fotosUrl": "",
+    "ingredientes": [
+     "1 calabacín mediano (250 g)",
+     "5 huevos medianos",
+     "100 g de queso fresco de Burgos",
+     "2 cucharadas de aceite de oliva virgen extra",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "lavar",
+      "texto": "Lava bien el calabacín bajo el grifo de agua fría frotando la piel con las manos.",
+      "usa": [
+       "1 calabacín mediano (250 g)"
+      ]
+     },
+     {
+      "icono": "cortar",
+      "texto": "Ralla el calabacín por el lado fino del rallador y corta el queso fresco en daditos pequeños de 1 cm.",
+      "usa": [
+       "1 calabacín mediano (250 g)",
+       "100 g de queso fresco de Burgos"
+      ],
+      "consejo": "Rallarlo tan fino hará que al cocinarse se funda con el huevo y casi no se aprecie la textura vegetal."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Pon una sartén antiadherente a fuego suave con 1 cucharada de aceite de oliva, echa el calabacín rallado con la pizca de sal y póchalo removiendo hasta que esté bien tierno.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "1 calabacín mediano (250 g)",
+       "1 pizca de sal"
+      ],
+      "fuego": "suave",
+      "min": 7,
+      "consejo": "Si suelta mucho líquido, déjalo un minuto más hasta que se evapore casi por completo."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Casca los huevos en un bol amplio y bátelos con un tenedor durante 1 minuto hasta que hagan un poco de espuma.",
+      "usa": [
+       "5 huevos medianos"
+      ]
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Agrega al bol con los huevos el calabacín pochado templado y los dados de queso fresco, removiendo con una cuchara para que quede homogéneo.",
+      "usa": [
+       "100 g de queso fresco de Burgos"
+      ]
+     },
+     {
+      "icono": "sarten",
+      "texto": "Añade la otra cucharada de aceite a la sartén a fuego suave-medio, vierte la mezcla y cocina 2 minutos; con ayuda de un plato llano da la vuelta a la tortilla y cuájala otros 2 minutos por el otro lado.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra"
+      ],
+      "fuego": "suave",
+      "min": 4,
+      "consejo": "Para que quede jugosa y tierna para el niño, no la dejes resecar; los bordes deben estar cuajados y el centro esponjoso."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Desliza la tortilla sobre un plato, córtala en cuñas o cuadraditos fáciles de pinchar con el tenedor y sírvela templada."
+     }
+    ]
+   },
+   {
+    "id": "gnocchis-salteados-con-tomate-dulce-y-mozzarella",
+    "titulo": "Ñoquis salteados con tomate dulce y mozzarella fundida",
+    "subtitulo": "Un bocado tierno y reconfortante que gusta a todos",
+    "cocina": "Italiana",
+    "imagen": "pasta",
+    "peques": true,
+    "healthy": false,
+    "gourmet": false,
+    "tiempo": 20,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 40,
+     "proteina": 20,
+     "hidratos": 40
+    },
+    "porque": "Ofrece una opción reconfortante y rápida, con salsa casera rica en tomate triturado y queso tierno.",
+    "truco": "Deja que la mozzarella se funda tapando la sartén al final para que cree hilos suaves que diviertan al peque.",
+    "etiquetas": [
+     "gnocchi",
+     "pasta",
+     "tomate",
+     "peques"
+    ],
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/Gnocchi_alla_sorrentina.jpg/960px-Gnocchi_alla_sorrentina.jpg",
+    "fotoCredito": "Davide Zambelli / Wikimedia Commons (CC BY 3.0)",
+    "fotosUrl": "",
+    "ingredientes": [
+     "500 g de ñoquis de patata",
+     "1 litro de agua",
+     "1 pizca de sal",
+     "1 cucharada de aceite de oliva virgen extra",
+     "250 g de salsa de tomate frito casero suave",
+     "150 g de queso mozzarella fresca en bola"
     ],
     "pasos": [
      {
       "icono": "olla",
-      "texto": "Pon a calentar el horno a 200 °C con calor arriba y abajo. Al mismo tiempo, llena una olla mediana con aproximadamente un litro de agua y un cuarto de cucharadita de sal, y ponla a calentar a fuego fuerte hasta que comience a hervir a borbotones.",
+      "texto": "Vierte el agua y la pizca de sal en una olla mediana y ponla a calentar a fuego fuerte hasta que comience a hervir con burbujas grandes.",
       "usa": [
-       "1/4 cucharadita de sal"
+       "1 litro de agua",
+       "1 pizca de sal"
       ],
       "fuego": "fuerte",
       "min": 5
      },
      {
       "icono": "cortar",
-      "texto": "Lava la coliflor bajo el grifo y córtala separando los ramilletes en trozos medianos. Pela la patata con un pelador de verduras y córtala en cubos de unos 2 cm.",
+      "texto": "Saca la bola de mozzarella de su suero, sécala ligeramente con papel de cocina y córtala en dados pequeños de 1 cm sobre una tabla.",
       "usa": [
-       "1 coliflor pequeña limpia de hojas (500 g)",
-       "1 patata mediana (150 g)"
+       "150 g de queso mozzarella fresca en bola"
       ]
      },
      {
       "icono": "olla",
-      "texto": "Cuando el agua esté hirviendo, echa con cuidado la coliflor y la patata troceadas. Baja a fuego medio, tapa la olla y deja cocer durante 18 minutos hasta que al pinchar con un tenedor ambos ingredientes se sientan muy tiernos.",
-      "fuego": "medio",
-      "min": 18,
-      "consejo": "Si el tenedor entra suavemente como si fuera mantequilla, ya están listos para triturar."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Mientras se cuecen las verduras, lava y seca el perejil y pícalo muy fino desechando los tallos gruesos. Pela 2 dientes de ajo y pícalos también lo más fino que puedas. En un plato hondo o bol, mézclalos con las 4 cucharadas de pan rallado y 2 cucharadas de aceite de oliva hasta que parezca arena mojada.",
+      "texto": "Echa los ñoquis con cuidado en la olla con el agua hirviendo y vigílalos atentamente durante unos 2 minutos.",
       "usa": [
-       "4 ramitas de perejil fresco",
-       "2 dientes de ajo",
-       "4 cucharadas de pan rallado (40 g)",
-       "2 cucharadas de aceite de oliva virgen extra (30 ml)"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Pinta el fondo de una bandeja de horno con 1 cucharada de aceite de oliva y coloca los 3 lomos de bacalao con la piel hacia abajo. Cubre la parte superior de solo 2 lomos con la mezcla de pan rallado y hierbas, presionando suavemente con los dedos; deja el tercer lomo completamente limpio para el niño.",
-      "usa": [
-       "3 lomos de bacalao desalado y sin espinas (450 g)",
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
+       "500 g de ñoquis de patata"
       ],
-      "consejo": "Dejar el lomo del peque sin la costra evita texturas secas que a veces les cuesta tragar o sabores demasiado fuertes a ajo crudo."
+      "fuego": "fuerte",
+      "min": 2,
+      "consejo": "Sabrás que están listos exactamente cuando suban y floten en la superficie del agua."
      },
      {
-      "icono": "horno",
-      "texto": "Mete el bacalao al horno a 200 °C a media altura durante 12 minutos, hasta que la costra de pan esté dorada y el bacalao del peque se vea blanco opaco y jugoso.",
-      "min": 12,
-      "consejo": "El bacalao está en su punto cuando al presionarlo suavemente con un tenedor sus lascas tienden a separarse con facilidad."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Escurre por completo el agua de la olla de la coliflor y la patata. Pásalas al vaso de la batidora junto con 1 diente de ajo pelado, 50 ml de leche tibia, 1 cucharada de aceite de oliva y el otro cuarto de cucharadita de sal. Tritura a máxima potencia durante 2 minutos hasta lograr un puré cremoso y sin ningún grumo.",
+      "icono": "sarten",
+      "texto": "Mientras tanto, en una sartén grande calienta la cucharada de aceite y vierte la salsa de tomate frito a fuego suave para que se temple.",
       "usa": [
-       "1 diente de ajo",
-       "50 ml de leche tibia",
-       "1 cucharada de aceite de oliva virgen extra (15 ml)",
-       "1/4 cucharadita de sal"
+       "1 cucharada de aceite de oliva virgen extra",
+       "250 g de salsa de tomate frito casero suave"
       ],
+      "fuego": "suave",
       "min": 2
      },
      {
+      "icono": "sarten",
+      "texto": "Recoge los ñoquis flotantes con una espumadera o colador, escúrrelos e incorpóralos directamente a la sartén con la salsa de tomate, mezclando con cuidado para que no se rompan.",
+      "fuego": "suave",
+      "min": 1
+     },
+     {
+      "icono": "sarten",
+      "texto": "Reparte los dados de mozzarella por encima de los ñoquis, tapa la sartén con una tapadera y cocina a fuego suave hasta que el queso se derrita formando hilos.",
+      "usa": [
+       "150 g de queso mozzarella fresca en bola"
+      ],
+      "fuego": "suave",
+      "min": 2,
+      "consejo": "El vapor atrapado por la tapa fundirá el queso sin necesidad de remover ni quemar el tomate."
+     },
+     {
       "icono": "emplatar",
-      "texto": "Sirve en el fondo de cada plato unas cucharadas de puré de coliflor. Coloca encima los lomos con costra para los adultos; para el peque, desmiga su bacalao con los dedos asegurándote de que no haya ninguna espina ni piel, y mézclalo suavemente con el puré en su plato.",
-      "consejo": "Tocar el pescado con las manos limpias al desmigarlo es la mejor forma de cerciorarse al 100 % de que no queda ninguna espina para el niño."
+      "texto": "Sirve los ñoquis templados en platos hondos para disfrutar de los hilos de queso suave.",
+      "consejo": "Comprueba con el dorso de la cuchara que no queden zonas demasiado calientes antes de servir al niño."
+     }
+    ]
+   },
+   {
+    "id": "solomillo-de-cerdo-con-manzana-y-chalotas",
+    "titulo": "Medallones de solomillo de cerdo con manzana caramelizada y chalotas",
+    "subtitulo": "Carne tierna con contraste agridulce delicado",
+    "cocina": "Española",
+    "imagen": "generico",
+    "peques": false,
+    "healthy": false,
+    "gourmet": true,
+    "tiempo": 40,
+    "dificultad": "Media",
+    "raciones": 3,
+    "plato": {
+     "verdura": 40,
+     "proteina": 35,
+     "hidratos": 25
+    },
+    "porque": "Plato gourmet pero muy accesible, con carne magra y fruta templada que resulta suave y deliciosa.",
+    "truco": "Para el niño, corta su ración de solomillo en bocaditos muy tiernos y sírvele la manzana en compota suave a un lado.",
+    "etiquetas": [
+     "solomillo",
+     "cerdo",
+     "manzana",
+     "gourmet"
+    ],
+    "foto": "",
+    "fotoCredito": "",
+    "fotosUrl": "",
+    "ingredientes": [
+     "500 g de solomillo de cerdo",
+     "2 manzanas dulces tipo Golden (unos 350 g)",
+     "4 chalotas medianas (unos 100 g)",
+     "2 cucharadas de aceite de oliva virgen extra",
+     "150 ml de caldo de pollo suave",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "cortar",
+      "texto": "Pela las chalotas. Pela también las manzanas, córtalas por la mitad y retira el centro duro con las semillas.",
+      "usa": [
+       "2 manzanas dulces tipo Golden (unos 350 g)",
+       "4 chalotas medianas (unos 100 g)"
+      ]
+     },
+     {
+      "icono": "cortar",
+      "texto": "Corta el solomillo de cerdo en medallones gruesos de unos 2 cm, las chalotas en tiras muy finas y las manzanas en gajos delgados.",
+      "usa": [
+       "500 g de solomillo de cerdo",
+       "2 manzanas dulces tipo Golden (unos 350 g)",
+       "4 chalotas medianas (unos 100 g)"
+      ]
+     },
+     {
+      "icono": "sarten",
+      "texto": "Calienta 1 cucharada de aceite en una sartén amplia a fuego fuerte y marca (dorar rápidamente la superficie) los medallones con la pizca de sal durante 2 minutos por lado; retíralos a un plato.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "500 g de solomillo de cerdo",
+       "1 pizca de sal"
+      ],
+      "fuego": "fuerte",
+      "min": 4,
+      "consejo": "Solo queremos dorar el exterior para conservar los jugos; terminará de hacerse con la salsa."
+     },
+     {
+      "icono": "sarten",
+      "texto": "En la misma sartén, añade la otra cucharada de aceite y baja a fuego suave; echa las chalotas picadas y póchalas despacio hasta que estén transparentes y tiernas.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra",
+       "4 chalotas medianas (unos 100 g)"
+      ],
+      "fuego": "suave",
+      "min": 4
+     },
+     {
+      "icono": "sarten",
+      "texto": "Añade los gajos de manzana a la sartén junto a las chalotas y cocina a fuego suave removiendo con frecuencia hasta que la manzana esté muy blanda y caramelizada.",
+      "usa": [
+       "2 manzanas dulces tipo Golden (unos 350 g)"
+      ],
+      "fuego": "suave",
+      "min": 8,
+      "consejo": "Sabrás que está lista cuando puedas aplastar fácilmente un trocito de manzana contra la pared de la sartén."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Vierte el caldo de pollo, regresa los medallones de solomillo a la sartén y cocina todo a fuego medio hasta que el caldo se reduzca a la mitad y la carne esté tierna.",
+      "usa": [
+       "150 ml de caldo de pollo suave"
+      ],
+      "fuego": "medio",
+      "min": 5
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Emplata los medallones con la salsa y la manzana; para el niño, corta su porción de carne en bocaditos muy pequeños y machaca su parte de manzana con un tenedor formando una compota suave a un lado."
      }
     ]
    }
