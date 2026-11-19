@@ -293,7 +293,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   function bloqueCompra(r, etiqueta, si){
     var items = r.ingredientes||[], hechos = 0, filas = '';
     items.forEach(function(it,ii){
-      var k = 'c_'+(D.actualizado||'').slice(0,10)+'_'+r.id+'_'+ii;
+      var k = 'c_'+r.id+'_'+ii;
       var ok = store(k)==='1'; if(ok) hechos++;
       filas += '<button class="item'+(ok?' ok':'')+'" data-k="'+esc(k)+'"><span class="check">'+(ok?'✓':'')+'</span>'+esc(it)+'</button>';
     });
