@@ -1,6 +1,6 @@
 // Lo reescribe el agente cada día. Ver AGENTE.md
 window.MENU_DATA = {
- "actualizado": "2026-11-19T13:06:22+01:00",
+ "actualizado": "2026-11-19T13:33:30+01:00",
  "hoy": {
   "fecha": "2026-11-19",
   "cole": {
@@ -12,15 +12,16 @@ window.MENU_DATA = {
    ]
   },
   "consejo": "Al mediodía ha comido legumbre (alubias) y pescado blanco (merluza), así que esta noche toca huevo o carne blanca, con mucha verdura y poco hidrato.",
+  "explicacion": "Hoy ha comido alubias y merluza, así que las cenas van de huevo y carne blanca con mucha verdura. En el cole esta semana lleva 1 de pescado, 1 de legumbre y nada de huevo hasta mañana, y la carne roja ya salió el lunes con las albóndigas. Por eso hay dos opciones de huevo y el resto de pollo o pavo, sin carne roja.",
   "cenas": [
    {
-    "id": "nuggets-pollo-horno",
-    "imagen": "pollo-horno",
-    "foto": "https://images.pexels.com/photos/11710530/pexels-photo-11710530.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Evgeniya Davydova / Pexels",
-    "titulo": "Nuggets de pollo al horno",
-    "subtitulo": "Con bastones de calabacín y zanahoria",
-    "tiempo": 25,
+    "id": "quesadillas-pollo-calabacin",
+    "imagen": "quesadilla",
+    "foto": "https://images.pexels.com/photos/13243944/pexels-photo-13243944.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "fotoCredito": "Nidhin K S / Pexels",
+    "titulo": "Quesadillas de pollo y calabacín",
+    "subtitulo": "Con ensalada de lechuga y zanahoria",
+    "tiempo": 20,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
@@ -28,292 +29,65 @@ window.MENU_DATA = {
      "proteina": 35,
      "hidratos": 20
     },
-    "porque": "Carne blanca para variar después de las alubias y la merluza, con verdura al horno al lado.",
+    "porque": "Carne blanca suave tras las alubias y la merluza, con el calabacín bien escondido.",
     "etiquetas": [
      "Pollo",
-     "Horno",
-     "Favorita de niños"
-    ],
-    "peques": true,
-    "truco": "Que él pase los trocitos por el pan rallado y los coloque en la bandeja; los bastones, para mojar en tomate.",
-    "ingredientes": [
-     "2 pechugas de pollo (unos 500 g)",
-     "2 huevos",
-     "100 g de pan rallado",
-     "30 g de copos de maíz sin azúcar",
-     "2 calabacines",
-     "2 zanahorias",
-     "2 cucharadas de aceite de oliva",
-     "1 pizca de sal"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Corta el pollo en trozos del tamaño de un bocado y las verduras en bastones."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Bate los huevos y mezcla el pan rallado con los copos de maíz machacados."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Pasa el pollo por huevo y luego por el rebozado."
-     },
-     {
-      "icono": "horno",
-      "texto": "Hornea pollo y verduras con un chorrito de aceite a 200 °C, dándoles la vuelta a mitad.",
-      "min": 18
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve con un poco de tomate natural para mojar."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "minipizzas-pan-verduras",
-    "imagen": "pizza",
-    "foto": "https://images.pexels.com/photos/4203044/pexels-photo-4203044.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Nishant Aneja / Pexels",
-    "titulo": "Mini pizzas de pan con verduras",
-    "subtitulo": "Con jamón york y mozzarella",
-    "tiempo": 20,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 40,
-     "proteina": 30,
-     "hidratos": 30
-    },
-    "porque": "Cena rápida y divertida con verdura picadita y una proteína distinta a la del mediodía.",
-    "etiquetas": [
-     "Horno",
-     "Rápida",
-     "Favorita de niños"
-    ],
-    "peques": true,
-    "truco": "Ponle los ingredientes en cuencos y que él monte su pizza; pica el pimiento y el champiñón muy menudos bajo el queso.",
-    "ingredientes": [
-     "6 rebanadas de pan de chapata o pan de molde grueso",
-     "150 g de tomate triturado",
-     "100 g de jamón york en taquitos",
-     "125 g de mozzarella rallada",
-     "1/2 pimiento rojo",
-     "4 champiñones",
-     "1/2 calabacín",
-     "Orégano"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Pica el pimiento, el champiñón y el calabacín en dados muy pequeños."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Saltea las verduras 4 minutos para que queden blanditas.",
-      "min": 4
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Unta el pan con tomate y reparte las verduras, el jamón y el queso."
-     },
-     {
-      "icono": "horno",
-      "texto": "Hornea a 200 °C hasta que el queso se funda.",
-      "min": 10
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Corta cada pizza en cuadraditos y sírvelas con una ensalada de lechuga."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "revuelto-espinacas-champinones",
-    "imagen": "tortilla",
-    "foto": "https://images.pexels.com/photos/35672963/pexels-photo-35672963.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Valeria Boltneva / Pexels",
-    "titulo": "Revuelto de espinacas y champiñones",
-    "subtitulo": "Sobre tostadas de pan",
-    "tiempo": 15,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 50,
-     "proteina": 30,
-     "hidratos": 20
-    },
-    "porque": "El huevo completa el día sin repetir pescado, y las espinacas y el champiñón ponen la verdura.",
-    "etiquetas": [
-     "Huevo",
      "Sartén",
-     "Rápida"
+     "Favorita de niños"
     ],
-    "truco": "Pica las espinacas muy finas para que casi no se vean y sírvele su revuelto en una tostada cortada en tiras.",
+    "peques": true,
+    "gourmet": false,
+    "truco": "Ralla el calabacín fino y mézclalo con el queso; córtale la quesadilla en triángulos para comer con la mano.",
     "ingredientes": [
-     "5 huevos",
-     "150 g de espinacas frescas",
-     "200 g de champiñones",
+     "6 tortillas de trigo pequeñas",
+     "1 pechuga de pollo (unos 300 g)",
+     "1 calabacín",
      "1/2 cebolla",
-     "3 rebanadas de pan",
+     "120 g de queso rallado suave",
+     "1 lechuga",
+     "1 zanahoria",
      "1 cucharada de aceite de oliva",
      "1 pizca de sal"
     ],
     "pasos": [
      {
       "icono": "cortar",
-      "texto": "Pica la cebolla, lamina los champiñones y corta las espinacas finas."
+      "texto": "Corta el pollo en tiras finas, pica la cebolla y ralla el calabacín."
      },
      {
       "icono": "sarten",
-      "texto": "Pocha la cebolla con el champiñón a fuego medio.",
+      "texto": "Saltea la cebolla y el pollo con el aceite hasta que se dore.",
       "min": 6
      },
      {
       "icono": "sarten",
-      "texto": "Añade las espinacas y deja que se ablanden.",
-      "min": 2
-     },
-     {
-      "icono": "sarten",
-      "texto": "Echa los huevos batidos y remueve a fuego suave hasta que cuajen jugosos.",
+      "texto": "Añade el calabacín rallado y cocina hasta que suelte el agua.",
       "min": 3
      },
      {
+      "icono": "envolver",
+      "texto": "Rellena las tortillas con el pollo y el queso y dóblalas por la mitad."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Dóralas en la sartén por los dos lados hasta que se funda el queso.",
+      "min": 4
+     },
+     {
       "icono": "emplatar",
-      "texto": "Tuesta el pan y sirve el revuelto encima."
+      "texto": "Córtalas en triángulos y sírvelas con la ensalada."
      }
     ],
     "fotosUrl": ""
    },
    {
-    "id": "crema-coliflor-quesito",
-    "imagen": "crema",
-    "foto": "https://images.pexels.com/photos/19367737/pexels-photo-19367737.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Zehra Yılmaz / Pexels",
-    "titulo": "Crema de coliflor y zanahoria",
-    "subtitulo": "Con quesitos y picatostes",
-    "tiempo": 30,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 60,
-     "proteina": 20,
-     "hidratos": 20
-    },
-    "porque": "Cena ligera y suave con mucha verdura; el queso pone la proteína después de un mediodía completo.",
-    "etiquetas": [
-     "Olla",
-     "Ligera",
-     "Reconfortante"
-    ],
-    "truco": "Al triturarla con quesitos queda naranja clarito y cremosa; que él eche los picatostes por encima.",
-    "ingredientes": [
-     "1 coliflor pequeña (unos 600 g)",
-     "2 zanahorias",
-     "1 puerro",
-     "1 patata pequeña",
-     "3 quesitos",
-     "100 g de queso fresco batido",
-     "2 rebanadas de pan",
-     "1 cucharada de aceite de oliva",
-     "1 pizca de sal"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Trocea la coliflor, la zanahoria, el puerro y la patata."
-     },
-     {
-      "icono": "olla",
-      "texto": "Rehoga el puerro 3 minutos, añade el resto y cubre con agua.",
-      "min": 20
-     },
-     {
-      "icono": "sarten",
-      "texto": "Dora el pan en dados para los picatostes.",
-      "min": 3
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Tritura la crema con los quesitos y ajusta de sal."
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve con una cucharada de queso fresco y los picatostes."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "minihamburguesas-pavo",
-    "imagen": "hamburguesa",
-    "foto": "https://images.pexels.com/photos/36963518/pexels-photo-36963518.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "fotoCredito": "Jeffry Surianto / Pexels",
-    "titulo": "Mini hamburguesas de pavo y zanahoria",
-    "subtitulo": "En panecillos con lechuga y tomate",
+    "id": "tortilla-calabacin-zanahoria",
+    "imagen": "tortilla",
+    "foto": "https://images.pexels.com/photos/5639249/pexels-photo-5639249.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "fotoCredito": "Shameel Mukkath / Pexels",
+    "titulo": "Tortilla de calabacín y zanahoria",
+    "subtitulo": "Con tomate rallado y pan",
     "tiempo": 25,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 40,
-     "proteina": 35,
-     "hidratos": 25
-    },
-    "porque": "Carne blanca y magra, con la zanahoria escondida dentro y ensalada al lado.",
-    "etiquetas": [
-     "Pavo",
-     "Sartén",
-     "Favorita de niños"
-    ],
-    "peques": true,
-    "truco": "La zanahoria va rallada muy fina dentro de la carne; que él ponga su lechuga y su tomate en el panecillo.",
-    "ingredientes": [
-     "500 g de pavo picado",
-     "1 zanahoria",
-     "1 huevo",
-     "2 cucharadas de pan rallado",
-     "6 panecillos pequeños",
-     "6 hojas de lechuga",
-     "1 tomate",
-     "1 cucharada de aceite de oliva",
-     "1 pizca de sal"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Ralla la zanahoria muy fina y corta el tomate en rodajas."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Mezcla el pavo con la zanahoria, el huevo, el pan rallado y una pizca de sal."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Forma 6 hamburguesitas pequeñas y planas."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Hazlas a fuego medio por los dos lados hasta que estén hechas por dentro.",
-      "min": 10
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Monta los panecillos con lechuga y tomate."
-     }
-    ],
-    "fotosUrl": ""
-   },
-   {
-    "id": "lomo-pisto-suave",
-    "imagen": "generico",
-    "foto": "",
-    "fotoCredito": "",
-    "titulo": "Lomo a la plancha con pisto suave",
-    "subtitulo": "Pisto de calabacín, pimiento y tomate",
-    "tiempo": 30,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
@@ -321,46 +95,298 @@ window.MENU_DATA = {
      "proteina": 35,
      "hidratos": 15
     },
-    "porque": "Carne magra para variar la proteína y un buen plato de verdura, con poco hidrato.",
+    "porque": "El huevo completa el día y esta semana todavía no ha salido en el cole.",
     "etiquetas": [
-     "Cerdo",
-     "Sartén",
-     "Mucha verdura"
+     "Huevo",
+     "Sartén"
     ],
-    "truco": "Córtale el lomo en tiras finas y mézclalas con el pisto; si no le gusta la verdura en trozos, tritúrale su parte como una salsa.",
+    "peques": true,
+    "gourmet": false,
+    "truco": "Ralla las verduras muy finas para que no se noten y que él bata los huevos.",
     "ingredientes": [
-     "6 filetes finos de lomo de cerdo (unos 450 g)",
-     "1 calabacín",
-     "1 pimiento rojo",
-     "1/2 pimiento verde",
-     "1 cebolla",
-     "200 g de tomate triturado",
+     "6 huevos",
+     "1 calabacín grande",
+     "1 zanahoria",
+     "1/2 cebolla",
+     "2 tomates maduros",
+     "3 rebanadas de pan",
      "2 cucharadas de aceite de oliva",
      "1 pizca de sal"
     ],
     "pasos": [
      {
       "icono": "cortar",
-      "texto": "Corta la cebolla, los pimientos y el calabacín en dados pequeños."
+      "texto": "Ralla el calabacín y la zanahoria y pica la cebolla."
      },
      {
       "icono": "sarten",
-      "texto": "Pocha la cebolla y los pimientos a fuego medio.",
+      "texto": "Pocha las verduras a fuego medio hasta que estén blanditas.",
       "min": 8
      },
      {
-      "icono": "sarten",
-      "texto": "Añade el calabacín y el tomate y deja que se haga el pisto.",
-      "min": 12
+      "icono": "mezclar",
+      "texto": "Bate los huevos y mézclalos con las verduras escurridas."
      },
      {
       "icono": "sarten",
-      "texto": "Haz los filetes de lomo a la plancha, un minuto y medio por cada lado.",
-      "min": 3
+      "texto": "Cuaja la tortilla a fuego suave y dale la vuelta con un plato.",
+      "min": 6
      },
      {
       "icono": "emplatar",
-      "texto": "Sirve el lomo con el pisto al lado."
+      "texto": "Sírvela con tomate rallado sobre el pan."
+     }
+    ],
+    "fotosUrl": ""
+   },
+   {
+    "id": "albondigas-pavo-salsa-verduras",
+    "imagen": "generico",
+    "foto": "https://images.pexels.com/photos/6248797/pexels-photo-6248797.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "fotoCredito": "Gary Barnes / Pexels",
+    "titulo": "Albóndigas de pavo en salsa de verduras",
+    "subtitulo": "Con la salsa de tomate y pimiento triturada",
+    "tiempo": 30,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 45,
+     "proteina": 40,
+     "hidratos": 15
+    },
+    "porque": "Pavo para seguir con carne blanca y una salsa que mete mucha verdura sin que se vea.",
+    "etiquetas": [
+     "Pavo",
+     "Olla",
+     "Favorita de niños"
+    ],
+    "peques": true,
+    "gourmet": false,
+    "truco": "Haz sus albóndigas del tamaño de una canica y tritura bien la salsa; que él las ayude a redondear.",
+    "ingredientes": [
+     "500 g de carne picada de pavo",
+     "1 huevo",
+     "2 cucharadas de pan rallado",
+     "1 cebolla",
+     "1 pimiento rojo",
+     "1 zanahoria",
+     "400 g de tomate triturado",
+     "2 cucharadas de aceite de oliva",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "mezclar",
+      "texto": "Mezcla el pavo con el huevo, el pan rallado y una pizca de sal y forma bolitas."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Dora las albóndigas en una cazuela con el aceite y sácalas.",
+      "min": 5
+     },
+     {
+      "icono": "cortar",
+      "texto": "Pica la cebolla, el pimiento y la zanahoria."
+     },
+     {
+      "icono": "olla",
+      "texto": "Sofríe las verduras en la misma cazuela, añade el tomate y cuece.",
+      "min": 10
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Tritura la salsa hasta dejarla fina."
+     },
+     {
+      "icono": "olla",
+      "texto": "Vuelve a meter las albóndigas y cuécelas en la salsa.",
+      "min": 10
+     }
+    ],
+    "fotosUrl": ""
+   },
+   {
+    "id": "crema-brocoli-calabacin-queso",
+    "imagen": "crema",
+    "foto": "https://images.pexels.com/photos/5644942/pexels-photo-5644942.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "fotoCredito": "Polina Kovaleva / Pexels",
+    "titulo": "Crema de brócoli y calabacín",
+    "subtitulo": "Con quesito fundido y huevo duro picado",
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 65,
+     "proteina": 25,
+     "hidratos": 10
+    },
+    "porque": "Cena ligera y muy verde, con poco hidrato después de un mediodía de legumbre.",
+    "etiquetas": [
+     "Verdura",
+     "Olla",
+     "Ligera"
+    ],
+    "peques": false,
+    "gourmet": false,
+    "truco": "Fúndele un quesito en su cuenco y que él espolvoree el huevo picado por encima como si fuera nieve.",
+    "ingredientes": [
+     "1 brócoli (unos 400 g)",
+     "2 calabacines",
+     "1 puerro",
+     "1 patata pequeña",
+     "3 quesitos",
+     "2 huevos",
+     "1 litro de agua o caldo de verduras sin sal",
+     "1 cucharada de aceite de oliva"
+    ],
+    "pasos": [
+     {
+      "icono": "olla",
+      "texto": "Cuece los huevos 10 minutos, enfríalos y pélalos.",
+      "min": 10
+     },
+     {
+      "icono": "cortar",
+      "texto": "Trocea el brócoli, los calabacines, el puerro y la patata."
+     },
+     {
+      "icono": "olla",
+      "texto": "Rehoga el puerro con el aceite, añade el resto y cubre con el agua.",
+      "min": 15
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Tritura con los quesitos hasta que quede muy fina."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Sirve con el huevo duro picado por encima."
+     }
+    ],
+    "fotosUrl": ""
+   },
+   {
+    "id": "huevos-horno-tomate-guisantes",
+    "imagen": "tortilla",
+    "foto": "https://images.pexels.com/photos/6275165/pexels-photo-6275165.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "fotoCredito": "Nataliya Vaitkevich / Pexels",
+    "titulo": "Huevos al horno con tomate y guisantes",
+    "subtitulo": "Con pan para mojar",
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 50,
+     "proteina": 30,
+     "hidratos": 20
+    },
+    "porque": "Otra forma de huevo, al horno, con una salsa de verduras suave y guisantes.",
+    "etiquetas": [
+     "Huevo",
+     "Horno"
+    ],
+    "peques": false,
+    "gourmet": false,
+    "truco": "Hazle su huevo en una cazuelita aparte y bien cuajado, y que moje tiras de pan en la salsa.",
+    "ingredientes": [
+     "6 huevos",
+     "400 g de tomate triturado",
+     "150 g de guisantes congelados",
+     "1 pimiento rojo",
+     "1/2 cebolla",
+     "3 rebanadas de pan",
+     "2 cucharadas de aceite de oliva",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "cortar",
+      "texto": "Pica la cebolla y el pimiento en trocitos pequeños."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Sofríe la cebolla y el pimiento, añade el tomate y los guisantes.",
+      "min": 10
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Reparte la salsa en una fuente y haz 6 huecos."
+     },
+     {
+      "icono": "horno",
+      "texto": "Casca un huevo en cada hueco y hornea a 200 °C hasta que cuaje la clara.",
+      "min": 10
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Sirve con el pan tostado."
+     }
+    ],
+    "fotosUrl": ""
+   },
+   {
+    "id": "pollo-relleno-espinacas-setas",
+    "imagen": "pollo-horno",
+    "foto": "",
+    "fotoCredito": "",
+    "titulo": "Pechugas rellenas de espinacas y queso",
+    "subtitulo": "Con salsa cremosa de champiñones y boniato asado",
+    "tiempo": 50,
+    "dificultad": "Media",
+    "raciones": 3,
+    "plato": {
+     "verdura": 45,
+     "proteina": 35,
+     "hidratos": 20
+    },
+    "porque": "El capricho del día: carne blanca jugosa con relleno verde, perfecta tras alubias y merluza.",
+    "etiquetas": [
+     "Pollo",
+     "Horno",
+     "Capricho"
+    ],
+    "peques": false,
+    "gourmet": true,
+    "truco": "Sírvele su filete cortado en ruedas para que vea la espiral verde, con la salsa aparte para mojar.",
+    "ingredientes": [
+     "3 pechugas de pollo enteras",
+     "150 g de espinacas frescas",
+     "100 g de queso de cabra suave o mozzarella",
+     "250 g de champiñones",
+     "1 chalota",
+     "150 ml de nata para cocinar",
+     "2 boniatos medianos",
+     "2 cucharadas de aceite de oliva",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "horno",
+      "texto": "Pela y corta los boniatos en dados y ásalos a 200 °C con un poco de aceite.",
+      "min": 30
+     },
+     {
+      "icono": "sarten",
+      "texto": "Saltea las espinacas hasta que se ablanden y escúrrelas bien.",
+      "min": 2
+     },
+     {
+      "icono": "cortar",
+      "texto": "Abre las pechugas en libro, rellénalas con espinacas y queso y ciérralas con palillos."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Dóralas por fuera en la sartén y termínalas en el horno.",
+      "min": 18
+     },
+     {
+      "icono": "sarten",
+      "texto": "En la misma sartén pocha la chalota y los champiñones y añade la nata.",
+      "min": 8
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Corta las pechugas en medallones y sirve con la salsa y el boniato."
      }
     ],
     "fotosUrl": ""
@@ -369,192 +395,208 @@ window.MENU_DATA = {
  },
  "finde": {
   "fechas": "Sábado 21 y domingo 22 de noviembre",
+  "compra": [],
   "comidas": [
    {
     "dia": "Sábado",
     "momento": "Comida",
     "opciones": [
      {
-      "id": "lasana-carne-verduras",
-      "imagen": "pasta",
-      "foto": "https://images.pexels.com/photos/5949921/pexels-photo-5949921.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "Alleksana / Pexels",
-      "titulo": "Lasaña de carne y verduras",
-      "subtitulo": "Con la verdura escondida en la boloñesa",
-      "tiempo": 60,
+      "id": "paella-pollo-verduras",
+      "imagen": "arroz",
+      "foto": "https://images.pexels.com/photos/24906297/pexels-photo-24906297.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "fotoCredito": "Wijs / Pexels",
+      "titulo": "Paella de pollo y verduras",
+      "subtitulo": "La de toda la vida, sin huesos pequeños",
+      "tiempo": 50,
       "dificultad": "Media",
       "raciones": 3,
       "plato": {
-       "verdura": 30,
-       "proteina": 35,
+       "verdura": 35,
+       "proteina": 30,
        "hidratos": 35
       },
-      "porque": "Plato de fin de semana para todos, con mucha verdura triturada en la salsa.",
+      "porque": "El clásico de sábado para comer en familia.",
+      "etiquetas": [
+       "Arroz",
+       "Pollo",
+       "Paellera"
+      ],
+      "peques": true,
+      "gourmet": false,
+      "truco": "Usa contramuslo deshuesado en trocitos y sírvele su parte sin judías enteras, cortadas pequeñas.",
+      "ingredientes": [
+       "300 g de arroz bomba",
+       "500 g de contramuslo de pollo deshuesado",
+       "150 g de judía verde plana",
+       "1 pimiento rojo",
+       "2 tomates maduros rallados",
+       "1 litro de caldo de pollo bajo en sal",
+       "1 sobre de azafrán o colorante",
+       "4 cucharadas de aceite de oliva"
+      ],
+      "pasos": [
+       {
+        "icono": "cortar",
+        "texto": "Trocea el pollo en dados y corta las judías y el pimiento pequeños."
+       },
+       {
+        "icono": "sarten",
+        "texto": "Dora el pollo en la paellera con el aceite.",
+        "min": 8
+       },
+       {
+        "icono": "sarten",
+        "texto": "Añade las verduras y luego el tomate rallado y sofríe.",
+        "min": 8
+       },
+       {
+        "icono": "mezclar",
+        "texto": "Echa el arroz, remueve y vierte el caldo caliente con el azafrán."
+       },
+       {
+        "icono": "olla",
+        "texto": "Cuece sin remover, primero fuerte y luego suave.",
+        "min": 18
+       },
+       {
+        "icono": "emplatar",
+        "texto": "Deja reposar tapada 5 minutos antes de servir.",
+        "min": 5
+       }
+      ],
+      "fotosUrl": ""
+     },
+     {
+      "id": "macarrones-gratinados-pavo",
+      "imagen": "pasta",
+      "foto": "https://images.pexels.com/photos/25524074/pexels-photo-25524074.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "fotoCredito": "Valeria Boltneva / Pexels",
+      "titulo": "Macarrones gratinados con boloñesa de pavo",
+      "subtitulo": "Con verdura triturada en la salsa",
+      "tiempo": 40,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 30,
+       "proteina": 30,
+       "hidratos": 40
+      },
+      "porque": "Pasta al horno que gusta a todos, con la verdura escondida.",
       "etiquetas": [
        "Pasta",
        "Horno",
        "Favorita de niños"
       ],
       "peques": true,
-      "truco": "Tritura la zanahoria y el calabacín con el tomate; que él reparta el queso rallado por encima antes de hornear.",
+      "gourmet": false,
+      "truco": "Tritura la salsa con la zanahoria y el calabacín y que él reparta el queso por encima.",
       "ingredientes": [
-       "12 placas de lasaña precocidas",
-       "400 g de carne picada de ternera",
+       "300 g de macarrones",
+       "400 g de carne picada de pavo",
        "1 cebolla",
        "1 zanahoria",
        "1 calabacín",
-       "400 g de tomate triturado",
-       "500 ml de bechamel",
+       "500 g de tomate triturado",
        "100 g de queso rallado",
-       "1 cucharada de aceite de oliva"
+       "2 cucharadas de aceite de oliva"
       ],
       "pasos": [
+       {
+        "icono": "olla",
+        "texto": "Cuece los macarrones el tiempo del paquete menos 2 minutos.",
+        "min": 9
+       },
        {
         "icono": "cortar",
         "texto": "Pica la cebolla, la zanahoria y el calabacín."
        },
        {
         "icono": "sarten",
-        "texto": "Pocha las verduras, añade el tomate y tritúralo todo.",
+        "texto": "Sofríe las verduras, añade el tomate y tritura la salsa.",
         "min": 12
        },
        {
         "icono": "sarten",
-        "texto": "Dora la carne y mézclala con la salsa.",
-        "min": 10
+        "texto": "Dora el pavo y mézclalo con la salsa.",
+        "min": 6
        },
        {
         "icono": "mezclar",
-        "texto": "Monta capas de placas, carne y bechamel en la fuente; termina con bechamel y queso."
+        "texto": "Junta la pasta con la boloñesa en una fuente y cubre con queso."
        },
        {
         "icono": "horno",
-        "texto": "Hornea a 190 °C hasta que esté dorada.",
-        "min": 25
-       },
-       {
-        "icono": "emplatar",
-        "texto": "Deja reposar 5 minutos antes de cortar."
+        "texto": "Gratina a 220 °C hasta que se dore.",
+        "min": 10
        }
       ],
       "fotosUrl": ""
      },
      {
-      "id": "salmon-horno-pure",
-      "imagen": "pescado",
-      "foto": "https://images.pexels.com/photos/20187069/pexels-photo-20187069.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "Boys in Bristol Photography / Pexels",
-      "titulo": "Salmón al horno con puré de patata",
-      "subtitulo": "Con judías verdes",
-      "tiempo": 35,
-      "dificultad": "Fácil",
+      "id": "solomillo-cerdo-manzana-boniato",
+      "imagen": "generico",
+      "foto": "",
+      "fotoCredito": "",
+      "titulo": "Solomillo de cerdo con salsa de manzana",
+      "subtitulo": "Con puré de boniato y zanahorias glaseadas",
+      "tiempo": 50,
+      "dificultad": "Media",
       "raciones": 3,
       "plato": {
        "verdura": 40,
        "proteina": 35,
        "hidratos": 25
       },
-      "porque": "Pescado azul el fin de semana, que entre semana en el cole toca sobre todo pescado blanco.",
+      "porque": "Capricho de sábado: carne tierna con un toque dulce que encanta a los niños.",
       "etiquetas": [
-       "Pescado",
-       "Horno"
+       "Cerdo",
+       "Horno",
+       "Capricho"
       ],
-      "truco": "Compra lomos sin espinas y desmígale su parte sobre el puré; las judías, cortadas cortitas.",
+      "peques": false,
+      "gourmet": true,
+      "truco": "Córtale el solomillo en medallones finos y la salsa de manzana, aparte, como un puré para mojar.",
       "ingredientes": [
-       "3 lomos de salmón sin piel ni espinas",
-       "600 g de patatas",
-       "300 g de judías verdes",
-       "100 ml de leche",
-       "1 cucharada de mantequilla",
-       "1 limón",
-       "1 cucharada de aceite de oliva",
-       "1 pizca de sal"
-      ],
-      "pasos": [
-       {
-        "icono": "olla",
-        "texto": "Cuece las patatas peladas en trozos con un poco de sal.",
-        "min": 20
-       },
-       {
-        "icono": "olla",
-        "texto": "En los últimos 8 minutos, añade las judías verdes troceadas.",
-        "min": 8
-       },
-       {
-        "icono": "horno",
-        "texto": "Hornea el salmón con aceite y unas gotas de limón a 200 °C.",
-        "min": 12
-       },
-       {
-        "icono": "mezclar",
-        "texto": "Machaca las patatas con la leche caliente y la mantequilla."
-       },
-       {
-        "icono": "emplatar",
-        "texto": "Sirve el salmón sobre el puré con las judías al lado."
-       }
-      ],
-      "fotosUrl": ""
-     },
-     {
-      "id": "lentejas-estofadas-verduras",
-      "imagen": "sopa",
-      "foto": "https://images.pexels.com/photos/9928340/pexels-photo-9928340.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "Dasha Klimova / Pexels",
-      "titulo": "Lentejas estofadas con verduras",
-      "subtitulo": "Sin chorizo, con mucha verdura",
-      "tiempo": 45,
-      "dificultad": "Fácil",
-      "raciones": 3,
-      "plato": {
-       "verdura": 40,
-       "proteina": 30,
-       "hidratos": 30
-      },
-      "porque": "Legumbre distinta a las alubias del cole y cuchara de fin de semana.",
-      "etiquetas": [
-       "Legumbre",
-       "Olla"
-      ],
-      "truco": "Pasa por la batidora una parte de las verduras del guiso para espesar el caldo y que no encuentre trozos.",
-      "ingredientes": [
-       "300 g de lentejas pardinas",
+       "2 solomillos de cerdo (unos 700 g)",
+       "2 manzanas golden",
        "1 cebolla",
-       "2 zanahorias",
-       "1 pimiento verde",
-       "1 patata",
-       "1 tomate maduro",
-       "1 cucharadita de pimentón dulce",
-       "1 hoja de laurel",
+       "150 ml de caldo de pollo bajo en sal",
+       "2 boniatos",
+       "4 zanahorias",
+       "1 cucharadita de miel",
+       "20 g de mantequilla",
        "2 cucharadas de aceite de oliva"
       ],
       "pasos": [
        {
-        "icono": "lavar",
-        "texto": "Lava las lentejas bajo el grifo."
-       },
-       {
-        "icono": "cortar",
-        "texto": "Trocea la cebolla, la zanahoria, el pimiento, la patata y el tomate."
-       },
-       {
         "icono": "olla",
-        "texto": "Sofríe las verduras con el aceite y añade el pimentón.",
-        "min": 6
+        "texto": "Cuece los boniatos pelados en trozos y aplástalos con la mantequilla.",
+        "min": 20
        },
        {
-        "icono": "olla",
-        "texto": "Echa las lentejas, el laurel y agua hasta cubrir de sobra. Cuece a fuego suave.",
-        "min": 35
+        "icono": "sarten",
+        "texto": "Sella los solomillos por todos los lados.",
+        "min": 5
        },
        {
-        "icono": "mezclar",
-        "texto": "Tritura un cazo de verduras con caldo y devuélvelo a la olla."
+        "icono": "horno",
+        "texto": "Termínalos en el horno a 190 °C.",
+        "min": 15
+       },
+       {
+        "icono": "sarten",
+        "texto": "Pocha la cebolla con la manzana en dados, añade el caldo y tritura.",
+        "min": 12
+       },
+       {
+        "icono": "sarten",
+        "texto": "Saltea las zanahorias en rodajas con la miel hasta glasearlas.",
+        "min": 8
        },
        {
         "icono": "emplatar",
-        "texto": "Sirve con un poco de pan."
+        "texto": "Deja reposar la carne 5 minutos, córtala y sirve sobre la salsa."
        }
       ],
       "fotosUrl": ""
@@ -566,137 +608,77 @@ window.MENU_DATA = {
     "momento": "Cena",
     "opciones": [
      {
-      "id": "tortilla-patata-cebolla",
-      "imagen": "tortilla",
-      "foto": "https://images.pexels.com/photos/14941246/pexels-photo-14941246.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "MikeGz / Pexels",
-      "titulo": "Tortilla de patata",
-      "subtitulo": "Con ensalada de lechuga y zanahoria",
-      "tiempo": 40,
-      "dificultad": "Media",
-      "raciones": 3,
-      "plato": {
-       "verdura": 35,
-       "proteina": 30,
-       "hidratos": 35
-      },
-      "porque": "Un clásico de sábado por la noche; la ensalada pone la verdura.",
-      "etiquetas": [
-       "Huevo",
-       "Sartén",
-       "Favorita de niños"
-      ],
-      "peques": true,
-      "truco": "Córtale la tortilla en cuadraditos para comer con palillo y que él aliñe su ensalada.",
-      "ingredientes": [
-       "6 huevos",
-       "600 g de patatas",
-       "1 cebolla",
-       "1 lechuga",
-       "2 zanahorias",
-       "200 ml de aceite de oliva para pochar",
-       "1 pizca de sal"
-      ],
-      "pasos": [
-       {
-        "icono": "cortar",
-        "texto": "Pela las patatas y córtalas en láminas finas; pica la cebolla."
-       },
-       {
-        "icono": "sarten",
-        "texto": "Pocha patata y cebolla en el aceite a fuego medio-bajo hasta que estén tiernas.",
-        "min": 20
-       },
-       {
-        "icono": "mezclar",
-        "texto": "Escúrrelas y mézclalas con los huevos batidos."
-       },
-       {
-        "icono": "sarten",
-        "texto": "Cuaja la tortilla y dale la vuelta con un plato.",
-        "min": 6
-       },
-       {
-        "icono": "cortar",
-        "texto": "Corta la lechuga y ralla la zanahoria para la ensalada."
-       },
-       {
-        "icono": "emplatar",
-        "texto": "Sirve la tortilla con la ensalada."
-       }
-      ],
-      "fotosUrl": ""
-     },
-     {
-      "id": "varitas-merluza-caseras",
-      "imagen": "pescado",
-      "foto": "https://images.pexels.com/photos/5639413/pexels-photo-5639413.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "Shameel Mukkath / Pexels",
-      "titulo": "Varitas de pescado caseras al horno",
-      "subtitulo": "Con puré de calabacín",
-      "tiempo": 30,
+      "id": "pizza-casera-jamon-champinon",
+      "imagen": "pizza",
+      "foto": "https://images.pexels.com/photos/6147834/pexels-photo-6147834.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "fotoCredito": "Roman Odintsov / Pexels",
+      "titulo": "Pizza casera de jamón y champiñón",
+      "subtitulo": "Con masa fácil y ensalada",
+      "tiempo": 45,
       "dificultad": "Fácil",
       "raciones": 3,
       "plato": {
-       "verdura": 40,
-       "proteina": 35,
-       "hidratos": 25
+       "verdura": 30,
+       "proteina": 30,
+       "hidratos": 40
       },
-      "porque": "Pescado blanco sin espinas en un formato que se comen todos.",
+      "porque": "Noche de pizza en casa, hecha entre todos.",
       "etiquetas": [
-       "Pescado",
+       "Pizza",
        "Horno",
        "Favorita de niños"
       ],
       "peques": true,
-      "truco": "Que él reboce las varitas; para mojar, un poco de mayonesa suave con limón.",
+      "gourmet": false,
+      "truco": "Que él estire su trozo de masa y ponga los ingredientes; el champiñón, picado muy menudo bajo el queso.",
       "ingredientes": [
-       "500 g de lomos de merluza o abadejo sin piel ni espinas",
-       "2 huevos",
-       "120 g de pan rallado",
-       "3 calabacines",
-       "1 patata pequeña",
-       "1 quesito",
-       "1 cucharada de aceite de oliva",
-       "1 limón"
+       "400 g de harina de trigo",
+       "220 ml de agua templada",
+       "10 g de levadura fresca",
+       "3 cucharadas de aceite de oliva",
+       "200 g de tomate triturado",
+       "150 g de jamón york",
+       "150 g de champiñones",
+       "200 g de mozzarella",
+       "Orégano"
       ],
       "pasos": [
        {
-        "icono": "cortar",
-        "texto": "Corta el pescado en tiras gruesas y seca bien con papel."
+        "icono": "mezclar",
+        "texto": "Mezcla la harina, el agua, la levadura, el aceite y una pizca de sal y amasa."
        },
        {
         "icono": "mezclar",
-        "texto": "Pásalas por huevo batido y pan rallado."
+        "texto": "Deja reposar la masa tapada.",
+        "min": 20
+       },
+       {
+        "icono": "cortar",
+        "texto": "Lamina los champiñones y corta el jamón en tiras."
+       },
+       {
+        "icono": "mezclar",
+        "texto": "Estira la masa, unta el tomate y reparte los ingredientes."
        },
        {
         "icono": "horno",
-        "texto": "Hornéalas a 200 °C con un hilo de aceite, dándoles la vuelta a mitad.",
-        "min": 15
-       },
-       {
-        "icono": "olla",
-        "texto": "Mientras, cuece el calabacín con la patata.",
-        "min": 15
-       },
-       {
-        "icono": "mezclar",
-        "texto": "Tritura las verduras con el quesito."
+        "texto": "Hornea a 230 °C hasta que el borde se dore.",
+        "min": 12
        },
        {
         "icono": "emplatar",
-        "texto": "Sirve las varitas con el puré y unas gotas de limón."
+        "texto": "Córtala en porciones y sirve con ensalada."
        }
       ],
       "fotosUrl": ""
      },
      {
-      "id": "crepes-jamon-queso",
-      "imagen": "quesadilla",
-      "foto": "",
-      "fotoCredito": "",
-      "titulo": "Crepes salados de jamón y queso",
-      "subtitulo": "Con champiñones y espinacas",
+      "id": "hamburguesas-ternera-caseras",
+      "imagen": "hamburguesa",
+      "foto": "https://images.pexels.com/photos/5860581/pexels-photo-5860581.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "fotoCredito": "Gustavo Santana / Pexels",
+      "titulo": "Hamburguesas caseras de ternera",
+      "subtitulo": "Con boniato al horno y lechuga",
       "tiempo": 35,
       "dificultad": "Fácil",
       "raciones": 3,
@@ -705,50 +687,110 @@ window.MENU_DATA = {
        "proteina": 35,
        "hidratos": 30
       },
-      "porque": "Cena divertida de fin de semana, con la verdura escondida dentro.",
+      "porque": "Las hamburguesas de fin de semana, hechas en casa y sin ultraprocesados.",
       "etiquetas": [
+       "Ternera",
        "Sartén",
        "Favorita de niños"
       ],
       "peques": true,
-      "truco": "Que él rellene y enrolle su crepe; las espinacas, muy picadas y mezcladas con el queso.",
+      "gourmet": false,
+      "truco": "Hazle una mini hamburguesa en un panecillo pequeño y que él elija si lleva queso o tomate.",
       "ingredientes": [
-       "2 huevos",
-       "250 ml de leche",
-       "125 g de harina",
-       "6 lonchas de jamón york",
-       "6 lonchas de queso suave",
-       "150 g de champiñones",
-       "100 g de espinacas frescas",
-       "1 cucharada de mantequilla"
+       "500 g de carne picada de ternera",
+       "1/2 cebolla rallada",
+       "1 huevo",
+       "3 panes de hamburguesa",
+       "3 lonchas de queso",
+       "1 tomate",
+       "1 lechuga",
+       "2 boniatos",
+       "2 cucharadas de aceite de oliva"
       ],
       "pasos": [
        {
-        "icono": "mezclar",
-        "texto": "Bate los huevos, la leche y la harina hasta tener una masa lisa. Déjala reposar."
-       },
-       {
         "icono": "cortar",
-        "texto": "Lamina los champiñones y pica las espinacas."
+        "texto": "Corta los boniatos en bastones."
+       },
+       {
+        "icono": "horno",
+        "texto": "Ásalos a 210 °C con un chorrito de aceite.",
+        "min": 25
+       },
+       {
+        "icono": "mezclar",
+        "texto": "Mezcla la carne con la cebolla rallada y el huevo y forma las hamburguesas."
        },
        {
         "icono": "sarten",
-        "texto": "Saltea las verduras con un poco de mantequilla.",
-        "min": 5
+        "texto": "Hazlas a la plancha y pon el queso al final para que se funda.",
+        "min": 8
+       },
+       {
+        "icono": "emplatar",
+        "texto": "Monta los panes con lechuga y tomate y sirve con el boniato."
+       }
+      ],
+      "fotosUrl": ""
+     },
+     {
+      "id": "merluza-salsa-verde-almejas",
+      "imagen": "pescado",
+      "foto": "",
+      "fotoCredito": "",
+      "titulo": "Merluza en salsa verde con almejas",
+      "subtitulo": "Con patatitas cocidas y guisantes",
+      "tiempo": 40,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 30,
+       "proteina": 45,
+       "hidratos": 25
+      },
+      "porque": "El capricho de la noche: un clásico vasco muy suave.",
+      "etiquetas": [
+       "Pescado",
+       "Cazuela",
+       "Capricho"
+      ],
+      "peques": false,
+      "gourmet": true,
+      "truco": "Pídele lomos sin espinas y sírvele su trozo desmigado con patata y la salsa aparte; las almejas, para los mayores.",
+      "ingredientes": [
+       "3 lomos de merluza sin espinas (unos 600 g)",
+       "300 g de almejas",
+       "3 dientes de ajo",
+       "1 manojo de perejil",
+       "1 cucharada de harina",
+       "250 ml de caldo de pescado",
+       "150 g de guisantes",
+       "3 patatas medianas",
+       "3 cucharadas de aceite de oliva"
+      ],
+      "pasos": [
+       {
+        "icono": "lavar",
+        "texto": "Deja las almejas en agua con sal para que suelten la arena.",
+        "min": 20
+       },
+       {
+        "icono": "olla",
+        "texto": "Cuece las patatas en rodajas gruesas.",
+        "min": 15
        },
        {
         "icono": "sarten",
-        "texto": "Haz 6 crepes finos en la sartén untada de mantequilla.",
-        "min": 12
+        "texto": "Dora el ajo picado en una cazuela, añade la harina y luego el caldo poco a poco."
        },
        {
-        "icono": "envolver",
-        "texto": "Rellena cada crepe con jamón, queso y verdura y dóblalo."
+        "icono": "olla",
+        "texto": "Pon la merluza, las almejas y los guisantes y mueve la cazuela en vaivén.",
+        "min": 6
        },
        {
-        "icono": "sarten",
-        "texto": "Vuelve a pasarlos por la sartén para fundir el queso.",
-        "min": 3
+        "icono": "emplatar",
+        "texto": "Espolvorea perejil picado y sirve con las patatas."
        }
       ],
       "fotosUrl": ""
@@ -760,183 +802,188 @@ window.MENU_DATA = {
     "momento": "Comida",
     "opciones": [
      {
-      "id": "canelones-pollo",
-      "imagen": "pasta",
-      "foto": "https://images.pexels.com/photos/12409905/pexels-photo-12409905.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "Alexey Demidov / Pexels",
-      "titulo": "Canelones de pollo",
-      "subtitulo": "Con bechamel y tomate",
+      "id": "pollo-asado-patatas-zanahorias",
+      "imagen": "pollo-horno",
+      "foto": "https://images.pexels.com/photos/6210955/pexels-photo-6210955.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "fotoCredito": "Tim Douglas / Pexels",
+      "titulo": "Pollo asado con patatas y zanahorias",
+      "subtitulo": "Al limón y romero, todo en una bandeja",
       "tiempo": 60,
-      "dificultad": "Media",
-      "raciones": 3,
-      "plato": {
-       "verdura": 30,
-       "proteina": 35,
-       "hidratos": 35
-      },
-      "porque": "Plato de domingo que gusta a todos, con la verdura dentro del relleno.",
-      "etiquetas": [
-       "Pollo",
-       "Horno",
-       "Favorita de niños"
-      ],
-      "peques": true,
-      "truco": "Mezcla la zanahoria y el puerro muy picados con el pollo; que él ponga el queso por encima.",
-      "ingredientes": [
-       "12 placas de canelones precocidas",
-       "400 g de pechuga de pollo",
-       "1 puerro",
-       "1 zanahoria",
-       "200 g de tomate triturado",
-       "500 ml de bechamel",
-       "80 g de queso rallado",
-       "1 cucharada de aceite de oliva"
-      ],
-      "pasos": [
-       {
-        "icono": "olla",
-        "texto": "Hidrata las placas en agua caliente según el paquete.",
-        "min": 10
-       },
-       {
-        "icono": "cortar",
-        "texto": "Pica el puerro y la zanahoria muy finos."
-       },
-       {
-        "icono": "sarten",
-        "texto": "Saltea las verduras y el pollo picado hasta que esté hecho. Añade 3 cucharadas de bechamel.",
-        "min": 12
-       },
-       {
-        "icono": "envolver",
-        "texto": "Rellena y enrolla los canelones en la fuente sobre el tomate."
-       },
-       {
-        "icono": "horno",
-        "texto": "Cúbrelos con bechamel y queso y gratina a 200 °C.",
-        "min": 20
-       },
-       {
-        "icono": "emplatar",
-        "texto": "Sirve dos o tres por persona con una ensalada."
-       }
-      ],
-      "fotosUrl": ""
-     },
-     {
-      "id": "guiso-ternera-patatas",
-      "imagen": "generico",
-      "foto": "https://images.pexels.com/photos/10692537/pexels-photo-10692537.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "Yang Hao / Pexels",
-      "titulo": "Guiso de ternera con patatas",
-      "subtitulo": "Con zanahoria y guisantes",
-      "tiempo": 60,
-      "dificultad": "Media",
+      "dificultad": "Fácil",
       "raciones": 3,
       "plato": {
        "verdura": 35,
        "proteina": 35,
        "hidratos": 30
       },
-      "porque": "Carne roja una vez en semana, en guiso tierno y con mucha verdura.",
+      "porque": "Asado de domingo en una sola bandeja, sin complicaciones.",
       "etiquetas": [
-       "Ternera",
-       "Olla"
+       "Pollo",
+       "Horno",
+       "Favorita de niños"
       ],
-      "truco": "Córtale la carne en trocitos muy pequeños y blanditos; los guisantes, para pescarlos con la cuchara.",
+      "peques": true,
+      "gourmet": false,
+      "truco": "Dale la pechuga o el muslo ya deshuesado en tiras y que moje las patatas en el jugo.",
       "ingredientes": [
-       "500 g de ternera para guisar en tacos",
-       "3 patatas",
-       "2 zanahorias",
-       "150 g de guisantes",
+       "1 pollo troceado (unos 1,5 kg) o 6 muslos",
+       "4 patatas",
+       "4 zanahorias",
        "1 cebolla",
-       "1 tomate maduro",
-       "500 ml de caldo de verduras",
-       "2 cucharadas de aceite de oliva"
-      ],
-      "pasos": [
-       {
-        "icono": "cortar",
-        "texto": "Corta la carne en tacos pequeños y pica la cebolla, la zanahoria y el tomate."
-       },
-       {
-        "icono": "olla",
-        "texto": "Dora la carne en la olla con el aceite y sácala.",
-        "min": 5
-       },
-       {
-        "icono": "olla",
-        "texto": "Sofríe las verduras, vuelve a poner la carne y cubre con el caldo.",
-        "min": 35
-       },
-       {
-        "icono": "olla",
-        "texto": "Añade las patatas en trozos y los guisantes y cuece hasta que estén tiernas.",
-        "min": 15
-       },
-       {
-        "icono": "emplatar",
-        "texto": "Sirve en plato hondo."
-       }
-      ],
-      "fotosUrl": ""
-     },
-     {
-      "id": "pisto-con-huevo",
-      "imagen": "generico",
-      "foto": "",
-      "fotoCredito": "",
-      "titulo": "Pisto con huevo",
-      "subtitulo": "Con pan para mojar",
-      "tiempo": 40,
-      "dificultad": "Fácil",
-      "raciones": 3,
-      "plato": {
-       "verdura": 55,
-       "proteina": 25,
-       "hidratos": 20
-      },
-      "porque": "Comida de domingo muy de verdura, con huevo como proteína.",
-      "etiquetas": [
-       "Huevo",
-       "Sartén",
-       "Mucha verdura"
-      ],
-      "truco": "Tritúrale su parte del pisto como una salsa y que moje el pan en la yema bien cuajada.",
-      "ingredientes": [
-       "2 calabacines",
-       "1 pimiento rojo",
-       "1 pimiento verde",
-       "1 cebolla",
-       "400 g de tomate triturado",
-       "3 huevos",
-       "1 barra de pan",
-       "2 cucharadas de aceite de oliva",
+       "1 limón",
+       "2 ramitas de romero",
+       "100 ml de agua",
+       "3 cucharadas de aceite de oliva",
        "1 pizca de sal"
       ],
       "pasos": [
        {
         "icono": "cortar",
-        "texto": "Corta todas las verduras en dados pequeños."
+        "texto": "Corta las patatas, las zanahorias y la cebolla en trozos medianos."
+       },
+       {
+        "icono": "mezclar",
+        "texto": "Pon todo en una bandeja con el pollo, el limón en rodajas, el romero y el aceite."
+       },
+       {
+        "icono": "horno",
+        "texto": "Asa a 200 °C con el agua en el fondo.",
+        "min": 30
+       },
+       {
+        "icono": "horno",
+        "texto": "Dale la vuelta al pollo y sigue asando hasta que se dore.",
+        "min": 20
+       },
+       {
+        "icono": "emplatar",
+        "texto": "Sirve con el jugo de la bandeja por encima."
+       }
+      ],
+      "fotosUrl": ""
+     },
+     {
+      "id": "fideua-suave-pescado",
+      "imagen": "pasta",
+      "foto": "",
+      "fotoCredito": "",
+      "titulo": "Fideuá suave de pescado",
+      "subtitulo": "Con rape y calamar, y alioli para los mayores",
+      "tiempo": 40,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 25,
+       "proteina": 35,
+       "hidratos": 40
+      },
+      "porque": "Para los que prefieren pescado el domingo, con un formato que a los niños les recuerda a la pasta.",
+      "etiquetas": [
+       "Pescado",
+       "Paellera"
+      ],
+      "peques": false,
+      "gourmet": false,
+      "truco": "Pica el calamar muy pequeño y sírvele su ración sin la costra tostada, con un poco de caldo.",
+      "ingredientes": [
+       "300 g de fideo de fideuá",
+       "300 g de rape sin espinas",
+       "200 g de calamar limpio",
+       "1 pimiento rojo",
+       "2 tomates maduros rallados",
+       "1 litro de caldo de pescado bajo en sal",
+       "1 sobre de azafrán o colorante",
+       "4 cucharadas de aceite de oliva"
+      ],
+      "pasos": [
+       {
+        "icono": "cortar",
+        "texto": "Corta el rape en dados y el calamar en trocitos."
        },
        {
         "icono": "sarten",
-        "texto": "Pocha la cebolla y los pimientos a fuego suave.",
+        "texto": "Dora el pescado en la paellera y resérvalo.",
+        "min": 4
+       },
+       {
+        "icono": "sarten",
+        "texto": "Sofríe el pimiento picado y el tomate.",
+        "min": 8
+       },
+       {
+        "icono": "sarten",
+        "texto": "Tuesta un poco los fideos en el sofrito.",
+        "min": 2
+       },
+       {
+        "icono": "olla",
+        "texto": "Añade el caldo caliente con el azafrán y el pescado y cuece.",
+        "min": 12
+       },
+       {
+        "icono": "emplatar",
+        "texto": "Deja reposar 3 minutos y sirve."
+       }
+      ],
+      "fotosUrl": ""
+     },
+     {
+      "id": "lubina-horno-panaderas",
+      "imagen": "pescado",
+      "foto": "https://images.pexels.com/photos/19239119/pexels-photo-19239119.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "fotoCredito": "Farhad Ibrahimzade / Pexels",
+      "titulo": "Lubina al horno con patatas panaderas",
+      "subtitulo": "Con pimiento, cebolla y un refrito suave",
+      "tiempo": 55,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 35,
+       "proteina": 40,
+       "hidratos": 25
+      },
+      "porque": "El capricho del domingo: pescado al horno como en un asador.",
+      "etiquetas": [
+       "Pescado",
+       "Horno",
+       "Capricho"
+      ],
+      "peques": false,
+      "gourmet": true,
+      "truco": "Usa lomos de lubina sin espinas y repásalos con los dedos; a él sírvele el pescado desmigado sobre la patata, sin el refrito.",
+      "ingredientes": [
+       "3 lomos de lubina sin espinas (unos 600 g)",
+       "4 patatas medianas",
+       "1 cebolla",
+       "1 pimiento verde",
+       "1 pimiento rojo",
+       "2 dientes de ajo",
+       "1 cucharada de vinagre de manzana",
+       "100 ml de caldo de pescado",
+       "5 cucharadas de aceite de oliva"
+      ],
+      "pasos": [
+       {
+        "icono": "cortar",
+        "texto": "Corta las patatas en rodajas finas y la cebolla y los pimientos en tiras."
+       },
+       {
+        "icono": "horno",
+        "texto": "Hornea las verduras con aceite y el caldo a 190 °C.",
+        "min": 30
+       },
+       {
+        "icono": "horno",
+        "texto": "Pon encima la lubina con la piel hacia arriba y hornea.",
         "min": 10
        },
        {
         "icono": "sarten",
-        "texto": "Añade el calabacín y el tomate y deja que se haga.",
-        "min": 15
-       },
-       {
-        "icono": "sarten",
-        "texto": "Haz tres huecos, casca un huevo en cada uno y tapa hasta que cuajen bien.",
-        "min": 6
+        "texto": "Dora el ajo laminado en aceite y añade el vinagre fuera del fuego."
        },
        {
         "icono": "emplatar",
-        "texto": "Sirve con pan."
+        "texto": "Riega el pescado con el refrito y sirve."
        }
       ],
       "fotosUrl": ""
@@ -948,130 +995,13 @@ window.MENU_DATA = {
     "momento": "Cena",
     "opciones": [
      {
-      "id": "sopa-pollo-fideos",
-      "imagen": "sopa",
-      "foto": "https://images.pexels.com/photos/8878621/pexels-photo-8878621.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "Rafał Nawrocki / Pexels",
-      "titulo": "Sopa de pollo con fideos",
-      "subtitulo": "Con zanahoria y apio",
-      "tiempo": 35,
-      "dificultad": "Fácil",
-      "raciones": 3,
-      "plato": {
-       "verdura": 35,
-       "proteina": 35,
-       "hidratos": 30
-      },
-      "porque": "Cena calentita y ligera para cerrar el fin de semana.",
-      "etiquetas": [
-       "Pollo",
-       "Olla",
-       "Reconfortante"
-      ],
-      "peques": true,
-      "truco": "Que él elija la forma de pasta (fideos o estrellitas); la zanahoria, en rodajitas muy finas.",
-      "ingredientes": [
-       "2 contramuslos de pollo deshuesados",
-       "2 zanahorias",
-       "1 rama de apio",
-       "1 puerro",
-       "100 g de fideos finos",
-       "1,5 l de agua",
-       "1 pizca de sal"
-      ],
-      "pasos": [
-       {
-        "icono": "cortar",
-        "texto": "Corta la zanahoria, el apio y el puerro."
-       },
-       {
-        "icono": "olla",
-        "texto": "Cuece el pollo con las verduras en el agua a fuego suave.",
-        "min": 25
-       },
-       {
-        "icono": "cortar",
-        "texto": "Saca el pollo y desmenúzalo."
-       },
-       {
-        "icono": "olla",
-        "texto": "Echa los fideos al caldo y cuécelos.",
-        "min": 4
-       },
-       {
-        "icono": "emplatar",
-        "texto": "Vuelve a poner el pollo y sirve."
-       }
-      ],
-      "fotosUrl": ""
-     },
-     {
-      "id": "sandwich-mixto-crema-tomate",
-      "imagen": "generico",
-      "foto": "https://images.pexels.com/photos/14941252/pexels-photo-14941252.jpeg?auto=compress&cs=tinysrgb&w=800",
-      "fotoCredito": "MikeGz / Pexels",
-      "titulo": "Sándwich mixto de pavo y queso",
-      "subtitulo": "Con crema de tomate",
+      "id": "fajitas-pollo-pimientos",
+      "imagen": "quesadilla",
+      "foto": "https://images.pexels.com/photos/32375350/pexels-photo-32375350.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "fotoCredito": "DΛVΞ GΛRCIΛ / Pexels",
+      "titulo": "Fajitas de pollo y pimientos",
+      "subtitulo": "Para montar en la mesa",
       "tiempo": 25,
-      "dificultad": "Fácil",
-      "raciones": 3,
-      "plato": {
-       "verdura": 35,
-       "proteina": 30,
-       "hidratos": 35
-      },
-      "porque": "Cena sencilla de domingo con la verdura en una crema suave.",
-      "etiquetas": [
-       "Sartén",
-       "Olla",
-       "Favorita de niños"
-      ],
-      "peques": true,
-      "truco": "Córtale el sándwich en tiras para mojar en la crema de tomate.",
-      "ingredientes": [
-       "6 rebanadas de pan de molde",
-       "6 lonchas de pechuga de pavo",
-       "6 lonchas de queso suave",
-       "800 g de tomate triturado",
-       "1 zanahoria",
-       "1 cebolla",
-       "1 quesito",
-       "1 cucharada de aceite de oliva"
-      ],
-      "pasos": [
-       {
-        "icono": "cortar",
-        "texto": "Pica la cebolla y la zanahoria."
-       },
-       {
-        "icono": "olla",
-        "texto": "Sofríelas, añade el tomate y cuece a fuego suave.",
-        "min": 15
-       },
-       {
-        "icono": "mezclar",
-        "texto": "Tritura la crema con el quesito."
-       },
-       {
-        "icono": "sarten",
-        "texto": "Monta los sándwiches y dóralos en la sartén por los dos lados.",
-        "min": 6
-       },
-       {
-        "icono": "emplatar",
-        "texto": "Sirve el sándwich con la crema en taza."
-       }
-      ],
-      "fotosUrl": ""
-     },
-     {
-      "id": "lenguado-horno-verduras",
-      "imagen": "pescado",
-      "foto": "",
-      "fotoCredito": "",
-      "titulo": "Filetes de lenguado al horno",
-      "subtitulo": "Con patata y calabacín en rodajas",
-      "tiempo": 30,
       "dificultad": "Fácil",
       "raciones": 3,
       "plato": {
@@ -1079,46 +1009,177 @@ window.MENU_DATA = {
        "proteina": 35,
        "hidratos": 20
       },
-      "porque": "Pescado blanco ligero para la última cena del fin de semana.",
+      "porque": "Cena divertida de domingo, cada uno se monta la suya.",
       "etiquetas": [
-       "Pescado",
-       "Horno"
+       "Pollo",
+       "Sartén",
+       "Favorita de niños"
       ],
-      "truco": "Compra filetes limpios y repásalos con los dedos por si queda alguna espina; sírvele el pescado desmigado sobre la patata.",
+      "peques": true,
+      "gourmet": false,
+      "truco": "Pon los ingredientes en cuencos y que él enrolle su fajita; los pimientos, en tiras finas y bien hechos.",
       "ingredientes": [
-       "6 filetes de lenguado o gallo sin espinas",
-       "2 patatas",
-       "1 calabacín",
+       "6 tortillas de trigo",
+       "2 pechugas de pollo (unos 500 g)",
+       "1 pimiento rojo",
+       "1 pimiento verde",
        "1 cebolla",
-       "1 limón",
-       "2 cucharadas de aceite de oliva",
-       "Perejil"
+       "1 aguacate",
+       "100 g de queso rallado",
+       "1 tomate",
+       "2 cucharadas de aceite de oliva"
       ],
       "pasos": [
        {
         "icono": "cortar",
-        "texto": "Corta la patata, el calabacín y la cebolla en rodajas finas."
+        "texto": "Corta el pollo, los pimientos y la cebolla en tiras finas."
        },
        {
-        "icono": "horno",
-        "texto": "Hornea las verduras con aceite a 200 °C.",
-        "min": 15
-       },
-       {
-        "icono": "horno",
-        "texto": "Pon los filetes encima con limón y perejil y hornea un poco más.",
+        "icono": "sarten",
+        "texto": "Saltea las verduras hasta que estén tiernas.",
         "min": 8
        },
        {
+        "icono": "sarten",
+        "texto": "Añade el pollo y dóralo.",
+        "min": 6
+       },
+       {
+        "icono": "mezclar",
+        "texto": "Haz un guacamole suave con el aguacate y el tomate picado."
+       },
+       {
         "icono": "emplatar",
-        "texto": "Sirve el pescado con las verduras."
+        "texto": "Calienta las tortillas y lleva todo a la mesa para montar."
+       }
+      ],
+      "fotosUrl": ""
+     },
+     {
+      "id": "huevos-rotos-patatas-jamon",
+      "imagen": "tortilla",
+      "foto": "",
+      "fotoCredito": "",
+      "titulo": "Huevos rotos con patatas al horno y jamón",
+      "subtitulo": "Con pimientos asados",
+      "tiempo": 35,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 30,
+       "proteina": 35,
+       "hidratos": 35
+      },
+      "porque": "Un clásico de bar en versión casera y menos frita.",
+      "etiquetas": [
+       "Huevo",
+       "Horno",
+       "Sartén"
+      ],
+      "peques": false,
+      "gourmet": false,
+      "truco": "Hazle su huevo bien cuajado y cortado sobre las patatas, y que él rompa la yema de los mayores.",
+      "ingredientes": [
+       "5 patatas medianas",
+       "6 huevos",
+       "100 g de jamón serrano en lonchas finas",
+       "2 pimientos rojos",
+       "1 cebolla",
+       "4 cucharadas de aceite de oliva",
+       "1 pizca de sal"
+      ],
+      "pasos": [
+       {
+        "icono": "cortar",
+        "texto": "Corta las patatas en gajos finos y los pimientos y la cebolla en tiras."
+       },
+       {
+        "icono": "horno",
+        "texto": "Asa las patatas y las verduras con aceite a 210 °C.",
+        "min": 25
+       },
+       {
+        "icono": "sarten",
+        "texto": "Fríe o haz a la plancha los huevos.",
+        "min": 4
+       },
+       {
+        "icono": "cortar",
+        "texto": "Corta el jamón en trocitos."
+       },
+       {
+        "icono": "emplatar",
+        "texto": "Pon los huevos sobre las patatas, rómpelos y reparte el jamón."
+       }
+      ],
+      "fotosUrl": ""
+     },
+     {
+      "id": "hojaldre-salmon-espinacas",
+      "imagen": "pescado",
+      "foto": "",
+      "fotoCredito": "",
+      "titulo": "Hojaldre de salmón y espinacas",
+      "subtitulo": "Con queso crema y ensalada verde",
+      "tiempo": 50,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 35,
+       "proteina": 35,
+       "hidratos": 30
+      },
+      "porque": "El capricho para cerrar el finde: un horneado bonito para la mesa.",
+      "etiquetas": [
+       "Pescado",
+       "Horno",
+       "Capricho"
+      ],
+      "peques": false,
+      "gourmet": true,
+      "truco": "Que él pinte el hojaldre con huevo y sírvele una loncha con el salmón bien desmigado; sin piel ni espinas.",
+      "ingredientes": [
+       "1 lámina de hojaldre refrigerado",
+       "2 lomos de salmón sin piel ni espinas (unos 500 g)",
+       "200 g de espinacas frescas",
+       "100 g de queso crema",
+       "1 huevo",
+       "1/2 limón",
+       "1 lechuga",
+       "1 cucharada de aceite de oliva"
+      ],
+      "pasos": [
+       {
+        "icono": "sarten",
+        "texto": "Saltea las espinacas hasta que se ablanden y escúrrelas muy bien.",
+        "min": 3
+       },
+       {
+        "icono": "mezclar",
+        "texto": "Mezcla las espinacas con el queso crema y unas gotas de limón."
+       },
+       {
+        "icono": "envolver",
+        "texto": "Extiende el hojaldre, pon la mitad de la crema, el salmón y el resto encima y ciérralo."
+       },
+       {
+        "icono": "mezclar",
+        "texto": "Haz unos cortes por encima y píntalo con huevo batido."
+       },
+       {
+        "icono": "horno",
+        "texto": "Hornea a 200 °C hasta que esté dorado.",
+        "min": 25
+       },
+       {
+        "icono": "emplatar",
+        "texto": "Deja reposar 5 minutos, córtalo en rebanadas y sirve con ensalada."
        }
       ],
       "fotosUrl": ""
      }
     ]
    }
-  ],
-  "compra": []
+  ]
  }
 };
