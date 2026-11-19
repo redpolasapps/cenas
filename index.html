@@ -73,6 +73,8 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 .likeg{position:static;display:inline-block;font-size:28px;width:56px;height:56px;line-height:56px;border-radius:28px;vertical-align:middle;margin-left:10px}
 .body{position:relative}
 .body h3{padding-right:46px}
+.peq.hea{background:#DDF1E4;color:#256B3C}
+.peq + .peq{margin-left:6px}
 .peq.gou{background:#EFE3F7;color:#6B3F8A}
 .body h3{font-size:21px;line-height:1.2}
 .body .sub{color:var(--soft);font-size:15px;margin-top:3px}
@@ -191,6 +193,25 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 .chip.on{background:var(--terra);border-color:var(--terra);color:#fff}
 .cuenta{font-size:14px;color:var(--soft);font-weight:700;margin:8px 0 10px}
 .ult{font-size:13px;color:var(--terra-d);font-weight:800;margin-top:6px}
+.semnav{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:space-between;justify-content:space-between;margin:0 0 10px;font-weight:800;color:var(--soft);font-size:15px}
+.sbtn{width:40px;height:40px;border-radius:20px;background:#fff;box-shadow:0 2px 0 var(--line);font-size:22px;color:var(--terra-d);font-weight:800}
+.tira{display:-webkit-flex;display:flex;margin:0 -3px 14px}
+.tdia{-webkit-flex:1;flex:1;margin:0 3px;background:#fff;border-radius:16px;padding:8px 0 7px;box-shadow:0 2px 0 var(--line);text-align:center;position:relative}
+.tdia .tl{display:block;font-size:12px;font-weight:800;color:var(--soft)}
+.tdia .tn{display:block;font-family:"Fraunces",Georgia,serif;font-size:22px;font-weight:700;line-height:26px}
+.tdia .th{display:block;font-size:10px;font-weight:800;color:var(--terra);text-transform:uppercase}
+.tdia.libre{opacity:.45}
+.tdia.fuera{opacity:.3}
+.tdia.on{background:var(--terra);box-shadow:none}
+.tdia.on .tl,.tdia.on .tn,.tdia.on .th{color:#fff}
+.dcard{background:#fff;border-radius:22px;padding:18px 18px 8px;box-shadow:0 2px 0 var(--line),0 8px 24px rgba(80,50,20,.06)}
+.dtit{font-family:"Fraunces",Georgia,serif;font-size:22px;font-weight:700;margin-bottom:10px}
+.dhoy{font-family:"Nunito",sans-serif;font-size:12px;background:var(--terra);color:#fff;border-radius:8px;padding:2px 8px;vertical-align:4px}
+.dnota{background:#FFF6DC;color:#6B5200;border-radius:12px;padding:8px 12px;font-weight:800;font-size:14px;margin-bottom:10px}
+.dpl{display:-webkit-flex;display:flex;-webkit-align-items:flex-start;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}
+.dpl .di{font-size:26px;width:42px;-webkit-flex:none;flex:none;line-height:30px}
+.dpl .dl{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--terra-d)}
+.dpl .dp{font-size:17px;font-weight:700;line-height:1.3;margin-top:2px}
 .vacio{text-align:center;color:var(--soft);padding:50px 20px;font-size:18px;line-height:1.5}
 @media (max-width:900px){ .card{width:50%} }
 @media (max-width:600px){
@@ -200,12 +221,6 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   .top{-webkit-align-items:center;align-items:center}
   .top .hora{font-size:26px}
   .top .bbig{padding:9px 11px;min-width:0;font-size:14px;margin-right:8px!important}
-  .chd{display:none}
-  .crow{display:block}
-  .crow>div{width:auto;margin:6px 0}
-  .cday.fuera{display:none}
-  .cday{padding:12px 14px;font-size:15px}
-  .cnum .cwd{display:inline;text-transform:capitalize;font-family:"Nunito",sans-serif;font-size:16px;font-weight:800;color:var(--soft)}
   .mtit{min-width:150px;font-size:20px}
   .cole svg{display:none}
   .det-img{margin:0 auto 16px}
@@ -259,21 +274,8 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
 
   /* ---------- Favoritas ---------- */
-  var FAVSHARED = {};
-  function esFav(id){ var l = store('fav_'+id); if(l==='1') return true; if(l==='0') return false; return !!FAVSHARED[id]; }
+  function esFav(id){ return store('fav_'+id)==='1'; }
   function corazon(id, grande){ var f = esFav(id); return '<button class="like'+(grande?' likeg':'')+(f?' on':'')+'" data-like="'+esc(id)+'">'+(f?'❤️':'🤍')+'</button>'; }
-  function pendientesFav(){
-    var add=[], del=[];
-    try{
-      for(var i=0;i<localStorage.length;i++){
-        var k=localStorage.key(i); if(k.indexOf('fav_')!==0) continue;
-        var id=k.slice(4), v=localStorage.getItem(k);
-        if(v==='1' && !FAVSHARED[id]) add.push(id);
-        if(v==='0' && FAVSHARED[id]) del.push(id);
-      }
-    }catch(e){}
-    return {add:add, del:del};
-  }
   function cargaJSON(url, cb){
     try{
       var x = new XMLHttpRequest();
@@ -340,7 +342,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     RECETAS[r.id] = r; r._bg = bg;
     return '<div class="card'+(mini?' mini':'')+'"><div class="card-in" data-r="'+esc(r.id)+'">'+
       '<div class="hero" style="background:'+bg+'">'+(n?'<span class="num">Opción '+n+'</span>':'')+cocina(r)+dish(r)+badge(r)+'</div>'+
-      '<div class="body">'+corazon(r.id)+(r.peques?'<div class="peq">🧒 Le encantará al peque</div>':'')+(r.gourmet?'<div class="peq gou">✨ Para darse un capricho</div>':'')+'<h3>'+esc(r.titulo)+'</h3>'+
+      '<div class="body">'+corazon(r.id)+(r.peques?'<div class="peq">🧒 Le encantará al peque</div>':'')+(r.healthy?'<div class="peq hea">💪 Healthy</div>':'')+(r.gourmet?'<div class="peq gou">✨ Para darse un capricho</div>':'')+'<h3>'+esc(r.titulo)+'</h3>'+
       (r.subtitulo?'<div class="sub">'+esc(r.subtitulo)+'</div>':'')+
       '<div class="meta"><i>⏱ <b>'+esc(r.tiempo)+' min</b></i><i>👩‍🍳 <b>'+esc(r.dificultad)+'</b></i></div>'+
       (!mini && r.porque?'<div class="por">'+esc(r.porque)+'</div>':'')+
@@ -348,9 +350,11 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
       '</div></div></div>';
   }
   var INFO = '<div class="info"><div class="lbl">ℹ️ Cómo funciona</div>'+
-    'Cada día hacia las 12:00 un agente lee el menú del cole y prepara 6 cenas que lo complementan (si falla, lo reintenta a las 13:47 y a las 18:47). '+
-    'La mayoría son recetas nuevas, para que el recetario vaya creciendo; a veces repite alguna del <b>📖 Recetario</b> que no haya salido en las últimas 2–3 semanas, dando prioridad a las que marcáis con <b>❤️</b>. '+
-    'Los jueves prepara también el fin de semana. La app se recarga sola cada 30 minutos.</div>';
+    'Cada día hacia mediodía se preparan <b>6 cenas</b> que complementan lo que el peque ha comido en el cole y el equilibrio de la semana. '+
+    'Al menos 2 son <b>💪 healthy</b> (más proteína y verdura, menos hidrato), 2 están pensadas para que <b>🧒 le encanten al peque</b> y la última es un <b>✨ capricho</b> más elaborado. '+
+    'Casi todas son <b>recetas nuevas</b>; como mucho 2 se repiten del <b>📖 Recetario</b>, y solo si llevan 2–3 semanas sin salir. '+
+    'Los jueves se prepara también el fin de semana. La app se actualiza sola.<br>'+
+    '<b>❤️ Favoritas:</b> marca con el corazón las recetas que os gusten para encontrarlas rápido en el Recetario. Se guardan solo en este aparato.</div>';
   var LEYENDA = '<div class="leyenda">El círculo pequeño muestra el equilibrio:<i style="background:#7DB56F"></i>verdura<i style="background:#E07F63"></i>proteína<i style="background:#EDBB57"></i>hidratos</div>';
 
   function cabecera(titulo, dia){
@@ -434,6 +438,52 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
       x.send();
     }catch(e){ MENUS[k]=null; }
   }
+  var diaSel = null;
+  function esMovil(){ return (window.innerWidth||document.documentElement.clientWidth) < 600; }
+  function kdia(d){ return ym(d)+'-'+(d.getDate()<10?'0':'')+d.getDate(); }
+  var DCORTO = ['D','L','M','X','J','V','S'];
+  function etiquetaPlato(p, j, n){
+    if(j===0) return ['🥣','Primero'];
+    if(j===1) return ['🍽️','Segundo'];
+    if(/fruta|yogur|postre|natillas|helado/i.test(p)) return ['🍎','Postre'];
+    return ['🥗','Acompañamiento'];
+  }
+  function coleMovil(dias, hk){
+    // Días lectivos del mes visible (lunes a viernes)
+    var lista = [], d = new Date(mesVista.getFullYear(), mesVista.getMonth(), 1);
+    while(d.getMonth()===mesVista.getMonth()){ if(d.getDay()>0 && d.getDay()<6) lista.push(new Date(d.getTime())); d.setDate(d.getDate()+1); }
+    var claves = lista.map(kdia);
+    if(!diaSel || claves.indexOf(diaSel)<0){
+      diaSel = claves.indexOf(hk)>=0 ? hk : (claves.filter(function(k){return dias[k];})[0] || claves[0]);
+    }
+    var sel = new Date(diaSel+'T12:00:00');
+    // Tira de días: semana del día elegido
+    var lunes = new Date(sel.getFullYear(), sel.getMonth(), sel.getDate()-((sel.getDay()+6)%7));
+    var s = '<div class="semnav"><button class="sbtn" data-sem="-1">‹</button><span>Semana del '+lunes.getDate()+' de '+MESES[lunes.getMonth()]+'</span><button class="sbtn" data-sem="1">›</button></div>';
+    s += '<div class="tira">';
+    for(var i=0;i<5;i++){
+      var dd = new Date(lunes.getFullYear(), lunes.getMonth(), lunes.getDate()+i), k = kdia(dd);
+      var fuera = dd.getMonth()!==mesVista.getMonth();
+      s += '<button class="tdia'+(k===diaSel?' on':'')+(k===hk?' hoy':'')+(dias[k]?'':' libre')+(fuera?' fuera':'')+'" data-dsel="'+k+'">'+
+        '<span class="tl">'+DCORTO[dd.getDay()]+'</span><span class="tn">'+dd.getDate()+'</span>'+(k===hk?'<span class="th">hoy</span>':'')+'</button>';
+    }
+    s += '</div>';
+    // Tarjeta del día elegido
+    var info = dias[diaSel];
+    s += '<div class="dcard"><div class="dtit">'+DIAS[sel.getDay()].charAt(0).toUpperCase()+DIAS[sel.getDay()].slice(1)+' '+sel.getDate()+' de '+MESES[sel.getMonth()]+(diaSel===hk?' <span class="dhoy">Hoy</span>':'')+'</div>';
+    if(info && info.nota) s += '<div class="dnota">🎉 '+esc(info.nota)+'</div>';
+    if(info){
+      (info.platos||[]).forEach(function(p,j){
+        var e = etiquetaPlato(p,j,(info.platos||[]).length);
+        s += '<div class="dpl"><span class="di">'+e[0]+'</span><div><div class="dl">'+e[1]+'</div><div class="dp">'+esc(p)+'</div></div></div>';
+      });
+    } else {
+      s += '<div class="vacio" style="padding:24px 10px">No hay menú para este día (festivo o sin datos).</div>';
+    }
+    s += '</div>';
+    return s;
+  }
+
   function vCole(){
     var hoy = new Date();
     if(!mesVista) mesVista = new Date(hoy.getFullYear(), hoy.getMonth(), 1);
@@ -445,6 +495,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     if(m==='cargando'){ return s+'<div class="vacio">Cargando…</div>'; }
     if(!m){ return s+'<div class="vacio">Todavía no hay menú para este mes.<br>Mándale al agente una foto del menú nuevo.</div>'; }
     var dias = m.dias||{}, hk = ym(hoy)+'-'+(hoy.getDate()<10?'0':'')+hoy.getDate();
+    if(esMovil()) return s + coleMovil(dias, hk) + (m.notas?'<div class="pie" style="text-align:left">'+esc(m.notas)+'</div>':'');
     s += '<div class="cal"><div class="crow chd"><div>Lunes</div><div>Martes</div><div>Miércoles</div><div>Jueves</div><div>Viernes</div></div>';
     var d = new Date(mesVista.getFullYear(), mesVista.getMonth(), 1);
     // retroceder al lunes
@@ -478,16 +529,9 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     var s = cabecera('Recetario', 'Todas las recetas que ha propuesto el agente');
     if(HIST===undefined){ HIST='cargando'; cargaJSON('recetas/historial.json', function(d){ HIST = d && d.recetas ? d.recetas : []; if(vista==='recetario') render(); }); }
     if(HIST==='cargando') return s+'<div class="vacio">Cargando recetario…</div>';
-    var pf = pendientesFav();
-    if(pf.add.length || pf.del.length){
-      var body = pf.add.map(function(i){return '+'+i;}).concat(pf.del.map(function(i){return '-'+i;})).join('\n');
-      s += '<div class="info" style="border-color:#F2B8C0"><div class="lbl">❤️ Favoritas pendientes de enviar</div>'+
-        'Has hecho '+(pf.add.length+pf.del.length)+' cambio(s) en las favoritas desde este aparato. Para que el agente les dé prioridad, envíaselas (necesitas tener abierta tu sesión de GitHub):'+
-        '<a class="btn" style="margin-top:12px;text-decoration:none" target="_blank" rel="noopener" href="https://github.com/redpolasapps/cenas/issues/new?title='+encodeURIComponent('Favoritos')+'&body='+encodeURIComponent(body)+'">Enviar favoritas al agente</a></div>';
-    }
     s += '<input id="q" class="buscar" type="search" placeholder="🔍 Buscar por nombre o ingrediente…" value="'+esc(FIL.q)+'" autocomplete="off">';
     s += '<div class="chips">';
-    [['','Todas'],['fav','❤️ Favoritas'],['peques','🧒 Peques'],['gourmet','✨ Capricho'],['cena','🌙 Cenas'],['finde','☀️ Finde']].forEach(function(t){
+    [['','Todas'],['fav','❤️ Favoritas'],['peques','🧒 Peques'],['healthy','💪 Healthy'],['gourmet','✨ Capricho'],['cena','🌙 Cenas'],['finde','☀️ Finde']].forEach(function(t){
       s += '<button class="chip'+(FIL.tipo===t[0]?' on':'')+'" data-ft="'+t[0]+'">'+t[1]+'</button>';
     });
     s += '</div><div class="chips"><button class="chip'+(FIL.cocina===''?' on':'')+'" data-fc="">Todas las cocinas</button>';
@@ -506,6 +550,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
       if(FIL.tipo==='fav' && !esFav(r.id)) return;
       if(FIL.tipo==='peques' && !r.peques) return;
       if(FIL.tipo==='gourmet' && !r.gourmet) return;
+      if(FIL.tipo==='healthy' && !r.healthy) return;
       if(FIL.tipo==='cena' && !usos.some(function(u){return u.dia==='Entre semana';})) return;
       if(FIL.tipo==='finde' && !usos.some(function(u){return u.dia!=='Entre semana';})) return;
       if(q){ var txt = norm(r.titulo+' '+(r.subtitulo||'')+' '+(r.cocina||'')+' '+(r.etiquetas||[]).join(' ')+' '+(r.ingredientes||[]).join(' ')); if(txt.indexOf(q)<0) return; }
@@ -615,9 +660,20 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
         if(t.getAttribute('data-home')){ paraTimer(); $('cook').className='cook'; $('ov').className='ov'; ir('hoy'); return; }
         if(t.getAttribute('data-r')){ abrir(t.getAttribute('data-r')); return; }
         if(t.getAttribute('data-v')){ ir(t.getAttribute('data-v')); return; }
+        if(t.getAttribute('data-dsel')){
+          var nk=t.getAttribute('data-dsel'), nd=new Date(nk+'T12:00:00');
+          if(nd.getMonth()!==mesVista.getMonth()) mesVista=new Date(nd.getFullYear(), nd.getMonth(), 1);
+          diaSel=nk; render(); return;
+        }
+        if(t.getAttribute('data-sem')){
+          var sd=new Date(diaSel+'T12:00:00'); sd.setDate(sd.getDate()+7*parseInt(t.getAttribute('data-sem'),10));
+          if(sd.getDay()===0) sd.setDate(sd.getDate()-2); if(sd.getDay()===6) sd.setDate(sd.getDate()-1);
+          if(sd.getMonth()!==mesVista.getMonth()) mesVista=new Date(sd.getFullYear(), sd.getMonth(), 1);
+          diaSel=kdia(sd); render(); return;
+        }
         if(t.getAttribute('data-m')){
           var md=parseInt(t.getAttribute('data-m'),10);
-          mesVista=new Date(mesVista.getFullYear(), mesVista.getMonth()+md, 1); render(); return;
+          mesVista=new Date(mesVista.getFullYear(), mesVista.getMonth()+md, 1); diaSel=null; render(); return;
         }
         if(t.getAttribute('data-t')){
           var id=t.getAttribute('data-t'), box=$('cb_'+id), op=box.className.indexOf('abierta')<0;
@@ -648,6 +704,8 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     render();
   }
   window.addEventListener('hashchange', desdeHash);
+  var eraMovil = esMovil();
+  window.addEventListener('resize', function(){ var em=esMovil(); if(em!==eraMovil){ eraMovil=em; if(vista==='cole') render(); } });
 
   // Reloj, y recarga automática de datos cada 30 min (si no se está cocinando)
   setInterval(function(){ var h=$('hora'); if(h) h.innerHTML=hora(); }, 20000);
@@ -657,9 +715,6 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     }
   }, 30*60*1000);
 
-  cargaJSON('recetas/favoritos.json', function(d){
-    if(d && d.favoritas){ d.favoritas.forEach(function(id){ FAVSHARED[id]=true; }); render(); }
-  });
   desdeHash();
 })();
 </script>

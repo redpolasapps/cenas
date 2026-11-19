@@ -1,7 +1,7 @@
 # Instrucciones del agente de cenas
 
 Este repositorio es una web app de cocina para un iPad mini 2 (Safari de iOS 12) que hay en la cocina. Se publica con GitHub Pages en http://redpolasapps.fyi/cenas/.
-Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.json`**. En modo completo, también `data.js` y `recetas/historial.json`. No toques `index.html`, `platos.js`, `scripts/` ni `.github/`.
+Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, también `data.js` y `recetas/historial.json`. No toques `index.html`, `platos.js`, `scripts/` ni `.github/`.
 
 ## Cómo se reparte el trabajo
 
@@ -23,7 +23,7 @@ Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.js
       { "reutilizar": "id-de-una-receta-del-recetario", "porque": "opcional: por qué encaja hoy" },
       {
         "id": "slug-unico-nuevo", "titulo": "...", "subtitulo": "...", "cocina": "Mediterránea", "imagen": "pescado",
-        "peques": false, "gourmet": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "peques": false, "healthy": true, "gourmet": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
         "plato": { "verdura": 50, "proteina": 30, "hidratos": 20 },
         "porque": "...", "truco": "...", "etiquetas": ["Pescado", "Horno"],
         "guia": "Una o dos frases para el redactor: ingredientes principales, técnica y cualquier detalle que no deba cambiar (p. ej. 'merluza en lomos sin espinas al horno sobre cama de patata en rodajas finas y pimiento rojo; salsa de limón aparte').",
@@ -44,7 +44,7 @@ Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.js
 ## Qué hacer en cada ejecución
 
 1. Mira la fecha de hoy en Europe/Madrid.
-   - **Favoritas:** lee `recetas/favoritos.json` (`favoritas` es una lista de ids y `issues_procesados` una lista de números). Mira los issues abiertos del repositorio con `gh issue list --repo redpolasapps/cenas --state open --json number,title,body`, o con `gh api repos/redpolasapps/cenas/issues`. Para cada issue cuyo título empiece por "Favoritos" y cuyo número no esté en `issues_procesados`: cada línea `+<id>` añade ese id a `favoritas` y cada línea `-<id>` lo quita. Añade el número a `issues_procesados` e intenta cerrar el issue con `gh issue close <n> --comment "Favoritas guardadas"`. Si no puedes cerrarlo, no pasa nada. Si `gh` no funciona, sigue sin tocar las favoritas.
+   - Las favoritas (❤️) se guardan solo en el aparato de cada persona, porque la app la usan varias casas. El agente no las ve: elige del recetario según su propio criterio.
 2. Lee el menú del colegio en `menus/AAAA-MM.json` (por ejemplo, `menus/2026-11.json`), en la clave `dias["AAAA-MM-DD"].platos`.
    - Si hoy es lunes a viernes y está en el menú, rellena `hoy.cole.platos` con esos platos y pon `hoy.cole.nota` si existe.
    - Si es sábado o domingo, festivo o no hay menú para hoy, deja `hoy.cole` como `{}`. La app mostrará "Hoy no hay cole". Si no existe el archivo del mes, haz lo mismo y añade en `hoy.consejo` que falta el menú del mes y hay que pasárselo al agente.
@@ -66,14 +66,15 @@ Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.js
      - Pescado sin espinas y carne sin huesos pequeños.
    - **Al menos dos de las 6 tienen que ser "seguras" para el peque:** un formato que suelen aceptar todos los niños (tortilla, croquetas, albóndigas, pasta, crema con quesito, rebozados al horno, hamburguesitas, mini pizzas, nuggets caseros, quesadillas…), con la verdura escondida o en trocitos pequeños. Márcalas con `"peques": true`.
    - En cada receta, añade `"truco"`: una frase para que el niño se la coma (cómo presentarla, cómo esconder la verdura, cómo hacer que participe o cómo servirle su parte aparte). Por ejemplo: "Tritura la verdura en la salsa" o "Que él ponga el queso por encima".
+   - **Al menos dos de las 6 tienen que ser "healthy"**: más proteína y verdura, y poco hidrato (sin pasta, arroz, pan ni patata como base, o en poca cantidad). Por ejemplo: pescado o pollo a la plancha o al horno con verduras, tortillas de verdura, revueltos, ensaladas templadas con proteína, cremas de verdura con huevo o pollo, o brochetas. Tienen que seguir siendo aptas y apetecibles para un niño de 4 años: texturas suaves y sabores sencillos. Márcalas con `"healthy": true`. Una cena puede ser a la vez `peques` y `healthy`. La de capricho no cuenta como healthy.
    - Fáciles (30 minutos o menos y pocos cacharros), equilibradas y ricas.
    - **La sexta (la última) es la opción "capricho":** una receta más elaborada y algo gourmet, para los días en que haya más ganas de cocinar. Puede llevar hasta 45–60 minutos, con algún ingrediente o técnica especial (un buen pescado o carne, una salsa, un horneado o un emplatado bonito), pero siempre factible en casa. Márcala con `"gourmet": true` y explica en `truco` cómo servirle al niño una versión que se coma (por ejemplo, la salsa aparte).
    - **Compensa el mediodía.** Si hubo legumbre y carne, cena pescado o huevo. Si hubo pescado, cena huevo o carne blanca. Si hubo mucho hidrato, cena poco. Siempre mucha verdura.
    - Las 6 tienen que ser distintas entre sí: usa proteínas diferentes y técnicas diferentes (horno, sartén, olla).
    - No repitas recetas que aparezcan en el `data.js` actual (`hoy.cenas`). Así se evita repetir lo de ayer.
-   - **Recetario (`recetas/historial.json`):** de las 6 cenas, **como mucho 2** pueden salir del recetario. El resto tienen que ser **recetas nuevas**, para que el recetario vaya creciendo.
-     - Solo puedes reutilizar recetas que no se hayan usado en los últimos 14 días (mira `usos[].fecha`), y que encajen con el día.
-     - **Prioriza las favoritas** (`recetas/favoritos.json`): si hay alguna favorita que encaje y no haya salido en 14 días, ponla.
+   - **Recetario (`recetas/historial.json`):** la prioridad es **crear recetas nuevas**, para que el recetario vaya creciendo. De las 6 cenas, **como mucho 2** pueden salir del recetario, y es perfectamente válido que no salga ninguna.
+     - Solo puedes reutilizar una receta si han pasado **al menos 14 días (2–3 semanas) desde la última vez que salió** (mira la fecha más reciente de `usos[].fecha`) y si encaja con el día.
+     - Elige tú cuáles repetir, según lo que mejor encaje con el menú y la semana. Prefiere las que salieron hace más tiempo o las que tuvieron buena pinta (fáciles, aptas para el peque).
      - Una receta reutilizada se copia tal cual del recetario (mismo `id`, pasos y foto). Así no hay que volver a buscar la foto ni a escribirla. Mira antes que tenga el formato actual (pasos detallados con `usa`, `cocina`, etc.). Si le falta algo, complétalo.
      - Antes de crear una receta nueva, comprueba que no exista ya una igual o casi igual en el recetario (mismo plato con otro nombre). Si existe, reutilízala en vez de duplicarla.
    - **Gustos de la familia:**
@@ -88,7 +89,7 @@ Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.js
    - Los gustos de la familia (mediterráneo, algo de japonés y americano fácil, nada nórdico ni alemán) también valen para el fin de semana.
    - **El fin de semana es libre:** no apliques el equilibrio semanal ni compenses lo del cole. Propón platos ricos y apetecibles para toda la familia, incluidos los típicos de fin de semana (paella, pizza casera, hamburguesas, asados, guisos…). Pueden ser algo más elaborados (de hasta 60 minutos). Valen las mismas reglas del niño de 4 años, y en cada bloque al menos una opción lleva `"peques": true`. **La tercera opción de cada bloque es la de capricho** (más elaborada y gourmet, con `"gourmet": true`), con las mismas reglas que la sexta cena entre semana.
    - La lista de la compra la monta la app **por receta** a partir de `ingredientes`. Escribe los ingredientes con cantidades concretas ("3 calabacines", "200 g de queso rallado"), un ingrediente por línea. Ya no hace falta rellenar `compra`: déjalo como `[]`.
-   - En el fin de semana, como mucho 1 opción por bloque puede salir del recetario (con las mismas reglas: 14 días sin usar y prioridad a las favoritas).
+   - En el fin de semana, como mucho 1 opción por bloque puede salir del recetario (con la misma regla de 14 días sin salir).
    - El resto de días, deja `finde` como está.
 7. **Actualiza el recetario** (`recetas/historial.json`, con el formato `{"actualizado": "...", "recetas": [ ... ]}`):
    - Cada receta de `hoy.cenas` y de `finde` (si lo has rehecho) tiene que estar en `recetas`, con la receta completa más una lista `usos`.
@@ -97,7 +98,7 @@ Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.js
    - Las recetas de `finde` llevan como fecha la del sábado o el domingo correspondiente.
    - No borres nunca recetas del recetario.
 8. Pon en `actualizado` la fecha y hora actual en ISO con zona horaria (+01:00 o +02:00).
-9. Comprueba que `data.js` es JavaScript válido, por ejemplo con `node -e "global.window={};require('./data.js');console.log(Object.keys(window.MENU_DATA))"`, y que `recetas/historial.json` y `recetas/favoritos.json` son JSON válido.
+9. Comprueba que `data.js` es JavaScript válido, por ejemplo con `node -e "global.window={};require('./data.js');console.log(Object.keys(window.MENU_DATA))"`, y que `recetas/historial.json` es JSON válido.
 10. Haz commit y push a `main`. Mensaje: `Cenas AAAA-MM-DD`. Si el push es rechazado, haz `git pull --rebase` y repite.
 
 ## Formato de una receta
@@ -118,6 +119,7 @@ Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.js
   "etiquetas": ["Huevo", "Sartén"],
   "cocina": "Española",
   "peques": true,
+  "healthy": false,
   "gourmet": false,
   "truco": "Córtala en triángulos pequeños y que moje en tomate.",
   "ingredientes": ["5 huevos", "2 calabacines"],
