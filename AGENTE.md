@@ -32,11 +32,16 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
    - **Compensa el mediodía.** Si hubo legumbre y carne, cena pescado o huevo. Si hubo pescado, cena huevo o carne blanca. Si hubo mucho hidrato, cena poco. Siempre mucha verdura.
    - Las 6 tienen que ser distintas entre sí: usa proteínas diferentes y técnicas diferentes (horno, sartén, olla).
    - No repitas recetas que aparezcan en el `data.js` actual (`hoy.cenas`). Así se evita repetir lo de ayer.
-   - Cocina de casa española, con ingredientes de supermercado normal y 3 raciones por defecto.
+   - **Gustos de la familia:**
+     - **Sobre todo cocina mediterránea:** arroces, pasta, legumbres, verduras al horno o a la plancha, pescados, tortillas, cremas, guisos caseros…
+     - **De vez en cuando, algo exótico pero fácil.** Les gusta lo japonés (yakisoba, yakitori, pollo teriyaki, donburi, gyozas compradas a la sartén) y lo americano (hamburguesas caseras, wraps, sándwiches, BBQ). Como mucho 1 de las 6 cenas de cada día, y que sea sencillo: **nada de sushi** ni recetas que pidan técnicas o ingredientes difíciles de encontrar.
+     - **Evita la cocina nórdica, alemana o centroeuropea** (salchichas con chucrut, platos con nata y patata muy pesados, etc.), porque no suele gustarles.
+   - Ingredientes de supermercado normal y 3 raciones por defecto.
    - Los días sin cole (sábado y domingo) también son libres. Copia en `hoy.cenas` las opciones de cena de ese día que haya en `finde`, y completa hasta 6 opciones (con al menos dos `"peques": true`).
 6. **Los jueves (y siempre que `finde` sea de una semana pasada)**, rehaz `finde` para el sábado y domingo siguientes:
    - `fechas`: por ejemplo, "Sábado 21 y domingo 22 de noviembre".
    - `comidas`: 4 bloques en este orden: Sábado Comida, Sábado Cena, Domingo Comida y Domingo Cena. Cada uno lleva **3 `opciones`** (la app las muestra en una fila de 3).
+   - Los gustos de la familia (mediterráneo, algo de japonés y americano fácil, nada nórdico ni alemán) también valen para el fin de semana.
    - **El fin de semana es libre:** no apliques el equilibrio semanal ni compenses lo del cole. Propón platos ricos y apetecibles para toda la familia, incluidos los típicos de fin de semana (paella, pizza casera, hamburguesas, asados, guisos…). Pueden ser algo más elaborados (de hasta 60 minutos). Valen las mismas reglas del niño de 4 años, y en cada bloque al menos una opción lleva `"peques": true`. **La tercera opción de cada bloque es la de capricho** (más elaborada y gourmet, con `"gourmet": true`), con las mismas reglas que la sexta cena entre semana.
    - La lista de la compra la monta la app **por receta** a partir de `ingredientes`. Escribe los ingredientes con cantidades concretas ("3 calabacines", "200 g de queso rallado"), un ingrediente por línea. Ya no hace falta rellenar `compra`: déjalo como `[]`.
    - El resto de días, deja `finde` como está.
