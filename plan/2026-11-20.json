@@ -1,0 +1,74 @@
+{
+  "fecha": "2026-11-20",
+  "hoy": {
+    "cole": {
+      "platos": ["Espaguetis integrales con tomate y queso rallado", "Huevos con bechamel", "Lechuga y maíz", "Yogur"],
+      "nota": "Día Universal de la Infancia"
+    },
+    "consejo": "Hoy ha comido pasta y huevo con bechamel: para cenar mejor pescado o legumbre, con mucha verdura y poco hidrato.",
+    "explicacion": "Al mediodía ha comido espaguetis y huevos con bechamel, así que el huevo y el hidrato ya están cubiertos. En el cole esta semana solo lleva 1 de pescado (merluza) y 1 de legumbre (alubias), por eso las cenas tiran sobre todo de pescado y legumbre, con verdura en todas y sin pasta ni huevo.",
+    "cenas": [
+      {
+        "id": "hamburguesitas-bacalao-calabacin-horno", "titulo": "Hamburguesitas de bacalao y calabacín al horno", "subtitulo": "Con ensalada de tomate y pepino", "cocina": "Casera", "imagen": "pescado",
+        "peques": true, "healthy": true, "gourmet": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 35, "hidratos": 15 },
+        "porque": "Pescado para compensar la pasta y el huevo del mediodía, con la verdura escondida dentro.",
+        "truco": "Hazle a él hamburguesitas pequeñas, del tamaño de una galleta, y que las moje en tomate natural.",
+        "etiquetas": ["Pescado", "Horno"],
+        "guia": "Lomos de bacalao fresco sin espinas picados a cuchillo con calabacín rallado y escurrido, cebolleta, perejil y un poco de pan rallado para ligar (sin huevo); se forman hamburguesitas y se hacen al horno con un hilo de aceite. Guarnición: ensalada de tomate y pepino en dados.",
+        "busqueda_foto": "fish cakes zucchini"
+      },
+      {
+        "id": "crema-lentejas-rojas-calabaza-zanahoria", "titulo": "Crema de lentejas rojas con calabaza y zanahoria", "subtitulo": "Suave, con un toque de queso fresco", "cocina": "Casera", "imagen": "crema",
+        "peques": true, "healthy": false, "gourmet": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 45, "proteina": 30, "hidratos": 25 },
+        "porque": "Suma una legumbre a la semana en formato crema, que entra muy fácil.",
+        "truco": "Ponle encima un quesito o una cucharada de queso fresco y que lo remueva él hasta que se funda.",
+        "etiquetas": ["Legumbre", "Olla"],
+        "guia": "Lentejas rojas (no necesitan remojo) cocidas en olla con calabaza, zanahoria, cebolla y un poco de puerro, en agua o caldo de verduras bajo en sal; se tritura fino. Sin especias picantes, solo una pizca de comino opcional para adultos. Servir con queso fresco batido por encima.",
+        "busqueda_foto": "red lentil soup"
+      },
+      {
+        "id": "brochetas-pollo-verduras-salsa-yogur", "titulo": "Brochetas de pollo y verduras al horno", "subtitulo": "Con salsa suave de yogur y limón", "cocina": "Mediterránea", "imagen": "pollo-horno",
+        "peques": false, "healthy": true, "gourmet": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 40, "hidratos": 10 },
+        "porque": "Proteína ligera y mucha verdura, casi sin hidrato, para equilibrar la pasta del mediodía.",
+        "truco": "A él sírvele los trozos ya sacados del pincho y la salsa de yogur en un cuenquito para mojar.",
+        "etiquetas": ["Carne blanca", "Horno"],
+        "guia": "Pechuga de pollo en dados medianos marinada con aceite, limón, ajo en polvo y orégano; brochetas alternando pollo con calabacín, pimiento rojo y cebolla en trozos; al horno a 200 ºC dándoles la vuelta. Salsa de yogur natural con limón, eneldo o menta y una pizca de sal.",
+        "busqueda_foto": "chicken vegetable skewers"
+      },
+      {
+        "id": "garbanzos-salteados-espinacas-gambas", "titulo": "Garbanzos salteados con espinacas y gambas", "subtitulo": "En sartén, con ajo suave y pimentón dulce", "cocina": "Española", "imagen": "garbanzos",
+        "peques": false, "healthy": false, "gourmet": false, "tiempo": 20, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 40, "proteina": 35, "hidratos": 25 },
+        "porque": "Legumbre y marisco en un plato rápido de sartén: completa la semana de legumbre.",
+        "truco": "Corta sus gambas en trocitos y aplasta un poco sus garbanzos con el tenedor para que no ruede ninguno.",
+        "etiquetas": ["Legumbre", "Marisco", "Sartén"],
+        "guia": "Garbanzos cocidos de bote bien lavados, salteados en sartén con ajo laminado (sin dorar), cebolla, gambas peladas, pimentón dulce (nada de picante) y espinacas frescas que se dejan reducir; un chorrito de limón al final.",
+        "busqueda_foto": "chickpeas spinach shrimp"
+      },
+      {
+        "id": "donburi-salmon-teriyaki-brocoli", "titulo": "Donburi de salmón teriyaki", "subtitulo": "Bol de arroz con salmón glaseado y brócoli", "cocina": "Japonesa", "imagen": "arroz",
+        "peques": false, "healthy": false, "gourmet": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 35, "proteina": 35, "hidratos": 30 },
+        "porque": "El toque japonés del día con pescado azul, que esta semana aún no ha salido.",
+        "truco": "Monta su bol él mismo: arroz, sus dados de salmón y los arbolitos de brócoli, con un pelín de salsa.",
+        "etiquetas": ["Pescado", "Sartén"],
+        "guia": "Lomos de salmón sin piel ni espinas en dados, dorados en sartén y glaseados con salsa teriyaki casera (salsa de soja baja en sal, miel y un poco de agua, reducida). Se sirve sobre poco arroz blanco con brócoli al vapor, zanahoria rallada y sésamo tostado (molido para el niño).",
+        "busqueda_foto": "salmon teriyaki bowl"
+      },
+      {
+        "id": "lubina-papillote-hinojo-limon", "titulo": "Lubina en papillote con hinojo y limón", "subtitulo": "Con patatitas asadas y salsa de mantequilla al limón", "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "healthy": false, "gourmet": true, "tiempo": 50, "dificultad": "Media", "raciones": 3,
+        "plato": { "verdura": 40, "proteina": 35, "hidratos": 25 },
+        "porque": "Un capricho de viernes con pescado fino, jugoso y sin complicaciones.",
+        "truco": "Abre su paquete en la mesa para que vea el vapor, y sírvele el pescado desmigado con las patatitas, sin la salsa.",
+        "etiquetas": ["Pescado", "Horno"],
+        "guia": "Lomos de lubina sin espinas en papillote (papel de horno) sobre hinojo y puerro en juliana fina, rodajas de limón, tomillo y un chorrito de vino blanco y aceite; al horno a 200 ºC unos 12–15 min. Guarnición: patatas pequeñas asadas al horno antes. Salsa beurre blanc sencilla de mantequilla, limón y chalota, aparte.",
+        "busqueda_foto": "sea bass parchment"
+      }
+    ]
+  },
+  "finde": null
+}
