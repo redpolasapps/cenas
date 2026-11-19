@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Cenas en casa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Cenas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF6EE; --card:#FFFFFF; --ink:#2E2A26; --soft:#7A6F64; --line:#EDE4D6;
+  --terra:#D9735A; --terra-d:#B85A43; --verde:#6BA368; --ambar:#E8B04B; --crema:#F5EBDD;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+  font-family:"Nunito",-apple-system,"Helvetica Neue",Arial,sans-serif;font-size:17px;-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Fraunces",Georgia,serif;margin:0;font-weight:700;letter-spacing:-.01em}
+button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer;padding:0}
+.wrap{max-width:1100px;margin:0 auto;padding:22px 24px 120px}
+
+/* Cabecera */
+.top{display:-webkit-flex;display:flex;-webkit-align-items:flex-end;align-items:flex-end;-webkit-justify-content:space-between;justify-content:space-between;margin-bottom:18px}
+.top .dia{font-size:15px;color:var(--soft);font-weight:700}
+.top h1{font-size:34px;margin-top:2px}
+.top .hora{font-family:"Fraunces",Georgia,serif;font-size:40px;color:var(--terra)}
+
+/* Pestañas */
+.tabs{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);
+  display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;padding:8px 0 14px;z-index:5}
+.tab{display:block;width:140px;text-align:center;padding:8px 0;border-radius:14px;color:var(--soft);font-weight:700;font-size:15px;margin:0 6px}
+.tab .ic{display:block;font-size:24px;line-height:30px}
+.tab.on{background:var(--crema);color:var(--terra-d)}
+
+/* Cole */
+.cole{background:var(--crema);border-radius:22px;padding:18px 22px;margin-bottom:22px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center}
+.cole svg{width:62px;height:62px;-webkit-flex:none;flex:none;margin-right:18px}
+.cole .lbl{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--terra-d);font-weight:800}
+.cole .platos{font-size:18px;font-weight:700;margin:4px 0 6px;line-height:1.35}
+.cole .platos span{color:var(--soft);font-weight:600}
+.cole .tip{font-size:15px;color:var(--soft);line-height:1.4}
+
+.sec{font-size:24px;margin:6px 0 14px}
+
+/* Tarjetas */
+.grid{display:-webkit-flex;display:flex;-webkit-flex-wrap:wrap;flex-wrap:wrap;margin:0 -9px}
+.card{width:33.333%;padding:0 9px 18px}
+.card-in{cursor:pointer;background:var(--card);border-radius:22px;box-shadow:0 2px 0 var(--line),0 8px 24px rgba(80,50,20,.06);overflow:hidden;height:100%;display:block;width:100%;text-align:left}
+.hero{height:190px;position:relative;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center}
+.hero .dish svg{width:170px;height:170px;display:block}
+.hero,.det-img{overflow:hidden}
+.foto{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
+.credito{position:absolute;left:10px;bottom:8px;font-size:11px;color:#fff;background:rgba(0,0,0,.35);padding:2px 8px;border-radius:10px}
+.sinfoto .credito{display:none}
+.badge{z-index:2;position:absolute;right:12px;bottom:10px;width:54px;height:54px;background:#fff;border-radius:50%;padding:2px}
+.badge svg{width:50px;height:50px;display:block}
+.num{z-index:2;position:absolute;top:12px;left:14px;background:#fff;border-radius:20px;padding:3px 11px;font-weight:800;font-size:14px;color:var(--terra-d)}
+.body{padding:14px 18px 18px}
+.peq{display:inline-block;background:#FFF1C9;color:#8A5A00;font-weight:800;font-size:13px;padding:3px 10px;border-radius:12px;margin-bottom:8px}
+.body h3{font-size:21px;line-height:1.2}
+.body .sub{color:var(--soft);font-size:15px;margin-top:3px}
+.meta{margin-top:10px;font-size:14px;color:var(--soft);font-weight:700}
+.meta b{color:var(--ink)}
+.meta i{font-style:normal;margin-right:12px}
+.por{margin-top:10px;font-size:14.5px;line-height:1.4}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12.5px;font-weight:800;padding:3px 10px;border-radius:12px;background:var(--crema);color:var(--terra-d);margin:0 5px 5px 0}
+
+.leyenda{font-size:13px;color:var(--soft);margin:-4px 0 16px;font-weight:600}
+.leyenda i{display:inline-block;width:10px;height:10px;border-radius:5px;margin:0 5px 0 12px;vertical-align:0}
+
+/* Finde */
+.bloque{margin-bottom:12px}
+.bloque h2{font-size:22px;margin-bottom:12px}
+.bloque h2 span{font-family:"Nunito",sans-serif;font-size:14px;font-weight:800;color:var(--terra-d);text-transform:uppercase;letter-spacing:.08em;margin-left:8px}
+.grid2 .card{width:50%}
+.mini .hero{height:150px}
+.mini .hero .dish svg{width:130px;height:130px}
+
+/* Compra */
+.compra{background:#fff;border-radius:22px;box-shadow:0 2px 0 var(--line)}
+.compra{padding:0 18px;margin-bottom:10px}
+.chead{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;width:100%;text-align:left;padding:10px 0}
+.cmini{width:54px;height:54px;-webkit-flex:none;flex:none;margin-right:14px}
+.cmini svg{width:54px;height:54px;display:block}
+.ctit{-webkit-flex:1;flex:1;font-family:"Fraunces",Georgia,serif;font-size:19px;font-weight:700}
+.cet{display:block;font-family:"Nunito",sans-serif;font-size:12.5px;font-weight:800;color:var(--terra-d);text-transform:uppercase;letter-spacing:.06em}
+.ccnt{font-weight:800;color:var(--soft);font-size:15px;margin:0 12px}
+.flecha{font-size:28px;color:var(--soft);-webkit-transition:-webkit-transform .2s;transition:transform .2s}
+.abierta .flecha{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
+.citems{display:none;padding-bottom:8px;border-top:1px solid var(--line)}
+.abierta .citems{display:block}
+.item{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:17px;width:100%;text-align:left}
+.item:last-child{border-bottom:0}
+.check{width:28px;height:28px;border-radius:9px;border:2px solid #D8CBB7;margin-right:14px;-webkit-flex:none;flex:none;text-align:center;line-height:24px;color:#fff;font-weight:800}
+.item.ok{color:#B4A898;text-decoration:line-through}
+.item.ok .check{background:var(--verde);border-color:var(--verde)}
+
+/* Detalle receta */
+.ov{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--bg);z-index:10;overflow-y:auto;-webkit-overflow-scrolling:touch;display:none}
+.ov.on{display:block}
+.det{max-width:860px;margin:0 auto;padding:20px 24px 60px}
+.back{font-weight:800;color:var(--terra-d);font-size:17px;padding:10px 0}
+.det-top{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin:8px 0 20px}
+.det-img{position:relative;width:220px;height:220px;-webkit-flex:none;flex:none;margin-right:28px;border-radius:30px;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center}
+.det-img .dish svg{width:190px;height:190px;display:block}
+.det-img .badge{right:10px;bottom:10px;width:70px;height:70px}
+.det-img .badge svg{width:66px;height:66px}
+.det-top h1{font-size:32px;line-height:1.15}
+.ingr{background:#fff;border-radius:22px;padding:6px 22px 12px;box-shadow:0 2px 0 var(--line)}
+.btn{display:block;width:100%;background:var(--terra);color:#fff;font-weight:800;font-size:20px;padding:18px;border-radius:18px;margin-top:18px;text-align:center}
+.btn:active{background:var(--terra-d)}
+.btn2{display:block;text-align:center;margin-top:12px;color:var(--terra-d);font-weight:800;text-decoration:none;padding:10px}
+
+/* Modo cocina */
+.cook{position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;z-index:20;display:none}
+.cook.on{display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column}
+.cook-h{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;padding:16px 24px}
+.cook-h .t{font-family:"Fraunces",Georgia,serif;font-size:19px;color:var(--soft)}
+.x{font-size:16px;font-weight:800;color:var(--terra-d);padding:8px 4px}
+.dots{text-align:center;padding:0 0 4px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:5px;background:var(--line);margin:0 4px}
+.dot.on{background:var(--terra);width:26px}
+.cook-b{-webkit-flex:1;flex:1;display:-webkit-flex;display:flex;-webkit-flex-direction:column;flex-direction:column;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;padding:10px 40px;text-align:center}
+.ilu{width:240px;height:240px;background:var(--crema);border-radius:50%;display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;-webkit-justify-content:center;justify-content:center;margin-bottom:24px}
+.ilu svg{width:170px;height:170px}
+.pn{font-size:15px;font-weight:800;color:var(--terra-d);text-transform:uppercase;letter-spacing:.1em}
+.pt{font-size:28px;line-height:1.3;font-weight:700;max-width:720px;margin-top:8px}
+.timer{margin-top:22px;background:var(--crema);color:var(--terra-d);font-weight:800;font-size:20px;padding:14px 26px;border-radius:30px}
+.timer.run{background:var(--terra);color:#fff}
+.timer.done{background:var(--verde);color:#fff}
+.cook-f{display:-webkit-flex;display:flex;padding:16px 24px 26px}
+.nav{-webkit-flex:1;flex:1;padding:22px;border-radius:20px;font-size:21px;font-weight:800}
+.nav.prev{background:var(--crema);color:var(--soft);margin-right:14px;-webkit-flex:0 0 32%;flex:0 0 32%}
+.nav.next{background:var(--terra);color:#fff}
+.nav[disabled]{opacity:.35}
+
+.pie{font-size:13px;color:#B4A898;text-align:center;margin-top:20px}
+
+.mesnav{text-align:center;margin:0 0 14px}
+.mbtn{width:48px;height:48px;border-radius:24px;background:#fff;box-shadow:0 2px 0 var(--line);font-size:26px;color:var(--terra-d);font-weight:800;vertical-align:middle}
+.mtit{display:inline-block;min-width:220px;font-family:"Fraunces",Georgia,serif;font-size:24px;font-weight:700;vertical-align:middle}
+.cal{background:#fff;border-radius:22px;padding:8px;box-shadow:0 2px 0 var(--line)}
+.crow{display:-webkit-flex;display:flex}
+.crow>div{width:20%;-webkit-flex:1 1 0;flex:1 1 0;margin:4px;min-width:0}
+.chd>div{text-align:center;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em;color:var(--terra-d);padding:6px 0}
+.cday{background:var(--bg);border-radius:14px;padding:8px 9px 10px;font-size:12.5px;line-height:1.3}
+.cday.fuera{background:transparent;opacity:.35}
+.cday.libre .cpl{color:#B4A898}
+.cday.hoy{background:#FCE6DC;box-shadow:inset 0 0 0 3px var(--terra)}
+.cnum{font-family:"Fraunces",Georgia,serif;font-size:19px;font-weight:700;margin-bottom:4px}
+.cnum span{font-family:"Nunito",sans-serif;font-size:11px;background:var(--terra);color:#fff;border-radius:8px;padding:1px 7px;vertical-align:3px}
+.cnota{font-size:11px;font-weight:800;color:var(--terra-d);margin-bottom:3px}
+.cpl{margin-bottom:3px;color:var(--soft)}
+.cpl.c1{color:var(--ink);font-weight:700}
+.vacio{text-align:center;color:var(--soft);padding:50px 20px;font-size:18px;line-height:1.5}
+@media (max-width:900px){ .card{width:50%} }
+@media (max-width:600px){ .card,.grid2 .card{width:100%} .top h1{font-size:28px} .det-top{display:block} .pt{font-size:23px} }
+@media (max-height:700px){ .ilu{width:170px;height:170px} .ilu svg{width:120px;height:120px} }
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+
+<div class="tabs" id="tabs">
+  <button class="tab" data-v="hoy"><span class="ic">🍽️</span>Cena de hoy</button>
+  <button class="tab" data-v="finde"><span class="ic">☀️</span>Fin de semana</button>
+  <button class="tab" data-v="compra"><span class="ic">🛒</span>Compra</button>
+  <button class="tab" data-v="cole"><span class="ic">📅</span>Menú cole</button>
+</div>
+
+<div class="ov" id="ov"></div>
+<div class="cook" id="cook"></div>
+
+<script src="platos.js"></script>
+<script>document.write('<script src="data.js?v='+new Date().getTime()+'"><\/script>');</script>
+<script>
+(function(){
+  var D = window.MENU_DATA || {};
+  var vista = 'hoy';
+  var RECETAS = {};
+  var cookR = null, cookI = 0, tInt = null, tLeft = 0;
+
+  var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
+  var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var HEROBG = ['#FCE6DC','#E4F0DF','#FBEFD3','#E3ECF5'];
+
+  function esc(s){ return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  function $(id){ return document.getElementById(id); }
+  function store(k,v){ try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v); }catch(e){ return null; } }
+
+  /* ---------- Plato equilibrado (SVG) ---------- */
+  function arc(cx,cy,r,a0,a1,color){
+    var x0=cx+r*Math.cos(a0), y0=cy+r*Math.sin(a0), x1=cx+r*Math.cos(a1), y1=cy+r*Math.sin(a1);
+    var large=(a1-a0)>Math.PI?1:0;
+    return '<path d="M'+cx+' '+cy+' L'+x0.toFixed(2)+' '+y0.toFixed(2)+' A'+r+' '+r+' 0 '+large+' 1 '+x1.toFixed(2)+' '+y1.toFixed(2)+' Z" fill="'+color+'"/>';
+  }
+  function plato(p){
+    p = p || {verdura:50,proteina:25,hidratos:25};
+    var tot=(p.verdura||0)+(p.proteina||0)+(p.hidratos||0)||1;
+    var parts=[[p.verdura,'#7DB56F'],[p.proteina,'#E07F63'],[p.hidratos,'#EDBB57']];
+    var a=-Math.PI/2, s='';
+    for(var i=0;i<parts.length;i++){
+      var d=(parts[i][0]/tot)*Math.PI*2;
+      if(d>0){ s+=arc(70,70,40,a,a+d,parts[i][1]); a+=d; }
+    }
+    return '<svg viewBox="0 0 140 140"><ellipse cx="70" cy="76" rx="62" ry="60" fill="rgba(80,50,20,.10)"/>'+
+      '<circle cx="70" cy="70" r="62" fill="#fff"/><circle cx="70" cy="70" r="50" fill="#FAF6F0" stroke="#EFE6D8" stroke-width="2"/>'+
+      s+'<circle cx="70" cy="70" r="40" fill="none" stroke="#fff" stroke-width="3"/>'+
+      '<line x1="70" y1="30" x2="70" y2="70" stroke="#fff" stroke-width="3"/></svg>';
+  }
+
+  /* ---------- Ilustraciones de pasos ---------- */
+  var ICON = {
+    cortar:'<svg viewBox="0 0 120 120"><rect x="14" y="58" width="92" height="40" rx="10" fill="#D9A86C"/><rect x="14" y="58" width="92" height="8" rx="4" fill="#E7BD86"/><circle cx="34" cy="74" r="9" fill="#F28C5B"/><circle cx="52" cy="78" r="7" fill="#F28C5B"/><circle cx="70" cy="76" r="6" fill="#7DB56F"/><path d="M60 22 L104 46 L98 54 L56 32 Z" fill="#C9D2DA"/><path d="M56 32 L60 22 L50 18 L44 28 Z" fill="#3B3632"/><path d="M60 22 L104 46" stroke="#fff" stroke-width="2"/></svg>',
+    sarten:'<svg viewBox="0 0 120 120"><path d="M38 30c0-8 8-8 8-16M54 30c0-8 8-8 8-16M70 30c0-8 8-8 8-16" stroke="#C9B9A6" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="88" y="68" width="30" height="10" rx="5" fill="#3B3632"/><ellipse cx="56" cy="74" rx="40" ry="20" fill="#3B3632"/><ellipse cx="56" cy="70" rx="34" ry="15" fill="#5A524B"/><ellipse cx="46" cy="68" rx="10" ry="6" fill="#F7D774"/><circle cx="46" cy="68" r="4" fill="#F2A93B"/><ellipse cx="68" cy="72" rx="9" ry="5" fill="#7DB56F"/></svg>',
+    horno:'<svg viewBox="0 0 120 120"><rect x="16" y="18" width="88" height="86" rx="12" fill="#E8DCCB"/><rect x="16" y="18" width="88" height="20" rx="10" fill="#D6C7B2"/><circle cx="34" cy="28" r="5" fill="#3B3632"/><circle cx="50" cy="28" r="5" fill="#3B3632"/><rect x="74" y="24" width="22" height="8" rx="4" fill="#3B3632"/><rect x="26" y="46" width="68" height="48" rx="8" fill="#3B3632"/><rect x="30" y="50" width="60" height="40" rx="6" fill="#F2A93B" opacity=".85"/><rect x="38" y="72" width="44" height="8" rx="3" fill="#B85A43"/><path d="M44 64c0-4 4-4 4-8M58 64c0-4 4-4 4-8M72 64c0-4 4-4 4-8" stroke="#FFE3A3" stroke-width="3" fill="none" stroke-linecap="round"/></svg>',
+    olla:'<svg viewBox="0 0 120 120"><path d="M42 26c0-8 8-8 8-16M60 26c0-8 8-8 8-16M78 26c0-8 8-8 8-16" stroke="#C9B9A6" stroke-width="4" fill="none" stroke-linecap="round"/><rect x="50" y="30" width="20" height="8" rx="4" fill="#3B3632"/><rect x="22" y="38" width="76" height="10" rx="5" fill="#B85A43"/><path d="M26 48h68v34c0 10-8 18-18 18H44c-10 0-18-8-18-18z" fill="#D9735A"/><rect x="10" y="56" width="16" height="8" rx="4" fill="#3B3632"/><rect x="94" y="56" width="16" height="8" rx="4" fill="#3B3632"/><path d="M34 62h52" stroke="#E99A82" stroke-width="4" stroke-linecap="round"/></svg>',
+    mezclar:'<svg viewBox="0 0 120 120"><path d="M70 14 L54 64" stroke="#3B3632" stroke-width="5" stroke-linecap="round"/><path d="M54 64c-14-4-18-22-6-26 10-3 14 12 6 26zM54 64c2-14 18-22 22-10 3 10-12 14-22 10z" stroke="#9AA5AE" stroke-width="3" fill="none"/><path d="M14 60h92c0 26-20 44-46 44S14 86 14 60z" fill="#7DB56F"/><path d="M14 60h92" stroke="#5E9452" stroke-width="6" stroke-linecap="round"/><ellipse cx="60" cy="60" rx="40" ry="5" fill="#F7D774"/></svg>',
+    emplatar:'<svg viewBox="0 0 120 120"><ellipse cx="60" cy="72" rx="50" ry="40" fill="rgba(80,50,20,.10)"/><circle cx="60" cy="66" r="44" fill="#fff" stroke="#EFE6D8" stroke-width="3"/><circle cx="60" cy="66" r="32" fill="#FAF6F0"/><path d="M42 62c6-12 30-12 36 0 2 8-8 14-18 14S40 70 42 62z" fill="#E07F63"/><circle cx="48" cy="54" r="6" fill="#7DB56F"/><circle cx="58" cy="50" r="5" fill="#7DB56F"/><circle cx="74" cy="56" r="5" fill="#EDBB57"/><path d="M8 30v24M4 30v12M12 30v12M8 54v40" stroke="#9AA5AE" stroke-width="3" stroke-linecap="round"/></svg>',
+    envolver:'<svg viewBox="0 0 120 120"><path d="M14 66 L60 30 L106 66 L60 98 Z" fill="#F3EDE3" stroke="#D8CBB7" stroke-width="3"/><path d="M14 66 Q60 52 106 66" stroke="#D8CBB7" stroke-width="3" fill="none"/><path d="M30 70 Q60 84 90 70" stroke="#D8CBB7" stroke-width="3" fill="none" stroke-dasharray="5 5"/><ellipse cx="60" cy="62" rx="18" ry="7" fill="#F5D6C8"/></svg>',
+    lavar:'<svg viewBox="0 0 120 120"><rect x="52" y="10" width="34" height="10" rx="5" fill="#9AA5AE"/><rect x="52" y="10" width="10" height="26" rx="5" fill="#9AA5AE"/><path d="M57 42v10M57 58v8" stroke="#6FB3E0" stroke-width="5" stroke-linecap="round"/><path d="M18 64h84l-8 34H26z" fill="#C9D2DA"/><circle cx="46" cy="70" r="8" fill="#EDBB57"/><circle cx="62" cy="74" r="8" fill="#EDBB57"/><circle cx="76" cy="68" r="8" fill="#EDBB57"/></svg>'
+  };
+  function dish(r){
+    var P=window.PLATOS||{}, ilu='<div class="dish">'+(P[r.imagen]||P.generico||'')+'</div>';
+    if(!r.foto) return ilu;
+    // Foto real encima de la ilustración; si no carga, se quita y queda la ilustración.
+    return ilu+'<img class="foto" src="'+esc(r.foto)+'" alt="" onerror="this.parentNode.className+=\' sinfoto\';this.parentNode.removeChild(this)">'+
+      (r.fotoCredito?'<span class="credito">📷 '+esc(r.fotoCredito)+'</span>':'');
+  }
+  function badge(r){ return '<div class="badge">'+plato(r.plato)+'</div>'; }
+  function icon(k){ return ICON[k] || ICON.emplatar; }
+
+  var BOLSA = '<svg viewBox="0 0 62 62"><rect x="6" y="18" width="50" height="38" rx="10" fill="#D9735A"/><path d="M20 18v-4a11 11 0 0 1 22 0v4" stroke="#B85A43" stroke-width="5" fill="none"/><rect x="18" y="30" width="26" height="14" rx="5" fill="#FCE6DC"/></svg>';
+
+  /* ---------- Fechas ---------- */
+  function fechaLarga(iso){
+    var d = iso ? new Date(iso+'T12:00:00') : new Date();
+    if(isNaN(d.getTime())) d = new Date();
+    var t=DIAS[d.getDay()]; return t.charAt(0).toUpperCase()+t.slice(1)+', '+d.getDate()+' de '+MESES[d.getMonth()];
+  }
+  function hora(){ var d=new Date(), m=d.getMinutes(); return d.getHours()+':'+(m<10?'0':'')+m; }
+
+  /* ---------- Tarjetas ---------- */
+  function card(r, n, bg, mini){
+    RECETAS[r.id] = r; r._bg = bg;
+    return '<div class="card'+(mini?' mini':'')+'"><div class="card-in" data-r="'+esc(r.id)+'">'+
+      '<div class="hero" style="background:'+bg+'">'+(n?'<span class="num">Opción '+n+'</span>':'')+dish(r)+badge(r)+'</div>'+
+      '<div class="body">'+(r.peques?'<div class="peq">🧒 Le encantará al peque</div>':'')+'<h3>'+esc(r.titulo)+'</h3>'+
+      (r.subtitulo?'<div class="sub">'+esc(r.subtitulo)+'</div>':'')+
+      '<div class="meta"><i>⏱ <b>'+esc(r.tiempo)+' min</b></i><i>👩‍🍳 <b>'+esc(r.dificultad)+'</b></i></div>'+
+      (!mini && r.porque?'<div class="por">'+esc(r.porque)+'</div>':'')+
+      '<div class="tags">'+(r.etiquetas||[]).map(function(t){return '<span class="tag">'+esc(t)+'</span>';}).join('')+'</div>'+
+      '</div></div></div>';
+  }
+  var LEYENDA = '<div class="leyenda">El círculo pequeño muestra el equilibrio:<i style="background:#7DB56F"></i>verdura<i style="background:#E07F63"></i>proteína<i style="background:#EDBB57"></i>hidratos</div>';
+
+  function cabecera(titulo, dia){
+    return '<div class="top"><div><div class="dia">'+esc(dia)+'</div><h1>'+esc(titulo)+'</h1></div><div class="hora" id="hora">'+hora()+'</div></div>';
+  }
+
+  function vHoy(){
+    var h = D.hoy || {}, c = h.cole || {};
+    var s = cabecera('¿Qué cenamos hoy?', fechaLarga(h.fecha));
+    var platos = c.platos || [c.primero, c.segundo, c.postre].filter(function(x){return x;});
+    if(platos.length){
+      s += '<div class="cole">'+BOLSA+'<div><div class="lbl">Hoy en el cole ha comido'+(c.nota?' · '+esc(c.nota):'')+'</div>'+
+        '<div class="platos">'+platos.map(esc).join(' <span>·</span> ')+'</div>'+
+        (h.consejo?'<div class="tip">💡 '+esc(h.consejo)+'</div>':'')+'</div></div>';
+    } else {
+      s += '<div class="cole">'+BOLSA+'<div><div class="lbl">Hoy no hay cole</div>'+
+        (h.consejo?'<div class="tip">💡 '+esc(h.consejo)+'</div>':'')+'</div></div>';
+    }
+    s += '<h2 class="sec">Propuestas para la cena</h2>'+LEYENDA+'<div class="grid">';
+    (h.cenas||[]).forEach(function(r,i){ s += card(r, i+1, HEROBG[i%HEROBG.length]); });
+    return s+'</div>';
+  }
+
+  function vFinde(){
+    var f = D.finde || {};
+    var s = cabecera('Fin de semana', f.fechas || '');
+    s += LEYENDA;
+    (f.comidas||[]).forEach(function(b,bi){
+      s += '<div class="bloque"><h2>'+esc(b.dia)+'<span>'+esc(b.momento)+'</span></h2><div class="grid">';
+      (b.opciones||[]).forEach(function(r,i){ s += card(r, i+1, HEROBG[(bi+i)%HEROBG.length], true); });
+      s += '</div></div>';
+    });
+    return s;
+  }
+
+  function bloqueCompra(r, etiqueta, si){
+    var items = r.ingredientes||[], hechos = 0, filas = '';
+    items.forEach(function(it,ii){
+      var k = 'c_'+(D.actualizado||'').slice(0,10)+'_'+r.id+'_'+ii;
+      var ok = store(k)==='1'; if(ok) hechos++;
+      filas += '<button class="item'+(ok?' ok':'')+'" data-k="'+esc(k)+'"><span class="check">'+(ok?'✓':'')+'</span>'+esc(it)+'</button>';
+    });
+    var abierto = store('a_'+r.id)==='1';
+    return '<div class="compra'+(abierto?' abierta':'')+'" id="cb_'+esc(r.id)+'">'+
+      '<button class="chead" data-t="'+esc(r.id)+'"><span class="cmini">'+((window.PLATOS||{})[r.imagen]||(window.PLATOS||{}).generico||'')+'</span>'+
+      '<span class="ctit"><span class="cet">'+esc(etiqueta)+'</span>'+esc(r.titulo)+'</span>'+
+      '<span class="ccnt">'+hechos+'/'+items.length+'</span><span class="flecha">›</span></button>'+
+      '<div class="citems">'+filas+'</div></div>';
+  }
+  function vCompra(){
+    var s = cabecera('Lista de la compra', 'Toca una receta para ver sus ingredientes');
+    var cenas = (D.hoy||{}).cenas||[];
+    if(cenas.length){
+      s += '<h2 class="sec">Cena de hoy</h2>';
+      cenas.forEach(function(r,i){ s += bloqueCompra(r, 'Opción '+(i+1)); });
+    }
+    ((D.finde||{}).comidas||[]).forEach(function(b){
+      s += '<h2 class="sec">'+esc(b.dia)+' · '+esc(b.momento)+'</h2>';
+      (b.opciones||[]).forEach(function(r,i){ s += bloqueCompra(r, 'Opción '+(i+1)); });
+    });
+    return s;
+  }
+
+  /* ---------- Calendario del cole ---------- */
+  var MENUS = {}, mesVista = null;
+  function ym(d){ var m=d.getMonth()+1; return d.getFullYear()+'-'+(m<10?'0':'')+m; }
+  function cargaMes(k){
+    if(MENUS[k]!==undefined) return;
+    MENUS[k] = 'cargando';
+    try{
+      var x = new XMLHttpRequest();
+      x.open('GET','menus/'+k+'.json?v='+new Date().getTime(),true);
+      x.onreadystatechange = function(){
+        if(x.readyState!==4) return;
+        try{ MENUS[k] = x.status===200 ? JSON.parse(x.responseText) : null; }catch(e){ MENUS[k]=null; }
+        if(vista==='cole') render();
+      };
+      x.send();
+    }catch(e){ MENUS[k]=null; }
+  }
+  function vCole(){
+    var hoy = new Date();
+    if(!mesVista) mesVista = new Date(hoy.getFullYear(), hoy.getMonth(), 1);
+    var k = ym(mesVista); cargaMes(k);
+    var m = MENUS[k];
+    var titulo = MESES[mesVista.getMonth()].charAt(0).toUpperCase()+MESES[mesVista.getMonth()].slice(1)+' '+mesVista.getFullYear();
+    var s = cabecera('Menú del cole', 'Comedor escolar');
+    s += '<div class="mesnav"><button class="mbtn" data-m="-1">‹</button><span class="mtit">'+titulo+'</span><button class="mbtn" data-m="1">›</button></div>';
+    if(m==='cargando'){ return s+'<div class="vacio">Cargando…</div>'; }
+    if(!m){ return s+'<div class="vacio">Todavía no hay menú para este mes.<br>Mándale al agente una foto del menú nuevo.</div>'; }
+    var dias = m.dias||{}, hk = ym(hoy)+'-'+(hoy.getDate()<10?'0':'')+hoy.getDate();
+    s += '<div class="cal"><div class="crow chd"><div>Lunes</div><div>Martes</div><div>Miércoles</div><div>Jueves</div><div>Viernes</div></div>';
+    var d = new Date(mesVista.getFullYear(), mesVista.getMonth(), 1);
+    // retroceder al lunes
+    var dow = (d.getDay()+6)%7; d.setDate(d.getDate()-dow);
+    var finMes = new Date(mesVista.getFullYear(), mesVista.getMonth()+1, 0);
+    while(d <= finMes){
+      var fila = '', alguno = false;
+      for(var i=0;i<5;i++){
+        var dd = new Date(d.getFullYear(), d.getMonth(), d.getDate()+i);
+        var dentro = dd.getMonth()===mesVista.getMonth();
+        var key = ym(dd)+'-'+(dd.getDate()<10?'0':'')+dd.getDate();
+        var info = dentro ? dias[key] : null;
+        if(dentro) alguno = true;
+        fila += '<div class="cday'+(dentro?'':' fuera')+(key===hk?' hoy':'')+(info?'':' libre')+'">'+
+          '<div class="cnum">'+dd.getDate()+(key===hk?' <span>Hoy</span>':'')+'</div>'+
+          (info && info.nota ? '<div class="cnota">'+esc(info.nota)+'</div>' : '')+
+          (info ? (info.platos||[]).map(function(p,j){ return '<div class="cpl'+(j===0?' c1':'')+'">'+esc(p)+'</div>'; }).join('') : (dentro?'<div class="cpl">—</div>':''))+
+          '</div>';
+      }
+      if(alguno) s += '<div class="crow">'+fila+'</div>';
+      d = new Date(d.getFullYear(), d.getMonth(), d.getDate()+7);
+    }
+    s += '</div>';
+    if(m.notas) s += '<div class="pie" style="text-align:left">'+esc(m.notas)+'</div>';
+    return s;
+  }
+
+  function render(){
+    RECETAS = {};
+    // Registrar todas las recetas para poder abrirlas desde cualquier vista
+    ((D.hoy||{}).cenas||[]).forEach(function(r){ RECETAS[r.id]=r; });
+    ((D.finde||{}).comidas||[]).forEach(function(b){ (b.opciones||[]).forEach(function(r){ RECETAS[r.id]=r; }); });
+    var html = vista==='finde' ? vFinde() : vista==='compra' ? vCompra() : vista==='cole' ? vCole() : vHoy();
+    html += '<div class="pie">Actualizado: '+esc(fechaLarga((D.actualizado||'').slice(0,10)))+'</div>';
+    $('app').innerHTML = html;
+    var tabs = document.querySelectorAll('.tab');
+    for(var i=0;i<tabs.length;i++) tabs[i].className = 'tab'+(tabs[i].getAttribute('data-v')===vista?' on':'');
+    window.scrollTo(0,0);
+  }
+
+  /* ---------- Detalle ---------- */
+  function abrir(id){
+    var r = RECETAS[id]; if(!r) return;
+    var s = '<div class="det"><button class="back" id="cerrar">‹ Volver</button>'+
+      '<div class="det-top"><div class="det-img" style="background:'+(r._bg||'#FCE6DC')+'">'+dish(r)+badge(r)+'</div><div><h1>'+esc(r.titulo)+'</h1>'+
+      '<div class="meta" style="font-size:16px"><i>⏱ <b>'+esc(r.tiempo)+' min</b></i><i>👩‍🍳 <b>'+esc(r.dificultad)+'</b></i><i>🍽 <b>'+esc(r.raciones)+' raciones</b></i></div>'+
+      (r.porque?'<div class="por" style="font-size:16px">'+esc(r.porque)+'</div>':'')+(r.truco?'<div class="por" style="font-size:16px">🧒 <b>Para el peque:</b> '+esc(r.truco)+'</div>':'')+'</div></div>'+
+      '<h2 class="sec">Ingredientes</h2><div class="ingr">';
+    (r.ingredientes||[]).forEach(function(it){ s += '<div class="item"><span class="check" style="border-color:#7DB56F"></span>'+esc(it)+'</div>'; });
+    s += '</div><button class="btn" id="empezar">Empezar a cocinar · '+(r.pasos||[]).length+' pasos ›</button>';
+    if(r.fotosUrl) s += '<a class="btn2" href="'+esc(r.fotosUrl)+'" target="_blank" rel="noopener">📷 Ver la receta con fotos reales</a>';
+    s += '</div>';
+    var ov = $('ov'); ov.innerHTML = s; ov.className='ov on'; ov.scrollTop=0;
+    $('cerrar').onclick = function(){ ov.className='ov'; };
+    $('empezar').onclick = function(){ cocinar(r); };
+  }
+
+  /* ---------- Modo cocina ---------- */
+  function paraTimer(){ if(tInt){ clearInterval(tInt); tInt=null; } }
+  function fmt(sec){ var m=Math.floor(sec/60), s=sec%60; return m+':'+(s<10?'0':'')+s; }
+  function cocinar(r){ cookR=r; cookI=0; paraTimer(); pintaPaso(); $('cook').className='cook on'; }
+  function pintaPaso(){
+    var r=cookR, p=r.pasos[cookI], n=r.pasos.length, dots='';
+    for(var i=0;i<n;i++) dots+='<span class="dot'+(i===cookI?' on':'')+'"></span>';
+    var last = cookI===n-1;
+    $('cook').innerHTML =
+      '<div class="cook-h"><span class="t">'+esc(r.titulo)+'</span><button class="x" id="salir">Salir ✕</button></div>'+
+      '<div class="dots">'+dots+'</div>'+
+      '<div class="cook-b"><div class="ilu">'+icon(p.icono)+'</div>'+
+      '<div class="pn">Paso '+(cookI+1)+' de '+n+'</div><div class="pt">'+esc(p.texto)+'</div>'+
+      (p.min?'<button class="timer" id="timer">⏱ Temporizador '+p.min+' min</button>':'')+'</div>'+
+      '<div class="cook-f"><button class="nav prev" id="prev"'+(cookI===0?' disabled':'')+'>‹ Atrás</button>'+
+      '<button class="nav next" id="next">'+(last?'¡Listo! A la mesa 🎉':'Siguiente ›')+'</button></div>';
+    $('salir').onclick=function(){ paraTimer(); $('cook').className='cook'; };
+    $('prev').onclick=function(){ if(cookI>0){ paraTimer(); cookI--; pintaPaso(); } };
+    $('next').onclick=function(){ paraTimer(); if(last){ $('cook').className='cook'; $('ov').className='ov'; } else { cookI++; pintaPaso(); } };
+    if(p.min) $('timer').onclick=function(){
+      var b=this;
+      if(tInt){ paraTimer(); b.className='timer'; b.innerHTML='⏱ Temporizador '+p.min+' min'; return; }
+      tLeft=p.min*60; b.className='timer run'; b.innerHTML='⏳ '+fmt(tLeft)+' · tocar para parar';
+      tInt=setInterval(function(){
+        tLeft--;
+        if(tLeft<=0){ paraTimer(); b.className='timer done'; b.innerHTML='✅ ¡Tiempo!'; return; }
+        b.innerHTML='⏳ '+fmt(tLeft)+' · tocar para parar';
+      },1000);
+    };
+  }
+
+  /* ---------- Eventos ---------- */
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    while(t && t!==document){
+      if(t.getAttribute){
+        if(t.getAttribute('data-r')){ abrir(t.getAttribute('data-r')); return; }
+        if(t.getAttribute('data-v')){ ir(t.getAttribute('data-v')); return; }
+        if(t.getAttribute('data-m')){
+          var md=parseInt(t.getAttribute('data-m'),10);
+          mesVista=new Date(mesVista.getFullYear(), mesVista.getMonth()+md, 1); render(); return;
+        }
+        if(t.getAttribute('data-t')){
+          var id=t.getAttribute('data-t'), box=$('cb_'+id), op=box.className.indexOf('abierta')<0;
+          box.className='compra'+(op?' abierta':''); store('a_'+id, op?'1':'0'); return;
+        }
+        if(t.getAttribute('data-k')){
+          var k=t.getAttribute('data-k'), ok=store(k)==='1';
+          store(k, ok?'0':'1');
+          t.className='item'+(ok?'':' ok');
+          t.firstChild.innerHTML = ok?'':'✓';
+          var bx=t.parentNode.parentNode, cnt=bx.querySelector?bx.querySelector('.ccnt'):null;
+          if(cnt){ var all=bx.querySelectorAll('.item'), n=0; for(var j=0;j<all.length;j++) if(all[j].className.indexOf('ok')>=0) n++; cnt.innerHTML=n+'/'+all.length; }
+          return;
+        }
+      }
+      t = t.parentNode;
+    }
+  });
+
+  function ir(v){
+    vista = v;
+    try{ if(location.hash!=='#'+v) location.hash = v; }catch(e){}
+    render();
+  }
+  function desdeHash(){
+    var h=(location.hash||'').replace('#','');
+    vista = (h==='finde'||h==='compra'||h==='cole') ? h : 'hoy';
+    render();
+  }
+  window.addEventListener('hashchange', desdeHash);
+
+  // Reloj, y recarga automática de datos cada 30 min (si no se está cocinando)
+  setInterval(function(){ var h=$('hora'); if(h) h.innerHTML=hora(); }, 20000);
+  setInterval(function(){
+    if($('cook').className.indexOf('on')<0 && $('ov').className.indexOf('on')<0 && location.protocol.indexOf('http')===0){
+      location.reload();
+    }
+  }, 30*60*1000);
+
+  desdeHash();
+})();
+</script>
+</body>
+</html>

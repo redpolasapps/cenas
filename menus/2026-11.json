@@ -1,0 +1,171 @@
+{
+ "mes": "2026-11",
+ "fuente": "Foto del menú en papel (catalán), traducida",
+ "notas": "Acompañan agua y pan (integral 2 veces por semana). Fruta del mes: mandarina, plátano, manzana, pera, naranja.",
+ "dias": {
+  "2026-11-02": {
+   "platos": [
+    "Sopa de fideos integrales",
+    "Pollo al horno con cebolla y pimiento",
+    "Patata y calabaza",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-03": {
+   "platos": [
+    "Arroz con tomate",
+    "Tortilla francesa",
+    "Lechuga y zanahoria rallada",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-04": {
+   "platos": [
+    "Alubias blancas con verduras",
+    "Filete de abadejo rebozado",
+    "Lechuga y brotes",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-05": {
+   "platos": [
+    "Crema de verduras (zanahoria, calabacín, puerro, cebolla y patata) con picatostes",
+    "Macarrones con boloñesa vegetal de legumbre",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-06": {
+   "platos": [
+    "Trinxat de col con patata",
+    "Hamburguesa mixta a la plancha",
+    "Ensalada de tomate y pepino",
+    "Yogur"
+   ]
+  },
+  "2026-11-09": {
+   "platos": [
+    "Lentejas guisadas",
+    "Huevos con salsa aurora",
+    "Tomate y zanahoria",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-10": {
+   "platos": [
+    "Paella de verduras",
+    "Fricandó de cerdo",
+    "Lechuga y cebolla",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-11": {
+   "platos": [
+    "Crema de puerro y patata",
+    "Lasaña de merluza",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-12": {
+   "platos": [
+    "Judías verdes con patata y zanahoria",
+    "Estofado de pavo",
+    "Ensalada con brotes y zanahoria",
+    "Yogur"
+   ]
+  },
+  "2026-11-13": {
+   "platos": [
+    "Espirales integrales con sofrito de tomate y orégano",
+    "Coca de verduras con boloñesa de legumbre",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-16": {
+   "platos": [
+    "Brócoli gratinado",
+    "Albóndigas de la abuela",
+    "Tomate aliñado y pimiento verde",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-17": {
+   "platos": [
+    "Arroz con tomate y orégano",
+    "Hamburguesa de cuscús con cebolla caramelizada",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-18": {
+   "platos": [
+    "Crema de calabaza y zanahoria",
+    "Pollo asado a la provenzal",
+    "Patatas en dados",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-19": {
+   "platos": [
+    "Alubias estofadas caseras",
+    "Merluza al horno con orégano",
+    "Lechuga y aceitunas",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-20": {
+   "platos": [
+    "Espaguetis integrales con tomate y queso rallado",
+    "Huevos con bechamel",
+    "Lechuga y maíz",
+    "Yogur"
+   ],
+   "nota": "Día Universal de la Infancia"
+  },
+  "2026-11-23": {
+   "platos": [
+    "Guisantes, patata y zanahoria",
+    "Pollo asado con orégano",
+    "Ensalada de lechuga, tomate y remolacha",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-24": {
+   "platos": [
+    "Crema de calabacín con aceite de albahaca",
+    "Fricandó de filete vegetal",
+    "Patatas en dados",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-25": {
+   "platos": [
+    "Macarrones integrales con crema de albahaca",
+    "Salmón al horno con verduras",
+    "Yogur"
+   ]
+  },
+  "2026-11-26": {
+   "platos": [
+    "Arroz tres delicias",
+    "Estofado de cerdo",
+    "Tomate aliñado",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-27": {
+   "platos": [
+    "Alubias blancas guisadas con zanahoria",
+    "Tortilla de patatas",
+    "Lechuga y col lombarda",
+    "Fruta de temporada"
+   ]
+  },
+  "2026-11-30": {
+   "platos": [
+    "Lentejas con verduras (cebolla y pimiento)",
+    "Calamares a la andaluza",
+    "Lechuga y maíz",
+    "Fruta de temporada"
+   ]
+  }
+ }
+}
