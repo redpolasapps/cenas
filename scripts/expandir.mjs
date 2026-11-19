@@ -150,39 +150,63 @@ async function fotoPexels(consulta) {
   } catch (e) { log("Pexels:", e.message); return null; }
 }
 const quitarHTML = (t) => String(t || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
-async function fotoWikimedia(consulta) {
-  if (!consulta) return null;
+async function candidatosWikimedia(consulta) {
+  if (!consulta) return [];
   try {
-    const url = "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=8" +
+    const url = "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=10" +
       "&prop=imageinfo&iiprop=url|mime|size|extmetadata&iiurlwidth=600&gsrsearch=" + encodeURIComponent(consulta + " filetype:bitmap");
     const r = await fetch(url, { headers: { "User-Agent": "cenas-en-casa/1.0 (https://github.com/redpolasapps/cenas)" } });
-    if (!r.ok) { log("Wikimedia HTTP", r.status); return null; }
+    if (!r.ok) { log("Wikimedia HTTP", r.status); return []; }
     const pages = Object.values((await r.json()).query?.pages || {}).sort((x, y) => (x.index || 0) - (y.index || 0));
+    const out = [];
     for (const pg of pages) {
       const ii = pg.imageinfo?.[0];
       if (!ii || !/jpeg/.test(ii.mime || "") || (ii.width || 0) < 600 || !ii.thumburl) continue;
       const m = ii.extmetadata || {};
       const lic = quitarHTML(m.LicenseShortName?.value);
       if (!/CC|Public domain|PD/i.test(lic)) continue;
-      const autor = quitarHTML(m.Artist?.value).slice(0, 60) || "Autor desconocido";
-      return { foto: ii.thumburl, fotoCredito: `${autor} / Wikimedia Commons (${lic})` };
+      out.push({
+        foto: ii.thumburl.split("?")[0],
+        fotoCredito: `${quitarHTML(m.Artist?.value).slice(0, 60) || "Autor desconocido"} / Wikimedia Commons (${lic})`,
+        titulo: String(pg.title || "").replace(/^File:/, ""),
+        descripcion: quitarHTML(m.ImageDescription?.value).slice(0, 200),
+      });
     }
-    return null;
-  } catch (e) { log("Wikimedia:", e.message); return null; }
+    return out;
+  } catch (e) { log("Wikimedia:", e.message); return []; }
 }
-async function fotoLibre(consulta) {
-  if (!consulta) return null;
-  // De la búsqueda más concreta a la más general: "roasted chicken thighs lemon" → "roasted chicken thighs" → "roasted chicken"
-  const palabras = consulta.split(/\s+/).filter(Boolean);
-  const intentos = [];
-  for (let n = palabras.length; n >= 2; n--) intentos.push(palabras.slice(0, n).join(" "));
-  if (!intentos.length) intentos.push(consulta);
-  for (const q of intentos.slice(0, 3)) {
-    const f = (await fotoPexels(q)) || (await fotoWikimedia(q));
-    if (f) { log(`Foto para "${consulta}" con la búsqueda "${q}"`); return f; }
+
+// Busca fotos para varias recetas. Con clave de Pexels usa Pexels; si no, reúne candidatas de Wikimedia
+// y le pide a Gemini (una sola llamada) que elija solo las que muestran de verdad ese plato.
+async function buscarFotos(recetas) {
+  const res = {};
+  const sinResolver = [];
+  for (const r of recetas) {
+    const consulta = r.busqueda_foto || r.titulo;
+    const px = await fotoPexels(consulta);
+    if (px) { res[r.id] = px; continue; }
+    const palabras = consulta.split(/\s+/).filter(Boolean);
+    const qs = [consulta]; if (palabras.length > 2) qs.push(palabras.slice(0, 2).join(" "));
+    const vistos = new Set(), cands = [];
+    for (const q of qs) for (const c of await candidatosWikimedia(q)) if (!vistos.has(c.foto) && cands.length < 8) { vistos.add(c.foto); cands.push(c); }
+    if (cands.length) sinResolver.push({ r, cands });
   }
-  log(`Sin foto para "${consulta}"`);
-  return null;
+  if (sinResolver.length) {
+    const prompt = `Para cada receta te doy fotos candidatas de Wikimedia Commons (nombre del archivo y descripción). ` +
+      `Elige, para cada receta, la candidata que muestre CLARAMENTE ese mismo plato ya cocinado y servido (mismo ingrediente principal y una preparación parecida). ` +
+      `Descarta fotos de restaurantes, fachadas, personas, mapas, ingredientes crudos o platos distintos. Si ninguna encaja de verdad, pon null. Es mejor null que una foto dudosa.\n` +
+      `Responde SOLO con JSON: {"elecciones":[{"id":"...","n":<número de la candidata o null>}]}\n\n` +
+      JSON.stringify(sinResolver.map(({ r, cands }) => ({ id: r.id, receta: r.titulo, descripcion: r.subtitulo || "", candidatas: cands.map((c, i) => ({ n: i, archivo: c.titulo, descripcion: c.descripcion })) })), null, 1);
+    try {
+      const j = await llamarGemini(prompt);
+      for (const e of j.elecciones || []) {
+        const item = sinResolver.find((x) => x.r.id === e.id);
+        if (item && Number.isInteger(e.n) && item.cands[e.n]) { const c = item.cands[e.n]; res[e.id] = { foto: c.foto, fotoCredito: c.fotoCredito }; log(`Foto elegida por Gemini para "${item.r.titulo}": ${c.titulo}`); }
+        else if (item) log(`Gemini no ve ninguna foto buena para "${item.r.titulo}"`);
+      }
+    } catch (e) { log("No se pudieron elegir fotos:", e.message); }
+  }
+  return res;
 }
 
 /* ---------------- principal ---------------- */
@@ -228,16 +252,12 @@ async function main() {
   if (pendientes.length) throw new Error(`Gemini no pudo redactar: ${pendientes.map((r) => r.id).join(", ")}. No se publica nada.`);
   for (const r of nuevas) Object.assign(r, hechos[r.id]);
 
-  // Fotos: para toda receta sin foto (nuevas y del recetario). No gasta tokens de ningún modelo.
+  // Fotos: para toda receta sin foto (nuevas y del recetario)
   const todas = [...cenas, ...(finde ? finde.comidas.flatMap((b) => b.opciones) : [])];
-  let nfotos = 0, sinFoto = 0;
-  for (const r of todas) {
-    if (r.foto) continue;
-    sinFoto++;
-    const f = await fotoLibre(r.busqueda_foto || r.titulo);
-    if (f) { Object.assign(r, f); nfotos++; }
-  }
-  log(`Fotos añadidas: ${nfotos} de ${sinFoto} recetas que no tenían`);
+  const sinFoto = todas.filter((r) => !r.foto || (process.env.FORZAR && /wikimedia/.test(r.foto) && nuevas.includes(r)));
+  const fotos = await buscarFotos(sinFoto);
+  for (const r of sinFoto) { if (fotos[r.id]) Object.assign(r, fotos[r.id]); else if (nuevas.includes(r)) { r.foto = ""; r.fotoCredito = ""; } }
+  log(`Fotos añadidas: ${Object.keys(fotos).length} de ${sinFoto.length} recetas que no tenían`);
   for (const r of [...cenas, ...(finde ? finde.comidas.flatMap((b) => b.opciones) : [])]) { delete r.guia; delete r.busqueda_foto; delete r.reutilizar; }
 
   // data.js
