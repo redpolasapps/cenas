@@ -42,6 +42,15 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
 - `finde`: `null` si no toca rehacerlo. Si toca (jueves o fin de semana pasado), un objeto `{"fechas": "Sábado 28 y domingo 29 de noviembre", "comidas": [ ... ]}` con 4 bloques `{"dia": "Sábado", "momento": "Comida", "fecha": "2026-11-28", "opciones": [3 recetas como las de arriba]}`.
 - Valida que el plan es JSON correcto y haz commit y push (`Plan AAAA-MM-DD`). La Action tarda unos minutos.
 
+## Leer el recetario sin gastar (importante)
+
+- **No leas nunca `recetas/historial.json` entero**: tiene todas las recetas con sus pasos y crece cada día.
+- Para decidir qué repetir, ejecuta **`node scripts/candidatas.mjs`**: muestra en una línea por receta solo las que se pueden repetir hoy (más de 14 días sin salir), como mucho 60, empezando por las que llevan más tiempo sin salir. Normalmente con eso basta.
+- Si necesitas más detalle, está **`recetas/indice.json`**: una línea por receta con `id`, `titulo`, `cocina`, `peques`, `healthy`, `gourmet`, `etiquetas`, `momentos`, `primera` y `ultima` (fechas), `veces` y si tiene `foto`. Está ordenado de más reciente a más antiguo.
+- Si necesitas ver o cambiar una receta concreta, sácala con node sin imprimir el resto. Por ejemplo: `node -e "const h=require('./recetas/historial.json');console.log(JSON.stringify(h.recetas.find(r=>r.id==='ID'),null,1))"`.
+- Para comprobar `data.js`, usa un `node -e` que imprima solo lo necesario (fecha, plan, títulos), no el archivo entero.
+- En modo completo, después de tocar `historial.json`, regenera el índice con `node scripts/expandir.mjs --indice`.
+
 ## Qué hacer en cada ejecución
 
 1. Mira la fecha de hoy en Europe/Madrid.
@@ -73,8 +82,8 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
    - **Compensa el mediodía.** Si hubo legumbre y carne, cena pescado o huevo. Si hubo pescado, cena huevo o carne blanca. Si hubo mucho hidrato, cena poco. Siempre mucha verdura.
    - Las 6 tienen que ser distintas entre sí: usa proteínas diferentes y técnicas diferentes (horno, sartén, olla).
    - No repitas recetas que aparezcan en el `data.js` actual (`hoy.cenas`). Así se evita repetir lo de ayer.
-   - **Recetario (`recetas/historial.json`):** la prioridad es **crear recetas nuevas**, para que el recetario vaya creciendo. De las 6 cenas, **como mucho 2** pueden salir del recetario, y es perfectamente válido que no salga ninguna.
-     - Solo puedes reutilizar una receta si han pasado **al menos 14 días (2–3 semanas) desde la última vez que salió** (mira la fecha más reciente de `usos[].fecha`) y si encaja con el día.
+   - **Recetario (consúltalo en `recetas/indice.json`):** la prioridad es **crear recetas nuevas**, para que el recetario vaya creciendo. De las 6 cenas, **como mucho 2** pueden salir del recetario, y es perfectamente válido que no salga ninguna.
+     - Solo puedes reutilizar una receta si han pasado **al menos 14 días (2–3 semanas) desde la última vez que salió** (campo `ultima` del índice) y si encaja con el día.
      - Elige tú cuáles repetir, según lo que mejor encaje con el menú y la semana. Prefiere las que salieron hace más tiempo o las que tuvieron buena pinta (fáciles, aptas para el peque).
      - Una receta reutilizada se copia tal cual del recetario (mismo `id`, pasos y foto). Así no hay que volver a buscar la foto ni a escribirla. Mira antes que tenga el formato actual (pasos detallados con `usa`, `cocina`, etc.). Si le falta algo, complétalo.
      - Antes de crear una receta nueva, comprueba que no exista ya una igual o casi igual en el recetario (mismo plato con otro nombre). Si existe, reutilízala en vez de duplicarla.

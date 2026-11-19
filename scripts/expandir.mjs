@@ -209,6 +209,20 @@ async function buscarFotos(recetas) {
   return res;
 }
 
+/* ---------------- Índice ligero del recetario (lo lee Claude para decidir) ---------------- */
+export async function escribirIndice(hist) {
+  const indice = (hist.recetas || []).map((r) => {
+    const fechas = (r.usos || []).map((u) => u.fecha).sort();
+    return {
+      id: r.id, titulo: r.titulo, cocina: r.cocina || "", peques: !!r.peques, healthy: !!r.healthy, gourmet: !!r.gourmet,
+      etiquetas: r.etiquetas || [], momentos: [...new Set((r.usos || []).map((u) => (u.dia === "Entre semana" ? "Cena" : `${u.dia} ${u.momento}`)))],
+      primera: fechas[0] || "", ultima: fechas[fechas.length - 1] || "", veces: fechas.length, foto: !!r.foto,
+    };
+  }).sort((a, b) => (a.ultima < b.ultima ? 1 : -1));
+  await writeFile(path.join(RAIZ, "recetas/indice.json"), "[\n" + indice.map((x) => JSON.stringify(x)).join(",\n") + "\n]\n");
+  log(`Índice del recetario: ${indice.length} recetas`);
+}
+
 /* ---------------- principal ---------------- */
 async function main() {
   let planRel = process.env.PLAN;
@@ -283,7 +297,12 @@ async function main() {
   if (finde) finde.comidas.forEach((b) => b.opciones.forEach((r) => usar(r, { fecha: b.fecha || plan.fecha, dia: b.dia, momento: b.momento })));
   hist.actualizado = data.actualizado;
   await writeFile(path.join(RAIZ, "recetas/historial.json"), JSON.stringify(hist, null, 1));
+  await escribirIndice(hist);
   log(`OK: ${cenas.length} cenas, ${nuevas.length} nuevas redactadas por Gemini, recetario con ${hist.recetas.length} recetas.`);
 }
 
-main().catch((e) => { console.error("[expandir] ERROR:", e.message); process.exit(1); });
+if (process.argv.includes("--indice")) {
+  leerJSON("recetas/historial.json", { recetas: [] }).then(escribirIndice).catch((e) => { console.error(e); process.exit(1); });
+} else {
+  main().catch((e) => { console.error("[expandir] ERROR:", e.message); process.exit(1); });
+}
