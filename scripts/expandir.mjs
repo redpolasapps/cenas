@@ -259,7 +259,7 @@ async function main() {
     return r;
   };
   const cenas = (plan.hoy?.cenas || []).map(resolver);
-  const finde = plan.finde ? { fechas: plan.finde.fechas, comidas: plan.finde.comidas.map((b) => ({ ...b, opciones: b.opciones.map(resolver) })), compra: [] } : null;
+  const finde = plan.finde ? { fechas: plan.finde.fechas, hasta: plan.finde.comidas.map((b) => b.fecha || "").sort().pop() || "", comidas: plan.finde.comidas.map((b) => ({ ...b, opciones: b.opciones.map(resolver) })), compra: [] } : null;
 
   // Gemini redacta las nuevas
   const { hechos, pendientes } = await redactar(nuevas);

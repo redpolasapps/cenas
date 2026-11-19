@@ -39,7 +39,7 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
 - En `cenas` van las 6, en orden: la sexta es la de capricho. Cada una es o bien `{"reutilizar": "<id>"}` (receta del recetario, se copia con sus pasos y su foto), o bien una receta nueva con todos los campos de arriba, **sin** `ingredientes` ni `pasos`.
 - Un `id` nuevo no puede existir ya en el recetario: si el plato ya está, usa `reutilizar`.
 - `busqueda_foto`: 2 a 4 palabras en inglés que describan el plato, para buscar en Pexels.
-- `finde`: `null` si no toca rehacerlo. Si toca (jueves o fin de semana pasado), un objeto `{"fechas": "Sábado 28 y domingo 29 de noviembre", "comidas": [ ... ]}` con 4 bloques `{"dia": "Sábado", "momento": "Comida", "fecha": "2026-11-28", "opciones": [3 recetas como las de arriba]}`.
+- `finde`: `null` si no toca rehacerlo. Si toca (el fin de semana anterior ya ha pasado, normalmente el lunes), un objeto `{"fechas": "Sábado 28 y domingo 29 de noviembre", "comidas": [ ... ]}` con 4 bloques `{"dia": "Sábado", "momento": "Comida", "fecha": "2026-11-28", "opciones": [3 recetas como las de arriba]}`.
 - Valida que el plan es JSON correcto y haz commit y push (`Plan AAAA-MM-DD`). La Action tarda unos minutos.
 
 ## Leer el recetario sin gastar (importante)
@@ -93,7 +93,7 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
      - **Evita la cocina nórdica, alemana o centroeuropea** (salchichas con chucrut, platos con nata y patata muy pesados, etc.), porque no suele gustarles.
    - Ingredientes de supermercado normal y 3 raciones por defecto.
    - Los días sin cole (sábado y domingo) también son libres. Copia en `hoy.cenas` las opciones de cena de ese día que haya en `finde`, y completa hasta 6 opciones (con al menos dos `"peques": true`).
-6. **Los jueves (y siempre que `finde` sea de una semana pasada)**, rehaz `finde` para el sábado y domingo siguientes:
+6. **Solo cuando el fin de semana de `finde` ya haya pasado** (normalmente, la primera ejecución del lunes), prepara `finde` para el sábado y domingo siguientes. Se considera pasado si `finde.hasta` (o, si no existe, la fecha del domingo que aparece en `finde.fechas`) es anterior a hoy. **El resto de días no se toca**: el plan del fin de semana se prepara una sola vez por semana, el lunes, para que dé tiempo a planificar la compra.
    - `fechas`: por ejemplo, "Sábado 21 y domingo 22 de noviembre".
    - `comidas`: 4 bloques en este orden: Sábado Comida, Sábado Cena, Domingo Comida y Domingo Cena. Cada uno lleva **3 `opciones`** (la app las muestra en una fila de 3).
    - Los gustos de la familia (mediterráneo, algo de japonés y americano fácil, nada nórdico ni alemán) también valen para el fin de semana.
