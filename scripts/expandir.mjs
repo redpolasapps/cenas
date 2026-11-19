@@ -66,8 +66,11 @@ Para cada receta devuelve:
 
 Responde SOLO con JSON con esta forma: {"recetas":[{"id":"...","ingredientes":[...],"pasos":[...]}]}, una entrada por cada receta, con el mismo "id".`;
 
-async function llamarGemini(prompt) {
-  if (process.env.MOCK_GEMINI) return JSON.parse(await readFile(process.env.MOCK_GEMINI, "utf8"));
+export async function llamarGemini(prompt) {
+  if (process.env.MOCK_GEMINI) { // pruebas: lista de archivos separados por comas, uno por llamada
+    const l = process.env.MOCK_GEMINI.split(","); const f = l.length > 1 ? l.shift() : l[0]; process.env.MOCK_GEMINI = l.join(",");
+    return JSON.parse(await readFile(f, "utf8"));
+  }
   const key = process.env.GEMINI_API_KEY;
   if (!key) throw new Error("Falta GEMINI_API_KEY");
   let ultimoError;
@@ -224,7 +227,7 @@ export async function escribirIndice(hist) {
 }
 
 /* ---------------- principal ---------------- */
-async function main() {
+export async function main() {
   let planRel = process.env.PLAN;
   if (!planRel) {
     const files = (await readdir(path.join(RAIZ, "plan")).catch(() => [])).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
@@ -301,8 +304,9 @@ async function main() {
   log(`OK: ${cenas.length} cenas, ${nuevas.length} nuevas redactadas por Gemini, recetario con ${hist.recetas.length} recetas.`);
 }
 
-if (process.argv.includes("--indice")) {
+const esPrincipal = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(new URL(import.meta.url).pathname);
+if (esPrincipal && process.argv.includes("--indice")) {
   leerJSON("recetas/historial.json", { recetas: [] }).then(escribirIndice).catch((e) => { console.error(e); process.exit(1); });
-} else {
+} else if (esPrincipal) {
   main().catch((e) => { console.error("[expandir] ERROR:", e.message); process.exit(1); });
 }

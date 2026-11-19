@@ -1,0 +1,56 @@
+name: Emergencia (Gemini lo hace todo si Claude no ha actualizado)
+
+on:
+  schedule:
+    # 13:30 UTC = 14:30 en Madrid en invierno (15:30 en verano). Claude actualiza a las 11:47 y reintenta a las 13:47.
+    - cron: "30 13 * * *"
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: "Hacerlo aunque la web ya esté actualizada hoy (prueba)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: expandir
+  cancel-in-progress: false
+
+jobs:
+  emergencia:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Comprobar y, si hace falta, que Gemini decida y redacte
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          FORZAR: ${{ inputs.forzar && '1' || '' }}
+        run: node scripts/emergencia.mjs
+
+      - name: Validar
+        run: |
+          node -e "global.window={};require('./data.js');const d=window.MENU_DATA;if(!d.hoy.cenas.length)throw new Error('sin cenas');console.log('data.js OK', d.hoy.fecha, d.hoy.cenas.length,'cenas')"
+          node -e "JSON.parse(require('fs').readFileSync('recetas/historial.json'));console.log('historial OK')"
+
+      - name: Publicar
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "gemini-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data.js recetas/historial.json recetas/indice.json plan
+          if git diff --cached --quiet; then echo "Sin cambios: la web ya estaba actualizada"; exit 0; fi
+          git commit -m "Emergencia: Gemini ha hecho el plan y las recetas $(date +%F)"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || true
