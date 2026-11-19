@@ -17,6 +17,8 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
    - carne roja como mucho 1 o 2 veces;
    - verdura en todas las comidas y cenas, y fruta a diario.
    Prioriza en las cenas lo que falte esa semana y evita lo que ya esté cubierto.
+   - **Semanas incompletas:** puede faltar el menú de algunos días. Pasa cuando la semana empieza en un mes y acaba en otro y aún no está el archivo del mes nuevo, en festivos, en vacaciones o cuando el menú no trae ese día. Cuenta solo los días que sí estén en `menus/` y **no te inventes nunca lo que ha comido un día sin menú**. Ajusta las pautas a los días que haya: con 2 días conocidos no hace falta llegar a 3 de pescado. Dilo en `hoy.explicacion` (por ejemplo, "solo tengo el menú de 3 días de esta semana").
+   - Si un mes empieza a mitad de semana, mira también el archivo del mes anterior o del siguiente para completar la semana, si existe.
    Escribe en `hoy.explicacion` un párrafo corto (2 o 3 frases, tono cercano) que explique por qué propones estas cenas: qué ha comido hoy, cómo va la semana (por ejemplo, "esta semana lleva 2 de pescado y 3 de legumbre") y qué buscan las cenas. La app lo muestra debajo de las recetas.
 5. Propón **6 cenas** en `hoy.cenas` (la app las muestra en 2 filas de 3):
    - **En casa hay un niño de 4 años que no come de todo.** Todas las cenas tienen que poder comerlas él y los adultos:
