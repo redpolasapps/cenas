@@ -171,7 +171,18 @@ async function fotoWikimedia(consulta) {
   } catch (e) { log("Wikimedia:", e.message); return null; }
 }
 async function fotoLibre(consulta) {
-  return (await fotoPexels(consulta)) || (await fotoWikimedia(consulta));
+  if (!consulta) return null;
+  // De la búsqueda más concreta a la más general: "roasted chicken thighs lemon" → "roasted chicken thighs" → "roasted chicken"
+  const palabras = consulta.split(/\s+/).filter(Boolean);
+  const intentos = [];
+  for (let n = palabras.length; n >= 2; n--) intentos.push(palabras.slice(0, n).join(" "));
+  if (!intentos.length) intentos.push(consulta);
+  for (const q of intentos.slice(0, 3)) {
+    const f = (await fotoPexels(q)) || (await fotoWikimedia(q));
+    if (f) { log(`Foto para "${consulta}" con la búsqueda "${q}"`); return f; }
+  }
+  log(`Sin foto para "${consulta}"`);
+  return null;
 }
 
 /* ---------------- principal ---------------- */
@@ -186,7 +197,7 @@ async function main() {
   log("Plan:", planRel, "fecha", plan.fecha);
 
   const actual = (await leerData()) || {};
-  if (actual.hoy?.fecha === plan.fecha && actual.plan === path.basename(planRel) && (actual.hoy.cenas || []).every((r) => (r.pasos || []).length)) {
+  if (!process.env.FORZAR && actual.hoy?.fecha === plan.fecha && actual.plan === path.basename(planRel) && (actual.hoy.cenas || []).every((r) => (r.pasos || []).length)) {
     log("data.js ya está generado con este plan. Nada que hacer."); return;
   }
   const hist = await leerJSON("recetas/historial.json", { recetas: [] });
@@ -203,7 +214,8 @@ async function main() {
       if (p.truco) copia.truco = p.truco;
       return copia;
     }
-    if (porId[p.id]) throw new Error(`La receta nueva "${p.id}" ya existe en el recetario: usa "reutilizar"`);
+    // Si ya existe en el recetario por una ejecución anterior de este mismo plan, se vuelve a redactar; si no, es un error del plan.
+    if (porId[p.id] && !(porId[p.id].usos || []).some((u) => u.fecha === plan.fecha)) throw new Error(`La receta nueva "${p.id}" ya existe en el recetario: usa "reutilizar"`);
     const r = { ...p, foto: p.foto || "", fotoCredito: p.fotoCredito || "", fotosUrl: "" };
     nuevas.push(r);
     return r;
@@ -216,14 +228,16 @@ async function main() {
   if (pendientes.length) throw new Error(`Gemini no pudo redactar: ${pendientes.map((r) => r.id).join(", ")}. No se publica nada.`);
   for (const r of nuevas) Object.assign(r, hechos[r.id]);
 
-  // Fotos (solo recetas nuevas sin foto)
-  let nfotos = 0;
-  for (const r of nuevas) {
+  // Fotos: para toda receta sin foto (nuevas y del recetario). No gasta tokens de ningún modelo.
+  const todas = [...cenas, ...(finde ? finde.comidas.flatMap((b) => b.opciones) : [])];
+  let nfotos = 0, sinFoto = 0;
+  for (const r of todas) {
     if (r.foto) continue;
+    sinFoto++;
     const f = await fotoLibre(r.busqueda_foto || r.titulo);
     if (f) { Object.assign(r, f); nfotos++; }
   }
-  log(`Fotos nuevas: ${nfotos}/${nuevas.length}`);
+  log(`Fotos añadidas: ${nfotos} de ${sinFoto} recetas que no tenían`);
   for (const r of [...cenas, ...(finde ? finde.comidas.flatMap((b) => b.opciones) : [])]) { delete r.guia; delete r.busqueda_foto; delete r.reutilizar; }
 
   // data.js
@@ -238,6 +252,8 @@ async function main() {
   // historial
   const usar = (r, uso) => {
     const limpio = JSON.parse(JSON.stringify(r)); delete limpio._bg;
+    const esNueva = nuevas.includes(r);
+    if (porId[r.id] && esNueva) { const usos = porId[r.id].usos || []; Object.keys(porId[r.id]).forEach((k) => delete porId[r.id][k]); Object.assign(porId[r.id], limpio, { usos }); }
     const h = porId[r.id] || (porId[r.id] = { ...limpio, usos: [] });
     if (!porId[r.id].usos) porId[r.id].usos = [];
     if (!hist.recetas.includes(h)) hist.recetas.push(h);
