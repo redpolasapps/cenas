@@ -83,11 +83,13 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
 - `pasos`: de 4 a 7 pasos. `icono` es uno de estos: `cortar`, `sarten`, `horno`, `olla`, `mezclar`, `emplatar`, `envolver`, `lavar`. `min` es opcional y activa un temporizador en la app.
 - `imagen`: la ilustración del plato terminado que más se parezca. Puede ser `pescado`, `tortilla`, `crema`, `arroz`, `pasta`, `pizza`, `hamburguesa`, `pollo-horno`, `garbanzos`, `sopa`, `quesadilla` o `generico`.
 
-## Fotos reales (opcional)
+## Fotos reales (intenta ponerlas siempre)
 
-- **No uses nunca el navegador ni ninguna herramienta del ordenador del usuario** (Claude_Browser, Chrome, computer use, remote-devices). Cada web que se abre ahí le pide un permiso, y esta tarea tiene que funcionar sin molestarle. Usa solo WebSearch y WebFetch.
-- Busca una foto como mucho por receta, con un par de búsquedas. Si no sale enseguida, deja `foto` vacío y sigue: la app muestra la ilustración, que siempre está.
-- Pon una foto en `foto` solo si se parece de verdad al plato y tiene una licencia libre: Wikimedia Commons (URL directa a `upload.wikimedia.org`), Unsplash o Pexels (URL directa a la imagen). Escribe en `fotoCredito` el autor y la web.
+- **No uses nunca el navegador ni ninguna herramienta del ordenador del usuario** (Claude_Browser, Chrome, computer use, remote-devices, request_access). Cada uso le pide un permiso. Usa solo WebSearch y WebFetch.
+- **Intenta que todas las recetas lleven foto real.** El objetivo es que la mayoría la tengan. Las fotos hacen la app mucho más útil.
+- Método que funciona: para cada receta, haz una búsqueda con WebSearch como `pexels <nombre del plato en inglés>` (por ejemplo, `pexels spinach omelette` o `pexels chicken nuggets`). En los resultados, elige una foto de pexels.com cuya descripción coincida con el plato. Si la búsqueda no devuelve la URL directa de la imagen, abre la página de la foto con WebFetch para sacarla y ver el autor. Pon en `foto` la URL directa (`https://images.pexels.com/photos/<id>/pexels-photo-<id>.jpeg?auto=compress&cs=tinysrgb&w=800`) y en `fotoCredito` "<autor> / Pexels".
+- Si Pexels no da nada que encaje, prueba con Unsplash (URL directa a `images.unsplash.com`) o con Wikimedia Commons (`upload.wikimedia.org`).
+- La foto tiene que corresponder de verdad al plato (por ejemplo, una tortilla para una tortilla). Si después de 2 o 3 búsquedas no encuentras ninguna que encaje, deja `foto` vacío: la app muestra la ilustración.
 - No uses fotos de blogs o webs de recetas.
 
 ## Menú del colegio
