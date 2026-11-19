@@ -10,7 +10,15 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
    - Si hoy es lunes a viernes y está en el menú, rellena `hoy.cole.platos` con esos platos y pon `hoy.cole.nota` si existe.
    - Si es sábado o domingo, festivo o no hay menú para hoy, deja `hoy.cole` como `{}`. La app mostrará "Hoy no hay cole". Si no existe el archivo del mes, haz lo mismo y añade en `hoy.consejo` que falta el menú del mes y hay que pasárselo al agente.
 3. Escribe `hoy.consejo`, una frase que diga qué ha comido al mediodía (tipo de proteína, legumbre, etc.) y qué conviene cenar para completar el día.
-4. Propón **6 cenas** en `hoy.cenas` (la app las muestra en 2 filas de 3):
+4. **Equilibrio semanal (solo de lunes a viernes).** Antes de elegir las cenas, mira el menú del cole de toda la semana en curso (de lunes a viernes) y las cenas que ya hay en `data.js`. Intenta que entre cole y casa la semana se acerque a estas pautas para un niño:
+   - pescado 3 o 4 veces;
+   - legumbre 3 o 4 veces;
+   - huevo de 3 a 4 veces;
+   - carne roja como mucho 1 o 2 veces;
+   - verdura en todas las comidas y cenas, y fruta a diario.
+   Prioriza en las cenas lo que falte esa semana y evita lo que ya esté cubierto.
+   Escribe en `hoy.explicacion` un párrafo corto (2 o 3 frases, tono cercano) que explique por qué propones estas cenas: qué ha comido hoy, cómo va la semana (por ejemplo, "esta semana lleva 2 de pescado y 3 de legumbre") y qué buscan las cenas. La app lo muestra debajo de las recetas.
+5. Propón **6 cenas** en `hoy.cenas` (la app las muestra en 2 filas de 3):
    - **En casa hay un niño de 4 años que no come de todo.** Todas las cenas tienen que poder comerlas él y los adultos:
      - Sin picante, con poca sal y con sabores suaves.
      - Nada de frutos secos enteros, uvas o tomates cherry enteros, ni trozos duros.
@@ -23,16 +31,16 @@ Cada día el agente reescribe **solo `data.js`**, salvo que se le pida otra cosa
    - Las 6 tienen que ser distintas entre sí: usa proteínas diferentes y técnicas diferentes (horno, sartén, olla).
    - No repitas recetas que aparezcan en el `data.js` actual (`hoy.cenas`). Así se evita repetir lo de ayer.
    - Cocina de casa española, con ingredientes de supermercado normal y 3 raciones por defecto.
-   - Los días sin cole (sábado y domingo), copia en `hoy.cenas` las opciones de cena de ese día que haya en `finde`, y completa hasta 6 opciones (con al menos dos `"peques": true`).
-5. **Los jueves (y siempre que `finde` sea de una semana pasada)**, rehaz `finde` para el sábado y domingo siguientes:
+   - Los días sin cole (sábado y domingo) también son libres. Copia en `hoy.cenas` las opciones de cena de ese día que haya en `finde`, y completa hasta 6 opciones (con al menos dos `"peques": true`).
+6. **Los jueves (y siempre que `finde` sea de una semana pasada)**, rehaz `finde` para el sábado y domingo siguientes:
    - `fechas`: por ejemplo, "Sábado 21 y domingo 22 de noviembre".
    - `comidas`: 4 bloques en este orden: Sábado Comida, Sábado Cena, Domingo Comida y Domingo Cena. Cada uno lleva **3 `opciones`** (la app las muestra en una fila de 3).
-   - El fin de semana puede incluir platos algo más elaborados (de hasta 60 minutos), pero siguen siendo fáciles. Valen las mismas reglas del niño de 4 años, y en cada bloque al menos una opción lleva `"peques": true`. **La tercera opción de cada bloque es la de capricho** (más elaborada y gourmet, con `"gourmet": true`), con las mismas reglas que la sexta cena entre semana. Ten en cuenta lo que ha comido en el cole esa semana para no repetir.
+   - **El fin de semana es libre:** no apliques el equilibrio semanal ni compenses lo del cole. Propón platos ricos y apetecibles para toda la familia, incluidos los típicos de fin de semana (paella, pizza casera, hamburguesas, asados, guisos…). Pueden ser algo más elaborados (de hasta 60 minutos). Valen las mismas reglas del niño de 4 años, y en cada bloque al menos una opción lleva `"peques": true`. **La tercera opción de cada bloque es la de capricho** (más elaborada y gourmet, con `"gourmet": true`), con las mismas reglas que la sexta cena entre semana.
    - La lista de la compra la monta la app **por receta** a partir de `ingredientes`. Escribe los ingredientes con cantidades concretas ("3 calabacines", "200 g de queso rallado"), un ingrediente por línea. Ya no hace falta rellenar `compra`: déjalo como `[]`.
    - El resto de días, deja `finde` como está.
-6. Pon en `actualizado` la fecha y hora actual en ISO con zona horaria (+01:00 o +02:00).
-7. Comprueba que `data.js` es JavaScript válido, por ejemplo con `node -e "global.window={};require('./data.js');console.log(Object.keys(window.MENU_DATA))"`.
-8. Haz commit y push a `main`. Mensaje: `Cenas AAAA-MM-DD`.
+7. Pon en `actualizado` la fecha y hora actual en ISO con zona horaria (+01:00 o +02:00).
+8. Comprueba que `data.js` es JavaScript válido, por ejemplo con `node -e "global.window={};require('./data.js');console.log(Object.keys(window.MENU_DATA))"`.
+9. Haz commit y push a `main`. Mensaje: `Cenas AAAA-MM-DD`.
 
 ## Formato de una receta
 

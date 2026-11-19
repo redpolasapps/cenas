@@ -42,6 +42,8 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 .cole .platos span{color:var(--soft);font-weight:600}
 .cole .tip{font-size:15px;color:var(--soft);line-height:1.4}
 
+.expl{background:#E4F0DF;border-radius:22px;padding:18px 22px;margin:6px 0 10px;font-size:16.5px;line-height:1.5}
+.expl .lbl{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:#3F7A3A;font-weight:800;margin-bottom:4px}
 .sec{font-size:24px;margin:6px 0 14px}
 
 /* Tarjetas */
@@ -280,7 +282,9 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
     }
     s += '<h2 class="sec">Propuestas para la cena</h2>'+LEYENDA+'<div class="grid">';
     (h.cenas||[]).forEach(function(r,i){ s += card(r, i+1, HEROBG[i%HEROBG.length]); });
-    return s+'</div>';
+    s += '</div>';
+    if(h.explicacion) s += '<div class="expl"><div class="lbl">🥗 Por qué estas cenas</div>'+esc(h.explicacion)+'</div>';
+    return s;
   }
 
   function vFinde(){
