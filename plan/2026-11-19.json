@@ -1,0 +1,81 @@
+{
+ "fecha": "2026-11-19",
+ "hoy": {
+  "cole": {
+   "platos": [
+    "Alubias estofadas caseras",
+    "Merluza al horno con orégano",
+    "Lechuga y aceitunas",
+    "Fruta de temporada"
+   ]
+  },
+  "consejo": "Al mediodía ha comido legumbre (alubias) y pescado blanco (merluza), así que esta noche toca huevo o carne blanca, con mucha verdura y poco hidrato.",
+  "explicacion": "Hoy ha comido alubias y merluza, así que las cenas van de huevo y carne blanca con mucha verdura. En el cole, de lunes a jueves, la semana lleva 1 de pescado, 1 de legumbre, 1 de carne roja (albóndigas) y nada de huevo, y mañana hay huevo con bechamel; por eso hay dos cenas con huevo y ninguna de carne roja. El huevo de mañana y el pescado de las cenas de la semana irán cerrando lo que falta.",
+  "cenas": [
+   {
+    "reutilizar": "tortilla-patata-espinacas"
+   },
+   {
+    "reutilizar": "nuggets-pollo-copos-maiz"
+   },
+   {
+    "id": "pollo-limon-horno-verduras",
+    "titulo": "Contramuslos de pollo al limón con verduras",
+    "subtitulo": "Al horno, en una sola bandeja",
+    "cocina": "Mediterránea",
+    "imagen": "pollo-horno",
+    "peques": false,
+    "gourmet": false,
+    "tiempo": 45,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 50,
+     "proteina": 30,
+     "hidratos": 20
+    },
+    "porque": "Carne blanca después de las alubias y la merluza, con mucha verdura asada.",
+    "truco": "Deshuesa su contramuslo y córtalo en tiras; la verdura asada, en trocitos.",
+    "etiquetas": [
+     "Pollo",
+     "Horno"
+    ],
+    "guia": "Contramuslos de pollo deshuesados al horno con limón, ajo y romero sobre calabacín, pimiento rojo y cebolla en trozos; 200 °C.",
+    "busqueda_foto": "roasted chicken thighs lemon vegetables"
+   },
+   {
+    "reutilizar": "mini-pizzas-pita-jamon-verduras"
+   },
+   {
+    "reutilizar": "yakitori-pavo-arroz-brocoli"
+   },
+   {
+    "id": "bacalao-costra-pure-coliflor",
+    "titulo": "Bacalao con costra de hierbas y puré de coliflor",
+    "subtitulo": "Fino y suave",
+    "cocina": "Mediterránea",
+    "imagen": "pescado",
+    "peques": false,
+    "gourmet": true,
+    "tiempo": 50,
+    "dificultad": "Media",
+    "raciones": 3,
+    "plato": {
+     "verdura": 45,
+     "proteina": 35,
+     "hidratos": 20
+    },
+    "porque": "Capricho ligero para la noche, con una costra crujiente.",
+    "truco": "Al peque, el bacalao sin costra y desmigado sobre el puré.",
+    "etiquetas": [
+     "Pescado",
+     "Horno",
+     "Capricho"
+    ],
+    "guia": "Lomos de bacalao desalado sin espinas con costra de pan rallado, perejil, ajo y aceite, al horno; puré cremoso de coliflor con un poco de patata y aceite de oliva.",
+    "busqueda_foto": "baked cod herb crust"
+   }
+  ]
+ },
+ "finde": null
+}
