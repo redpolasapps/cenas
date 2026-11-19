@@ -1,6 +1,6 @@
 // Lo genera scripts/expandir.mjs a partir del plan de Claude. Ver AGENTE.md
 window.MENU_DATA = {
- "actualizado": "2026-11-19T22:38:04+01:00",
+ "actualizado": "2026-11-19T22:49:17+01:00",
  "plan": "2026-11-19.json",
  "hoy": {
   "fecha": "2026-11-19",
@@ -161,78 +161,70 @@ window.MENU_DATA = {
      "Pollo",
      "Horno"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b5/Tandoori_Chicken_01.jpg/960px-Tandoori_Chicken_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "fotoCredito": "andrusdevelopment / Wikimedia Commons (CC BY 2.0)",
     "fotosUrl": "",
     "ingredientes": [
-     "500 g de contramuslos de pollo deshuesados y sin piel",
-     "1 calabacín mediano (unos 250 g)",
-     "1 pimiento rojo mediano (unos 200 g)",
-     "1 cebolla mediana (unos 150 g)",
+     "500 g de contramuslos de pollo deshuesados sin piel",
+     "1 calabacín mediano (250 g)",
+     "1 pimiento rojo mediano (200 g)",
+     "1 cebolla mediana (150 g)",
      "2 dientes de ajo",
-     "1 limón grande",
+     "1 limón",
      "1 ramita de romero fresco",
      "3 cucharadas de aceite de oliva virgen extra (45 ml)",
-     "1 pizca de sal"
+     "1/2 cucharadita de sal (3 g)"
     ],
     "pasos": [
      {
       "icono": "horno",
-      "texto": "Precalentar el horno a 200 °C con calor arriba y abajo. Forrar una bandeja amplia de horno con papel vegetal para que no se pegue nada.",
-      "min": 10,
-      "consejo": "Tener el horno bien caliente antes de meter los alimentos hace que el pollo quede dorado por fuera y jugoso por dentro."
-     },
-     {
-      "icono": "lavar",
-      "texto": "Lavar bien bajo el grifo el calabacín y el pimiento rojo, y secarlos con un paño limpio.",
-      "usa": [
-       "1 calabacín mediano (unos 250 g)",
-       "1 pimiento rojo mediano (unos 200 g)"
-      ]
+      "texto": "Enciende el horno a 200 °C con calor arriba y abajo para que vaya cogiendo temperatura."
      },
      {
       "icono": "cortar",
-      "texto": "Cortar el calabacín, el pimiento rojo (quitándole el rabillo y las semillas blancas) y la cebolla pelada en dados medianos de unos 2 a 3 centímetros. Pelar los 2 dientes de ajo y picarlos muy finos.",
+      "texto": "Lava el calabacín y el pimiento. Corta el calabacín en rodajas de 1 cm, el pimiento en cuadrados medianos (unos 3 cm) y la cebolla pelada en gajos anchos.",
       "usa": [
-       "1 calabacín mediano (unos 250 g)",
-       "1 pimiento rojo mediano (unos 200 g)",
-       "1 cebolla mediana (unos 150 g)",
-       "2 dientes de ajo"
+       "1 calabacín mediano (250 g)",
+       "1 pimiento rojo mediano (200 g)",
+       "1 cebolla mediana (150 g)"
       ]
      },
      {
       "icono": "mezclar",
-      "texto": "Poner todas las verduras cortadas en la bandeja de horno, repartidas en una sola capa. Regar con 2 cucharadas de aceite de oliva virgen extra y la mitad de la pizca de sal, y mezclar con las manos para que se impregnen bien.",
+      "texto": "Coloca todas las verduras repartidas en una bandeja de horno grande. Rocía por encima con aceite y una parte de la sal, y remueve con las manos para que se impregnen bien.",
       "usa": [
-       "2 cucharadas de aceite de oliva virgen extra (45 ml)",
-       "1 pizca de sal"
+       "2 cucharadas de aceite de oliva virgen extra (30 ml)",
+       "1/4 cucharadita de sal"
       ]
      },
      {
       "icono": "mezclar",
-      "texto": "Acomodar los 500 g de contramuslos de pollo sobre la cama de verduras. Cortar el limón por la mitad: exprimir una mitad sobre el pollo y las verduras, y cortar la otra mitad en rodajas para colocarlas entre las piezas. Añadir la ramita de romero entera, la cucharada restante de aceite de oliva y la otra pizca de sal por encima del pollo.",
+      "texto": "Pela y pica muy fino los ajos y las hojas de romero. En un cuenco pequeño, mézclalos con el zumo de medio limón, una cucharada de aceite y el resto de la sal. Corta la otra mitad del limón en rodajas.",
       "usa": [
-       "500 g de contramuslos de pollo deshuesados y sin piel",
-       "1 limón grande",
+       "2 dientes de ajo",
        "1 ramita de romero fresco",
+       "1 limón",
        "1 cucharada de aceite de oliva virgen extra (15 ml)",
-       "1 pizca de sal"
+       "1/4 cucharadita de sal"
       ]
      },
      {
-      "icono": "horno",
-      "texto": "Introducir la bandeja a media altura en el horno a 200 °C y hornear durante 35 minutos sin abrir la puerta los primeros 20 minutos.",
-      "min": 35,
-      "consejo": "Sabrás que el pollo está listo cuando la superficie esté dorada y, al pinchar en la parte más gruesa con la punta de un cuchillo, el líquido que salga sea transparente y sin sangre."
+      "icono": "mezclar",
+      "texto": "Haz un hueco entre las verduras y coloca los contramuslos de pollo. Pinta o frota bien la carne con la mezcla de ajo, limón y romero, y pon las rodajas de limón encima de las piezas.",
+      "usa": [
+       "500 g de contramuslos de pollo deshuesados sin piel"
+      ],
+      "consejo": "Asegúrate de que los contramuslos queden en una sola capa sin montarse unos sobre otros para que se asen de manera uniforme."
      },
      {
       "icono": "horno",
-      "texto": "Sacar la bandeja del horno con manoplas protectoras y dejar reposar 3 minutos antes de servir.",
-      "min": 3
+      "texto": "Mete la bandeja a media altura en el horno a 200 °C durante unos 35 minutos.",
+      "min": 35,
+      "consejo": "Sabrás que el pollo está listo cuando esté dorado y, al pincharlo en la parte más gruesa con un tenedor, el jugo que salga sea totalmente transparente."
      },
      {
       "icono": "emplatar",
-      "texto": "Emplatar: servir para los adultos un contramuslo con su guarnición de verduras asadas. Para el peque de 4 años, revisar minuciosamente que la carne no tenga ningún cartílago o huesecillo, cortarla en tiras finas fáciles de masticar y trocear su ración de verdura asada en bocaditos pequeños."
+      "texto": "Sirve las raciones de los adultos con su contramuslo y verduras. Para el niño de 4 años, retira la piel si tuviera, corta el contramuslo en tiras finas o daditos pequeños y trocea la verdura asada para que pueda comerla cómodamente y sin riesgo de atragantamiento."
      }
     ]
    },
@@ -385,81 +377,78 @@ window.MENU_DATA = {
      "Horno",
      "Capricho"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/26/Restaurante_Panor%C3%A2mico_da_Amieira_Marina_-_Portugal_%283716448048%29.jpg/960px-Restaurante_Panor%C3%A2mico_da_Amieira_Marina_-_Portugal_%283716448048%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "fotoCredito": "Vitor Oliveira from Torres Vedras, PORTUGAL / Wikimedia Commons (CC BY-SA 2.0)",
     "fotosUrl": "",
     "ingredientes": [
-     "3 lomos de bacalao desalado y sin espinas (unos 450 g)",
-     "1 coliflor pequeña (unos 500 g limpia)",
-     "1 patata mediana (unos 150 g)",
-     "1 diente de ajo",
-     "2 cucharadas de perejil fresco picado",
-     "3 cucharadas de pan rallado (unos 30 g)",
+     "3 lomos de bacalao desalado y sin espinas (450 g)",
+     "500 g de coliflor limpia",
+     "1 patata mediana (150 g)",
      "4 cucharadas de aceite de oliva virgen extra (60 ml)",
-     "1 pizca de sal",
-     "500 ml de agua"
+     "3 cucharadas de pan rallado (30 g)",
+     "2 cucharadas de perejil fresco picado",
+     "1 diente de ajo",
+     "1/2 cucharadita de sal (3 g)"
     ],
     "pasos": [
      {
-      "icono": "horno",
-      "texto": "Precalentar el horno a 200 °C con calor arriba y abajo.",
-      "min": 10
-     },
-     {
       "icono": "cortar",
-      "texto": "Lavar la coliflor bajo el grifo y cortarla en ramilletes pequeños descartando el tronco grueso. Pelar la patata y cortarla en dados de unos 2 centímetros para que se cocine rápido.",
+      "texto": "Separa la coliflor en ramilletes medianos y lávalos con agua fresca. Pela la patata y córtala en dados de unos 2 cm para que tarde menos en cocerse.",
       "usa": [
-       "1 coliflor pequeña (unos 500 g limpia)",
-       "1 patata mediana (unos 150 g)"
+       "500 g de coliflor limpia",
+       "1 patata mediana (150 g)"
       ]
      },
      {
       "icono": "olla",
-      "texto": "Poner en una olla la coliflor, la patata, 500 ml de agua y una pizca de sal. Llevar a ebullición a fuego fuerte y, cuando empiece a hervir, bajar a fuego medio y cocer durante 15 minutos con la tapa puesta.",
+      "texto": "Pon la coliflor y la patata en una olla, cúbrelas con agua fría del grifo y añade una pizca de sal. Enciende el fuego a nivel medio y deja hervir suavemente durante 20 minutos hasta que estén muy tiernas.",
       "usa": [
-       "1 coliflor pequeña (unos 500 g limpia)",
-       "1 patata mediana (unos 150 g)",
-       "500 ml de agua",
-       "1 pizca de sal"
+       "1/4 cucharadita de sal"
       ],
       "fuego": "medio",
-      "min": 15,
-      "consejo": "Pincha un trozo de patata con un tenedor; si entra con total facilidad y parece mantequilla, ya están en su punto."
+      "min": 20,
+      "consejo": "Comprueba que están listas pinchando la patata con la punta de un cuchillo: debe entrar y salir con total suavidad."
+     },
+     {
+      "icono": "horno",
+      "texto": "Mientras cuecen las verduras, precalienta el horno a 200 °C con calor arriba y abajo."
      },
      {
       "icono": "mezclar",
-      "texto": "Mientras se cuece la verdura, pelar el diente de ajo y picarlo lo más fino posible. En un cuenco pequeño, mezclar el pan rallado, el perejil fresco picado, el ajo y 2 cucharadas de aceite de oliva virgen extra hasta formar una pasta arenosa y húmeda.",
+      "texto": "Pela y pica el ajo muy fino, eliminando el germen central si lo prefieres para que sea más suave. En un tazón, mezcla el pan rallado, el perejil fresco picado, el ajo picado y dos cucharadas de aceite hasta obtener una mezcla con textura de arena húmeda.",
       "usa": [
        "1 diente de ajo",
        "2 cucharadas de perejil fresco picado",
-       "3 cucharadas de pan rallado (unos 30 g)",
+       "3 cucharadas de pan rallado (30 g)",
        "2 cucharadas de aceite de oliva virgen extra (30 ml)"
       ]
      },
      {
-      "icono": "horno",
-      "texto": "Colocar los 3 lomos de bacalao en una fuente apta para horno con la piel hacia abajo, comprobando pasando las yemas de los dedos que no tengan espinas. Repartir la pasta de pan rallado sobre la parte superior de 2 de los lomos presionando con una cuchara; dejar el tercer lomo (para el niño) sin costra, rociado solo con un hilito del aceite restante.",
+      "icono": "mezclar",
+      "texto": "Seca los lomos de bacalao con papel de cocina y colócalos en una fuente para horno con la piel hacia abajo. Reparte la mezcla de pan rallado sobre 2 de los lomos presionando suavemente con los dedos; deja el lomo del niño sin costra (solo con unas gotas de aceite).",
       "usa": [
-       "3 lomos de bacalao desalado y sin espinas (unos 450 g)",
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
-      ]
+       "3 lomos de bacalao desalado y sin espinas (450 g)"
+      ],
+      "consejo": "Pasa los dedos por cada lomo antes de colocarlos para asegurar que no queda ninguna espina oculta."
      },
      {
       "icono": "horno",
-      "texto": "Meter la fuente al horno a 200 °C a media altura y hornear durante 12 a 14 minutos.",
-      "min": 13,
-      "consejo": "El bacalao está hecho cuando la carne pasa de translúcida a blanca opaca y las lascas se abren suavemente al tocarlas; la costra de los adultos debe quedar doradita y crujiente."
+      "texto": "Introduce la fuente en el horno a 200 °C durante 15 minutos hasta que el pescado esté hecho y la costra de los adultos se vea ligeramente dorada y crujiente.",
+      "min": 15,
+      "consejo": "El bacalao está listo cuando las lascas de carne se separan con facilidad al tocarlo con un tenedor."
      },
      {
       "icono": "mezclar",
-      "texto": "Escurrir la coliflor y la patata guardando medio vaso del agua de la cocción en una taza. Añadir a la verdura 1 cucharada de aceite de oliva virgen extra y triturar con la batidora de mano, añadiendo 3 o 4 cucharadas del agua reservada poco a poco hasta lograr un puré cremoso y sin grumos.",
+      "texto": "Escurre la coliflor y la patata, reservando medio vaso del agua de cocción. Tritura con una batidora añadiendo dos cucharadas de aceite y el resto de la sal (y un chorrito del agua reservada si lo ves muy denso) hasta conseguir un puré cremoso y sin grumos.",
       "usa": [
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
-      ]
+       "2 cucharadas de aceite de oliva virgen extra (30 ml)",
+       "1/4 cucharadita de sal"
+      ],
+      "min": 5
      },
      {
       "icono": "emplatar",
-      "texto": "Emplatar: en los platos de los adultos disponer una base de puré caliente y colocar encima el lomo de bacalao con su costra de hierbas. Para el niño, poner el puré en su plato y encima su ración de bacalao sin costra desmigada finamente con las manos, verificando de nuevo que no quede ninguna espina oculta."
+      "texto": "Sirve en los platos una base generosa de puré de coliflor. Coloca encima los lomos con costra para los adultos; para el niño, desmiga su lomo con un tenedor comprobando que no haya espinas y mézclalo sobre su puré."
      }
     ]
    }
