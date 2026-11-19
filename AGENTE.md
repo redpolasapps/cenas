@@ -1,7 +1,45 @@
 # Instrucciones del agente de cenas
 
 Este repositorio es una web app de cocina para un iPad mini 2 (Safari de iOS 12) que hay en la cocina. Se publica con GitHub Pages en http://redpolasapps.fyi/cenas/.
-Cada día el agente escribe **solo `data.js`, `recetas/historial.json` y `recetas/favoritos.json`**, salvo que se le pida otra cosa. No toques `index.html` ni `platos.js`.
+Cada día el agente escribe **el plan del día (`plan/`) y `recetas/favoritos.json`**. En modo completo, también `data.js` y `recetas/historial.json`. No toques `index.html`, `platos.js`, `scripts/` ni `.github/`.
+
+## Cómo se reparte el trabajo
+
+- **Claude decide** (pocas palabras): qué 6 cenas, cuáles se repiten del recetario, el equilibrio de la semana, la explicación, el tipo de cocina, cuál es para el peque y cuál de capricho. Lo escribe como **plan** en `plan/AAAA-MM-DD.json`.
+- **Gemini redacta** (lo pesado): al subir un plan, GitHub Actions (`.github/workflows/expandir.yml` → `scripts/expandir.mjs`) le pide a Gemini los **ingredientes y los pasos detallados** de las recetas nuevas. También busca las fotos en Pexels si existe el secreto `PEXELS_API_KEY`, escribe `data.js` y actualiza `recetas/historial.json`. Necesita el secreto `GEMINI_API_KEY` en el repositorio.
+- **Modo plan (el normal):** sigue los pasos de abajo para decidir, pero **no escribas `ingredientes` ni `pasos` y no busques fotos**. Escribe solo el plan.
+- **Modo completo (reserva):** si la Action falla, Claude escribe `data.js` y el recetario él mismo, con todo, siguiendo el resto de este documento.
+
+### Formato del plan (`plan/AAAA-MM-DD.json`)
+
+```json
+{
+  "fecha": "2026-11-20",
+  "hoy": {
+    "cole": { "platos": ["..."], "nota": "..." },
+    "consejo": "...",
+    "explicacion": "...",
+    "cenas": [
+      { "reutilizar": "id-de-una-receta-del-recetario", "porque": "opcional: por qué encaja hoy" },
+      {
+        "id": "slug-unico-nuevo", "titulo": "...", "subtitulo": "...", "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "gourmet": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 30, "hidratos": 20 },
+        "porque": "...", "truco": "...", "etiquetas": ["Pescado", "Horno"],
+        "guia": "Una o dos frases para el redactor: ingredientes principales, técnica y cualquier detalle que no deba cambiar (p. ej. 'merluza en lomos sin espinas al horno sobre cama de patata en rodajas finas y pimiento rojo; salsa de limón aparte').",
+        "busqueda_foto": "baked hake with potatoes"
+      }
+    ]
+  },
+  "finde": null
+}
+```
+
+- En `cenas` van las 6, en orden: la sexta es la de capricho. Cada una es o bien `{"reutilizar": "<id>"}` (receta del recetario, se copia con sus pasos y su foto), o bien una receta nueva con todos los campos de arriba, **sin** `ingredientes` ni `pasos`.
+- Un `id` nuevo no puede existir ya en el recetario: si el plato ya está, usa `reutilizar`.
+- `busqueda_foto`: 2 a 4 palabras en inglés que describan el plato, para buscar en Pexels.
+- `finde`: `null` si no toca rehacerlo. Si toca (jueves o fin de semana pasado), un objeto `{"fechas": "Sábado 28 y domingo 29 de noviembre", "comidas": [ ... ]}` con 4 bloques `{"dia": "Sábado", "momento": "Comida", "fecha": "2026-11-28", "opciones": [3 recetas como las de arriba]}`.
+- Valida que el plan es JSON correcto y haz commit y push (`Plan AAAA-MM-DD`). La Action tarda unos minutos.
 
 ## Qué hacer en cada ejecución
 
