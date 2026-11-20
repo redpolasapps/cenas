@@ -46,6 +46,7 @@ async function main() {
   log(`La web NO está actualizada para ${hoy}: Gemini lo hace todo.`);
 
   const d = dow(hoy), finDeSemana = d === 0 || d === 6;
+  const tocaRapida = d === 1 || d === 3 || d === 5; // lunes, miércoles y viernes: una cena súper rápida
   const menuHoy = finDeSemana ? null : await menuDe(hoy);
   // Menú de la semana (lunes a viernes) que se conozca
   const lunes = masDias(hoy, -((d + 6) % 7));
@@ -83,7 +84,7 @@ DATOS DE HOY
 - Comida del cole hoy: ${menuHoy ? menuHoy.platos.join(" · ") + (menuHoy.nota ? ` (${menuHoy.nota})` : "") : finDeSemana ? "hoy no hay cole (fin de semana)" : "no hay menú para hoy (festivo o sin datos)"}
 - Menú del cole de esta semana:\n${semana.map((x) => "  - " + x).join("\n")}
 - Cenas de los últimos 14 días (NO las repitas ni hagas casi lo mismo): ${recientes.join(" | ") || "(ninguna)"}
-- Recetas del recetario que SÍ se pueden repetir (como mucho 2 de las 6; usa "reutilizar" con su id exacto):\n${candidatas.map((r) => `  - ${r.id} | ${r.titulo} | ${r.cocina}${r.healthy ? " | healthy" : ""}${r.peques ? " | peques" : ""}${r.gourmet ? " | gourmet" : ""}${r.airfryer ? " | airfryer" : ""}`).join("\n") || "  (ninguna todavía)"}
+- Recetas del recetario que SÍ se pueden repetir (como mucho 2 de las 6; usa "reutilizar" con su id exacto):\n${candidatas.map((r) => `  - ${r.id} | ${r.titulo} | ${r.cocina}${r.healthy ? " | healthy" : ""}${r.peques ? " | peques" : ""}${r.gourmet ? " | gourmet" : ""}${r.airfryer ? " | airfryer" : ""}${r.rapida ? " | rapida" : ""}`).join("\n") || "  (ninguna todavía)"}
 ${findeHoy ? `- Hoy es fin de semana: incluye entre las 6 cenas estas opciones ya planificadas (con "reutilizar"): ${findeHoy.opciones.map((r) => r.id).join(", ")}` : ""}
 - ${tocaFinde ? `TOCA preparar el fin de semana del sábado ${sab} y domingo ${dom}.` : "NO toca preparar el fin de semana: pon \"finde\": null."}
 
@@ -100,15 +101,15 @@ FORMATO DE RESPUESTA: SOLO JSON con esta forma exacta:
 }
 Cada receta es o {"reutilizar":"<id del recetario>"} o una receta NUEVA con exactamente estos campos:
 {"id":"slug-unico-en-minusculas","titulo":"...","subtitulo":"...","cocina":uno de ${JSON.stringify(COCINAS)},"imagen":uno de ${JSON.stringify(IMAGENES)},
- "peques":bool,"healthy":bool,"gourmet":bool,"airfryer":bool,"tiempo":minutos,"dificultad":"Fácil"|"Media","raciones":${FAMILIA.raciones || 3},
+ "peques":bool,"healthy":bool,"gourmet":bool,"airfryer":bool,"rapida":bool,"tiempo":minutos,"dificultad":"Fácil"|"Media","raciones":${FAMILIA.raciones || 3},
  "plato":{"verdura":n,"proteina":n,"hidratos":n} (suman 100),"porque":"...","truco":"...","etiquetas":["..."],
  "guia":"1-2 frases para quien la redactará: ingredientes principales y técnica","busqueda_foto":"2-4 palabras en inglés"}
-NO escribas ingredientes ni pasos. Las 6 cenas: al menos 2 healthy, al menos 2 peques, la sexta gourmet, EXACTAMENTE 1 con "airfryer": true (se cocina toda o casi toda en la freidora de aire; puede ser a la vez healthy, peques, gourmet o ninguna: varía de un día a otro; en su guia di qué va a la air fryer), como mucho 1 exótica (japonesa, americana…), y como mucho 2 "reutilizar".`;
+NO escribas ingredientes ni pasos. Las 6 cenas: al menos 2 healthy, al menos 2 peques, la sexta gourmet, EXACTAMENTE 1 con "airfryer": true (se cocina toda o casi toda en la freidora de aire; puede ser a la vez healthy, peques, gourmet o ninguna: varía de un día a otro; en su guia di qué va a la air fryer), ${tocaRapida ? 'y EXACTAMENTE 1 con "rapida": true (SÚPER RÁPIDA y sana para una noche de cansancio: 10-15 minutos, productos ya preparados como caldo envasado con fideos, verdura de bolsa al microondas con aceite y sal, legumbre de bote salteada, tortilla francesa con pan integral; que encaje con el menú del cole; puede ser también healthy o peques)' : 'ninguna con "rapida": true hoy'}, como mucho 1 exótica (japonesa, americana…), y como mucho 2 "reutilizar".`;
 
   let plan = null, problemas = [];
   for (let intento = 1; intento <= 3 && !plan; intento++) {
     const p = await llamarGemini(intento === 1 ? prompt : `${prompt}\n\nTu respuesta anterior tenía estos problemas, corrígelos: ${problemas.join("; ")}`);
-    problemas = validar(p, { hoy, candidatas: new Set(candidatas.map((r) => r.id)), finde: findeHoy, idsExistentes, tocaFinde, flags: Object.fromEntries(indice.map((r) => [r.id, r])) });
+    problemas = validar(p, { hoy, candidatas: new Set(candidatas.map((r) => r.id)), finde: findeHoy, idsExistentes, tocaFinde, tocaRapida, flags: Object.fromEntries(indice.map((r) => [r.id, r])) });
     if (!problemas.length) plan = p; else log(`Intento ${intento}: ${problemas.join("; ")}`);
   }
   if (!plan) throw new Error("Gemini no ha conseguido un plan válido: " + problemas.join("; "));
@@ -150,6 +151,7 @@ function validar(p, ctx) {
   const flag = (r, k) => (r.reutilizar ? !!ctx.flags[r.reutilizar]?.[k] : !!r[k]);
   if (cenas.filter((r) => flag(r, "healthy")).length < 2) e.push("hacen falta al menos 2 cenas con healthy: true");
   if (cenas.filter((r) => flag(r, "peques")).length < 2) e.push("hacen falta al menos 2 cenas con peques: true");
+  if (ctx.tocaRapida && cenas.filter((r) => flag(r, "rapida")).length < 1) e.push("hoy hace falta 1 cena con rapida: true (súper rápida, 10-15 min, productos ya preparados)");
   if (cenas.filter((r) => flag(r, "airfryer")).length < 1) e.push("hace falta 1 cena con airfryer: true (cocinada toda o casi toda en la freidora de aire)");
   if (ctx.tocaFinde) {
     const b = p.finde?.comidas || [];

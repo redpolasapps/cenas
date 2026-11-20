@@ -16,7 +16,7 @@ import path from "node:path";
 import vm from "node:vm";
 
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
-const ICONOS = ["cortar", "sarten", "horno", "olla", "mezclar", "emplatar", "envolver", "lavar", "airfryer"];
+const ICONOS = ["cortar", "sarten", "horno", "olla", "mezclar", "emplatar", "envolver", "lavar", "airfryer", "micro"];
 const FUEGOS = ["suave", "medio", "fuerte"];
 const MODELOS = [process.env.GEMINI_MODEL || "gemini-2.5-flash", "gemini-flash-latest", "gemini-2.5-flash-lite"];
 
@@ -61,13 +61,14 @@ Para cada receta devuelve:
 - "pasos": entre 6 y 12 pasos, escritos para alguien que casi NO sabe cocinar. Uno por acción. Cada paso es un objeto con:
   - "texto": 1 a 3 frases claras que explican CÓMO hacerlo: tamaño del corte, recipiente, cantidad de aceite, cuándo añadir cada cosa. Si usas un término de cocina, explícalo ("pochar: cocinar a fuego suave hasta que esté blandita y transparente").
   - "usa": lista con los ingredientes y cantidades EXACTAS que se usan en ese paso. Si el paso no usa ingredientes, lista vacía.
-  - "icono": uno de: cortar, sarten, horno, olla, mezclar, emplatar, envolver, lavar, airfryer (para los pasos en la freidora de aire).
+  - "icono": uno de: cortar, sarten, horno, olla, mezclar, emplatar, envolver, lavar, airfryer (pasos en la freidora de aire), micro (pasos en el microondas).
   - "fuego": "suave", "medio" o "fuerte" solo si el paso es en el fuego. Si es en el horno, indica en el texto la temperatura y el modo (arriba y abajo).
   - "min": minutos del paso si los tiene (número), si no omítelo.
   - "consejo": opcional, una aclaración útil: cómo saber que está hecho (color, textura, que el cuchillo entre fácil), qué hacer si algo sale mal o un aviso de seguridad.
   El primer paso suele ser preparar (precalentar el horno, poner agua a hervir, sacar ingredientes). El último, emplatar, incluida la versión para el niño si la guía o el truco la mencionan.
 ${ALERGIAS ? `- ALERGIAS E INTOLERANCIAS DE LA FAMILIA (OBLIGATORIO, ni rastro en ingredientes ni pasos): ${ALERGIAS}.\n` : ""}- Seguridad para el niño de ${EDAD} años: sin picante, poca sal, pescado sin espinas, carne sin huesecillos, nada de frutos secos enteros ni uvas o tomates cherry enteros.
 - Si una receta tiene "airfryer": true, se cocina toda o casi toda en la freidora de aire (air fryer): en sus pasos indica temperatura (°C), minutos, si hay que precalentarla, cuánto aceite (spray o una cucharadita), no llenar demasiado la cesta y cuándo darle la vuelta o sacudirla. Usa el icono "airfryer" en esos pasos.
+- Si una receta tiene "rapida": true, es una cena SÚPER RÁPIDA para una noche de mucho cansancio: lista en 10–15 minutos, como mucho 5 pasos muy cortos, con productos ya preparados del súper (caldo envasado, verdura de bolsa para microondas, legumbre cocida de bote, huevos, pollo asado, pan integral, conservas de pescado…). Nombra el tipo de producto de forma genérica, sin marcas.
 - Los ingredientes de la lista tienen que cuadrar con lo que se usa en los pasos.
 
 Responde SOLO con JSON con esta forma: {"recetas":[{"id":"...","ingredientes":[...],"pasos":[...]}]}, una entrada por cada receta, con el mismo "id".`;
@@ -133,7 +134,7 @@ async function redactar(recetas) {
     for (let i = 0; i < pendientes.length; i += 6) {
       const lote = pendientes.slice(i, i + 6).map((r) => ({
         id: r.id, titulo: r.titulo, subtitulo: r.subtitulo, cocina: r.cocina, raciones: r.raciones || 3,
-        tiempo_min: r.tiempo, dificultad: r.dificultad, guia: r.guia || "", truco_para_el_nino: r.truco || "", ...(r.airfryer ? { airfryer: true } : {}),
+        tiempo_min: r.tiempo, dificultad: r.dificultad, guia: r.guia || "", truco_para_el_nino: r.truco || "", ...(r.airfryer ? { airfryer: true } : {}), ...(r.rapida ? { rapida: true } : {}),
       }));
       try {
         const res = await llamarGemini(`${REGLAS}\n\nRECETAS:\n${JSON.stringify(lote, null, 1)}`);
@@ -223,7 +224,7 @@ export async function escribirIndice(hist) {
   const indice = (hist.recetas || []).map((r) => {
     const fechas = (r.usos || []).map((u) => u.fecha).sort();
     return {
-      id: r.id, titulo: r.titulo, cocina: r.cocina || "", peques: !!r.peques, healthy: !!r.healthy, gourmet: !!r.gourmet, airfryer: !!r.airfryer,
+      id: r.id, titulo: r.titulo, cocina: r.cocina || "", peques: !!r.peques, healthy: !!r.healthy, gourmet: !!r.gourmet, airfryer: !!r.airfryer, rapida: !!r.rapida,
       etiquetas: r.etiquetas || [], momentos: [...new Set((r.usos || []).map((u) => (u.dia === "Entre semana" ? "Cena" : `${u.dia} ${u.momento}`)))],
       primera: fechas[0] || "", ultima: fechas[fechas.length - 1] || "", veces: fechas.length, foto: !!r.foto,
     };

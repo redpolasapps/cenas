@@ -8,6 +8,6 @@ try { indice = JSON.parse(readFileSync(new URL("../recetas/indice.json", import.
 const ok = indice.filter((r) => r.ultima && r.ultima <= limite).sort((a, b) => (a.ultima < b.ultima ? -1 : 1)).slice(0, 60);
 console.log(`# ${ok.length} candidatas (sin salir desde el ${limite}) de ${indice.length} recetas. Formato: id | título | cocina | etiquetas | flags | última vez | veces`);
 for (const r of ok) {
-  const f = [r.peques && "peques", r.healthy && "healthy", r.gourmet && "gourmet", r.airfryer && "airfryer", r.foto && "foto"].filter(Boolean).join(",");
+  const f = [r.peques && "peques", r.healthy && "healthy", r.gourmet && "gourmet", r.airfryer && "airfryer", r.rapida && "rapida", r.foto && "foto"].filter(Boolean).join(",");
   console.log(`${r.id} | ${r.titulo} | ${r.cocina} | ${(r.etiquetas || []).join("/")} | ${f} | ${r.ultima} | ${r.veces}`);
 }

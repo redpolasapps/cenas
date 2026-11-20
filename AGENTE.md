@@ -28,7 +28,7 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
       { "reutilizar": "id-de-una-receta-del-recetario", "porque": "opcional: por qué encaja hoy" },
       {
         "id": "slug-unico-nuevo", "titulo": "...", "subtitulo": "...", "cocina": "Mediterránea", "imagen": "pescado",
-        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
         "plato": { "verdura": 50, "proteina": 30, "hidratos": 20 },
         "porque": "...", "truco": "...", "etiquetas": ["Pescado", "Horno"],
         "guia": "Una o dos frases para el redactor: ingredientes principales, técnica y cualquier detalle que no deba cambiar (p. ej. 'merluza en lomos sin espinas al horno sobre cama de patata en rodajas finas y pimiento rojo; salsa de limón aparte').",
@@ -50,7 +50,7 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
 
 - **No leas nunca `recetas/historial.json` entero**: tiene todas las recetas con sus pasos y crece cada día.
 - Para decidir qué repetir, ejecuta **`node scripts/candidatas.mjs`**: muestra en una línea por receta solo las que se pueden repetir hoy (más de 14 días sin salir), como mucho 60, empezando por las que llevan más tiempo sin salir. Normalmente con eso basta.
-- Si necesitas más detalle, está **`recetas/indice.json`**: una línea por receta con `id`, `titulo`, `cocina`, `peques`, `healthy`, `gourmet`, `airfryer`, `etiquetas`, `momentos`, `primera` y `ultima` (fechas), `veces` y si tiene `foto`. Está ordenado de más reciente a más antiguo.
+- Si necesitas más detalle, está **`recetas/indice.json`**: una línea por receta con `id`, `titulo`, `cocina`, `peques`, `healthy`, `gourmet`, `airfryer`, `rapida`, `etiquetas`, `momentos`, `primera` y `ultima` (fechas), `veces` y si tiene `foto`. Está ordenado de más reciente a más antiguo.
 - Si necesitas ver o cambiar una receta concreta, sácala con node sin imprimir el resto. Por ejemplo: `node -e "const h=require('./recetas/historial.json');console.log(JSON.stringify(h.recetas.find(r=>r.id==='ID'),null,1))"`.
 - Para comprobar `data.js`, usa un `node -e` que imprima solo lo necesario (fecha, plan, títulos), no el archivo entero.
 - En modo completo, después de tocar `historial.json`, regenera el índice con `node scripts/expandir.mjs --indice`.
@@ -81,6 +81,7 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
    - **Al menos dos de las 6 tienen que ser "seguras" para el peque:** un formato que suelen aceptar todos los niños (tortilla, croquetas, albóndigas, pasta, crema con quesito, rebozados al horno, hamburguesitas, mini pizzas, nuggets caseros, quesadillas…), con la verdura escondida o en trocitos pequeños. Márcalas con `"peques": true`.
    - En cada receta, añade `"truco"`: una frase para que el niño se la coma (cómo presentarla, cómo esconder la verdura, cómo hacer que participe o cómo servirle su parte aparte). Por ejemplo: "Tritura la verdura en la salsa" o "Que él ponga el queso por encima".
    - **Exactamente una de las 6 se cocina toda o casi toda en la air fryer (freidora de aire)** → `"airfryer": true`. Puede ser a la vez healthy, peques, gourmet o ninguna de ellas: **varía de un día a otro** (un día la healthy, otro una casera, otro la del peque…). En su `guia` di qué parte va a la air fryer, a qué temperatura y cuántos minutos. Si reutilizas del recetario, mira el campo `airfryer` del índice.
+   - **Lunes, miércoles y viernes, una de las 6 es "súper rápida"** → `"rapida": true`: sana, que encaje con el menú del cole y lista en 10–15 minutos con productos ya preparados, para una noche de mucho cansancio. Ejemplos: caldo envasado a la olla con fideos (10 min); brócoli o judías de bolsa al microondas con aceite, sal y un huevo a la plancha; legumbre de bote salteada con verdura y atún; tortilla francesa con tomate y pan integral. Como mucho 5 pasos. Puede ser también healthy o peques. Los demás días, ninguna.
    - **Al menos dos de las 6 tienen que ser "healthy"**: más proteína y verdura, y poco hidrato (sin pasta, arroz, pan ni patata como base, o en poca cantidad). Por ejemplo: pescado o pollo a la plancha o al horno con verduras, tortillas de verdura, revueltos, ensaladas templadas con proteína, cremas de verdura con huevo o pollo, o brochetas. Tienen que seguir siendo aptas y apetecibles para un niño de 4 años: texturas suaves y sabores sencillos. Márcalas con `"healthy": true`. Una cena puede ser a la vez `peques` y `healthy`. La de capricho no cuenta como healthy.
    - Fáciles (30 minutos o menos y pocos cacharros), equilibradas y ricas.
    - **La sexta (la última) es la opción "capricho":** una receta más elaborada y algo gourmet, para los días en que haya más ganas de cocinar. Puede llevar hasta 45–60 minutos, con algún ingrediente o técnica especial (un buen pescado o carne, una salsa, un horneado o un emplatado bonito), pero siempre factible en casa. Márcala con `"gourmet": true` y explica en `truco` cómo servirle al niño una versión que se coma (por ejemplo, la salsa aparte).
@@ -136,6 +137,7 @@ Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, ta
   "peques": true,
   "healthy": false,
   "airfryer": false,
+  "rapida": false,
   "gourmet": false,
   "truco": "Córtala en triángulos pequeños y que moje en tomate.",
   "ingredientes": ["5 huevos", "2 calabacines"],
