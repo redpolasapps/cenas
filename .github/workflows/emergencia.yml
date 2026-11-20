@@ -2,8 +2,9 @@ name: Emergencia (Gemini lo hace todo si Claude no ha actualizado)
 
 on:
   schedule:
-    # 06:15 UTC = 07:15 en Madrid en invierno (08:15 en verano). Claude actualiza a las 05:47 y reintenta a las 06:47.
-    - cron: "15 6 * * *"
+    # Cada media hora. El script solo trabaja a partir de la "hora" de familia.json y si las cenas de hoy aún no están.
+    # (Aquí Claude actualiza a las 05:47; esto es la red de seguridad. En otras casas, es lo que lo hace todo.)
+    - cron: "10,40 * * * *"
   workflow_dispatch:
     inputs:
       forzar:
@@ -35,6 +36,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
+          PROGRAMADO: ${{ github.event_name == 'schedule' && '1' || '0' }}
         run: node scripts/emergencia.mjs
 
       - name: Validar

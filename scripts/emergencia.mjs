@@ -35,6 +35,10 @@ async function menuDe(fecha) {
 
 async function main() {
   const hoy = process.env.FECHA || hoyMadrid();
+  if (process.env.PROGRAMADO === "1" && FAMILIA.hora) {
+    const ahora = new Intl.DateTimeFormat("en-GB", { timeZone: FAMILIA.zona || "Europe/Madrid", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date());
+    if (ahora < FAMILIA.hora) { log(`Aún no toca (son las ${ahora}; se actualiza a partir de las ${FAMILIA.hora}).`); return; }
+  }
   const data = await leerData();
   if (!process.env.FORZAR && data.hoy?.fecha === hoy && (data.hoy.cenas || []).every((r) => (r.pasos || []).length)) {
     log(`La web ya tiene las cenas de hoy (${hoy}). No hace falta el plan de emergencia.`); return;
