@@ -2,8 +2,8 @@ name: Emergencia (Gemini lo hace todo si Claude no ha actualizado)
 
 on:
   schedule:
-    # 13:30 UTC = 14:30 en Madrid en invierno (15:30 en verano). Claude actualiza a las 11:47 y reintenta a las 13:47.
-    - cron: "30 13 * * *"
+    # 06:15 UTC = 07:15 en Madrid en invierno (08:15 en verano). Claude actualiza a las 05:47 y reintenta a las 06:47.
+    - cron: "15 6 * * *"
   workflow_dispatch:
     inputs:
       forzar:
