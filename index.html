@@ -28,6 +28,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
 .top .hora{font-family:"Fraunces",Georgia,serif;font-size:40px;color:var(--terra)}
 
 /* Pestañas */
+a.panelbtn{display:inline-block;text-decoration:none;color:inherit}
 .tabs{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.96);border-top:1px solid var(--line);
   display:-webkit-flex;display:flex;-webkit-justify-content:center;justify-content:center;padding:8px 0 14px;z-index:5}
 .tab{display:block;width:128px;text-align:center;padding:8px 0;border-radius:14px;color:var(--soft);font-weight:700;font-size:15px;margin:0 6px}
@@ -258,6 +259,9 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   var RECETAS = {};
   var cookR = null, cookI = 0, tInt = null, tLeft = 0;
 
+  // Si se ha abierto desde el panel de casa, botón para volver a él
+  var PANEL = false;
+  try { if(/[?&]panel=1/.test(location.search)) sessionStorage.setItem('desde_panel','1'); PANEL = sessionStorage.getItem('desde_panel')==='1'; } catch(e){ PANEL = /[?&]panel=1/.test(location.search); }
   var DIAS = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
   var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
   var COCINA = {'Española':'🥘','Mediterránea':'🍋','Italiana':'🍝','Japonesa':'🍜','Asiática':'🥢','Americana':'🍔','Mexicana':'🌮','Árabe':'🥙','Casera':'🏠'};
@@ -358,7 +362,7 @@ button{font-family:inherit;border:0;background:none;color:inherit;cursor:pointer
   var LEYENDA = '<div class="leyenda">El círculo pequeño muestra el equilibrio:<i style="background:#7DB56F"></i>verdura<i style="background:#E07F63"></i>proteína<i style="background:#EDBB57"></i>hidratos</div>';
 
   function cabecera(titulo, dia){
-    return '<div class="top"><div><div class="dia">'+esc(dia)+'</div><h1>'+esc(titulo)+'</h1></div><div>'+(vista!=='hoy'?'<button class="bbig home" data-home="1" style="margin-right:16px;vertical-align:middle">🏠 Inicio</button>':'')+'<span class="hora" id="hora" style="vertical-align:middle">'+hora()+'</span></div></div>';
+    return '<div class="top"><div><div class="dia">'+esc(dia)+'</div><h1>'+esc(titulo)+'</h1></div><div>'+(PANEL?'<a class="bbig panelbtn" href="/casa/" style="margin-right:16px;vertical-align:middle">‹ Panel</a>':'')+(vista!=='hoy'?'<button class="bbig home" data-home="1" style="margin-right:16px;vertical-align:middle">🏠 Inicio</button>':'')+'<span class="hora" id="hora" style="vertical-align:middle">'+hora()+'</span></div></div>';
   }
 
   function vHoy(){
