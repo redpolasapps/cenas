@@ -3,6 +3,9 @@
 Este repositorio es una web app de cocina para un iPad mini 2 (Safari de iOS 12) que hay en la cocina. Se publica con GitHub Pages en http://redpolasapps.fyi/cenas/.
 Cada día el agente escribe **el plan del día (`plan/`)**. En modo completo, también `data.js` y `recetas/historial.json`. No toques `index.html`, `platos.js`, `scripts/` ni `.github/`.
 
+
+> **`familia.json`** guarda lo propio de cada casa (ciudad, edad del peque, raciones, gustos, cosas a evitar y alergias). Si algo de este documento sobre gustos, edad o raciones lo contradice, **manda `familia.json`**.
+
 ## Cómo se reparte el trabajo
 
 - **Claude decide** (pocas palabras): qué 6 cenas, cuáles se repiten del recetario, el equilibrio de la semana, la explicación, el tipo de cocina, cuál es para el peque y cuál de capricho. Lo escribe como **plan** en `plan/AAAA-MM-DD.json`.

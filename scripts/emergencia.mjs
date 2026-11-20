@@ -9,7 +9,7 @@
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
-import { llamarGemini, main as expandir } from "./expandir.mjs";
+import { llamarGemini, main as expandir, FAMILIA } from "./expandir.mjs";
 
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const log = (...a) => console.log("[emergencia]", ...a);
@@ -18,7 +18,7 @@ const IMAGENES = ["pescado", "tortilla", "crema", "arroz", "pasta", "pizza", "ha
 const DIAS = ["domingo", "lunes", "martes", "miércoles", "jueves", "viernes", "sábado"];
 const MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
 
-const hoyMadrid = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Madrid" }).format(new Date());
+const hoyMadrid = () => new Intl.DateTimeFormat("en-CA", { timeZone: FAMILIA.zona || "Europe/Madrid" }).format(new Date());
 const masDias = (f, n) => new Date(new Date(f + "T12:00:00Z").getTime() + n * 864e5).toISOString().slice(0, 10);
 const dow = (f) => new Date(f + "T12:00:00Z").getUTCDay();
 const slug = (t) => String(t).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60);
@@ -64,10 +64,16 @@ async function main() {
   const reglas = await readFile(path.join(RAIZ, "AGENTE.md"), "utf8");
   const reglasDecision = reglas.slice(reglas.indexOf("## Qué hacer en cada ejecución"), reglas.indexOf("## Formato de una receta"));
 
-  const prompt = `Eres el planificador de cenas de una familia (Barcelona, cocina casera). Hoy es ${DIAS[d]} ${hoy}.
+  const prompt = `Eres el planificador de cenas de una familia (${FAMILIA.ciudad || "Barcelona"}, cocina casera). Hoy es ${DIAS[d]} ${hoy}.
 Tienes que DECIDIR el plan del día siguiendo estas reglas (son las mismas que usa otro agente; ignora lo que diga de git, commits, data.js o historial: tú solo devuelves el plan):
 
 ${reglasDecision}
+
+DATOS DE ESTA FAMILIA (si contradicen algo de arriba sobre gustos, edad o raciones, MANDAN ESTOS):
+- Niño de ${FAMILIA.edad || 4} años. Raciones por receta: ${FAMILIA.raciones || 3}.
+- Gustos: ${FAMILIA.gustos || "cocina mediterránea casera"}
+- Evitar: ${FAMILIA.evitar || "nada en especial"}
+${FAMILIA.alergias ? `- ALERGIAS (OBLIGATORIO, nunca usarlas): ${FAMILIA.alergias}` : ""}
 
 DATOS DE HOY
 - Comida del cole hoy: ${menuHoy ? menuHoy.platos.join(" · ") + (menuHoy.nota ? ` (${menuHoy.nota})` : "") : finDeSemana ? "hoy no hay cole (fin de semana)" : "no hay menú para hoy (festivo o sin datos)"}
@@ -90,7 +96,7 @@ FORMATO DE RESPUESTA: SOLO JSON con esta forma exacta:
 }
 Cada receta es o {"reutilizar":"<id del recetario>"} o una receta NUEVA con exactamente estos campos:
 {"id":"slug-unico-en-minusculas","titulo":"...","subtitulo":"...","cocina":uno de ${JSON.stringify(COCINAS)},"imagen":uno de ${JSON.stringify(IMAGENES)},
- "peques":bool,"healthy":bool,"gourmet":bool,"tiempo":minutos,"dificultad":"Fácil"|"Media","raciones":3,
+ "peques":bool,"healthy":bool,"gourmet":bool,"tiempo":minutos,"dificultad":"Fácil"|"Media","raciones":${FAMILIA.raciones || 3},
  "plato":{"verdura":n,"proteina":n,"hidratos":n} (suman 100),"porque":"...","truco":"...","etiquetas":["..."],
  "guia":"1-2 frases para quien la redactará: ingredientes principales y técnica","busqueda_foto":"2-4 palabras en inglés"}
 NO escribas ingredientes ni pasos. Las 6 cenas: al menos 2 healthy, al menos 2 peques, la sexta gourmet, como mucho 1 exótica (japonesa, americana…), y como mucho 2 "reutilizar".`;

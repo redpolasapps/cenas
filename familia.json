@@ -1,0 +1,10 @@
+{
+ "_ayuda": "Configuración de esta familia. Es el ÚNICO archivo que hay que cambiar para adaptar las cenas a otra casa.",
+ "ciudad": "Barcelona",
+ "zona": "Europe/Madrid",
+ "edad": 4,
+ "raciones": 3,
+ "gustos": "Sobre todo cocina mediterránea: arroces, pasta, legumbres, verduras al horno o a la plancha, pescados, tortillas, cremas y guisos caseros. De vez en cuando algo exótico pero fácil: japonés (yakisoba, teriyaki, donburi) o americano (hamburguesas caseras, costillas, mac and cheese). Nada de sushi.",
+ "evitar": "Cocina nórdica, alemana o centroeuropea (salchichas con chucrut, platos muy pesados con nata y patata).",
+ "alergias": ""
+}

@@ -22,6 +22,11 @@ const MODELOS = [process.env.GEMINI_MODEL || "gemini-2.5-flash", "gemini-flash-l
 
 const log = (...a) => console.log("[expandir]", ...a);
 
+// Lo propio de cada familia (ciudad, edad del peque, gustos, alergias) está en familia.json
+export const FAMILIA = await (async () => { try { return JSON.parse(await readFile(path.join(RAIZ, "familia.json"), "utf8")); } catch { return {}; } })();
+const EDAD = FAMILIA.edad || 4, ZONA = FAMILIA.zona || "Europe/Madrid";
+const ALERGIAS = String(FAMILIA.alergias || "").trim();
+
 /* ---------------- utilidades ---------------- */
 async function leerJSON(rel, defecto) {
   try { return JSON.parse(await readFile(path.join(RAIZ, rel), "utf8")); } catch { return defecto; }
@@ -36,7 +41,7 @@ async function leerData() {
 function ahoraMadrid() {
   const d = new Date();
   const p = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
-    timeZone: "Europe/Madrid", year: "numeric", month: "2-digit", day: "2-digit",
+    timeZone: ZONA, year: "numeric", month: "2-digit", day: "2-digit",
     hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23", timeZoneName: "longOffset",
   }).formatToParts(d).map((x) => [x.type, x.value]));
   const off = (p.timeZoneName || "GMT+01:00").replace("GMT", "") || "+00:00";
@@ -48,7 +53,7 @@ function diaSemana(fecha) {
 }
 
 /* ---------------- Gemini ---------------- */
-const REGLAS = `Eres un redactor de recetas de cocina casera española para una familia con un niño de 4 años.
+const REGLAS = `Eres un redactor de recetas de cocina casera española para una familia con un niño de ${EDAD} años.
 Te paso una lista de recetas YA DECIDIDAS (título, tipo de cocina, raciones, tiempo y una guía). NO cambies el plato ni lo que dice la guía: solo escribe sus ingredientes y sus pasos.
 
 Para cada receta devuelve:
@@ -61,7 +66,7 @@ Para cada receta devuelve:
   - "min": minutos del paso si los tiene (número), si no omítelo.
   - "consejo": opcional, una aclaración útil: cómo saber que está hecho (color, textura, que el cuchillo entre fácil), qué hacer si algo sale mal o un aviso de seguridad.
   El primer paso suele ser preparar (precalentar el horno, poner agua a hervir, sacar ingredientes). El último, emplatar, incluida la versión para el niño si la guía o el truco la mencionan.
-- Seguridad para el niño de 4 años: sin picante, poca sal, pescado sin espinas, carne sin huesecillos, nada de frutos secos enteros ni uvas o tomates cherry enteros.
+${ALERGIAS ? `- ALERGIAS E INTOLERANCIAS DE LA FAMILIA (OBLIGATORIO, ni rastro en ingredientes ni pasos): ${ALERGIAS}.\n` : ""}- Seguridad para el niño de ${EDAD} años: sin picante, poca sal, pescado sin espinas, carne sin huesecillos, nada de frutos secos enteros ni uvas o tomates cherry enteros.
 - Los ingredientes de la lista tienen que cuadrar con lo que se usa en los pasos.
 
 Responde SOLO con JSON con esta forma: {"recetas":[{"id":"...","ingredientes":[...],"pasos":[...]}]}, una entrada por cada receta, con el mismo "id".`;
