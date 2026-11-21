@@ -1,220 +1,83 @@
 // Lo genera scripts/expandir.mjs a partir del plan de Claude. Ver AGENTE.md
 window.MENU_DATA = {
- "actualizado": "2026-11-20T00:45:41+01:00",
- "plan": "2026-11-20.json",
+ "actualizado": "2026-11-21T05:58:24+01:00",
+ "plan": "2026-11-21.json",
  "hoy": {
-  "fecha": "2026-11-20",
-  "cole": {
-   "platos": [
-    "Espaguetis integrales con tomate y queso rallado",
-    "Huevos con bechamel",
-    "Lechuga y maíz",
-    "Yogur"
-   ],
-   "nota": "Día Universal de la Infancia"
-  },
-  "consejo": "Hoy ha comido pasta y huevo con bechamel: para cenar mejor pescado o legumbre, con mucha verdura y poco hidrato.",
-  "explicacion": "Al mediodía ha comido espaguetis y huevos con bechamel, así que el huevo y el hidrato ya están cubiertos. En el cole esta semana solo lleva 1 de pescado (merluza) y 1 de legumbre (alubias), por eso las cenas tiran sobre todo de pescado y legumbre, con verdura en todas y sin pasta ni huevo.",
+  "fecha": "2026-11-21",
+  "cole": {},
+  "consejo": "Hoy es sábado y no hay cole: cena libre, con verdura en todas las opciones y algo de fruta de postre.",
+  "explicacion": "Es fin de semana, así que no hace falta compensar el cole. Arriba están la pizza y el salmón del plan del sábado, y además cuatro ideas nuevas más ligeras: albóndigas de pavo, un revuelto con setas y gambas, pollo en la air fryer y unas lentejas, para quien prefiera algo de cuchara o con más verdura.",
   "cenas": [
    {
-    "id": "hamburguesitas-bacalao-calabacin-horno",
-    "titulo": "Hamburguesitas de bacalao y calabacín al horno",
-    "subtitulo": "Con ensalada de tomate y pepino",
-    "cocina": "Casera",
-    "imagen": "pescado",
-    "peques": true,
-    "healthy": true,
-    "gourmet": false,
-    "tiempo": 30,
+    "id": "pizza-margarita-verduras",
+    "imagen": "pizza",
+    "foto": "https://images.pexels.com/photos/6223186/pexels-photo-6223186.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "fotoCredito": "Antonius Ferret / Pexels",
+    "titulo": "Pizza casera margarita con verduras",
+    "subtitulo": "Con calabacín, maíz y mozzarella",
+    "tiempo": 40,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
-     "verdura": 50,
-     "proteina": 35,
-     "hidratos": 15
+     "verdura": 35,
+     "proteina": 25,
+     "hidratos": 40
     },
-    "porque": "Pescado para compensar la pasta y el huevo del mediodía, con la verdura escondida dentro.",
-    "truco": "Hazle a él hamburguesitas pequeñas, del tamaño de una galleta, y que las moje en tomate natural.",
+    "porque": "Es la cena prevista para el sábado en el plan del fin de semana.",
     "etiquetas": [
-     "Pescado",
+     "Queso",
      "Horno"
     ],
-    "foto": "",
-    "fotoCredito": "",
-    "fotosUrl": "",
-    "ingredientes": [
-     "450 g de lomos de bacalao fresco desalado y sin espinas",
-     "1 calabacín mediano (unos 250 g)",
-     "1 cebolleta pequeña (unos 80 g)",
-     "2 ramitas de perejil fresco",
-     "40 g de pan rallado",
-     "2 cucharadas de aceite de oliva virgen extra (30 ml)",
-     "2 tomates medianos maduros (unos 300 g)",
-     "1 pepino mediano (unos 150 g)",
-     "1 pizca suave de sal (1 g)"
-    ],
-    "pasos": [
-     {
-      "icono": "horno",
-      "texto": "Precalentar el horno a 200 ºC con calor arriba y abajo. Forrar una bandeja de horno con papel vegetal para que no se peguen las hamburguesas.",
-      "min": 5
-     },
-     {
-      "icono": "cortar",
-      "texto": "Rallar el calabacín con un rallador grueso y apretarlo con fuerza entre las manos para quitarle todo el líquido que suelta. Picar la cebolleta muy fina y picar las hojas de perejil.",
-      "usa": [
-       "1 calabacín mediano (unos 250 g)",
-       "1 cebolleta pequeña (unos 80 g)",
-       "2 ramitas de perejil fresco"
-      ],
-      "consejo": "Escurrir bien el calabacín es clave para que la masa no quede aguada y se puedan formar las hamburguesas sin romperse."
-     },
-     {
-      "icono": "cortar",
-      "texto": "Pasar las yemas de los dedos por los lomos de bacalao para verificar minuciosamente que no quede ninguna espina. Picar el pescado a cuchillo en trocitos muy diminutos, como si fuera carne picada.",
-      "usa": [
-       "450 g de lomos de bacalao fresco desalado y sin espinas"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "En un bol amplio, juntar el bacalao picado, el calabacín bien escurrido, la cebolleta, el perejil, una pizca suave de sal y el pan rallado. Mezclar con una cuchara o con las manos limpias hasta tener una pasta homogénea.",
-      "usa": [
-       "40 g de pan rallado",
-       "1 pizca suave de sal (1 g)"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Formar con las manos 4 hamburguesas de tamaño normal para los adultos y 3 o 4 minihamburguesitas del tamaño de una galleta pequeña para el niño. Colocarlas sobre la bandeja y regarlas por encima con un hilo de aceite de oliva.",
-      "usa": [
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
-      ]
-     },
-     {
-      "icono": "horno",
-      "texto": "Hornear a 200 ºC durante 15 minutos, hasta que se sientan firmes al tocarlas y tengan un tono ligeramente dorado.",
-      "min": 15,
-      "consejo": "Para comprobar que están listas, presiona suavemente con un tenedor: deben sentirse compactas y no blandas."
-     },
-     {
-      "icono": "cortar",
-      "texto": "Mientras tanto, pelar el pepino y cortarlo en dados pequeños. Lavar los tomates, cortarlos en dados del mismo tamaño y mezclar todo en un cuenco con una cucharada de aceite de oliva.",
-      "usa": [
-       "2 tomates medianos maduros (unos 300 g)",
-       "1 pepino mediano (unos 150 g)",
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
-      ]
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Emplatar sirviendo las hamburguesas acompañadas de la ensalada fresca. Para el peque, servir sus minihamburguesas templadas acompañadas de unos daditos de tomate natural aparte para que pueda mojarlas."
-     }
-    ]
-   },
-   {
-    "id": "crema-lentejas-rojas-calabaza-zanahoria",
-    "titulo": "Crema de lentejas rojas con calabaza y zanahoria",
-    "subtitulo": "Suave, con un toque de queso fresco",
-    "cocina": "Casera",
-    "imagen": "crema",
+    "cocina": "Italiana",
     "peques": true,
-    "healthy": false,
     "gourmet": false,
-    "tiempo": 30,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 45,
-     "proteina": 30,
-     "hidratos": 25
-    },
-    "porque": "Suma una legumbre a la semana en formato crema, que entra muy fácil.",
-    "truco": "Ponle encima un quesito o una cucharada de queso fresco y que lo remueva él hasta que se funda.",
-    "etiquetas": [
-     "Legumbre",
-     "Olla"
-    ],
-    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Mercimek_%C3%A7orbasi.jpg/960px-Mercimek_%C3%A7orbasi.jpg",
-    "fotoCredito": "E4024 / Wikimedia Commons (CC BY-SA 4.0)",
-    "fotosUrl": "",
+    "truco": "Que él estire la masa y reparta el maíz y el queso por su mitad.",
     "ingredientes": [
-     "180 g de lentejas rojas",
-     "250 g de calabaza pelada",
-     "2 zanahorias medianas (unos 150 g)",
-     "1 cebolla pequeña (unos 100 g)",
-     "1 puerro pequeño (solo la parte blanca, unos 80 g)",
-     "700 ml de caldo de verduras bajo en sal o agua",
-     "2 cucharadas de aceite de oliva virgen extra (30 ml)",
-     "90 g de queso fresco batido",
-     "1 pizca de comino molido (opcional para adultos)"
+     "1 masa de pizza fresca",
+     "200 g de tomate triturado",
+     "200 g de mozzarella",
+     "1 calabacín",
+     "80 g de maíz dulce",
+     "Orégano",
+     "Aceite de oliva"
     ],
     "pasos": [
      {
       "icono": "cortar",
-      "texto": "Pelar las zanahorias y la calabaza y cortarlas en dados de unos 2 centímetros. Lavar la parte blanca del puerro para retirar restos de tierra y picarlo junto con la cebolla en trozos pequeños.",
-      "usa": [
-       "250 g de calabaza pelada",
-       "2 zanahorias medianas (unos 150 g)",
-       "1 cebolla pequeña (unos 100 g)",
-       "1 puerro pequeño (solo la parte blanca, unos 80 g)"
-      ]
+      "texto": "Corta el calabacín en dados muy pequeños."
      },
      {
-      "icono": "olla",
-      "texto": "Poner 2 cucharadas de aceite en una olla a fuego medio y pochar la cebolla con el puerro durante 5 minutos, removiendo con una cuchara de madera hasta que estén transparentes y tiernos sin dorarse.",
-      "usa": [
-       "2 cucharadas de aceite de oliva virgen extra (30 ml)"
-      ],
-      "fuego": "medio",
-      "min": 5,
-      "consejo": "Pochar significa cocinar a fuego suave-medio para que la verdura se ablande despacio con su propio vapor sin tostarse."
-     },
-     {
-      "icono": "olla",
-      "texto": "Añadir a la olla los dados de calabaza y zanahoria, y remover durante 3 minutos para que se impregnen bien del aceite y los jugos.",
-      "fuego": "medio",
+      "icono": "sarten",
+      "texto": "Saltéalo un par de minutos.",
       "min": 3
      },
      {
-      "icono": "lavar",
-      "texto": "Enjuagar las lentejas rojas en un colador bajo el grifo de agua fría durante unos segundos y volcarlas a la olla junto con el caldo de verduras o agua.",
-      "usa": [
-       "180 g de lentejas rojas",
-       "700 ml de caldo de verduras bajo en sal o agua"
-      ]
+      "icono": "envolver",
+      "texto": "Estira la masa, unta el tomate y reparte verduras y mozzarella."
      },
      {
-      "icono": "olla",
-      "texto": "Subir el fuego hasta que rompa a hervir, bajar inmediatamente a fuego suave, tapar la olla y dejar cocer durante 18 minutos.",
-      "fuego": "suave",
-      "min": 18,
-      "consejo": "Sabrás que está en su punto cuando pinches la zanahoria y la calabaza con un cuchillo y la punta entre con total facilidad."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Apagar el fuego y triturar todo con la batidora de mano durante 2 o 3 minutos hasta conseguir una textura completamente lisa, sedosa y sin grumos.",
-      "min": 2
+      "icono": "horno",
+      "texto": "Hornea a 230 °C.",
+      "min": 12
      },
      {
       "icono": "emplatar",
-      "texto": "Servir la crema caliente en cuencos para los adultos, decorando con una cucharada de queso fresco batido y una pizca opcional de comino molido. Para el niño, servir la crema tibia en su plato hondo con su cucharada de queso fresco encima para que él mismo la remueva con la cuchara hasta fundirla.",
-      "usa": [
-       "90 g de queso fresco batido",
-       "1 pizca de comino molido (opcional para adultos)"
-      ]
+      "texto": "Añade orégano y corta en porciones."
      }
-    ]
+    ],
+    "fotosUrl": ""
    },
    {
-    "id": "brochetas-pollo-verduras-salsa-yogur",
-    "titulo": "Brochetas de pollo y verduras al horno",
-    "subtitulo": "Con salsa suave de yogur y limón",
-    "cocina": "Mediterránea",
-    "imagen": "pollo-horno",
-    "peques": false,
+    "id": "albondigas-pavo-salsa-zanahoria",
+    "titulo": "Albóndigas de pavo en salsa de zanahoria",
+    "subtitulo": "Con judías verdes salteadas",
+    "cocina": "Casera",
+    "imagen": "generico",
+    "peques": true,
     "healthy": true,
     "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
     "tiempo": 30,
     "dificultad": "Fácil",
     "raciones": 3,
@@ -223,113 +86,141 @@ window.MENU_DATA = {
      "proteina": 40,
      "hidratos": 10
     },
-    "porque": "Proteína ligera y mucha verdura, casi sin hidrato, para equilibrar la pasta del mediodía.",
-    "truco": "A él sírvele los trozos ya sacados del pincho y la salsa de yogur en un cuenquito para mojar.",
+    "porque": "Carne blanca en un formato que le encanta, con la verdura escondida en la salsa.",
+    "truco": "Hazle las albóndigas pequeñitas, como canicas, y que las pinche con un palillo de cóctel sin punta.",
     "etiquetas": [
-     "Carne blanca",
-     "Horno"
+     "Pavo",
+     "Olla"
     ],
-    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Oven_baked_vegetables_with_Chicken_Skewers.jpg/960px-Oven_baked_vegetables_with_Chicken_Skewers.jpg",
-    "fotoCredito": "FitTasteTic / Wikimedia Commons (CC BY-SA 2.0)",
+    "foto": "https://images.pexels.com/photos/15946048/pexels-photo-15946048.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
-     "450 g de pechuga de pollo limpia y sin huesos",
-     "1 calabacín pequeño (unos 180 g)",
-     "1 pimiento rojo mediano (unos 150 g)",
-     "1 cebolla mediana (unos 120 g)",
-     "3 cucharadas de aceite de oliva virgen extra (45 ml)",
-     "1 cucharada de zumo de limón para el pollo (15 ml)",
-     "1/2 cucharadita de ajo en polvo",
-     "1/2 cucharadita de orégano seco",
-     "1 yogur natural sin azúcar (125 g)",
-     "1 cucharadita de zumo de limón para la salsa (5 ml)",
-     "1 cucharadita de eneldo fresco picado (o menta fresca)",
-     "1 pizca suave de sal (1 g)"
+     "400 g de pavo picado",
+     "1 huevo",
+     "3 cucharadas de pan rallado",
+     "1 diente de ajo",
+     "1 cucharada de perejil fresco picado",
+     "3 zanahorias",
+     "1 cebolla",
+     "300 ml de caldo de pollo bajo en sal",
+     "300 g de judías verdes redondas",
+     "4 cucharadas de aceite de oliva",
+     "2 pizcas de sal"
     ],
     "pasos": [
      {
-      "icono": "horno",
-      "texto": "Precalentar el horno a 200 ºC con calor arriba y abajo. Si vas a utilizar palillos de madera para brocheta, sumérgelos en un vaso con agua durante unos minutos para que no se quemen en el horno.",
-      "min": 5
-     },
-     {
       "icono": "cortar",
-      "texto": "Revisar la pechuga de pollo retirando cualquier resto de grasa o cartílago y cortarla en dados medianos de unos 2 a 3 centímetros.",
+      "texto": "Pela las zanahorias y la cebolla. Corta las zanahorias en rodajas finas y la cebolla en trocitos pequeños. Pela el ajo y pícalo muy fino.",
       "usa": [
-       "450 g de pechuga de pollo limpia y sin huesos"
+       "3 zanahorias",
+       "1 cebolla",
+       "1 diente de ajo"
       ]
      },
      {
       "icono": "mezclar",
-      "texto": "En un bol mediano, verter 2 cucharadas de aceite, 1 cucharada de zumo de limón, el ajo en polvo, el orégano seco y una pizca suave de sal. Añadir los dados de pollo, mezclar con una cuchara para que se impregnen y dejar reposar 5 minutos.",
+      "texto": "En un bol, mezcla con las manos el pavo picado, el huevo, el pan rallado, el ajo picado, el perejil y una pizca de sal, hasta que quede una masa uniforme.",
       "usa": [
-       "2 cucharadas de aceite de oliva virgen extra (30 ml)",
-       "1 cucharada de zumo de limón para el pollo (15 ml)",
-       "1/2 cucharadita de ajo en polvo",
-       "1/2 cucharadita de orégano seco",
-       "1 pizca suave de sal (1 g)"
+       "400 g de pavo picado",
+       "1 huevo",
+       "3 cucharadas de pan rallado",
+       "1 diente de ajo",
+       "1 cucharada de perejil fresco picado",
+       "1 pizca de sal"
       ],
-      "min": 5
-     },
-     {
-      "icono": "cortar",
-      "texto": "Lavar el calabacín y el pimiento. Cortar el calabacín en rodajas gruesas y luego en mitades; despepitar el pimiento y cortarlo en cuadrados, e igual con la cebolla.",
-      "usa": [
-       "1 calabacín pequeño (unos 180 g)",
-       "1 pimiento rojo mediano (unos 150 g)",
-       "1 cebolla mediana (unos 120 g)"
-      ]
+      "consejo": "Mójate las manos con agua para que la masa no se pegue."
      },
      {
       "icono": "mezclar",
-      "texto": "Montar las brochetas pinchando de manera alterna un trozo de pollo, uno de pimiento, uno de calabacín y uno de cebolla hasta completar los palillos. Colocarlas en una bandeja con papel de horno y pintar las verduras por encima con 1 cucharada de aceite.",
-      "usa": [
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
-      ]
+      "texto": "Forma bolitas del tamaño de una nuez (unas 20) haciéndolas rodar entre las palmas de las manos. Déjalas en un plato.",
+      "consejo": "Para el peque, hazle unas cuantas más pequeñas, como canicas."
      },
      {
-      "icono": "horno",
-      "texto": "Hornear a 200 ºC durante 18 minutos en total, abriendo a los 9 minutos para darles la vuelta con unas pinzas y que se doren igual por ambos lados.",
-      "min": 18,
-      "consejo": "Para verificar que el pollo está listo, corta un trocito central: debe estar blanco y bien cocinado por dentro, sin ningún tono rosado."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Mientras se hornean, preparar la salsa batiendo en un cuenco pequeño el yogur natural, 1 cucharadita de zumo de limón y el eneldo o menta picados con una cucharita hasta tener una crema suave.",
+      "icono": "sarten",
+      "texto": "Pon una sartén honda o una cazuela a fuego medio con 2 cucharadas de aceite. Dora las albóndigas por todos los lados, moviéndolas con cuidado, y sácalas a un plato. No tienen que quedar hechas por dentro.",
       "usa": [
-       "1 yogur natural sin azúcar (125 g)",
-       "1 cucharadita de zumo de limón para la salsa (5 ml)",
-       "1 cucharadita de eneldo fresco picado (o menta fresca)"
+       "2 cucharadas de aceite de oliva"
       ],
+      "fuego": "medio",
+      "min": 6
+     },
+     {
+      "icono": "olla",
+      "texto": "En la misma cazuela, añade 1 cucharada de aceite, la cebolla y la zanahoria. Cocínalas a fuego suave, removiendo de vez en cuando, hasta que estén blanditas.",
+      "usa": [
+       "1 cucharada de aceite de oliva",
+       "1 cebolla",
+       "3 zanahorias"
+      ],
+      "fuego": "suave",
+      "min": 10,
+      "consejo": "Si se pegan, añade un chorrito del caldo."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Añade el caldo, deja que hierva 2 minutos y tritura todo con la batidora hasta que quede una salsa fina y naranja.",
+      "usa": [
+       "300 ml de caldo de pollo bajo en sal"
+      ],
+      "fuego": "medio",
+      "min": 2
+     },
+     {
+      "icono": "olla",
+      "texto": "Mete las albóndigas en la salsa, tapa y cocina a fuego suave para que se hagan por dentro.",
+      "fuego": "suave",
+      "min": 12,
+      "consejo": "Están hechas cuando, al partir una, por dentro está blanca y sin parte rosada."
+     },
+     {
+      "icono": "olla",
+      "texto": "Mientras, quita las puntas a las judías y córtalas en trozos de 3 cm. Cuécelas en un cazo con agua hirviendo y una pizca de sal hasta que estén tiernas, y escúrrelas.",
+      "usa": [
+       "300 g de judías verdes redondas",
+       "1 pizca de sal"
+      ],
+      "fuego": "fuerte",
+      "min": 10
+     },
+     {
+      "icono": "sarten",
+      "texto": "Saltea las judías escurridas en una sartén con 1 cucharada de aceite durante un par de minutos.",
+      "usa": [
+       "1 cucharada de aceite de oliva"
+      ],
+      "fuego": "medio",
       "min": 2
      },
      {
       "icono": "emplatar",
-      "texto": "Emplatar sirviendo las brochetas enteras a los adultos con la salsa al lado. Para el niño de 4 años, desmontar completamente su brocheta retirando el palo de madera, cortar los trozos al tamaño de un bocado cómodo y servirle la salsa de yogur en un vasito o cuenquito pequeño para que moje."
+      "texto": "Sirve las albóndigas con bastante salsa y las judías al lado. Al peque, ponle las albóndigas pequeñas con un palillo de cóctel sin punta para que las pinche."
      }
     ]
    },
    {
-    "id": "garbanzos-salteados-espinacas-gambas",
-    "titulo": "Garbanzos salteados con espinacas y gambas",
-    "subtitulo": "En sartén, con ajo suave y pimentón dulce",
+    "id": "revuelto-setas-trigueros-gambas",
+    "titulo": "Revuelto de setas, trigueros y gambas",
+    "subtitulo": "Con tomate aliñado",
     "cocina": "Española",
-    "imagen": "garbanzos",
+    "imagen": "tortilla",
     "peques": false,
-    "healthy": false,
+    "healthy": true,
     "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
     "tiempo": 20,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
-     "verdura": 40,
-     "proteina": 35,
-     "hidratos": 25
+     "verdura": 50,
+     "proteina": 40,
+     "hidratos": 10
     },
-    "porque": "Legumbre y marisco en un plato rápido de sartén: completa la semana de legumbre.",
-    "truco": "Corta sus gambas en trocitos y aplasta un poco sus garbanzos con el tenedor para que no ruede ninguno.",
+    "porque": "Huevo y marisco con mucha verdura y casi nada de hidrato, para una cena ligera.",
+    "truco": "A él sírvele su parte con las gambas cortadas en trocitos y las setas muy picadas, sobre una tostadita pequeña.",
     "etiquetas": [
-     "Legumbre",
+     "Huevo",
      "Marisco",
      "Sartén"
     ],
@@ -337,301 +228,365 @@ window.MENU_DATA = {
     "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "400 g de garbanzos cocidos en conserva (peso escurrido)",
+     "6 huevos",
+     "250 g de champiñones y setas variadas",
+     "1 manojo de espárragos trigueros (unos 200 g)",
      "200 g de gambas peladas",
-     "150 g de espinacas frescas baby",
-     "1 cebolla mediana (unos 140 g)",
-     "2 dientes de ajo",
-     "3 cucharadas de aceite de oliva virgen extra (45 ml)",
-     "1 cucharadita de pimentón dulce (sin picante)",
-     "1 cucharada de zumo de limón (15 ml)",
-     "1 pizca suave de sal (1 g)"
+     "1 diente de ajo",
+     "2 tomates maduros",
+     "3 cucharadas de aceite de oliva",
+     "1 pizca de orégano",
+     "2 pizcas de sal",
+     "3 rebanadas de pan integral"
     ],
     "pasos": [
      {
       "icono": "lavar",
-      "texto": "Volcar los garbanzos en un colador grande y lavarlos bajo el grifo de agua fría hasta que dejen de soltar espuma; dejar escurrir bien todo el agua.",
+      "texto": "Lava los espárragos y dobla cada uno con las manos: se partirá justo donde empieza la parte dura. Tira la parte dura y corta el resto en trozos de 2 cm.",
       "usa": [
-       "400 g de garbanzos cocidos en conserva (peso escurrido)"
-      ],
-      "min": 2
+       "1 manojo de espárragos trigueros (unos 200 g)"
+      ]
      },
      {
       "icono": "cortar",
-      "texto": "Pelar los dientes de ajo y cortarlos en láminas muy finitas. Pelar la cebolla y cortarla en dados pequeñitos.",
+      "texto": "Limpia los champiñones y las setas con un papel de cocina húmedo y córtalos en láminas finas. Pela el ajo y pícalo muy fino.",
       "usa": [
-       "1 cebolla mediana (unos 140 g)",
-       "2 dientes de ajo"
+       "250 g de champiñones y setas variadas",
+       "1 diente de ajo"
+      ],
+      "consejo": "No laves las setas debajo del grifo: absorben agua y luego no se doran."
+     },
+     {
+      "icono": "cortar",
+      "texto": "Corta los tomates en rodajas, ponlos en un plato y alíñalos con 1 cucharada de aceite, una pizca de sal y el orégano.",
+      "usa": [
+       "2 tomates maduros",
+       "1 cucharada de aceite de oliva",
+       "1 pizca de sal",
+       "1 pizca de orégano"
       ]
      },
      {
       "icono": "sarten",
-      "texto": "Calentar las 3 cucharadas de aceite de oliva en una sartén amplia a fuego suave y añadir el ajo laminado, cocinándolo durante 1 minuto solo para que suelte aroma, sin que coja color dorado.",
+      "texto": "Pon una sartén grande a fuego medio-fuerte con 2 cucharadas de aceite. Añade los espárragos y saltéalos 3 minutos. Después añade las setas y el ajo y cocina hasta que las setas suelten el agua y se doren un poco.",
       "usa": [
-       "3 cucharadas de aceite de oliva virgen extra (45 ml)"
+       "2 cucharadas de aceite de oliva",
+       "1 diente de ajo"
       ],
-      "fuego": "suave",
-      "min": 1,
-      "consejo": "Si el ajo se dora en exceso se vuelve amargo; si ves que toma color rápido, aparta la sartén del fuego unos segundos."
+      "fuego": "fuerte",
+      "min": 7
      },
      {
       "icono": "sarten",
-      "texto": "Añadir la cebolla picada y una pizca suave de sal a la sartén; cocinar a fuego medio durante 6 minutos removiendo con frecuencia hasta que esté blandita y translúcida.",
-      "usa": [
-       "1 pizca suave de sal (1 g)"
-      ],
-      "fuego": "medio",
-      "min": 6
-     },
-     {
-      "icono": "sarten",
-      "texto": "Agregar las gambas peladas a la sartén y saltear a fuego medio durante 2 minutos hasta que cambien de grisáceo a un tono rosado y firme.",
+      "texto": "Añade las gambas y saltéalas hasta que cambien de color, de gris a rosado.",
       "usa": [
        "200 g de gambas peladas"
       ],
       "fuego": "medio",
-      "min": 2
-     },
-     {
-      "icono": "sarten",
-      "texto": "Apartar la sartén del fuego un instante para que no se queme el pimentón, añadir la cucharadita de pimentón dulce, remover rápidamente con la cuchara y volver al fuego medio.",
-      "usa": [
-       "1 cucharadita de pimentón dulce (sin picante)"
-      ],
-      "fuego": "medio",
-      "min": 1
-     },
-     {
-      "icono": "sarten",
-      "texto": "Incorporar de inmediato los garbanzos escurridos y las espinacas frescas a la sartén. Saltear todo junto durante 3 o 4 minutos hasta que las hojas de espinaca se hayan encogido por completo.",
-      "usa": [
-       "150 g de espinacas frescas baby"
-      ],
-      "fuego": "medio",
-      "min": 4
+      "min": 2,
+      "consejo": "No las cocines de más o se quedarán duras."
      },
      {
       "icono": "mezclar",
-      "texto": "Apagar el fuego, rociar por encima con la cucharada de zumo de limón y mezclar bien para unificar los sabores.",
+      "texto": "Bate los huevos en un bol con una pizca de sal, solo hasta mezclar la yema y la clara.",
       "usa": [
-       "1 cucharada de zumo de limón (15 ml)"
+       "6 huevos",
+       "1 pizca de sal"
       ]
      },
      {
+      "icono": "sarten",
+      "texto": "Baja el fuego a suave, echa los huevos en la sartén y remueve despacio con una espátula, desde los bordes hacia el centro, hasta que estén casi cuajados pero jugosos.",
+      "fuego": "suave",
+      "min": 3,
+      "consejo": "Apaga el fuego cuando aún brillen un poco: con el calor de la sartén terminan de hacerse."
+     },
+     {
       "icono": "emplatar",
-      "texto": "Emplatar repartiendo en platos hondos. Para la ración del niño de 4 años, cortar sus gambas en trozos pequeñitos y aplastar un poco sus garbanzos con un tenedor para que queden aplastados y no rueden ni supongan peligro de atragantamiento."
+      "texto": "Tuesta el pan y sirve el revuelto con el tomate aliñado al lado. Para el peque, corta sus gambas en trocitos y ponle un poco de revuelto sobre una tostadita pequeña.",
+      "usa": [
+       "3 rebanadas de pan integral"
+      ]
      }
     ]
    },
    {
-    "id": "donburi-salmon-teriyaki-brocoli",
-    "titulo": "Donburi de salmón teriyaki",
-    "subtitulo": "Bol de arroz con salmón glaseado y brócoli",
-    "cocina": "Japonesa",
-    "imagen": "arroz",
+    "id": "contramuslos-pollo-airfryer-verduras",
+    "titulo": "Contramuslos de pollo en air fryer con verduras",
+    "subtitulo": "Calabacín, pimiento y cebolla asados",
+    "cocina": "Casera",
+    "imagen": "pollo-horno",
     "peques": false,
     "healthy": false,
     "gourmet": false,
+    "airfryer": true,
+    "rapida": false,
     "tiempo": 30,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
-     "verdura": 35,
+     "verdura": 45,
      "proteina": 35,
-     "hidratos": 30
+     "hidratos": 20
     },
-    "porque": "El toque japonés del día con pescado azul, que esta semana aún no ha salido.",
-    "truco": "Monta su bol él mismo: arroz, sus dados de salmón y los arbolitos de brócoli, con un pelín de salsa.",
+    "porque": "Pollo jugoso y doradito casi sin manchar, con una bandeja de verdura asada.",
+    "truco": "Córtale el pollo en tiras finas y ponle un poco de kétchup casero o tomate para mojar.",
     "etiquetas": [
-     "Pescado",
-     "Sartén"
+     "Pollo",
+     "Air fryer"
     ],
-    "foto": "https://upload.wikimedia.org/wikipedia/commons/5/5e/B-Dama%27s_Salmon_Teriyaki_Bowl._a.k.a._The_anti-sisig._-%29_%2814954283259%29.jpg",
-    "fotoCredito": "Arnold Gatilao from Oakland, CA, USA / Wikimedia Commons (CC BY 2.0)",
+    "foto": "",
+    "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "350 g de lomos de salmón fresco sin piel ni espinas",
-     "180 g de arroz redondo o grano corto",
-     "250 g de brócoli (cortado en arbolitos pequeños)",
-     "1 zanahoria mediana (unos 100 g)",
-     "3 cucharadas de salsa de soja baja en sal (45 ml)",
-     "1 cucharada colmada de miel (25 g)",
-     "3 cucharadas de agua (45 ml)",
-     "1 cucharada de aceite de oliva virgen extra (15 ml)",
-     "1 cucharadita de semillas de sésamo tostado"
+     "6 contramuslos de pollo deshuesados y sin piel (unos 600 g)",
+     "1 limón",
+     "1 cucharadita de pimentón dulce",
+     "½ cucharadita de ajo en polvo",
+     "1 cucharadita de orégano",
+     "1 calabacín",
+     "1 pimiento rojo",
+     "1 cebolla",
+     "3 cucharadas de aceite de oliva",
+     "2 pizcas de sal",
+     "6 patatas pequeñas (unos 400 g)"
     ],
     "pasos": [
      {
-      "icono": "olla",
-      "texto": "Enjuagar el arroz con agua en un colador. Ponerlo en una olla pequeña con 360 ml de agua, tapar y llevar a ebullición; en cuanto hierva, bajar a fuego suave y dejar cocer tapado durante 15 minutos sin destapar hasta que absorba el líquido.",
-      "usa": [
-       "180 g de arroz redondo o grano corto"
-      ],
-      "fuego": "suave",
-      "min": 15
-     },
-     {
-      "icono": "olla",
-      "texto": "Lavar el brócoli y cortarlo en pequeños arbolitos del tamaño de una moneda. Cocinarlos al vapor en una olla con cestillo durante 6 minutos hasta que estén tiernos pero de color verde vivo. Pelar y rallar la zanahoria.",
-      "usa": [
-       "250 g de brócoli (cortado en arbolitos pequeños)",
-       "1 zanahoria mediana (unos 100 g)"
-      ],
-      "fuego": "medio",
-      "min": 6
-     },
-     {
       "icono": "mezclar",
-      "texto": "En un vaso mezclar la salsa de soja baja en sal, la miel y las 3 cucharadas de agua, removiendo con una cuchara hasta que la miel se disuelva por completo.",
+      "texto": "En un bol, mezcla 2 cucharadas de aceite, el zumo de medio limón, el pimentón dulce, el ajo en polvo, el orégano y una pizca de sal. Añade los contramuslos, dales vueltas para que se impregnen y déjalos 10 minutos.",
       "usa": [
-       "3 cucharadas de salsa de soja baja en sal (45 ml)",
-       "1 cucharada colmada de miel (25 g)",
-       "3 cucharadas de agua (45 ml)"
-      ]
+       "6 contramuslos de pollo deshuesados y sin piel (unos 600 g)",
+       "2 cucharadas de aceite de oliva",
+       "½ limón",
+       "1 cucharadita de pimentón dulce",
+       "½ cucharadita de ajo en polvo",
+       "1 cucharadita de orégano",
+       "1 pizca de sal"
+      ],
+      "min": 10
      },
      {
       "icono": "cortar",
-      "texto": "Pasar las yemas de los dedos por los lomos de salmón para asegurarse al cien por cien de que no quede ninguna espina, y cortarlo en dados limpios de 2 centímetros.",
+      "texto": "Lava el calabacín y el pimiento. Corta el calabacín en medias lunas gruesas (1 cm), el pimiento en tiras anchas y la cebolla pelada en gajos. Mézclalos con 1 cucharada de aceite y una pizca de sal.",
       "usa": [
-       "350 g de lomos de salmón fresco sin piel ni espinas"
+       "1 calabacín",
+       "1 pimiento rojo",
+       "1 cebolla",
+       "1 cucharada de aceite de oliva",
+       "1 pizca de sal"
       ]
      },
      {
-      "icono": "sarten",
-      "texto": "Calentar 1 cucharada de aceite en una sartén antiadherente a fuego fuerte y dorar los dados de salmón durante 2 minutos dándoles la vuelta con delicadeza para sellar el exterior.",
+      "icono": "airfryer",
+      "texto": "Precalienta la air fryer a 190 °C durante 3 minutos. Pon las verduras en la cesta, sin llenarla demasiado, y cocínalas a 190 °C. Sacude la cesta a mitad de tiempo.",
+      "min": 10,
+      "consejo": "Si tu cesta es pequeña, hazlas en dos tandas: amontonadas se cuecen en vez de asarse."
+     },
+     {
+      "icono": "micro",
+      "texto": "Mientras, lava las patatas, pínchalas con un tenedor, ponlas en un plato con un poco de agua, tápalas y hazlas en el microondas a máxima potencia hasta que estén tiernas.",
       "usa": [
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
+       "6 patatas pequeñas (unos 400 g)"
       ],
-      "fuego": "fuerte",
+      "min": 8,
+      "consejo": "Están hechas cuando un cuchillo entra sin esfuerzo."
+     },
+     {
+      "icono": "airfryer",
+      "texto": "Saca las verduras a una fuente y tápalas. Coloca los contramuslos en la cesta en una sola capa y cocínalos a 190 °C, dándoles la vuelta a mitad de tiempo.",
+      "min": 20,
+      "consejo": "Están hechos cuando, al cortarlos por la parte más gruesa, el jugo sale transparente y no hay zonas rosadas."
+     },
+     {
+      "icono": "airfryer",
+      "texto": "Vuelve a meter las verduras en la cesta con el pollo los 2 últimos minutos para que se calienten.",
       "min": 2
      },
      {
-      "icono": "sarten",
-      "texto": "Bajar a fuego medio, verter la mezcla de teriyaki casera en la sartén y cocinar durante 2 minutos mientras la salsa burbujea y se reduce hasta crear un almíbar brillante que cubra el pescado.",
-      "fuego": "medio",
-      "min": 2,
-      "consejo": "Mueve la sartén en vaivén con suavidad para que el salmón se glasee por todos lados sin desmoronarse."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Moler una cucharadita de semillas de sésamo tostado machacándolas en un mortero para que queden en polvo fino y sean totalmente seguras para el niño pequeño.",
-      "usa": [
-       "1 cucharadita de semillas de sésamo tostado"
-      ],
-      "min": 1
-     },
-     {
       "icono": "emplatar",
-      "texto": "Emplatar repartiendo una base de arroz blanco en tres boles. Para los adultos, coronar con el brócoli al vapor, la zanahoria rallada, el salmón glaseado con su salsita y el sésamo. Para el niño, dejar que monte su propio bol colocando el arroz, sus dados de pescado y sus arbolitos de brócoli con una cucharadita ligera de salsa y el sésamo molido por encima."
+      "texto": "Sirve el pollo con las verduras y las patatas partidas por la mitad, con un chorrito del limón restante. Al peque, córtale el pollo en tiras finas y ponle tomate para mojar.",
+      "usa": [
+       "½ limón"
+      ]
      }
     ]
    },
    {
-    "id": "lubina-papillote-hinojo-limon",
-    "titulo": "Lubina en papillote con hinojo y limón",
-    "subtitulo": "Con patatitas asadas y salsa de mantequilla al limón",
-    "cocina": "Mediterránea",
-    "imagen": "pescado",
+    "id": "lentejas-estofadas-verduras",
+    "titulo": "Lentejas estofadas con verduras",
+    "subtitulo": "De cuchara, suaves y rápidas",
+    "cocina": "Española",
+    "imagen": "garbanzos",
     "peques": false,
     "healthy": false,
-    "gourmet": true,
-    "tiempo": 50,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 30,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 40,
+     "proteina": 30,
+     "hidratos": 30
+    },
+    "porque": "Un plato de cuchara de legumbre para una noche de otoño, sin chorizo y con mucha verdura.",
+    "truco": "Tritura un cucharón del guiso y mézclalo con su plato para que quede más espeso y no vea los trozos.",
+    "etiquetas": [
+     "Legumbre",
+     "Olla"
+    ],
+    "foto": "https://images.pexels.com/photos/35763746/pexels-photo-35763746.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
+    "fotosUrl": "",
+    "ingredientes": [
+     "2 botes de lentejas pardinas cocidas (unos 800 g)",
+     "1 cebolla",
+     "2 zanahorias",
+     "1 pimiento verde italiano",
+     "1 diente de ajo",
+     "2 tomates maduros",
+     "1 hoja de laurel",
+     "1 cucharadita de pimentón dulce",
+     "500 ml de caldo de verduras",
+     "2 cucharadas de aceite de oliva",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "lavar",
+      "texto": "Pon las lentejas en un colador y enjuágalas bajo el grifo hasta que el agua salga limpia. Déjalas escurrir.",
+      "usa": [
+       "2 botes de lentejas pardinas cocidas (unos 800 g)"
+      ],
+      "consejo": "Así quitas el líquido del bote, que suele tener mucha sal."
+     },
+     {
+      "icono": "cortar",
+      "texto": "Pela la cebolla, las zanahorias y el ajo. Corta la cebolla, el pimiento y las zanahorias en dados pequeños, de medio centímetro, y pica el ajo muy fino.",
+      "usa": [
+       "1 cebolla",
+       "2 zanahorias",
+       "1 pimiento verde italiano",
+       "1 diente de ajo"
+      ]
+     },
+     {
+      "icono": "cortar",
+      "texto": "Corta los tomates por la mitad y rállalos por la parte del corte con un rallador grueso, sobre un plato. Tira la piel.",
+      "usa": [
+       "2 tomates maduros"
+      ]
+     },
+     {
+      "icono": "olla",
+      "texto": "Pon una olla a fuego medio con el aceite. Añade la cebolla, la zanahoria, el pimiento y el ajo, y cocínalos removiendo de vez en cuando hasta que estén blanditos y la cebolla transparente.",
+      "usa": [
+       "2 cucharadas de aceite de oliva"
+      ],
+      "fuego": "medio",
+      "min": 8
+     },
+     {
+      "icono": "olla",
+      "texto": "Añade el tomate rallado y cocina hasta que pierda el agua y se oscurezca un poco. Retira la olla del fuego, añade el pimentón y remueve rápido.",
+      "usa": [
+       "1 cucharadita de pimentón dulce"
+      ],
+      "fuego": "medio",
+      "min": 4,
+      "consejo": "El pimentón se quema enseguida: por eso se añade con la olla fuera del fuego."
+     },
+     {
+      "icono": "olla",
+      "texto": "Vuelve a poner la olla al fuego, añade las lentejas, el caldo, el laurel y una pizca de sal. Cuando hierva, baja el fuego y deja que cueza tapado.",
+      "usa": [
+       "500 ml de caldo de verduras",
+       "1 hoja de laurel",
+       "1 pizca de sal"
+      ],
+      "fuego": "suave",
+      "min": 15,
+      "consejo": "Si queda muy espeso, añade un poco de agua; si queda caldoso, destapa los últimos 5 minutos."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Quita la hoja de laurel. Saca un cucharón de lentejas, tritúralo con la batidora y vuelve a mezclarlo en la olla para espesar.",
+      "consejo": "Para el peque puedes triturar su ración entera."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Sirve las lentejas calientes en plato hondo. Al peque, sírvele una ración con el puré mezclado para que no vea los trocitos de verdura."
+     }
+    ]
+   },
+   {
+    "id": "salmon-costra-hierbas-coliflor",
+    "imagen": "pescado",
+    "foto": "https://images.pexels.com/photos/12318013/pexels-photo-12318013.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "fotoCredito": "Jordan Rushton / Pexels",
+    "titulo": "Salmón con costra de hierbas",
+    "subtitulo": "Con puré de coliflor y espárragos",
+    "tiempo": 45,
     "dificultad": "Media",
     "raciones": 3,
     "plato": {
      "verdura": 40,
-     "proteina": 35,
-     "hidratos": 25
+     "proteina": 40,
+     "hidratos": 20
     },
-    "porque": "Un capricho de viernes con pescado fino, jugoso y sin complicaciones.",
-    "truco": "Abre su paquete en la mesa para que vea el vapor, y sírvele el pescado desmigado con las patatitas, sin la salsa.",
+    "porque": "Es la cena de capricho prevista para el sábado.",
     "etiquetas": [
-     "Pescado",
-     "Horno"
+     "Salmón",
+     "Horno",
+     "Capricho"
     ],
-    "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/-2015-10-04_Oven_Baked_Sea_Bass%2C_Trimingham.JPG/960px--2015-10-04_Oven_Baked_Sea_Bass%2C_Trimingham.JPG",
-    "fotoCredito": "Kolforn (Kolforn) I'd appreciate if you could mail me (Kolfo / Wikimedia Commons (CC BY-SA 4.0)",
-    "fotosUrl": "",
+    "cocina": "Mediterránea",
+    "peques": false,
+    "gourmet": true,
+    "truco": "Revisa bien las espinas, quítale la costra si no la quiere y sírvele el puré como nube debajo.",
     "ingredientes": [
-     "3 lomos de lubina limpios sin espinas (unos 450 g en total)",
-     "400 g de patatas pequeñas para guarnición",
-     "1 bulbo de hinojo pequeño (unos 150 g)",
-     "1 puerro (solo la parte blanca, unos 100 g)",
-     "1 limón entero",
-     "3 cucharadas de aceite de oliva virgen extra (45 ml)",
-     "30 ml de vino blanco (2 cucharadas)",
-     "3 ramitas de tomillo fresco",
-     "1 chalota pequeña (unos 25 g)",
-     "40 g de mantequilla",
-     "1 pizca suave de sal (1 g)"
+     "3 lomos de salmón sin piel ni espinas",
+     "40 g de pan rallado panko",
+     "Perejil y eneldo",
+     "1 limón",
+     "1 coliflor",
+     "100 ml de leche",
+     "20 g de mantequilla",
+     "1 manojo de espárragos verdes",
+     "Aceite de oliva"
     ],
     "pasos": [
      {
-      "icono": "horno",
-      "texto": "Precalentar el horno a 200 ºC con calor arriba y abajo. Lavar muy bien las patatas pequeñas, cortarlas por la mitad sin pelar y disponerlas en una bandeja de horno con 1 cucharada de aceite y una pizca suave de sal.",
-      "usa": [
-       "400 g de patatas pequeñas para guarnición",
-       "1 cucharada de aceite de oliva virgen extra (15 ml)",
-       "1 pizca suave de sal (1 g)"
-      ],
-      "min": 5
-     },
-     {
-      "icono": "horno",
-      "texto": "Introducir las patatas en el horno a 200 ºC durante 20 minutos para que vayan ablandándose antes de meter el pescado.",
-      "min": 20
-     },
-     {
-      "icono": "cortar",
-      "texto": "Cortar el puerro limpio y el bulbo de hinojo en tiras muy finas (juliana fina). Cortar medio limón en rodajas finas y guardar la otra mitad para exprimir su zumo después.",
-      "usa": [
-       "1 bulbo de hinojo pequeño (unos 150 g)",
-       "1 puerro (solo la parte blanca, unos 100 g)",
-       "1 limón entero"
-      ]
-     },
-     {
-      "icono": "envolver",
-      "texto": "Cortar 3 pliegos amplios de papel de horno. Colocar en el centro de cada papel una cama con la juliana de hinojo y puerro, y encima un par de rodajas de limón."
+      "icono": "olla",
+      "texto": "Cuece la coliflor en ramilletes.",
+      "min": 15
      },
      {
       "icono": "mezclar",
-      "texto": "Revisar al tacto que los lomos de lubina estén completamente libres de espinas y colocar un lomo encima de las verduras en cada paquete de papel.",
-      "usa": [
-       "3 lomos de lubina limpios sin espinas (unos 450 g en total)"
-      ]
+      "texto": "Tritúrala con la leche y la mantequilla."
      },
      {
-      "icono": "envolver",
-      "texto": "Regar cada lomo con un chorrito de vino blanco, un hilo de aceite (repartiendo 1 cucharada entre los tres paquetes) y una ramita de tomillo fresco. Plegar los bordes del papel hacia dentro doblando varias veces para que queden paquetes sellados herméticamente (papillote).",
-      "usa": [
-       "1 cucharada de aceite de oliva virgen extra (15 ml)",
-       "30 ml de vino blanco (2 cucharadas)",
-       "3 ramitas de tomillo fresco"
-      ],
-      "consejo": "El sellado debe quedar bien apretado para que el vapor generado dentro cocine el pescado sin que se escape la humedad."
+      "icono": "mezclar",
+      "texto": "Mezcla el panko con las hierbas, ralladura de limón y aceite."
      },
      {
       "icono": "horno",
-      "texto": "Colocar los 3 paquetes de papillote en el horno junto a las patatas y hornear a 200 ºC durante 13 minutos, hasta que los paquetes se vean inflados como globos.",
-      "min": 13
+      "texto": "Cubre el salmón con la costra y hornéalo a 200 °C.",
+      "min": 12
      },
      {
-      "icono": "olla",
-      "texto": "Mientras tanto, preparar la salsa para los adultos: picar la chalota finísima y pocharla en un cacito a fuego suave con 1 cucharada de aceite durante 3 minutos; agregar el zumo de la mitad del limón reservada, apartar del fuego y añadir la mantequilla fría en dados batiendo con una varilla hasta que se funda en una crema suave.",
-      "usa": [
-       "1 chalota pequeña (unos 25 g)",
-       "40 g de mantequilla",
-       "1 cucharada de aceite de oliva virgen extra (15 ml)"
-      ],
-      "fuego": "suave",
+      "icono": "sarten",
+      "texto": "Saltea los espárragos.",
       "min": 5
      },
      {
       "icono": "emplatar",
-      "texto": "Llevar los paquetes de papillote a la mesa y cortar el papel con tijeras delante de todos para que el niño disfrute viendo salir el vapor aromático. Servir a los adultos el pescado jugoso con sus verduras, las patatitas asadas y la salsa de mantequilla. Para el niño, desmigar su porción de lubina en su plato verificando una vez más que no haya espinas y acompañarla con las patatitas chafadas con un tenedor, sin ponerle la salsa de chalota."
+      "texto": "Sirve el salmón sobre el puré con los espárragos y un gajo de limón."
      }
-    ]
+    ],
+    "fotosUrl": ""
    }
   ]
  },

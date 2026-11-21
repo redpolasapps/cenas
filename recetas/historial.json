@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-20T00:45:41+01:00",
+ "actualizado": "2026-11-21T05:58:24+01:00",
  "recetas": [
   {
    "id": "tortilla-patata-espinacas",
@@ -2803,6 +2803,488 @@
     {
      "fecha": "2026-11-20",
      "dia": "Entre semana",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "albondigas-pavo-salsa-zanahoria",
+   "titulo": "Albóndigas de pavo en salsa de zanahoria",
+   "subtitulo": "Con judías verdes salteadas",
+   "cocina": "Casera",
+   "imagen": "generico",
+   "peques": true,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 50,
+    "proteina": 40,
+    "hidratos": 10
+   },
+   "porque": "Carne blanca en un formato que le encanta, con la verdura escondida en la salsa.",
+   "truco": "Hazle las albóndigas pequeñitas, como canicas, y que las pinche con un palillo de cóctel sin punta.",
+   "etiquetas": [
+    "Pavo",
+    "Olla"
+   ],
+   "foto": "https://images.pexels.com/photos/15946048/pexels-photo-15946048.jpeg?auto=compress&cs=tinysrgb&w=600",
+   "fotoCredito": "Pexels",
+   "fotosUrl": "",
+   "ingredientes": [
+    "400 g de pavo picado",
+    "1 huevo",
+    "3 cucharadas de pan rallado",
+    "1 diente de ajo",
+    "1 cucharada de perejil fresco picado",
+    "3 zanahorias",
+    "1 cebolla",
+    "300 ml de caldo de pollo bajo en sal",
+    "300 g de judías verdes redondas",
+    "4 cucharadas de aceite de oliva",
+    "2 pizcas de sal"
+   ],
+   "pasos": [
+    {
+     "icono": "cortar",
+     "texto": "Pela las zanahorias y la cebolla. Corta las zanahorias en rodajas finas y la cebolla en trocitos pequeños. Pela el ajo y pícalo muy fino.",
+     "usa": [
+      "3 zanahorias",
+      "1 cebolla",
+      "1 diente de ajo"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "En un bol, mezcla con las manos el pavo picado, el huevo, el pan rallado, el ajo picado, el perejil y una pizca de sal, hasta que quede una masa uniforme.",
+     "usa": [
+      "400 g de pavo picado",
+      "1 huevo",
+      "3 cucharadas de pan rallado",
+      "1 diente de ajo",
+      "1 cucharada de perejil fresco picado",
+      "1 pizca de sal"
+     ],
+     "consejo": "Mójate las manos con agua para que la masa no se pegue."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Forma bolitas del tamaño de una nuez (unas 20) haciéndolas rodar entre las palmas de las manos. Déjalas en un plato.",
+     "consejo": "Para el peque, hazle unas cuantas más pequeñas, como canicas."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Pon una sartén honda o una cazuela a fuego medio con 2 cucharadas de aceite. Dora las albóndigas por todos los lados, moviéndolas con cuidado, y sácalas a un plato. No tienen que quedar hechas por dentro.",
+     "usa": [
+      "2 cucharadas de aceite de oliva"
+     ],
+     "fuego": "medio",
+     "min": 6
+    },
+    {
+     "icono": "olla",
+     "texto": "En la misma cazuela, añade 1 cucharada de aceite, la cebolla y la zanahoria. Cocínalas a fuego suave, removiendo de vez en cuando, hasta que estén blanditas.",
+     "usa": [
+      "1 cucharada de aceite de oliva",
+      "1 cebolla",
+      "3 zanahorias"
+     ],
+     "fuego": "suave",
+     "min": 10,
+     "consejo": "Si se pegan, añade un chorrito del caldo."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Añade el caldo, deja que hierva 2 minutos y tritura todo con la batidora hasta que quede una salsa fina y naranja.",
+     "usa": [
+      "300 ml de caldo de pollo bajo en sal"
+     ],
+     "fuego": "medio",
+     "min": 2
+    },
+    {
+     "icono": "olla",
+     "texto": "Mete las albóndigas en la salsa, tapa y cocina a fuego suave para que se hagan por dentro.",
+     "fuego": "suave",
+     "min": 12,
+     "consejo": "Están hechas cuando, al partir una, por dentro está blanca y sin parte rosada."
+    },
+    {
+     "icono": "olla",
+     "texto": "Mientras, quita las puntas a las judías y córtalas en trozos de 3 cm. Cuécelas en un cazo con agua hirviendo y una pizca de sal hasta que estén tiernas, y escúrrelas.",
+     "usa": [
+      "300 g de judías verdes redondas",
+      "1 pizca de sal"
+     ],
+     "fuego": "fuerte",
+     "min": 10
+    },
+    {
+     "icono": "sarten",
+     "texto": "Saltea las judías escurridas en una sartén con 1 cucharada de aceite durante un par de minutos.",
+     "usa": [
+      "1 cucharada de aceite de oliva"
+     ],
+     "fuego": "medio",
+     "min": 2
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve las albóndigas con bastante salsa y las judías al lado. Al peque, ponle las albóndigas pequeñas con un palillo de cóctel sin punta para que las pinche."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-21",
+     "dia": "Sábado",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "revuelto-setas-trigueros-gambas",
+   "titulo": "Revuelto de setas, trigueros y gambas",
+   "subtitulo": "Con tomate aliñado",
+   "cocina": "Española",
+   "imagen": "tortilla",
+   "peques": false,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 20,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 50,
+    "proteina": 40,
+    "hidratos": 10
+   },
+   "porque": "Huevo y marisco con mucha verdura y casi nada de hidrato, para una cena ligera.",
+   "truco": "A él sírvele su parte con las gambas cortadas en trocitos y las setas muy picadas, sobre una tostadita pequeña.",
+   "etiquetas": [
+    "Huevo",
+    "Marisco",
+    "Sartén"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "6 huevos",
+    "250 g de champiñones y setas variadas",
+    "1 manojo de espárragos trigueros (unos 200 g)",
+    "200 g de gambas peladas",
+    "1 diente de ajo",
+    "2 tomates maduros",
+    "3 cucharadas de aceite de oliva",
+    "1 pizca de orégano",
+    "2 pizcas de sal",
+    "3 rebanadas de pan integral"
+   ],
+   "pasos": [
+    {
+     "icono": "lavar",
+     "texto": "Lava los espárragos y dobla cada uno con las manos: se partirá justo donde empieza la parte dura. Tira la parte dura y corta el resto en trozos de 2 cm.",
+     "usa": [
+      "1 manojo de espárragos trigueros (unos 200 g)"
+     ]
+    },
+    {
+     "icono": "cortar",
+     "texto": "Limpia los champiñones y las setas con un papel de cocina húmedo y córtalos en láminas finas. Pela el ajo y pícalo muy fino.",
+     "usa": [
+      "250 g de champiñones y setas variadas",
+      "1 diente de ajo"
+     ],
+     "consejo": "No laves las setas debajo del grifo: absorben agua y luego no se doran."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Corta los tomates en rodajas, ponlos en un plato y alíñalos con 1 cucharada de aceite, una pizca de sal y el orégano.",
+     "usa": [
+      "2 tomates maduros",
+      "1 cucharada de aceite de oliva",
+      "1 pizca de sal",
+      "1 pizca de orégano"
+     ]
+    },
+    {
+     "icono": "sarten",
+     "texto": "Pon una sartén grande a fuego medio-fuerte con 2 cucharadas de aceite. Añade los espárragos y saltéalos 3 minutos. Después añade las setas y el ajo y cocina hasta que las setas suelten el agua y se doren un poco.",
+     "usa": [
+      "2 cucharadas de aceite de oliva",
+      "1 diente de ajo"
+     ],
+     "fuego": "fuerte",
+     "min": 7
+    },
+    {
+     "icono": "sarten",
+     "texto": "Añade las gambas y saltéalas hasta que cambien de color, de gris a rosado.",
+     "usa": [
+      "200 g de gambas peladas"
+     ],
+     "fuego": "medio",
+     "min": 2,
+     "consejo": "No las cocines de más o se quedarán duras."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Bate los huevos en un bol con una pizca de sal, solo hasta mezclar la yema y la clara.",
+     "usa": [
+      "6 huevos",
+      "1 pizca de sal"
+     ]
+    },
+    {
+     "icono": "sarten",
+     "texto": "Baja el fuego a suave, echa los huevos en la sartén y remueve despacio con una espátula, desde los bordes hacia el centro, hasta que estén casi cuajados pero jugosos.",
+     "fuego": "suave",
+     "min": 3,
+     "consejo": "Apaga el fuego cuando aún brillen un poco: con el calor de la sartén terminan de hacerse."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Tuesta el pan y sirve el revuelto con el tomate aliñado al lado. Para el peque, corta sus gambas en trocitos y ponle un poco de revuelto sobre una tostadita pequeña.",
+     "usa": [
+      "3 rebanadas de pan integral"
+     ]
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-21",
+     "dia": "Sábado",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "contramuslos-pollo-airfryer-verduras",
+   "titulo": "Contramuslos de pollo en air fryer con verduras",
+   "subtitulo": "Calabacín, pimiento y cebolla asados",
+   "cocina": "Casera",
+   "imagen": "pollo-horno",
+   "peques": false,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": true,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 45,
+    "proteina": 35,
+    "hidratos": 20
+   },
+   "porque": "Pollo jugoso y doradito casi sin manchar, con una bandeja de verdura asada.",
+   "truco": "Córtale el pollo en tiras finas y ponle un poco de kétchup casero o tomate para mojar.",
+   "etiquetas": [
+    "Pollo",
+    "Air fryer"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "6 contramuslos de pollo deshuesados y sin piel (unos 600 g)",
+    "1 limón",
+    "1 cucharadita de pimentón dulce",
+    "½ cucharadita de ajo en polvo",
+    "1 cucharadita de orégano",
+    "1 calabacín",
+    "1 pimiento rojo",
+    "1 cebolla",
+    "3 cucharadas de aceite de oliva",
+    "2 pizcas de sal",
+    "6 patatas pequeñas (unos 400 g)"
+   ],
+   "pasos": [
+    {
+     "icono": "mezclar",
+     "texto": "En un bol, mezcla 2 cucharadas de aceite, el zumo de medio limón, el pimentón dulce, el ajo en polvo, el orégano y una pizca de sal. Añade los contramuslos, dales vueltas para que se impregnen y déjalos 10 minutos.",
+     "usa": [
+      "6 contramuslos de pollo deshuesados y sin piel (unos 600 g)",
+      "2 cucharadas de aceite de oliva",
+      "½ limón",
+      "1 cucharadita de pimentón dulce",
+      "½ cucharadita de ajo en polvo",
+      "1 cucharadita de orégano",
+      "1 pizca de sal"
+     ],
+     "min": 10
+    },
+    {
+     "icono": "cortar",
+     "texto": "Lava el calabacín y el pimiento. Corta el calabacín en medias lunas gruesas (1 cm), el pimiento en tiras anchas y la cebolla pelada en gajos. Mézclalos con 1 cucharada de aceite y una pizca de sal.",
+     "usa": [
+      "1 calabacín",
+      "1 pimiento rojo",
+      "1 cebolla",
+      "1 cucharada de aceite de oliva",
+      "1 pizca de sal"
+     ]
+    },
+    {
+     "icono": "airfryer",
+     "texto": "Precalienta la air fryer a 190 °C durante 3 minutos. Pon las verduras en la cesta, sin llenarla demasiado, y cocínalas a 190 °C. Sacude la cesta a mitad de tiempo.",
+     "min": 10,
+     "consejo": "Si tu cesta es pequeña, hazlas en dos tandas: amontonadas se cuecen en vez de asarse."
+    },
+    {
+     "icono": "micro",
+     "texto": "Mientras, lava las patatas, pínchalas con un tenedor, ponlas en un plato con un poco de agua, tápalas y hazlas en el microondas a máxima potencia hasta que estén tiernas.",
+     "usa": [
+      "6 patatas pequeñas (unos 400 g)"
+     ],
+     "min": 8,
+     "consejo": "Están hechas cuando un cuchillo entra sin esfuerzo."
+    },
+    {
+     "icono": "airfryer",
+     "texto": "Saca las verduras a una fuente y tápalas. Coloca los contramuslos en la cesta en una sola capa y cocínalos a 190 °C, dándoles la vuelta a mitad de tiempo.",
+     "min": 20,
+     "consejo": "Están hechos cuando, al cortarlos por la parte más gruesa, el jugo sale transparente y no hay zonas rosadas."
+    },
+    {
+     "icono": "airfryer",
+     "texto": "Vuelve a meter las verduras en la cesta con el pollo los 2 últimos minutos para que se calienten.",
+     "min": 2
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve el pollo con las verduras y las patatas partidas por la mitad, con un chorrito del limón restante. Al peque, córtale el pollo en tiras finas y ponle tomate para mojar.",
+     "usa": [
+      "½ limón"
+     ]
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-21",
+     "dia": "Sábado",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "lentejas-estofadas-verduras",
+   "titulo": "Lentejas estofadas con verduras",
+   "subtitulo": "De cuchara, suaves y rápidas",
+   "cocina": "Española",
+   "imagen": "garbanzos",
+   "peques": false,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 40,
+    "proteina": 30,
+    "hidratos": 30
+   },
+   "porque": "Un plato de cuchara de legumbre para una noche de otoño, sin chorizo y con mucha verdura.",
+   "truco": "Tritura un cucharón del guiso y mézclalo con su plato para que quede más espeso y no vea los trozos.",
+   "etiquetas": [
+    "Legumbre",
+    "Olla"
+   ],
+   "foto": "https://images.pexels.com/photos/35763746/pexels-photo-35763746.jpeg?auto=compress&cs=tinysrgb&w=600",
+   "fotoCredito": "Pexels",
+   "fotosUrl": "",
+   "ingredientes": [
+    "2 botes de lentejas pardinas cocidas (unos 800 g)",
+    "1 cebolla",
+    "2 zanahorias",
+    "1 pimiento verde italiano",
+    "1 diente de ajo",
+    "2 tomates maduros",
+    "1 hoja de laurel",
+    "1 cucharadita de pimentón dulce",
+    "500 ml de caldo de verduras",
+    "2 cucharadas de aceite de oliva",
+    "1 pizca de sal"
+   ],
+   "pasos": [
+    {
+     "icono": "lavar",
+     "texto": "Pon las lentejas en un colador y enjuágalas bajo el grifo hasta que el agua salga limpia. Déjalas escurrir.",
+     "usa": [
+      "2 botes de lentejas pardinas cocidas (unos 800 g)"
+     ],
+     "consejo": "Así quitas el líquido del bote, que suele tener mucha sal."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pela la cebolla, las zanahorias y el ajo. Corta la cebolla, el pimiento y las zanahorias en dados pequeños, de medio centímetro, y pica el ajo muy fino.",
+     "usa": [
+      "1 cebolla",
+      "2 zanahorias",
+      "1 pimiento verde italiano",
+      "1 diente de ajo"
+     ]
+    },
+    {
+     "icono": "cortar",
+     "texto": "Corta los tomates por la mitad y rállalos por la parte del corte con un rallador grueso, sobre un plato. Tira la piel.",
+     "usa": [
+      "2 tomates maduros"
+     ]
+    },
+    {
+     "icono": "olla",
+     "texto": "Pon una olla a fuego medio con el aceite. Añade la cebolla, la zanahoria, el pimiento y el ajo, y cocínalos removiendo de vez en cuando hasta que estén blanditos y la cebolla transparente.",
+     "usa": [
+      "2 cucharadas de aceite de oliva"
+     ],
+     "fuego": "medio",
+     "min": 8
+    },
+    {
+     "icono": "olla",
+     "texto": "Añade el tomate rallado y cocina hasta que pierda el agua y se oscurezca un poco. Retira la olla del fuego, añade el pimentón y remueve rápido.",
+     "usa": [
+      "1 cucharadita de pimentón dulce"
+     ],
+     "fuego": "medio",
+     "min": 4,
+     "consejo": "El pimentón se quema enseguida: por eso se añade con la olla fuera del fuego."
+    },
+    {
+     "icono": "olla",
+     "texto": "Vuelve a poner la olla al fuego, añade las lentejas, el caldo, el laurel y una pizca de sal. Cuando hierva, baja el fuego y deja que cueza tapado.",
+     "usa": [
+      "500 ml de caldo de verduras",
+      "1 hoja de laurel",
+      "1 pizca de sal"
+     ],
+     "fuego": "suave",
+     "min": 15,
+     "consejo": "Si queda muy espeso, añade un poco de agua; si queda caldoso, destapa los últimos 5 minutos."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Quita la hoja de laurel. Saca un cucharón de lentejas, tritúralo con la batidora y vuelve a mezclarlo en la olla para espesar.",
+     "consejo": "Para el peque puedes triturar su ración entera."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve las lentejas calientes en plato hondo. Al peque, sírvele una ración con el puré mezclado para que no vea los trocitos de verdura."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-21",
+     "dia": "Sábado",
      "momento": "Cena"
     }
    ]
