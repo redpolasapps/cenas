@@ -7,10 +7,11 @@
 // Variables de entorno:
 //   GEMINI_API_KEY   (obligatoria)  clave de Google AI Studio, guardada como secreto en GitHub
 //   PEXELS_API_KEY   (opcional)     clave gratuita de pexels.com/api; sin ella se usa Wikimedia Commons (sin clave)
-//   GEMINI_MODEL     (opcional)     por defecto gemini-2.5-flash
+//   GEMINI_MODEL     (opcional)     forzar un modelo; si no, se eligen los flash disponibles (ver gemini.mjs)
 //   PLAN             (opcional)     ruta del plan; por defecto, el más reciente de plan/
 //   MOCK_GEMINI      (solo pruebas) archivo JSON con una respuesta simulada de Gemini
 
+import { llamarGemini as llamar } from "./gemini.mjs";
 import { readFile, writeFile, readdir } from "node:fs/promises";
 import path from "node:path";
 import vm from "node:vm";
@@ -18,7 +19,6 @@ import vm from "node:vm";
 const RAIZ = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 const ICONOS = ["cortar", "sarten", "horno", "olla", "mezclar", "emplatar", "envolver", "lavar", "airfryer", "micro"];
 const FUEGOS = ["suave", "medio", "fuerte"];
-const MODELOS = [process.env.GEMINI_MODEL || "gemini-2.5-flash", "gemini-flash-latest", "gemini-2.5-flash-lite"];
 
 const log = (...a) => console.log("[expandir]", ...a);
 
@@ -73,39 +73,16 @@ ${ALERGIAS ? `- ALERGIAS E INTOLERANCIAS DE LA FAMILIA (OBLIGATORIO, ni rastro e
 
 Responde SOLO con JSON con esta forma: {"recetas":[{"id":"...","ingredientes":[...],"pasos":[...]}]}, una entrada por cada receta, con el mismo "id".`;
 
-export async function llamarGemini(prompt) {
+// Todo el trabajo con Gemini tiene un límite global (la Action se corta a los 24 min)
+const LIMITE = Date.now() + Number(process.env.LIMITE_MIN || 19) * 60000;
+export async function llamarGemini(prompt, opciones = {}) {
   if (process.env.MOCK_GEMINI) { // pruebas: lista de archivos separados por comas, uno por llamada
     const l = process.env.MOCK_GEMINI.split(","); const f = l.length > 1 ? l.shift() : l[0]; process.env.MOCK_GEMINI = l.join(",");
     return JSON.parse(await readFile(f, "utf8"));
   }
-  const key = process.env.GEMINI_API_KEY;
-  if (!key) throw new Error("Falta GEMINI_API_KEY");
-  let ultimoError;
-  for (const modelo of MODELOS) {
-    for (let intento = 1; intento <= 2; intento++) {
-      try {
-        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", "x-goog-api-key": key },
-          body: JSON.stringify({
-            contents: [{ role: "user", parts: [{ text: prompt }] }],
-            generationConfig: { responseMimeType: "application/json", temperature: 0.4, maxOutputTokens: 32000 },
-          }),
-        });
-        const txt = await r.text();
-        if (r.status === 404) { ultimoError = new Error(`${modelo}: 404`); break; }
-        if (!r.ok) throw new Error(`${modelo}: HTTP ${r.status} ${txt.slice(0, 300)}`);
-        const j = JSON.parse(txt);
-        const out = (j.candidates?.[0]?.content?.parts || []).map((p) => p.text || "").join("");
-        log(`Gemini (${modelo}) respondió ${out.length} caracteres`);
-        return JSON.parse(out.replace(/^```(json)?|```$/g, "").trim());
-      } catch (e) {
-        ultimoError = e; log("Fallo Gemini:", e.message);
-        await new Promise((res) => setTimeout(res, 4000 * intento));
-      }
-    }
-  }
-  throw ultimoError || new Error("Gemini no respondió");
+  const queda = LIMITE - Date.now();
+  if (queda < 30000) throw new Error("Sin tiempo para más llamadas a Gemini");
+  return llamar(prompt, { log, ...opciones, presupuestoMs: Math.min(opciones.presupuestoMs || 8 * 60000, queda) });
 }
 
 function limpiarPaso(p) {
@@ -130,9 +107,9 @@ async function redactar(recetas) {
   const hechos = {};
   let pendientes = recetas.slice();
   for (let vuelta = 1; vuelta <= 3 && pendientes.length; vuelta++) {
-    // en lotes de 6 para no pasar del límite de salida
-    for (let i = 0; i < pendientes.length; i += 6) {
-      const lote = pendientes.slice(i, i + 6).map((r) => ({
+    // en lotes de 3: respuestas más cortas, más rápidas y que fallan menos
+    for (let i = 0; i < pendientes.length; i += 3) {
+      const lote = pendientes.slice(i, i + 3).map((r) => ({
         id: r.id, titulo: r.titulo, subtitulo: r.subtitulo, cocina: r.cocina, raciones: r.raciones || 3,
         tiempo_min: r.tiempo, dificultad: r.dificultad, guia: r.guia || "", truco_para_el_nino: r.truco || "", ...(r.airfryer ? { airfryer: true } : {}), ...(r.rapida ? { rapida: true } : {}),
       }));
@@ -208,7 +185,7 @@ async function buscarFotos(recetas) {
       `Responde SOLO con JSON: {"elecciones":[{"id":"...","n":<número de la candidata o null>}]}\n\n` +
       JSON.stringify(sinResolver.map(({ r, cands }) => ({ id: r.id, receta: r.titulo, descripcion: r.subtitulo || "", candidatas: cands.map((c, i) => ({ n: i, archivo: c.titulo, descripcion: c.descripcion })) })), null, 1);
     try {
-      const j = await llamarGemini(prompt);
+      const j = await llamarGemini(prompt, { presupuestoMs: 2 * 60000 });
       for (const e of j.elecciones || []) {
         const item = sinResolver.find((x) => x.r.id === e.id);
         if (item && Number.isInteger(e.n) && item.cands[e.n]) { const c = item.cands[e.n]; res[e.id] = { foto: c.foto, fotoCredito: c.fotoCredito }; log(`Foto elegida por Gemini para "${item.r.titulo}": ${c.titulo}`); }

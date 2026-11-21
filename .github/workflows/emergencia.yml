@@ -23,7 +23,7 @@ concurrency:
 jobs:
   emergencia:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
 
@@ -37,6 +37,7 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
           PROGRAMADO: ${{ github.event_name == 'schedule' && '1' || '0' }}
+          LIMITE_MIN: "30"
         run: node scripts/emergencia.mjs
 
       - name: Validar
