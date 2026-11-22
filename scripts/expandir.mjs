@@ -242,7 +242,7 @@ async function elegirViendo(grupo, res) {
   }
   log(`Eligiendo fotos para ${grupo.length} recetas (${vistas} miniaturas)`);
   try {
-    const j = await llamarGemini(partes, { presupuestoMs: 3 * 60000 });
+    const j = await llamarGemini(partes, { presupuestoMs: 5 * 60000 });
     for (const e of j.elecciones || []) {
       const item = grupo.find((x) => x.r.id === e.id);
       if (item && Number.isInteger(e.n) && item.cands[e.n]) {
