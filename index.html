@@ -275,6 +275,21 @@ a.panelbtn{display:inline-block;text-decoration:none;color:inherit}
 <script>document.write('<script src="data.js?v='+new Date().getTime()+'"><\/script>');</script>
 <script>
 (function(){
+  var OCUPADO = function(){ return !!document.querySelector('.cook.on, .ov.on, .modal.on, .detalle.on') || /receta|cocina/.test(location.hash) || document.activeElement && /INPUT|TEXTAREA/.test(document.activeElement.tagName); };
+  // Si hay una versión nueva publicada, recarga sola (cada 20 min; no si hay algo abierto)
+  (function(){
+    var yo = document.currentScript ? document.currentScript.text : '';
+    if(!yo) return;
+    function mira(){
+      try{
+        var r = new XMLHttpRequest(); r.open('GET', location.pathname + '?v=' + Date.now(), true);
+        r.onload = function(){ if(r.status === 200 && r.responseText.length > 1000 && r.responseText.indexOf(yo) < 0 && !OCUPADO()) location.reload(); };
+        r.send();
+      }catch(e){}
+    }
+    setInterval(mira, 20*60000);
+  })();
+
   var D = window.MENU_DATA || {};
   var vista = 'hoy';
   var RECETAS = {};
