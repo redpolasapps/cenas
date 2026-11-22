@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-21T05:58:24+01:00",
+ "actualizado": "2026-11-22T05:50:43+01:00",
  "recetas": [
   {
    "id": "tortilla-patata-espinacas",
@@ -3285,6 +3285,479 @@
     {
      "fecha": "2026-11-21",
      "dia": "Sábado",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "merluza-horno-verduras-asadas",
+   "titulo": "Merluza al horno con verduras asadas",
+   "subtitulo": "Con calabacín, pimiento y cebolla",
+   "cocina": "Mediterránea",
+   "imagen": "pescado",
+   "peques": false,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 55,
+    "proteina": 35,
+    "hidratos": 10
+   },
+   "porque": "Pescado blanco suave y mucha verdura para una cena ligera de domingo.",
+   "truco": "Desmígale su lomo en el plato y mézclalo con un poco de verdura asada bien blandita.",
+   "etiquetas": [
+    "Pescado",
+    "Horno"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "3 lomos de merluza sin espinas ni piel (450 g)",
+    "1 calabacín mediano (200 g)",
+    "1 pimiento rojo (150 g)",
+    "1 cebolla mediana (150 g)",
+    "3 cucharadas de aceite de oliva virgen extra (30 ml)",
+    "1/2 cucharadita de ajo en polvo (2 g)",
+    "1 cucharadita de perejil picado (2 g)",
+    "1 cucharada de zumo de limón (15 ml)",
+    "1 pizca de sal (2 g)"
+   ],
+   "pasos": [
+    {
+     "icono": "horno",
+     "texto": "Precalienta el horno a 200 °C con calor arriba y abajo. Lava con abundante agua del grifo el calabacín y el pimiento rojo.",
+     "usa": [
+      "1 calabacín mediano (200 g)",
+      "1 pimiento rojo (150 g)"
+     ]
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pela la cebolla y corta la cebolla, el calabacín y el pimiento rojo en tiras finas (en juliana) sobre una tabla de cortar.",
+     "usa": [
+      "1 cebolla mediana (150 g)",
+      "1 calabacín mediano (200 g)",
+      "1 pimiento rojo (150 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Coloca todas las tiras de verdura en una bandeja grande apta para horno. Añade 2 cucharadas de aceite de oliva virgen extra y 1 pizca de sal, y remueve bien con las manos para que queden impregnadas.",
+     "usa": [
+      "1 cebolla mediana (150 g)",
+      "1 calabacín mediano (200 g)",
+      "1 pimiento rojo (150 g)",
+      "2 cucharadas de aceite de oliva virgen extra (20 ml)",
+      "1 pizca de sal (2 g)"
+     ]
+    },
+    {
+     "icono": "horno",
+     "texto": "Mete la bandeja al horno a 200 °C durante 15 minutos para pochar las verduras (cocinarlas hasta que estén tiernas y ligeramente doradas).",
+     "min": 15,
+     "consejo": "Comprueba que las tiras de verdura estén blanditas pinchando un trozo de pimiento con un tenedor."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Mientras se asan las verduras, sazona los 3 lomos de merluza espolvoreando por encima 1/2 cucharadita de ajo en polvo, 1 cucharadita de perejil picado, 1 cucharada de zumo de limón y 1 cucharada de aceite de oliva virgen extra.",
+     "usa": [
+      "3 lomos de merluza sin espinas ni piel (450 g)",
+      "1/2 cucharadita de ajo en polvo (2 g)",
+      "1 cucharadita de perejil picado (2 g)",
+      "1 cucharada de zumo de limón (15 ml)",
+      "1 cucharada de aceite de oliva virgen extra (10 ml)"
+     ]
+    },
+    {
+     "icono": "horno",
+     "texto": "Saca con cuidado la bandeja del horno usando manoplas. Coloca los lomos de merluza sazonados justo encima de la cama de verduras asadas.",
+     "usa": [
+      "3 lomos de merluza sin espinas ni piel (450 g)"
+     ]
+    },
+    {
+     "icono": "horno",
+     "texto": "Vuelve a meter la bandeja al horno a 200 °C durante 12 minutos hasta que el pescado esté totalmente cocinado por dentro.",
+     "min": 12,
+     "consejo": "El pescado estará listo cuando la carne se vuelva blanca e opaca y se separe fácilmente con un tenedor."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve un lomo de merluza con verduras asadas en cada plato. Para el niño de 4 años, desmiga muy bien su ración de pescado asegurándote de que no quede ninguna espina y mézclala con la verdura asada bien blandita."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-22",
+     "dia": "Domingo",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "huevos-pisto-suave-sarten",
+   "titulo": "Huevos con pisto suave",
+   "subtitulo": "Pisto casero de calabacín, pimiento y tomate",
+   "cocina": "Española",
+   "imagen": "tortilla",
+   "peques": false,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 60,
+    "proteina": 30,
+    "hidratos": 10
+   },
+   "porque": "Huevo y verdura en un plato de toda la vida, ligero y sin apenas hidrato.",
+   "truco": "Tritura su ración de pisto para que quede como una salsa y que moje un trocito de pan.",
+   "etiquetas": [
+    "Huevo",
+    "Sartén"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "1 cebolla mediana (150 g)",
+    "1 pimiento rojo (150 g)",
+    "1 pimiento verde (150 g)",
+    "1 calabacín mediano (200 g)",
+    "400 g de tomate triturado en conserva",
+    "4 huevos grandes",
+    "3 cucharadas de aceite de oliva virgen extra (30 ml)",
+    "1 pizca de sal (2 g)",
+    "3 rebanadas de pan (90 g)"
+   ],
+   "pasos": [
+    {
+     "icono": "lavar",
+     "texto": "Lava bajo el grifo de agua fría el calabacín, el pimiento rojo y el pimiento verde, y sécalos con un papel de cocina.",
+     "usa": [
+      "1 calabacín mediano (200 g)",
+      "1 pimiento rojo (150 g)",
+      "1 pimiento verde (150 g)"
+     ]
+    },
+    {
+     "icono": "cortar",
+     "texto": "Sobre una tabla de cortar, retira las semillas de los pimientos y pica la cebolla, el pimiento rojo, el pimiento verde y el calabacín en dados pequeñitos de medio centímetro.",
+     "usa": [
+      "1 cebolla mediana (150 g)",
+      "1 pimiento rojo (150 g)",
+      "1 pimiento verde (150 g)",
+      "1 calabacín mediano (200 g)"
+     ]
+    },
+    {
+     "icono": "sarten",
+     "texto": "Vierte 3 cucharadas de aceite de oliva en una sartén grande y ponla a fuego suave. Añade la cebolla y los pimientos cortados con 1 pizca de sal y pocha (cocinar a fuego suave removiendo hasta que estén blandos y transparentes) durante 10 minutos.",
+     "usa": [
+      "1 cebolla mediana (150 g)",
+      "1 pimiento rojo (150 g)",
+      "1 pimiento verde (150 g)",
+      "3 cucharadas de aceite de oliva virgen extra (30 ml)",
+      "1 pizca de sal (2 g)"
+     ],
+     "fuego": "suave",
+     "min": 10
+    },
+    {
+     "icono": "sarten",
+     "texto": "Añade el calabacín picado a la sartén y sigue cocinando todo a fuego suave durante 5 minutos más, removiendo con una cuchara de madera.",
+     "usa": [
+      "1 calabacín mediano (200 g)"
+     ],
+     "fuego": "suave",
+     "min": 5
+    },
+    {
+     "icono": "sarten",
+     "texto": "Incorpora los 400 g de tomate triturado, mezcla bien con las verduras y cocina a fuego suave durante 10 minutos hasta que la salsa espese y reduzca el agua del tomate.",
+     "usa": [
+      "400 g de tomate triturado en conserva"
+     ],
+     "fuego": "suave",
+     "min": 10,
+     "consejo": "Sabrás que está en su punto cuando el tomate haya cambiado a un color rojo más intenso y no esté líquido."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Con la cuchara de madera, abre 4 huecos separados entre la verdura en la sartén y casca cuidadosamente un huevo dentro de cada hueco.",
+     "usa": [
+      "4 huevos grandes"
+     ],
+     "fuego": "suave"
+    },
+    {
+     "icono": "sarten",
+     "texto": "Coloca una tapa a la sartén y deja cocinar a fuego suave durante 4 minutos hasta que la clara del huevo quede totalmente blanca y cuajada. Para el niño, asegúrate de que su yema quede bien cocinada y firme.",
+     "fuego": "suave",
+     "min": 4,
+     "consejo": "Si la yema de algún huevo sigue demasiado líquida para el peque, déjala tapada 1-2 minutos extra hasta que endurezca por completo."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve las raciones en platos llanos con las rebanadas de pan. Para el niño de 4 años, tritura su ración de pisto con la batidora para crear una salsa cremosa y desmenuza su huevo cuajado para que disfrute mojando el pan de forma segura.",
+     "usa": [
+      "3 rebanadas de pan (90 g)"
+     ]
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-22",
+     "dia": "Domingo",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "hamburguesitas-ternera-calabacin-airfryer",
+   "titulo": "Hamburguesitas de ternera y calabacín en air fryer",
+   "subtitulo": "Con ensalada de zanahoria y maíz",
+   "cocina": "Americana",
+   "imagen": "hamburguesa",
+   "peques": true,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": true,
+   "rapida": false,
+   "tiempo": 25,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 40,
+    "proteina": 35,
+    "hidratos": 25
+   },
+   "porque": "Un formato que le encanta, con la verdura escondida en la carne.",
+   "truco": "Hazle una mini hamburguesa en un panecillo pequeño y que él ponga la loncha de queso.",
+   "etiquetas": [
+    "Ternera",
+    "Air fryer"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "350 g de carne picada de ternera",
+    "1/2 calabacín (100 g)",
+    "1 huevo grande",
+    "30 g de pan rallado",
+    "1 pizca de sal (2 g)",
+    "6 panecillos pequeños para hamburguesa (180 g)",
+    "6 lonchas de queso tierno (120 g)",
+    "100 g de lechuga variada picada",
+    "1 zanahoria grande rallada (80 g)",
+    "80 g de maíz dulce en conserva",
+    "1 cucharada de aceite de oliva en spray o líquido (10 ml)"
+   ],
+   "pasos": [
+    {
+     "icono": "lavar",
+     "texto": "Lava medio calabacín y rállalo con un rallador fino. Con ayuda de un paño limpio o colador, apriétalo fuerte para eliminar todo el exceso de agua.",
+     "usa": [
+      "1/2 calabacín (100 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "En un cuenco grande, pon los 350 g de carne picada de ternera, el calabacín rallado y bien escurrido, 1 huevo, 30 g de pan rallado y 1 pizca de sal. Mezcla todo con las manos limpias hasta formar una masa uniforme.",
+     "usa": [
+      "350 g de carne picada de ternera",
+      "1/2 calabacín (100 g)",
+      "1 huevo grande",
+      "30 g de pan rallado",
+      "1 pizca de sal (2 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Divide la masa en 6 porciones iguales y moldea con las palmas 6 mini hamburguesas de unos 2 cm de grosor."
+    },
+    {
+     "icono": "airfryer",
+     "texto": "Precalienta la freidora de aire (air fryer) a 190 °C durante 3 minutos. Pulveriza la cesta con 1 cucharada de aceite de oliva para evitar que se peguen.",
+     "usa": [
+      "1 cucharada de aceite de oliva en spray o líquido (10 ml)"
+     ],
+     "min": 3
+    },
+    {
+     "icono": "airfryer",
+     "texto": "Coloca las 6 mini hamburguesas en la cesta de la air fryer en una sola capa sin amontonar. Cocina a 190 °C durante 11 minutos, dándoles la vuelta a mitad del cocinado (al minuto 6).",
+     "min": 11,
+     "consejo": "Para saber si están listas, corta una por la mitad y verifica que la carne no esté rosada por dentro."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Mientras se doran en la air fryer, mezcla en una ensaladera la lechuga picada, la zanahoria rallada y el maíz dulce escurrido.",
+     "usa": [
+      "100 g de lechuga variada picada",
+      "1 zanahoria grande rallada (80 g)",
+      "80 g de maíz dulce en conserva"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Abre los 6 panecillos pequeños. Al sacar las mini hamburguesas bien calientes de la freidora, mete una en cada panecillo y coloca encima 1 loncha de queso tierno para que se funda.",
+     "usa": [
+      "6 panecillos pequeños para hamburguesa (180 g)",
+      "6 lonchas de queso tierno (120 g)"
+     ]
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Emplata dos panecillos por adulto y dos para el niño acompañados de la ensalada fresca. Deja que el niño de 4 años coloque él mismo la loncha de queso en su panecillo para participar de forma divertida en la cena."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-22",
+     "dia": "Domingo",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "minestrone-alubias-verduras",
+   "titulo": "Minestrone de alubias y verduras",
+   "subtitulo": "Sopa italiana con pasta pequeña",
+   "cocina": "Italiana",
+   "imagen": "sopa",
+   "peques": true,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 50,
+    "proteina": 25,
+    "hidratos": 25
+   },
+   "porque": "Legumbre y muchas verduras en una cena de cuchara calentita.",
+   "truco": "Que él eche el parmesano rallado por encima, y sírvele la sopa templada con las verduras en trocitos pequeños.",
+   "etiquetas": [
+    "Legumbre",
+    "Olla"
+   ],
+   "foto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/ff/Liat_Portal_for_Foodie_Disorder_-_Homemade_minestrone_soup.jpg/960px-Liat_Portal_for_Foodie_Disorder_-_Homemade_minestrone_soup.jpg",
+   "fotoCredito": "HaJunkiyada / Wikimedia Commons (CC BY-SA 4.0)",
+   "fotosUrl": "",
+   "ingredientes": [
+    "1 cebolla mediana (150 g)",
+    "1 zanahoria grande (100 g)",
+    "1 rama de apio (50 g)",
+    "1 calabacín pequeño (150 g)",
+    "100 g de judías verdes planas o redondas",
+    "2 cucharadas de aceite de oliva (30 ml)",
+    "150 g de tomate triturado en conserva",
+    "750 ml de caldo de verduras bajo en sal",
+    "200 g de alubias blancas cocidas en conserva",
+    "60 g de pasta pequeña (tipo estrellitas o coditos)",
+    "30 g de queso parmesano rallado",
+    "1 pizca de sal"
+   ],
+   "pasos": [
+    {
+     "icono": "cortar",
+     "texto": "Lava muy bien las verduras bajo el grifo con agua fría. Con ayuda de una tabla y un cuchillo, pica en dados muy pequeños la cebolla, la zanahoria pelada, la rama de apio, el calabacín y corta las judías verdes retirando las puntas.",
+     "usa": [
+      "1 cebolla mediana (150 g)",
+      "1 zanahoria grande (100 g)",
+      "1 rama de apio (50 g)",
+      "1 calabacín pequeño (150 g)",
+      "100 g de judías verdes planas o redondas"
+     ],
+     "min": 5,
+     "consejo": "Cortar la verdura en trocitos muy pequeños ayuda a que se cocine rápido y a que al niño le resulte fácil de masticar."
+    },
+    {
+     "icono": "olla",
+     "texto": "En una olla mediana, añade las 2 cucharadas de aceite de oliva y calienta a fuego medio. Agrega la cebolla, la zanahoria y el apio picados para pochar: cocinar a fuego suave/medio hasta que la cebolla esté blanda y transparente, unos 8 minutos removiendo de vez en cuando.",
+     "usa": [
+      "2 cucharadas de aceite de oliva (30 ml)",
+      "1 cebolla mediana (150 g)",
+      "1 zanahoria grande (100 g)",
+      "1 rama de apio (50 g)"
+     ],
+     "fuego": "medio",
+     "min": 8
+    },
+    {
+     "icono": "olla",
+     "texto": "Añade a la olla el calabacín y las judías verdes picadas. Remueve con una cucharada de madera durante 5 minutos para que la verdura se rehogue (se cocine ligeramente con el aceite antes de añadir líquido).",
+     "usa": [
+      "1 calabacín pequeño (150 g)",
+      "100 g de judías verdes planas o redondas"
+     ],
+     "fuego": "medio",
+     "min": 5
+    },
+    {
+     "icono": "olla",
+     "texto": "Incorpora los 150 g de tomate triturado, los 750 ml de caldo de verduras y 1 pizca de sal. Remueve bien y sube la potencia a fuego fuerte hasta que el líquido empiece a hervir (a soltar burbujas grandes).",
+     "usa": [
+      "150 g de tomate triturado en conserva",
+      "750 ml de caldo de verduras bajo en sal",
+      "1 pizca de sal"
+     ],
+     "fuego": "fuerte",
+     "min": 2
+    },
+    {
+     "icono": "olla",
+     "texto": "Cuando empiece a hervir, baja el fuego a suave, tapa la olla dejando un pequeño hueco y deja cocinar despacio durante 10 minutos para que las verduras estén bien tiernas.",
+     "fuego": "suave",
+     "min": 10
+    },
+    {
+     "icono": "lavar",
+     "texto": "Mientras se cocinan las verduras, coloca los 200 g de alubias blancas en un colador y lávalas bajo el grifo de agua fría hasta que dejen de soltar espuma. Deja que escurran bien.",
+     "usa": [
+      "200 g de alubias blancas cocidas en conserva"
+     ],
+     "min": 2
+    },
+    {
+     "icono": "olla",
+     "texto": "Echa en la olla los 60 g de pasta pequeña y las alubias escurridas. Cocina a fuego medio durante unos 7 minutos (o el tiempo que indique el paquete de la pasta), removiendo para que la pasta no se pegue al fondo.",
+     "usa": [
+      "60 g de pasta pequeña (tipo estrellitas o coditos)",
+      "200 g de alubias blancas cocidas en conserva"
+     ],
+     "fuego": "medio",
+     "min": 7,
+     "consejo": "Prueba una estrellita o codito antes de apagar: debe estar suave al morder para que el niño coma sin problema."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Apaga el fuego y sirve la sopa en tres platos hondos. Para la ración del niño, deja entibiar la sopa durante un par de minutos y deja que él mismo añada el queso parmesano rallado por encima.",
+     "usa": [
+      "30 g de queso parmesano rallado"
+     ],
+     "min": 3,
+     "consejo": "Prueba siempre una cucharada de la sopa del niño antes de dársela para verificar que la temperatura es tibia y no quema."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-22",
+     "dia": "Domingo",
      "momento": "Cena"
     }
    ]
