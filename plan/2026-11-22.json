@@ -1,0 +1,54 @@
+{
+  "fecha": "2026-11-22",
+  "autor": "claude",
+  "hoy": {
+    "cole": {},
+    "consejo": "Hoy es domingo y no hay cole: cena libre, ligera y con mucha verdura para empezar bien la semana, y fruta de postre.",
+    "explicacion": "Es fin de semana, así que no hace falta compensar el cole. Arriba están los crepes y el risotto del plan del domingo, y además cuatro ideas nuevas: merluza al horno, huevos con pisto suave, unas hamburguesitas en la air fryer y una minestrone con alubias, para cerrar el finde con pescado, huevo, legumbre y mucha verdura.",
+    "cenas": [
+      { "reutilizar": "crepes-jamon-queso-espinacas", "porque": "Es la opción para el peque de la cena del domingo en el plan del fin de semana." },
+      {
+        "id": "merluza-horno-verduras-asadas", "titulo": "Merluza al horno con verduras asadas", "subtitulo": "Con calabacín, pimiento y cebolla", "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 55, "proteina": 35, "hidratos": 10 },
+        "porque": "Pescado blanco suave y mucha verdura para una cena ligera de domingo.",
+        "truco": "Desmígale su lomo en el plato y mézclalo con un poco de verdura asada bien blandita.",
+        "etiquetas": ["Pescado", "Horno"],
+        "guia": "Lomos de merluza sin espinas ni piel al horno (200 °C, 12 min) sobre una bandeja de calabacín, pimiento rojo y cebolla en tiras asados antes 15 min; aceite de oliva, ajo en polvo, perejil y unas gotas de limón. Sin patata.",
+        "busqueda_foto": "baked hake vegetables"
+      },
+      {
+        "id": "huevos-pisto-suave-sarten", "titulo": "Huevos con pisto suave", "subtitulo": "Pisto casero de calabacín, pimiento y tomate", "cocina": "Española", "imagen": "tortilla",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 60, "proteina": 30, "hidratos": 10 },
+        "porque": "Huevo y verdura en un plato de toda la vida, ligero y sin apenas hidrato.",
+        "truco": "Tritura su ración de pisto para que quede como una salsa y que moje un trocito de pan.",
+        "etiquetas": ["Huevo", "Sartén"],
+        "guia": "Pisto en sartén grande: cebolla, pimiento rojo y verde y calabacín en dados pequeños pochados a fuego suave, luego tomate triturado hasta que espese (sin picante). Se hacen 4-5 huecos y se cuajan los huevos encima con tapa hasta que la clara esté hecha y la yema cuajada para el niño.",
+        "busqueda_foto": "eggs ratatouille skillet"
+      },
+      {
+        "id": "hamburguesitas-ternera-calabacin-airfryer", "titulo": "Hamburguesitas de ternera y calabacín en air fryer", "subtitulo": "Con ensalada de zanahoria y maíz", "cocina": "Americana", "imagen": "hamburguesa",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": true, "rapida": false, "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 40, "proteina": 35, "hidratos": 25 },
+        "porque": "Un formato que le encanta, con la verdura escondida en la carne.",
+        "truco": "Hazle una mini hamburguesa en un panecillo pequeño y que él ponga la loncha de queso.",
+        "etiquetas": ["Ternera", "Air fryer"],
+        "guia": "Mini hamburguesas de ternera picada con calabacín rallado y escurrido, un poco de pan rallado, huevo y sal; en la air fryer a 190 °C 10-12 min dándoles la vuelta a mitad. Se sirven en panecillos pequeños con una loncha de queso, y ensalada de zanahoria rallada, lechuga y maíz.",
+        "busqueda_foto": "mini beef burgers"
+      },
+      {
+        "id": "minestrone-alubias-verduras", "titulo": "Minestrone de alubias y verduras", "subtitulo": "Sopa italiana con pasta pequeña", "cocina": "Italiana", "imagen": "sopa",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 25, "hidratos": 25 },
+        "porque": "Legumbre y muchas verduras en una cena de cuchara calentita.",
+        "truco": "Que él eche el parmesano rallado por encima, y sírvele la sopa templada con las verduras en trocitos pequeños.",
+        "etiquetas": ["Legumbre", "Olla"],
+        "guia": "Sopa en olla: sofrito de cebolla, zanahoria y apio en dados pequeños, calabacín y judías verdes troceadas, tomate triturado y caldo de verduras; al final alubias blancas cocidas de bote escurridas y un puñado pequeño de pasta pequeña (estrellitas o coditos). Parmesano rallado por encima. Sin picante.",
+        "busqueda_foto": "minestrone soup beans"
+      },
+      { "reutilizar": "risotto-setas-parmesano", "porque": "Es la opción de capricho de la cena del domingo en el plan del fin de semana." }
+    ]
+  },
+  "finde": null
+}
