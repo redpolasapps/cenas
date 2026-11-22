@@ -142,6 +142,7 @@ async function candidatosUnsplash(consulta) {
       fotoAutorUrl: `${ph.user?.links?.html || "https://unsplash.com"}?${UTM}`,
       fotoFuenteUrl: `https://unsplash.com/?${UTM}`,
       descarga: ph.links?.download_location || "",
+      mini: `${ph.urls.raw}${ph.urls.raw.includes("?") ? "&" : "?"}fm=jpg&q=60&w=320`,
       titulo: "Unsplash", descripcion: String(ph.alt_description || ph.description || "").slice(0, 200),
     }));
   } catch (e) { log("Unsplash:", e.message); return []; }
@@ -161,6 +162,7 @@ async function candidatosPexels(consulta) {
     return ((await r.json()).photos || []).filter((ph) => ph.src?.original).map((ph) => ({
       foto: `${ph.src.original}?auto=compress&cs=tinysrgb&w=600`, fotoCredito: `${ph.photographer} / Pexels`,
       fotoAutorUrl: ph.photographer_url || "", fotoFuenteUrl: "https://www.pexels.com",
+      mini: `${ph.src.original}?auto=compress&cs=tinysrgb&w=320`,
       titulo: "Pexels", descripcion: String(ph.alt || "").slice(0, 200),
     }));
   } catch (e) { log("Pexels:", e.message); return []; }
@@ -182,7 +184,7 @@ async function candidatosWikimedia(consulta) {
       const lic = quitarHTML(m.LicenseShortName?.value);
       if (!/CC|Public domain|PD/i.test(lic)) continue;
       out.push({
-        foto: ii.thumburl.split("?")[0],
+        foto: ii.thumburl.split("?")[0], mini: ii.thumburl.split("?")[0],
         fotoCredito: `${quitarHTML(m.Artist?.value).slice(0, 60) || "Autor desconocido"} / Wikimedia Commons (${lic})`,
         titulo: String(pg.title || "").replace(/^File:/, ""),
         descripcion: quitarHTML(m.ImageDescription?.value).slice(0, 200),
@@ -210,28 +212,49 @@ export async function buscarFotos(recetas) {
     }
     if (cands.length) sinResolver.push({ r, cands });
   }
-  if (sinResolver.length) {
-    const prompt = `Para cada receta te doy fotos candidatas (fuente y descripción de la foto). ` +
-      `Elige, para cada receta, la candidata que muestre CLARAMENTE ese mismo plato ya cocinado y servido (mismo ingrediente principal y una preparación parecida). ` +
-      `Descarta fotos de restaurantes, fachadas, personas, mapas, ingredientes crudos o platos distintos. Si ninguna encaja de verdad, pon null. Es mejor null que una foto dudosa.\n` +
-      `Responde SOLO con JSON: {"elecciones":[{"id":"...","n":<número de la candidata o null>}]}\n\n` +
-      JSON.stringify(sinResolver.map(({ r, cands }) => ({ id: r.id, receta: r.titulo, descripcion: r.subtitulo || "", candidatas: cands.map((c, i) => ({ n: i, fuente: c.titulo, descripcion: c.descripcion })) })), null, 1);
-    try {
-      const j = await llamarGemini(prompt, { presupuestoMs: 2 * 60000 });
-      for (const e of j.elecciones || []) {
-        const item = sinResolver.find((x) => x.r.id === e.id);
-        if (item && Number.isInteger(e.n) && item.cands[e.n]) {
-          const c = item.cands[e.n];
-          res[e.id] = { foto: c.foto, fotoCredito: c.fotoCredito, ...(c.fotoAutorUrl ? { fotoAutorUrl: c.fotoAutorUrl, fotoFuenteUrl: c.fotoFuenteUrl } : {}) };
-          await avisarUnsplash(c);
-          log(`Foto elegida por Gemini para "${item.r.titulo}": ${c.titulo} — ${c.descripcion.slice(0, 60)}`);
-        }
-        else if (item) log(`Gemini no ve ninguna foto buena para "${item.r.titulo}"`);
-      }
-    } catch (e) { log("No se pudieron elegir fotos:", e.message); }
-  }
+  // Gemini MIRA las fotos (miniaturas) para elegir; de 3 en 3 recetas para que cada llamada sea ligera
+  for (let i = 0; i < sinResolver.length; i += 3) await elegirViendo(sinResolver.slice(i, i + 3), res);
   return res;
 }
+
+async function miniatura(url) {
+  try {
+    const r = await fetch(url, { signal: AbortSignal.timeout(15000), headers: { "User-Agent": "cenas-en-casa/1.0 (https://github.com/redpolasapps/cenas)" } });
+    if (!r.ok) return null;
+    const b = Buffer.from(await r.arrayBuffer());
+    return b.length > 900000 ? null : { inline_data: { mime_type: "image/jpeg", data: b.toString("base64") } };
+  } catch { return null; }
+}
+
+async function elegirViendo(grupo, res) {
+  const partes = [{ text: `Eres quien elige la foto de cada receta de una web de cenas. Para cada receta verás varias fotos candidatas numeradas. ` +
+    `Elige la que muestre CLARAMENTE ese mismo plato ya cocinado y servido, con buena pinta (mismo ingrediente principal y una preparación parecida). ` +
+    `Descarta fotos de restaurantes, fachadas, personas, mapas, ingredientes crudos, fotos borrosas o platos distintos. Si ninguna encaja de verdad, pon null: es mejor null que una foto dudosa.\n` +
+    `Responde SOLO con JSON: {"elecciones":[{"id":"...","n":<número de la candidata o null>}]}` }];
+  let vistas = 0;
+  for (const { r, cands } of grupo) {
+    partes.push({ text: `\n=== Receta id "${r.id}": ${r.titulo}${r.subtitulo ? " — " + r.subtitulo : ""} ===` });
+    for (let n = 0; n < cands.length; n++) {
+      const img = cands[n].mini ? await miniatura(cands[n].mini) : null;
+      partes.push({ text: `Candidata ${n} (${cands[n].titulo}): ${cands[n].descripcion || "sin descripción"}` });
+      if (img) { partes.push(img); vistas++; }
+    }
+  }
+  log(`Eligiendo fotos para ${grupo.length} recetas (${vistas} miniaturas)`);
+  try {
+    const j = await llamarGemini(partes, { presupuestoMs: 3 * 60000 });
+    for (const e of j.elecciones || []) {
+      const item = grupo.find((x) => x.r.id === e.id);
+      if (item && Number.isInteger(e.n) && item.cands[e.n]) {
+        const c = item.cands[e.n];
+        res[e.id] = { foto: c.foto, fotoCredito: c.fotoCredito, ...(c.fotoAutorUrl ? { fotoAutorUrl: c.fotoAutorUrl, fotoFuenteUrl: c.fotoFuenteUrl } : {}) };
+        await avisarUnsplash(c);
+        log(`Foto elegida por Gemini para "${item.r.titulo}": ${c.titulo} — ${String(c.descripcion).slice(0, 60)}`);
+      } else if (item) log(`Gemini no ve ninguna foto buena para "${item.r.titulo}"`);
+    }
+  } catch (e) { log("No se pudieron elegir fotos:", e.message); }
+}
+
 
 /* ---------------- Índice ligero del recetario (lo lee Claude para decidir) ---------------- */
 export async function escribirIndice(hist) {

@@ -67,7 +67,7 @@ export async function llamarGemini(prompt, { log = () => {}, presupuestoMs = 10 
           method: "POST",
           headers: { "Content-Type": "application/json", "x-goog-api-key": key },
           body: JSON.stringify({
-            contents: [{ role: "user", parts: [{ text: prompt }] }],
+            contents: [{ role: "user", parts: Array.isArray(prompt) ? prompt : [{ text: prompt }] }],
             generationConfig: { responseMimeType: "application/json", temperature, maxOutputTokens },
           }),
           signal: AbortSignal.timeout(Math.min(timeoutMs, queda)),
