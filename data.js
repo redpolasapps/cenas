@@ -95,8 +95,8 @@ window.MENU_DATA = {
      "Pescado",
      "Horno"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/11653557/pexels-photo-11653557.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "3 lomos de merluza sin espinas ni piel (450 g)",
@@ -199,8 +199,8 @@ window.MENU_DATA = {
      "Huevo",
      "Sartén"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/6275165/pexels-photo-6275165.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "1 cebolla mediana (150 g)",
@@ -314,8 +314,8 @@ window.MENU_DATA = {
      "Ternera",
      "Air fryer"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/18354206/pexels-photo-18354206.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "350 g de carne picada de ternera",
