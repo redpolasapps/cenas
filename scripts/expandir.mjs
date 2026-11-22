@@ -124,17 +124,46 @@ async function redactar(recetas) {
   return { hechos, pendientes };
 }
 
-/* ---------------- Fotos: Pexels (si hay clave) o Wikimedia Commons (sin clave) ---------------- */
-async function fotoPexels(consulta) {
-  const key = process.env.PEXELS_API_KEY;
-  if (!key || !consulta) return null;
+/* ---------------- Fotos: Unsplash y Pexels (con clave) y Wikimedia Commons (sin clave) ----------------
+   Se reúnen candidatas de todas y Gemini elige la que muestra de verdad el plato (o ninguna → ilustración).
+   Las fotos se enlazan, no se copian (así lo piden Unsplash y Pexels, y el repositorio no crece). */
+const UTM = "utm_source=cenas_en_casa&utm_medium=referral";
+async function candidatosUnsplash(consulta) {
+  const key = process.env.UNSPLASH_ACCESS_KEY;
+  if (!key || !consulta) return [];
   try {
-    const r = await fetch(`https://api.pexels.com/v1/search?per_page=1&orientation=landscape&query=${encodeURIComponent(consulta)}`, { headers: { Authorization: key } });
-    if (!r.ok) { log("Pexels HTTP", r.status); return null; }
-    const ph = (await r.json()).photos?.[0];
-    if (!ph?.src?.original) return null;
-    return { foto: `${ph.src.original}?auto=compress&cs=tinysrgb&w=600`, fotoCredito: `${ph.photographer} / Pexels` };
-  } catch (e) { log("Pexels:", e.message); return null; }
+    const r = await fetch(`https://api.unsplash.com/search/photos?per_page=6&orientation=landscape&content_filter=high&query=${encodeURIComponent(consulta)}`,
+      { headers: { Authorization: `Client-ID ${key}`, "Accept-Version": "v1" }, signal: AbortSignal.timeout(20000) });
+    if (!r.ok) { log("Unsplash HTTP", r.status); return []; }
+    return ((await r.json()).results || []).filter((ph) => ph.urls?.raw).map((ph) => ({
+      // JPG a 600 px: el Safari del iPad antiguo no abre WebP/AVIF
+      foto: `${ph.urls.raw}${ph.urls.raw.includes("?") ? "&" : "?"}fm=jpg&q=70&w=600&h=400&fit=crop`,
+      fotoCredito: `${ph.user?.name || "Autor"} / Unsplash`,
+      fotoAutorUrl: `${ph.user?.links?.html || "https://unsplash.com"}?${UTM}`,
+      fotoFuenteUrl: `https://unsplash.com/?${UTM}`,
+      descarga: ph.links?.download_location || "",
+      titulo: "Unsplash", descripcion: String(ph.alt_description || ph.description || "").slice(0, 200),
+    }));
+  } catch (e) { log("Unsplash:", e.message); return []; }
+}
+// Unsplash pide avisar cuando se elige una foto para usarla
+async function avisarUnsplash(c) {
+  const key = process.env.UNSPLASH_ACCESS_KEY;
+  if (!key || !c.descarga) return;
+  try { await fetch(c.descarga, { headers: { Authorization: `Client-ID ${key}` }, signal: AbortSignal.timeout(15000) }); } catch {}
+}
+async function candidatosPexels(consulta) {
+  const key = process.env.PEXELS_API_KEY;
+  if (!key || !consulta) return [];
+  try {
+    const r = await fetch(`https://api.pexels.com/v1/search?per_page=4&orientation=landscape&query=${encodeURIComponent(consulta)}`, { headers: { Authorization: key }, signal: AbortSignal.timeout(20000) });
+    if (!r.ok) { log("Pexels HTTP", r.status); return []; }
+    return ((await r.json()).photos || []).filter((ph) => ph.src?.original).map((ph) => ({
+      foto: `${ph.src.original}?auto=compress&cs=tinysrgb&w=600`, fotoCredito: `${ph.photographer} / Pexels`,
+      fotoAutorUrl: ph.photographer_url || "", fotoFuenteUrl: "https://www.pexels.com",
+      titulo: "Pexels", descripcion: String(ph.alt || "").slice(0, 200),
+    }));
+  } catch (e) { log("Pexels:", e.message); return []; }
 }
 const quitarHTML = (t) => String(t || "").replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
 async function candidatosWikimedia(consulta) {
@@ -163,32 +192,40 @@ async function candidatosWikimedia(consulta) {
   } catch (e) { log("Wikimedia:", e.message); return []; }
 }
 
-// Busca fotos para varias recetas. Con clave de Pexels usa Pexels; si no, reúne candidatas de Wikimedia
-// y le pide a Gemini (una sola llamada) que elija solo las que muestran de verdad ese plato.
-async function buscarFotos(recetas) {
+// Busca fotos para varias recetas: reúne candidatas (Unsplash, Pexels, Wikimedia) y le pide a Gemini
+// (una sola llamada) que elija solo las que muestran de verdad ese plato.
+export async function buscarFotos(recetas) {
   const res = {};
   const sinResolver = [];
   for (const r of recetas) {
     const consulta = r.busqueda_foto || r.titulo;
-    const px = await fotoPexels(consulta);
-    if (px) { res[r.id] = px; continue; }
-    const palabras = consulta.split(/\s+/).filter(Boolean);
-    const qs = [consulta]; if (palabras.length > 2) qs.push(palabras.slice(0, 2).join(" "));
     const vistos = new Set(), cands = [];
-    for (const q of qs) for (const c of await candidatosWikimedia(q)) if (!vistos.has(c.foto) && cands.length < 8) { vistos.add(c.foto); cands.push(c); }
+    const mete = (lista, max) => { for (const c of lista) if (!vistos.has(c.foto) && cands.length < max) { vistos.add(c.foto); cands.push(c); } };
+    mete(await candidatosUnsplash(consulta), 6);
+    mete(await candidatosPexels(consulta), 9);
+    if (cands.length < 4) {
+      const palabras = consulta.split(/\s+/).filter(Boolean);
+      const qs = [consulta]; if (palabras.length > 2) qs.push(palabras.slice(0, 2).join(" "));
+      for (const q of qs) mete(await candidatosWikimedia(q), 12);
+    }
     if (cands.length) sinResolver.push({ r, cands });
   }
   if (sinResolver.length) {
-    const prompt = `Para cada receta te doy fotos candidatas de Wikimedia Commons (nombre del archivo y descripción). ` +
+    const prompt = `Para cada receta te doy fotos candidatas (fuente y descripción de la foto). ` +
       `Elige, para cada receta, la candidata que muestre CLARAMENTE ese mismo plato ya cocinado y servido (mismo ingrediente principal y una preparación parecida). ` +
       `Descarta fotos de restaurantes, fachadas, personas, mapas, ingredientes crudos o platos distintos. Si ninguna encaja de verdad, pon null. Es mejor null que una foto dudosa.\n` +
       `Responde SOLO con JSON: {"elecciones":[{"id":"...","n":<número de la candidata o null>}]}\n\n` +
-      JSON.stringify(sinResolver.map(({ r, cands }) => ({ id: r.id, receta: r.titulo, descripcion: r.subtitulo || "", candidatas: cands.map((c, i) => ({ n: i, archivo: c.titulo, descripcion: c.descripcion })) })), null, 1);
+      JSON.stringify(sinResolver.map(({ r, cands }) => ({ id: r.id, receta: r.titulo, descripcion: r.subtitulo || "", candidatas: cands.map((c, i) => ({ n: i, fuente: c.titulo, descripcion: c.descripcion })) })), null, 1);
     try {
       const j = await llamarGemini(prompt, { presupuestoMs: 2 * 60000 });
       for (const e of j.elecciones || []) {
         const item = sinResolver.find((x) => x.r.id === e.id);
-        if (item && Number.isInteger(e.n) && item.cands[e.n]) { const c = item.cands[e.n]; res[e.id] = { foto: c.foto, fotoCredito: c.fotoCredito }; log(`Foto elegida por Gemini para "${item.r.titulo}": ${c.titulo}`); }
+        if (item && Number.isInteger(e.n) && item.cands[e.n]) {
+          const c = item.cands[e.n];
+          res[e.id] = { foto: c.foto, fotoCredito: c.fotoCredito, ...(c.fotoAutorUrl ? { fotoAutorUrl: c.fotoAutorUrl, fotoFuenteUrl: c.fotoFuenteUrl } : {}) };
+          await avisarUnsplash(c);
+          log(`Foto elegida por Gemini para "${item.r.titulo}": ${c.titulo} — ${c.descripcion.slice(0, 60)}`);
+        }
         else if (item) log(`Gemini no ve ninguna foto buena para "${item.r.titulo}"`);
       }
     } catch (e) { log("No se pudieron elegir fotos:", e.message); }

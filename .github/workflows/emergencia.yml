@@ -35,6 +35,7 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           FORZAR: ${{ inputs.forzar && '1' || '' }}
           PROGRAMADO: ${{ github.event_name == 'schedule' && '1' || '0' }}
           LIMITE_MIN: "30"
