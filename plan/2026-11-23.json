@@ -1,0 +1,575 @@
+{
+ "fecha": "2026-11-23",
+ "autor": "claude",
+ "hoy": {
+  "cole": {
+   "platos": [
+    "Guisantes, patata y zanahoria",
+    "Pollo asado con orégano",
+    "Ensalada de lechuga, tomate y remolacha",
+    "Fruta de temporada"
+   ]
+  },
+  "consejo": "Hoy ha comido pollo asado con guisantes, patata y zanahoria: para cenar mejor pescado, legumbre o huevo, mucha verdura y poco hidrato.",
+  "explicacion": "Al mediodía ha tomado pollo con bastante patata, así que las cenas van con pescado, huevo o garbanzos y mucha verdura. Esta semana el cole solo trae pescado el miércoles (salmón), legumbre el viernes (alubias) y huevo el viernes (tortilla), así que en casa conviene sumar pescado y huevo. Como es lunes, hay una opción súper rápida para noches de cansancio.",
+  "cenas": [
+   {
+    "id": "ensalada-templada-garbanzos-calabaza-feta",
+    "titulo": "Ensalada templada de garbanzos y calabaza asada",
+    "subtitulo": "Con espinacas tiernas y queso feta suave",
+    "cocina": "Mediterránea",
+    "imagen": "garbanzos",
+    "peques": false,
+    "healthy": true,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 50,
+     "proteina": 30,
+     "hidratos": 20
+    },
+    "porque": "Legumbre y mucha verdura para equilibrar el pollo con patata del mediodía, con poco hidrato.",
+    "truco": "Sírvele los garbanzos y la calabaza en montoncitos separados y deja que él desmigue el queso por encima.",
+    "etiquetas": [
+     "Legumbre",
+     "Horno",
+     "Verdura"
+    ],
+    "guia": "Garbanzos cocidos de bote escurridos y calabaza en dados de 2 cm asados al horno a 200 °C unos 20 min con aceite y comino suave; se mezclan templados con espinacas tiernas, feta desmigado y vinagreta de limón suave. Sin frutos secos.",
+    "busqueda_foto": "chickpea pumpkin salad"
+   },
+   {
+    "id": "revuelto-champinones-espinacas-rapido",
+    "titulo": "Revuelto rápido de champiñones y espinacas",
+    "subtitulo": "Con tostada integral y tomate rallado",
+    "cocina": "Casera",
+    "imagen": "tortilla",
+    "peques": false,
+    "healthy": true,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": true,
+    "tiempo": 12,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 45,
+     "proteina": 40,
+     "hidratos": 15
+    },
+    "porque": "Huevo y verdura en 12 minutos, perfecto para una noche de lunes cansada.",
+    "truco": "Pon su parte en una tostada cortada en tiras para que la coja con la mano.",
+    "etiquetas": [
+     "Huevo",
+     "Sartén",
+     "Rápida"
+    ],
+    "guia": "Súper rápida, como mucho 5 pasos: champiñones laminados de bandeja y espinacas de bolsa salteados en sartén con un poco de aceite, luego 5 huevos batidos a fuego suave hasta cuajar jugoso; tostada integral con tomate rallado aparte.",
+    "busqueda_foto": "scrambled eggs spinach mushrooms"
+   },
+   {
+    "id": "varitas-merluza-caseras-airfryer",
+    "titulo": "Varitas de merluza caseras en air fryer",
+    "subtitulo": "Con palitos de zanahoria y mayonesa de yogur",
+    "cocina": "Casera",
+    "imagen": "pescado",
+    "peques": true,
+    "healthy": false,
+    "gourmet": false,
+    "airfryer": true,
+    "rapida": false,
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 30,
+     "proteina": 45,
+     "hidratos": 25
+    },
+    "porque": "Suma pescado a una semana que va corta, en un formato que a los niños les encanta.",
+    "truco": "Que él pase las varitas por el pan rallado y moje en la salsa de yogur.",
+    "etiquetas": [
+     "Pescado",
+     "Air fryer",
+     "Peques"
+    ],
+    "guia": "Lomos de merluza sin piel ni espinas en tiras gruesas, pasados por huevo y pan rallado con un poco de parmesano, rociados con aceite en spray y hechos en la air fryer a 200 °C unos 10-12 min, dándoles la vuelta a mitad. Acompañar con zanahoria en bastones y salsa de yogur natural con limón.",
+    "busqueda_foto": "fish sticks homemade"
+   },
+   {
+    "id": "pasta-bolonesa-lentejas-verduras",
+    "titulo": "Pasta con boloñesa de lentejas y verduras escondidas",
+    "subtitulo": "Salsa de tomate, zanahoria y lentejas rojas",
+    "cocina": "Italiana",
+    "imagen": "pasta",
+    "peques": true,
+    "healthy": false,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 30,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 35,
+     "proteina": 25,
+     "hidratos": 40
+    },
+    "porque": "Legumbre disfrazada de boloñesa, con mucha verdura triturada dentro.",
+    "truco": "La salsa se tritura: no verá ni la zanahoria ni las lentejas. Que ponga él el queso rallado.",
+    "etiquetas": [
+     "Legumbre",
+     "Olla",
+     "Peques"
+    ],
+    "guia": "Sofrito suave de cebolla, zanahoria y calabacín muy picados, 100 g de lentejas rojas en seco cocidas en tomate triturado con un poco de agua 15 min y triturado todo; con 200 g de pasta corta (macarrones o espirales) y queso rallado por encima.",
+    "busqueda_foto": "lentil bolognese pasta"
+   },
+   {
+    "id": "udon-salteado-langostinos-verduras",
+    "titulo": "Udon salteado con langostinos y verduras",
+    "subtitulo": "Con brócoli, zanahoria y salsa de soja suave",
+    "cocina": "Japonesa",
+    "imagen": "pasta",
+    "peques": false,
+    "healthy": false,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 20,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 40,
+     "proteina": 30,
+     "hidratos": 30
+    },
+    "porque": "Marisco y verdura salteada para un toque japonés fácil, distinto del pollo del mediodía.",
+    "truco": "Corta los langostinos en trocitos y sírvele los fideos con unas gotas de soja baja en sal, sin más salsa.",
+    "etiquetas": [
+     "Marisco",
+     "Sartén",
+     "Japonés"
+    ],
+    "guia": "Fideos udon precocidos de paquete, langostinos pelados crudos o congelados, brócoli en ramitos pequeños, zanahoria en tiras finas y cebolleta, salteados en sartén o wok a fuego fuerte con aceite; salsa de soja baja en sal con un poco de miel y jengibre suave, nada de picante.",
+    "busqueda_foto": "shrimp udon stir fry"
+   },
+   {
+    "id": "rollitos-lenguado-espinacas-azafran",
+    "titulo": "Rollitos de lenguado rellenos de espinacas",
+    "subtitulo": "Con salsa suave de azafrán y arroz basmati",
+    "cocina": "Mediterránea",
+    "imagen": "pescado",
+    "peques": false,
+    "healthy": false,
+    "gourmet": true,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 45,
+    "dificultad": "Media",
+    "raciones": 3,
+    "plato": {
+     "verdura": 35,
+     "proteina": 40,
+     "hidratos": 25
+    },
+    "porque": "Un pescado fino y bien presentado para una noche con ganas de cocinar.",
+    "truco": "Sírvele un rollito cortado en rodajas con la salsa aparte, y el arroz para que lo mezcle.",
+    "etiquetas": [
+     "Pescado",
+     "Horno",
+     "Capricho"
+    ],
+    "guia": "Filetes de lenguado sin piel ni espinas untados con espinacas salteadas con ajo suave y un poco de queso crema, enrollados y sujetos con palillo, al horno a 190 °C unos 15 min con un chorrito de vino blanco y caldo de pescado; salsa con ese jugo, unas hebras de azafrán y un poco de nata ligera reducida. Acompañar con arroz basmati.",
+    "busqueda_foto": "stuffed sole rolls"
+   }
+  ]
+ },
+ "finde": {
+  "fechas": "Sábado 28 y domingo 29 de noviembre",
+  "desde": "2026-11-28",
+  "hasta": "2026-11-29",
+  "comidas": [
+   {
+    "dia": "Sábado",
+    "momento": "Comida",
+    "fecha": "2026-11-28",
+    "opciones": [
+     {
+      "id": "fideua-pescado-gambas",
+      "titulo": "Fideuá de pescado y gambas",
+      "subtitulo": "Con alioli suave aparte",
+      "cocina": "Española",
+      "imagen": "arroz",
+      "peques": false,
+      "healthy": false,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 50,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 25,
+       "proteina": 35,
+       "hidratos": 40
+      },
+      "porque": "Un clásico de sábado para compartir en familia.",
+      "truco": "Sírvele su parte sin gambas enteras (en trocitos) y sin alioli.",
+      "etiquetas": [
+       "Pescado",
+       "Paella",
+       "Fin de semana"
+      ],
+      "guia": "Fideo fino nº2 tostado en paella con aceite, sofrito de tomate y pimiento rojo, caldo de pescado, rape o merluza en dados sin espinas y gambas peladas; termina 2 min en el horno a 200 °C para que el fideo se levante. Alioli suave (con poco ajo) aparte.",
+      "busqueda_foto": "fideua seafood noodles"
+     },
+     {
+      "id": "macarrones-gratinados-bolonesa",
+      "titulo": "Macarrones gratinados con boloñesa",
+      "subtitulo": "Con verduras escondidas en la salsa",
+      "cocina": "Italiana",
+      "imagen": "pasta",
+      "peques": true,
+      "healthy": false,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 45,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 25,
+       "proteina": 35,
+       "hidratos": 40
+      },
+      "porque": "El plato favorito de muchos niños, con verdura triturada dentro.",
+      "truco": "Que él reparta el queso por encima antes de meterlo al horno.",
+      "etiquetas": [
+       "Carne",
+       "Horno",
+       "Peques"
+      ],
+      "guia": "Boloñesa de carne picada mixta con cebolla, zanahoria y calabacín muy picados y tomate triturado, cocida 20 min; mezclada con 300 g de macarrones cocidos, cubierta de bechamel ligera y queso rallado, gratinada al horno a 220 °C 10 min.",
+      "busqueda_foto": "baked macaroni bolognese"
+     },
+     {
+      "id": "arroz-negro-sepia-alioli",
+      "titulo": "Arroz negro con sepia",
+      "subtitulo": "Con alioli suave y limón",
+      "cocina": "Española",
+      "imagen": "arroz",
+      "peques": false,
+      "healthy": false,
+      "gourmet": true,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 55,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 20,
+       "proteina": 35,
+       "hidratos": 45
+      },
+      "porque": "Un arroz de capricho con sabor a mar para el fin de semana.",
+      "truco": "Ponle la sepia en trocitos muy pequeños y el alioli aparte para los mayores.",
+      "etiquetas": [
+       "Marisco",
+       "Paella",
+       "Capricho"
+      ],
+      "guia": "Sepia limpia en dados pequeños sofrita en paella con cebolla y pimiento verde muy picados y tomate, tinta de sepia en sobre, arroz bomba y caldo de pescado, 18 min sin remover; reposo 5 min. Alioli suave aparte.",
+      "busqueda_foto": "black rice cuttlefish"
+     }
+    ]
+   },
+   {
+    "dia": "Sábado",
+    "momento": "Cena",
+    "fecha": "2026-11-28",
+    "opciones": [
+     {
+      "id": "pizza-casera-york-champinones",
+      "titulo": "Pizza casera de jamón york y champiñones",
+      "subtitulo": "Masa fina con tomate y mozzarella",
+      "cocina": "Italiana",
+      "imagen": "pizza",
+      "peques": true,
+      "healthy": false,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 35,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 25,
+       "proteina": 35,
+       "hidratos": 40
+      },
+      "porque": "Noche de pizza en casa para empezar el finde.",
+      "truco": "Que él decore su porción con el jamón y los champiñones.",
+      "etiquetas": [
+       "Pizza",
+       "Horno",
+       "Peques"
+      ],
+      "guia": "Masa de pizza fresca comprada, tomate triturado con orégano, mozzarella, jamón york en tiras y champiñones laminados finos, al horno a 230 °C 12-15 min en la parte baja.",
+      "busqueda_foto": "ham mushroom pizza"
+     },
+     {
+      "id": "hamburguesa-ternera-queso-patatas-horno",
+      "titulo": "Hamburguesa de ternera con queso",
+      "subtitulo": "Con patatas gajo al horno y ensalada",
+      "cocina": "Americana",
+      "imagen": "hamburguesa",
+      "peques": false,
+      "healthy": false,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 40,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 25,
+       "proteina": 40,
+       "hidratos": 35
+      },
+      "porque": "Cena americana de finde, casera y sin ultraprocesados.",
+      "truco": "Hazle una hamburguesa pequeña en pan de mini brioche, con el queso fundido y el kétchup aparte.",
+      "etiquetas": [
+       "Carne",
+       "Horno",
+       "Americana"
+      ],
+      "guia": "Hamburguesas de 150 g de carne picada de ternera con sal y pimienta suave, a la plancha 3-4 min por lado, con queso cheddar fundido encima, en pan brioche con lechuga y tomate en rodajas; patatas en gajos al horno a 210 °C 30 min con aceite y pimentón dulce.",
+      "busqueda_foto": "cheeseburger potato wedges"
+     },
+     {
+      "id": "solomillo-ternera-salsa-queso-verduras",
+      "titulo": "Solomillo de ternera con salsa suave de queso",
+      "subtitulo": "Con espárragos trigueros y puré de patata",
+      "cocina": "Mediterránea",
+      "imagen": "generico",
+      "peques": false,
+      "healthy": false,
+      "gourmet": true,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 40,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 30,
+       "proteina": 40,
+       "hidratos": 30
+      },
+      "porque": "Una carne buena para una cena especial de sábado.",
+      "truco": "Córtale la carne en tiras finas, bien hecha por dentro, con el puré y la salsa aparte.",
+      "etiquetas": [
+       "Carne",
+       "Sartén",
+       "Capricho"
+      ],
+      "guia": "Medallones de solomillo de ternera de 3 cm marcados en sartén muy caliente 2-3 min por lado y reposados; salsa de queso suave (tipo azul suave o torta) con un poco de nata ligera; espárragos trigueros a la plancha y puré de patata casero.",
+      "busqueda_foto": "beef tenderloin cheese sauce"
+     }
+    ]
+   },
+   {
+    "dia": "Domingo",
+    "momento": "Comida",
+    "fecha": "2026-11-29",
+    "opciones": [
+     {
+      "id": "pollo-asado-patatas-panaderas",
+      "titulo": "Pollo asado con patatas panaderas",
+      "subtitulo": "Con cebolla y pimiento al horno",
+      "cocina": "Española",
+      "imagen": "pollo-horno",
+      "peques": true,
+      "healthy": false,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 70,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 30,
+       "proteina": 40,
+       "hidratos": 30
+      },
+      "porque": "El asado de domingo de toda la vida, con verdura al horno.",
+      "truco": "Sírvele pechuga deshuesada en tiras y las patatas más blanditas.",
+      "etiquetas": [
+       "Pollo",
+       "Horno",
+       "Peques"
+      ],
+      "guia": "Pollo troceado (muslos y pechugas) sobre cama de patata en rodajas finas, cebolla y pimiento rojo en tiras, con aceite, ajo, limón, tomillo y un vaso de agua o caldo; horno a 200 °C 55-60 min, dando la vuelta a mitad.",
+      "busqueda_foto": "roast chicken potatoes"
+     },
+     {
+      "id": "canelones-espinacas-ricotta",
+      "titulo": "Canelones de espinacas y ricotta",
+      "subtitulo": "Con bechamel ligera y tomate",
+      "cocina": "Italiana",
+      "imagen": "pasta",
+      "peques": true,
+      "healthy": false,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 50,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 35,
+       "proteina": 30,
+       "hidratos": 35
+      },
+      "porque": "Pasta de domingo con verdura en el relleno.",
+      "truco": "Pon en su plato un canelón con un poco de tomate por encima y que lo gratine con queso.",
+      "etiquetas": [
+       "Verdura",
+       "Horno",
+       "Peques"
+      ],
+      "guia": "Placas de canelón precocidas rellenas de espinacas salteadas y escurridas mezcladas con ricotta y parmesano; base de tomate triturado, bechamel ligera por encima y queso rallado; horno a 200 °C 20 min y gratinar.",
+      "busqueda_foto": "spinach ricotta cannelloni"
+     },
+     {
+      "id": "carrilleras-cerdo-vino-pure",
+      "titulo": "Carrilleras de cerdo guisadas al vino tinto",
+      "subtitulo": "Con puré de patata y zanahoria",
+      "cocina": "Española",
+      "imagen": "generico",
+      "peques": false,
+      "healthy": false,
+      "gourmet": true,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 120,
+      "dificultad": "Media",
+      "raciones": 3,
+      "plato": {
+       "verdura": 25,
+       "proteina": 40,
+       "hidratos": 35
+      },
+      "porque": "Un guiso lento de domingo que se deshace en la boca.",
+      "truco": "La carne queda tan tierna que se deshace: desmenúzasela sobre el puré con un poco de salsa.",
+      "etiquetas": [
+       "Carne",
+       "Olla",
+       "Capricho"
+      ],
+      "guia": "Carrilleras de cerdo limpias, enharinadas y doradas, guisadas con cebolla, zanahoria y puerro y un vaso de vino tinto (el alcohol se evapora bien) y caldo, 1 h 30 min a fuego suave (o 35 min en olla exprés); salsa triturada. Puré de patata casero.",
+      "busqueda_foto": "braised pork cheeks"
+     }
+    ]
+   },
+   {
+    "dia": "Domingo",
+    "momento": "Cena",
+    "fecha": "2026-11-29",
+    "opciones": [
+     {
+      "id": "crema-calabacin-quesito-tostas",
+      "titulo": "Crema de calabacín con quesito",
+      "subtitulo": "Con tostas de pan y huevo duro picado",
+      "cocina": "Casera",
+      "imagen": "crema",
+      "peques": true,
+      "healthy": true,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 25,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 60,
+       "proteina": 25,
+       "hidratos": 15
+      },
+      "porque": "Cena ligera de domingo para compensar el finde.",
+      "truco": "Que él eche el huevo picado y los trocitos de tosta por encima como si fueran 'tropezones'.",
+      "etiquetas": [
+       "Verdura",
+       "Olla",
+       "Peques"
+      ],
+      "guia": "Calabacín y puerro cocidos en poca agua con una patata pequeña, triturados con 3 quesitos; servir con huevo duro picado y tostas de pan en dados.",
+      "busqueda_foto": "zucchini cream soup"
+     },
+     {
+      "id": "wraps-pollo-verduras-yogur",
+      "titulo": "Wraps de pollo y verduras",
+      "subtitulo": "Con salsa de yogur y lechuga",
+      "cocina": "Americana",
+      "imagen": "quesadilla",
+      "peques": false,
+      "healthy": false,
+      "gourmet": false,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 25,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 35,
+       "proteina": 40,
+       "hidratos": 25
+      },
+      "porque": "Cena informal de domingo que se monta en la mesa.",
+      "truco": "Enrolla el suyo bien apretado y córtalo por la mitad para que lo coja fácil.",
+      "etiquetas": [
+       "Pollo",
+       "Sartén",
+       "Americana"
+      ],
+      "guia": "Tiras de pechuga de pollo salteadas con pimiento rojo y cebolla en sartén con pimentón dulce, en tortillas de trigo con lechuga, tomate en dados, maíz y salsa de yogur con limón.",
+      "busqueda_foto": "chicken wraps"
+     },
+     {
+      "id": "pulpo-gallega-cachelos",
+      "titulo": "Pulpo a la gallega con cachelos",
+      "subtitulo": "Con pimentón dulce y aceite de oliva",
+      "cocina": "Española",
+      "imagen": "generico",
+      "peques": false,
+      "healthy": false,
+      "gourmet": true,
+      "airfryer": false,
+      "rapida": false,
+      "tiempo": 30,
+      "dificultad": "Fácil",
+      "raciones": 3,
+      "plato": {
+       "verdura": 20,
+       "proteina": 45,
+       "hidratos": 35
+      },
+      "porque": "Un capricho gallego fácil con pulpo ya cocido.",
+      "truco": "Córtale el pulpo en trocitos muy pequeños y sin pimentón, sobre las patatas.",
+      "etiquetas": [
+       "Marisco",
+       "Olla",
+       "Capricho"
+      ],
+      "guia": "Pulpo cocido comprado, calentado 2 min en agua de cocer las patatas; cachelos (patata en rodajas gruesas cocida con piel y laurel), pulpo en rodajas encima, sal en escamas, pimentón dulce (nada de picante) y buen aceite de oliva. Servir en tabla de madera.",
+      "busqueda_foto": "octopus galician style"
+     }
+    ]
+   }
+  ]
+ }
+}
