@@ -332,8 +332,8 @@ window.MENU_DATA = {
      "Olla",
      "Peques"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/6287525/pexels-photo-6287525.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "200 g de pasta corta (macarrones o espirales)",
@@ -443,8 +443,8 @@ window.MENU_DATA = {
      "Sartén",
      "Japonés"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/6646373/pexels-photo-6646373.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "400 g de fideos udon precocidos",
@@ -1117,8 +1117,8 @@ window.MENU_DATA = {
        "Horno",
        "Americana"
       ],
-      "foto": "",
-      "fotoCredito": "",
+      "foto": "https://images.pexels.com/photos/14014041/pexels-photo-14014041.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "fotoCredito": "Pexels",
       "fotosUrl": "",
       "ingredientes": [
        "450 g de carne picada de ternera 100% limpia",
@@ -1340,8 +1340,8 @@ window.MENU_DATA = {
        "Horno",
        "Peques"
       ],
-      "foto": "",
-      "fotoCredito": "",
+      "foto": "https://images.pexels.com/photos/5956828/pexels-photo-5956828.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "fotoCredito": "Pexels",
       "fotosUrl": "",
       "ingredientes": [
        "800 g de pollo troceado (muslitos y pechuga sin piel)",
@@ -1825,8 +1825,8 @@ window.MENU_DATA = {
        "Sartén",
        "Americana"
       ],
-      "foto": "",
-      "fotoCredito": "",
+      "foto": "https://images.pexels.com/photos/29535635/pexels-photo-29535635.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "fotoCredito": "Pexels",
       "fotosUrl": "",
       "ingredientes": [
        "450 g de pechuga de pollo limpia sin hueso",
