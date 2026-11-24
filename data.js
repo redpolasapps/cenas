@@ -1,131 +1,136 @@
 // Lo genera scripts/expandir.mjs a partir del plan de Claude. Ver AGENTE.md
 window.MENU_DATA = {
- "actualizado": "2026-11-23T06:09:19+01:00",
- "plan": "2026-11-23.json",
+ "actualizado": "2026-11-24T06:06:20+01:00",
+ "plan": "2026-11-24.json",
  "hoy": {
-  "fecha": "2026-11-23",
+  "fecha": "2026-11-24",
   "cole": {
    "platos": [
-    "Guisantes, patata y zanahoria",
-    "Pollo asado con orégano",
-    "Ensalada de lechuga, tomate y remolacha",
+    "Crema de calabacín con aceite de albahaca",
+    "Fricandó de filete vegetal",
+    "Patatas en dados",
     "Fruta de temporada"
    ]
   },
-  "consejo": "Hoy ha comido pollo asado con guisantes, patata y zanahoria: para cenar mejor pescado, legumbre o huevo, mucha verdura y poco hidrato.",
-  "explicacion": "Al mediodía ha tomado pollo con bastante patata, así que las cenas van con pescado, huevo o garbanzos y mucha verdura. Esta semana el cole solo trae pescado el miércoles (salmón), legumbre el viernes (alubias) y huevo el viernes (tortilla), así que en casa conviene sumar pescado y huevo. Como es lunes, hay una opción súper rápida para noches de cansancio.",
+  "consejo": "Hoy ha comido crema de calabacín y fricandó de filete vegetal con patatas: para cenar, pescado, huevo o legumbre, con mucha verdura y poco hidrato.",
+  "explicacion": "Al mediodía ha tomado proteína vegetal con patata, así que las cenas tiran de pescado, huevo y legumbre con verdura y poco hidrato. Esta semana el cole trae pescado solo el miércoles (salmón), legumbre y huevo el viernes y carne de cerdo el jueves, así que en casa conviene sumar pescado y huevo y no hace falta carne roja. Todas las cenas de hoy son nuevas: ninguna receta del recetario lleva aún 14 días sin salir.",
   "cenas": [
    {
-    "id": "ensalada-templada-garbanzos-calabaza-feta",
-    "titulo": "Ensalada templada de garbanzos y calabaza asada",
-    "subtitulo": "Con espinacas tiernas y queso feta suave",
+    "id": "dorada-airfryer-judias-zanahoria",
+    "titulo": "Lomos de dorada en air fryer",
+    "subtitulo": "Con judías verdes y zanahoria salteadas",
     "cocina": "Mediterránea",
-    "imagen": "garbanzos",
+    "imagen": "pescado",
     "peques": false,
+    "healthy": true,
+    "gourmet": false,
+    "airfryer": true,
+    "rapida": false,
+    "tiempo": 20,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 50,
+     "proteina": 40,
+     "hidratos": 10
+    },
+    "porque": "Pescado blanco y verdura, con muy poco hidrato después de la patata del mediodía.",
+    "truco": "Desmenúzale la dorada en trocitos comprobando que no quede ninguna espina y ponle la zanahoria en bastoncitos para comer con los dedos.",
+    "etiquetas": [
+     "Pescado",
+     "Air fryer",
+     "Verdura"
+    ],
+    "foto": "",
+    "fotoCredito": "",
+    "fotosUrl": "",
+    "ingredientes": [
+     "3 lomos de dorada limpios y sin espinas (450 g)",
+     "200 g de judías verdes redondas",
+     "2 zanahorias medianas (150 g)",
+     "2 cucharadas de aceite de oliva virgen extra (20 ml)",
+     "1 pizca de sal suave (2 g)",
+     "1/2 cucharadita de ajo en polvo",
+     "1 cucharadita de perejil picado",
+     "50 ml de agua",
+     "1 limón"
+    ],
+    "pasos": [
+     {
+      "icono": "lavar",
+      "texto": "Lavar bien las judías verdes y las zanahorias. Precalentar la freidora de aire a 180 °C durante 3 minutos.",
+      "min": 3
+     },
+     {
+      "icono": "cortar",
+      "texto": "Cortar las puntas de las judías verdes y trocearlas por la mitad. Pelar las zanahorias con un pelador de patatas y cortarlas en bastoncitos finos de unos 4 cm.",
+      "usa": [
+       "200 g de judías verdes redondas",
+       "2 zanahorias medianas (150 g)"
+      ]
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Sazonar los lomos de dorada agregando por ambos lados una pizca de sal suave, el ajo en polvo, el perejil picado y una cucharada de aceite de oliva (en spray o pincelado).",
+      "usa": [
+       "3 lomos de dorada limpios y sin espinas (450 g)",
+       "1 pizca de sal suave (2 g)",
+       "1/2 cucharadita de ajo en polvo",
+       "1 cucharadita de perejil picado",
+       "1 cucharada de aceite de oliva virgen extra (10 ml)"
+      ]
+     },
+     {
+      "icono": "airfryer",
+      "texto": "Colocar los lomos de dorada en la cesta de la freidora de aire con la piel hacia abajo, sin que se monten unos sobre otros. Cocinar a 180 °C durante 9-10 minutos.",
+      "usa": [
+       "3 lomos de dorada limpios y sin espinas (450 g)"
+      ],
+      "min": 10,
+      "consejo": "Sabrás que está lista cuando la carne del pescado se vea opaca, blanca y se separe fácilmente con un tenedor."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Mientras se hace el pescado, poner una sartén a fuego medio con una cucharada de aceite de oliva. Añadir las judías y las zanahorias y remover durante 2 minutos.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra (10 ml)",
+       "200 g de judías verdes redondas",
+       "2 zanahorias medianas (150 g)"
+      ],
+      "fuego": "medio",
+      "min": 2
+     },
+     {
+      "icono": "sarten",
+      "texto": "Añadir los 50 ml de agua a la sartén, tapar con una tapadera y dejar cocinar a fuego suave durante 8 minutos hasta que las verduras estén tiernas al pincharlas.",
+      "usa": [
+       "50 ml de agua"
+      ],
+      "fuego": "suave",
+      "min": 8,
+      "consejo": "Si el agua se evapora antes de tiempo y la verdura sigue dura, añade 2 cucharadas más de agua."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Servir la dorada con la verdura salteada al lado y unos gajos de limón. Para el niño de 4 años, desmenuzar su ración de dorada pasando los dedos para comprobar que no queda ninguna espina y ponerle la zanahoria en bastoncitos para comer con los dedos.",
+      "usa": [
+       "1 limón"
+      ]
+     }
+    ]
+   },
+   {
+    "id": "mini-frittatas-verduras-molde-magdalenas",
+    "titulo": "Mini frittatas de verduras",
+    "subtitulo": "Al horno en molde de magdalenas, con ensalada",
+    "cocina": "Italiana",
+    "imagen": "tortilla",
+    "peques": true,
     "healthy": true,
     "gourmet": false,
     "airfryer": false,
     "rapida": false,
     "tiempo": 25,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 50,
-     "proteina": 30,
-     "hidratos": 20
-    },
-    "porque": "Legumbre y mucha verdura para equilibrar el pollo con patata del mediodía, con poco hidrato.",
-    "truco": "Sírvele los garbanzos y la calabaza en montoncitos separados y deja que él desmigue el queso por encima.",
-    "etiquetas": [
-     "Legumbre",
-     "Horno",
-     "Verdura"
-    ],
-    "foto": "https://images.unsplash.com/photo-1688923130941-889a41f4439c?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8Mnx8Y2hpY2twZWElMjBwdW1wa2luJTIwc2FsYWR8ZW58MXwwfHx8MTc5NTQxMDMwM3ww&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
-    "fotoCredito": "Imad 786 / Unsplash",
-    "fotosUrl": "",
-    "ingredientes": [
-     "400 g de garbanzos cocidos en bote (lavados y escurridos)",
-     "300 g de calabaza limpia (sin piel ni semillas)",
-     "100 g de queso feta",
-     "100 g de espinacas frescas tiernas de bolsa",
-     "3 cucharadas de aceite de oliva virgen extra (45 ml)",
-     "1 cucharada de zumo de limón (15 ml)",
-     "1/2 cucharadita de comino molido",
-     "1 pizca de sal"
-    ],
-    "pasos": [
-     {
-      "icono": "cortar",
-      "texto": "Precalienta el horno a 200 °C con calor arriba y abajo. Corta la calabaza en dados de unos 2 cm de tamaño sobre una tabla.",
-      "usa": [
-       "300 g de calabaza limpia (sin piel ni semillas)"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Coloca los dados de calabaza en una bandeja de horno cubierta con papel vegetal. Añade 1 cucharada de aceite de oliva, el comino molido y una pizca de sal, y mezcla bien con las manos.",
-      "usa": [
-       "300 g de calabaza limpia (sin piel ni semillas)",
-       "1 cucharada de aceite de oliva virgen extra (45 ml)",
-       "1/2 cucharadita de comino molido",
-       "1 pizca de sal"
-      ]
-     },
-     {
-      "icono": "horno",
-      "texto": "Mete la bandeja en el horno a 200 °C durante 20 minutos hasta que la calabaza esté tierna.",
-      "min": 20,
-      "consejo": "Sabrás que la calabaza está lista cuando la pinches con un tenedor y se introduzca sin resistencia."
-     },
-     {
-      "icono": "lavar",
-      "texto": "Coloca los garbanzos en un colador bajo el grifo de agua fría para quitar la espuma del bote y escurre muy bien todo el líquido.",
-      "usa": [
-       "400 g de garbanzos cocidos en bote (lavados y escurridos)"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "En un cuenco pequeño, mezcla 2 cucharadas de aceite de oliva con 1 cucharada de zumo de limón removiendo con una cuchara hasta formar la vinagreta.",
-      "usa": [
-       "2 cucharadas de aceite de oliva virgen extra (45 ml)",
-       "1 cucharada de zumo de limón (15 ml)"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "En un bol grande, pon las espinacas tiernas de bolsa, los garbanzos escurridos y la calabaza asada todavía templada. Vierte la vinagreta por encima y remueve suavemente.",
-      "usa": [
-       "100 g de espinacas frescas tiernas de bolsa",
-       "400 g de garbanzos cocidos en bote (lavados y escurridos)",
-       "300 g de calabaza limpia (sin piel ni semillas)"
-      ]
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve en los platos de los adultos la ensalada con el queso feta desmigado por encima. Para el niño de 4 años, sirve los garbanzos y la calabaza en montoncitos separados y deja que él desmigue el queso por encima.",
-      "usa": [
-       "100 g de queso feta"
-      ],
-      "consejo": "Pochar o desmigar el queso consiste en desmenuzarlo en trocitos pequeños usando los dedos."
-     }
-    ],
-    "fotoAutorUrl": "https://unsplash.com/@imad8321?utm_source=cenas_en_casa&utm_medium=referral",
-    "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
-   },
-   {
-    "id": "revuelto-champinones-espinacas-rapido",
-    "titulo": "Revuelto rápido de champiñones y espinacas",
-    "subtitulo": "Con tostada integral y tomate rallado",
-    "cocina": "Casera",
-    "imagen": "tortilla",
-    "peques": false,
-    "healthy": true,
-    "gourmet": false,
-    "airfryer": false,
-    "rapida": true,
-    "tiempo": 12,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
@@ -133,185 +138,101 @@ window.MENU_DATA = {
      "proteina": 40,
      "hidratos": 15
     },
-    "porque": "Huevo y verdura en 12 minutos, perfecto para una noche de lunes cansada.",
-    "truco": "Pon su parte en una tostada cortada en tiras para que la coja con la mano.",
+    "porque": "Huevo con verdura escondida, ligero y con poco hidrato.",
+    "truco": "Que él reparta el queso rallado en cada hueco del molde antes de hornear: tamaño magdalena, se come con la mano.",
     "etiquetas": [
      "Huevo",
-     "Sartén",
-     "Rápida"
+     "Horno",
+     "Verdura"
     ],
-    "foto": "https://images.unsplash.com/photo-1563690449029-d6e1b8d6003d?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8Mnx8c2NyYW1ibGVkJTIwZWdncyUyMHNwaW5hY2glMjBtdXNocm9vbXN8ZW58MXwwfHx8MTc5NTQxMDMwM3ww&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
-    "fotoCredito": "amirali mirhashemian / Unsplash",
+    "foto": "https://images.unsplash.com/photo-1518310532637-f5225f94f3c3?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8MXx8ZWdnJTIwbXVmZmlucyUyMHZlZ2V0YWJsZXN8ZW58MXwwfHx8MTc5NTQ5NjI3NXww&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
+    "fotoCredito": "Kaitlyn Chow / Unsplash",
     "fotosUrl": "",
     "ingredientes": [
-     "5 huevos grandes",
-     "200 g de champiñones laminados (1 bandeja)",
-     "100 g de espinacas frescas (1 bolsa)",
-     "2 tomates maduros (200 g)",
-     "3 rodajas de pan integral (120 g)",
-     "2 cucharadas de aceite de oliva virgen extra (30 ml)",
-     "1 pizca de sal"
+     "6 huevos grandes",
+     "30 ml de leche",
+     "1/2 pimiento rojo (80 g)",
+     "1/2 calabacín pequeño (100 g)",
+     "50 g de espinacas frescas",
+     "60 g de queso rallado suave",
+     "2 cucharadas de aceite de oliva virgen extra (20 ml)",
+     "1 pizca de sal (2 g)",
+     "100 g de lechuga variada",
+     "1 tomate grande (150 g)"
     ],
     "pasos": [
      {
-      "icono": "mezclar",
-      "texto": "Ralla los tomates maduros con un rallador en un bol. En otro bol grande, casca los 5 huevos, añade una pizca muy suave de sal y bátelos bien con un tenedor.",
+      "icono": "horno",
+      "texto": "Enfrentar la preparación encendiendo el horno a 180 °C con calor arriba y abajo para precalentar. Pincelar los huecos de un molde para magdalenas con una cucharada de aceite de oliva para que no se peguen.",
       "usa": [
-       "2 tomates maduros (200 g)",
-       "5 huevos grandes",
-       "1 pizca de sal"
+       "1 cucharada de aceite de oliva virgen extra (10 ml)"
       ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Tuesta las 3 rodajas de pan integral en la tostadora. Reparte el tomate rallado sobre el pan con una cuchara y añade 1 cucharada de aceite de oliva por encima.",
-      "usa": [
-       "3 rodajas de pan integral (120 g)",
-       "2 tomates maduros (200 g)",
-       "1 cucharada de aceite de oliva virgen extra (30 ml)"
-      ]
-     },
-     {
-      "icono": "sarten",
-      "texto": "Pon una sartén a fuego medio con 1 cucharada de aceite de oliva. Añade los champiñones laminados de bandeja y las espinacas de bolsa, y cocina salteando durante 4 minutos.",
-      "usa": [
-       "200 g de champiñones laminados (1 bandeja)",
-       "100 g de espinacas frescas (1 bolsa)",
-       "1 cucharada de aceite de oliva virgen extra (30 ml)"
-      ],
-      "fuego": "medio",
-      "min": 4,
-      "consejo": "Saltear significa cocinar a fuego vivo moviendo los ingredientes para que no se peguen."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Baja el fuego a suave e vierte los huevos batidos en la sartén. Remueve de forma continua con una espátula de silicona durante 2 minutos hasta que el huevo cuaje jugoso.",
-      "usa": [
-       "5 huevos grandes"
-      ],
-      "fuego": "suave",
-      "min": 2,
-      "consejo": "Retira la sartén del fuego un poco antes de lo deseado para evitar que el huevo se seque demasiado."
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve el revuelto jugoso en los platos junto a las tostadas. Para el niño de 4 años, pon su parte sobre su tostada y córtala en tiras alargadas para que pueda cogerla con la mano."
-     }
-    ],
-    "fotoAutorUrl": "https://unsplash.com/@amir_v_ali?utm_source=cenas_en_casa&utm_medium=referral",
-    "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
-   },
-   {
-    "id": "varitas-merluza-caseras-airfryer",
-    "titulo": "Varitas de merluza caseras en air fryer",
-    "subtitulo": "Con palitos de zanahoria y mayonesa de yogur",
-    "cocina": "Casera",
-    "imagen": "pescado",
-    "peques": true,
-    "healthy": false,
-    "gourmet": false,
-    "airfryer": true,
-    "rapida": false,
-    "tiempo": 25,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 30,
-     "proteina": 45,
-     "hidratos": 25
-    },
-    "porque": "Suma pescado a una semana que va corta, en un formato que a los niños les encanta.",
-    "truco": "Que él pase las varitas por el pan rallado y moje en la salsa de yogur.",
-    "etiquetas": [
-     "Pescado",
-     "Air fryer",
-     "Peques"
-    ],
-    "foto": "https://images.unsplash.com/photo-1627435602002-745922e7221c?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8NHx8ZmlzaCUyMHN0aWNrcyUyMGhvbWVtYWRlfGVufDF8MHx8fDE3OTU0MTAzMDR8MA&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
-    "fotoCredito": "Laårk Boshoff / Unsplash",
-    "fotosUrl": "",
-    "ingredientes": [
-     "450 g de lomos de merluza sin piel ni espinas",
-     "2 huevos grandes",
-     "100 g de pan rallado",
-     "25 g de queso parmesano rallado",
-     "3 zanahorias (250 g)",
-     "1 yogur natural no edulcorado (125 g)",
-     "1 cucharadita de zumo de limón (5 ml)",
-     "1 cucharada de aceite de oliva en spray (15 ml)",
-     "1 pizca de sal"
-    ],
-    "pasos": [
-     {
-      "icono": "airfryer",
-      "texto": "Precalienta la air fryer a 200 °C durante 3 minutos. Corta los lomos de merluza sin espinas en tiras gruesas de unos 2 cm de ancho sobre una tabla limpia.",
-      "usa": [
-       "450 g de lomos de merluza sin piel ni espinas"
-      ],
-      "min": 3
-     },
-     {
-      "icono": "mezclar",
-      "texto": "En un plato hondo bate los 2 huevos con una pizca suave de sal. En otro plato, mezcla el pan rallado con el parmesano. En un vaso, mezcla el yogur natural con la cucharadita de zumo de limón.",
-      "usa": [
-       "2 huevos grandes",
-       "100 g de pan rallado",
-       "25 g de queso parmesano rallado",
-       "1 yogur natural no edulcorado (125 g)",
-       "1 cucharadita de zumo de limón (5 ml)",
-       "1 pizca de sal"
-      ]
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Pasa cada tira de merluza primero por el huevo batido y después por la mezcla de pan rallado y parmesano, apretando suavemente para fijar el empanado.",
-      "usa": [
-       "450 g de lomos de merluza sin piel ni espinas",
-       "2 huevos grandes",
-       "100 g de pan rallado",
-       "25 g de queso parmesano rallado"
-      ],
-      "consejo": "Deja que el niño de 4 años te ayude a pasar las varitas de merluza por el pan rallado."
-     },
-     {
-      "icono": "airfryer",
-      "texto": "Coloca las varitas en la cesta de la air fryer sin sobrecargar ni amontonar el pescado. Pulveriza un poco de aceite en spray sobre ellas y cocina a 200 °C durante 6 minutos.",
-      "usa": [
-       "1 cucharada de aceite de oliva en spray (15 ml)"
-      ],
-      "min": 6,
-      "consejo": "Si la cesta es pequeña, hazlo en dos tandas para que queden crujientes."
-     },
-     {
-      "icono": "airfryer",
-      "texto": "Abre la cesta, da la vuelta a las varitas con cuidado usando unas pinzas, pulveriza otro poco de aceite en spray y programa a 200 °C durante otros 5 minutos.",
-      "min": 5
      },
      {
       "icono": "cortar",
-      "texto": "Mientras tanto, pela las 3 zanahorias con un pelador de verduras y cortalas en bastones alargados y delgados.",
+      "texto": "Lavar el pimiento, el calabacín y las espinacas. Picar todo en trocitos muy pequeñitos con un cuchillo fino.",
       "usa": [
-       "3 zanahorias (250 g)"
+       "1/2 pimiento rojo (80 g)",
+       "1/2 calabacín pequeño (100 g)",
+       "50 g de espinacas frescas"
+      ]
+     },
+     {
+      "icono": "sarten",
+      "texto": "Poner una sartén a fuego medio con una cucharada de aceite de oliva y rehogar las verduras picadas durante 5 minutos. Rehogar: cocinar las verduras moviéndolas con una cuchara de madera hasta que se ablanden.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra (10 ml)",
+       "1/2 pimiento rojo (80 g)",
+       "1/2 calabacín pequeño (100 g)",
+       "50 g de espinacas frescas"
+      ],
+      "fuego": "medio",
+      "min": 5
+     },
+     {
+      "icono": "mezclar",
+      "texto": "En un bol grande, cascar los 6 huevos, añadir los 30 ml de leche y la pizca de sal. Batir bien con un tenedor hasta que quede homogéneo. Incorporar las verduras rehogadas y mezclar.",
+      "usa": [
+       "6 huevos grandes",
+       "30 ml de leche",
+       "1 pizca de sal (2 g)"
+      ]
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Repartir la mezcla de huevo y verduras en los huecos del molde de magdalenas. Pedir al niño que ayude repartiendo el queso rallado suave por encima de cada hueco.",
+      "usa": [
+       "60 g de queso rallado suave"
+      ]
+     },
+     {
+      "icono": "horno",
+      "texto": "Meter el molde en el horno a 180 °C (arriba y abajo) durante 15-18 minutos.",
+      "min": 16,
+      "consejo": "Estarán listas cuando al clavar un palillo en el centro de una frittata, este salga completamente limpio y seco."
+     },
+     {
+      "icono": "cortar",
+      "texto": "Mientras se hornean, lavar la lechuga y el tomate. Cortar el tomate en dados medianos y mezclarlo todo en un bol de ensalada.",
+      "usa": [
+       "100 g de lechuga variada",
+       "1 tomate grande (150 g)"
       ]
      },
      {
       "icono": "emplatar",
-      "texto": "Sirve las varitas de merluza doradas junto a los bastones de zanahoria y el bol pequeño de salsa de yogur natural y limón para mojar.",
-      "usa": [
-       "3 zanahorias (250 g)",
-       "1 yogur natural no edulcorado (125 g)"
-      ]
+      "texto": "Sacar el molde del horno, dejar templar 3 minutos para no quemarse y desmoldar con cuidado. Servir junto a la ensalada. Para el niño, presentar sus mini frittatas como magdalenas de huevo para comer con la mano."
      }
     ],
-    "fotoAutorUrl": "https://unsplash.com/@laarkstudio?utm_source=cenas_en_casa&utm_medium=referral",
+    "fotoAutorUrl": "https://unsplash.com/@kaitlynraeann?utm_source=cenas_en_casa&utm_medium=referral",
     "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
    },
    {
-    "id": "pasta-bolonesa-lentejas-verduras",
-    "titulo": "Pasta con boloñesa de lentejas y verduras escondidas",
-    "subtitulo": "Salsa de tomate, zanahoria y lentejas rojas",
-    "cocina": "Italiana",
-    "imagen": "pasta",
+    "id": "hamburguesitas-lentejas-zanahoria-yogur",
+    "titulo": "Hamburguesitas de lentejas y zanahoria",
+    "subtitulo": "Con salsa suave de yogur y pepino",
+    "cocina": "Casera",
+    "imagen": "hamburguesa",
     "peques": true,
     "healthy": false,
     "gourmet": false,
@@ -321,308 +242,453 @@ window.MENU_DATA = {
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
-     "verdura": 35,
-     "proteina": 25,
-     "hidratos": 40
+     "verdura": 40,
+     "proteina": 30,
+     "hidratos": 30
     },
-    "porque": "Legumbre disfrazada de boloñesa, con mucha verdura triturada dentro.",
-    "truco": "La salsa se tritura: no verá ni la zanahoria ni las lentejas. Que ponga él el queso rallado.",
+    "porque": "Suma legumbre a la semana en un formato que le gusta, con la verdura escondida.",
+    "truco": "Hazlas pequeñitas como monedas grandes y que él las moje en la salsa de yogur.",
     "etiquetas": [
      "Legumbre",
-     "Olla",
-     "Peques"
+     "Sartén"
     ],
-    "foto": "https://images.pexels.com/photos/6287525/pexels-photo-6287525.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "fotoCredito": "Pexels",
+    "foto": "https://images.unsplash.com/photo-1600802084641-ed4c8d984fb9?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8MXx8bGVudGlsJTIwcGF0dGllcyUyMHlvZ3VydCUyMHNhdWNlfGVufDF8MHx8fDE3OTU0OTYyNzV8MA&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
+    "fotoCredito": "Jan Landau / Unsplash",
     "fotosUrl": "",
     "ingredientes": [
-     "200 g de pasta corta (macarrones o espirales)",
-     "100 g de lentejas rojas secas",
-     "400 g de tomate triturado en conserva",
-     "1 cebolla pequeña (100 g)",
-     "1 zanahoria mediana (100 g)",
-     "1/2 calabacín pequeño (100 g)",
+     "400 g de lentejas cocidas en conserva (1 bote escurrido)",
+     "1 zanahoria grande (100 g)",
+     "1/2 cebolla pequeña (50 g)",
+     "1 huevo",
+     "40 g de pan rallado",
+     "40 g de queso rallado suave",
      "2 cucharadas de aceite de oliva virgen extra (20 ml)",
-     "150 ml de agua",
-     "1 pizca de sal",
-     "50 g de queso rallado suave"
+     "1/2 pepino (100 g)",
+     "1 yogur natural no edulcorado (125 g)",
+     "1 pizca de sal (2 g)",
+     "100 g de brotes de lechuga variados"
     ],
     "pasos": [
      {
-      "icono": "cortar",
-      "texto": "Lavar bien las verduras. Picar la cebolla, la zanahoria y el calabacín en trocitos lo más pequeños posible con un cuchillo afilado sobre una tabla.",
+      "icono": "sarten",
+      "texto": "Picar la cebolla en trocitos muy pequeños. Poner una sartén a fuego suave con 1 cucharada de aceite y pochar la cebolla durante 5 minutos. Pochar: cocinar lentamente hasta que la cebolla esté transparente y suave.",
       "usa": [
-       "1 cebolla pequeña (100 g)",
-       "1 zanahoria mediana (100 g)",
-       "1/2 calabacín pequeño (100 g)"
+       "1/2 cebolla pequeña (50 g)",
+       "1 cucharada de aceite de oliva virgen extra (10 ml)"
+      ],
+      "fuego": "suave",
+      "min": 5
+     },
+     {
+      "icono": "cortar",
+      "texto": "Pelar la zanahoria y el medio pepino. Rallar la zanahoria fina y el pepino con la parte fina del rallador. Reservar el pepino picado aparte.",
+      "usa": [
+       "1 zanahoria grande (100 g)",
+       "1/2 pepino (100 g)"
       ]
      },
      {
-      "icono": "olla",
-      "texto": "En una olla, poner 2 cucharadas de aceite de oliva a fuego medio. Añadir las verduras picadas y pochar (cocinar a fuego suave hasta que estén blanditas y transparentes) durante 8 minutos removiendo con una cuchara de madera.",
+      "icono": "mezclar",
+      "texto": "Volcar el bote de lentejas en un colador, lavarlas con agua del grifo y escurrirlas bien. Ponerlas en un bol grande y aplastarlas bien con un tenedor hasta tener una pasta grumosa.",
       "usa": [
-       "2 cucharadas de aceite de oliva virgen extra (20 ml)",
-       "1 cebolla pequeña (100 g)",
-       "1 zanahoria mediana (100 g)",
-       "1/2 calabacín pequeño (100 g)"
-      ],
-      "fuego": "suave",
-      "min": 8,
-      "consejo": "Si ves que la verdura se agarra al fondo, baja un poco más el fuego."
-     },
-     {
-      "icono": "olla",
-      "texto": "Añadir a la misma olla los 100 g de lentejas rojas (aclaradas en agua fría), los 400 g de tomate triturado, los 150 ml de agua y una pizca de sal. Mezclar todo bien.",
-      "usa": [
-       "100 g de lentejas rojas secas",
-       "400 g de tomate triturado en conserva",
-       "150 ml de agua",
-       "1 pizca de sal"
-      ],
-      "fuego": "medio"
-     },
-     {
-      "icono": "olla",
-      "texto": "Tapar la olla y dejar cocer a fuego suave durante 15 minutos. Las lentejas rojas deben quedar totalmente tiernas y casi deshacerse al presionarlas.",
-      "fuego": "suave",
-      "min": 15
+       "400 g de lentejas cocidas en conserva (1 bote escurrido)"
+      ]
      },
      {
       "icono": "mezclar",
-      "texto": "Pasar todo el contenido de la olla al vaso de la batidora y triturar durante 1 o 2 minutos a máxima potencia hasta lograr una salsa fina y homogénea sin ningún grumo visible.",
-      "consejo": "Triturar muy bien evita que el niño detecte los trocitos de verdura o lentejas."
-     },
-     {
-      "icono": "olla",
-      "texto": "En una cazuela aparte con abundante agua hirviendo y una pizca de sal, cocer los 200 g de pasta corta a fuego fuerte el tiempo que indique el paquete (unos 9 minutos). Escurrir bien con un colador.",
+      "texto": "Añadir al bol de las lentejas la zanahoria rallada, la cebolla pochada, el huevo, el queso rallado y el pan rallado. Mezclar con una cuchara hasta tener una masa firme.",
       "usa": [
-       "200 g de pasta corta (macarrones o espirales)",
-       "1 pizca de sal"
-      ],
-      "fuego": "fuerte",
-      "min": 9
+       "1 zanahoria grande (100 g)",
+       "1 cebolla pequeña (50 g)",
+       "1 huevo",
+       "40 g de queso rallado suave",
+       "40 g de pan rallado"
+      ]
      },
      {
       "icono": "mezclar",
-      "texto": "Volver a poner la salsa triturada en la olla a fuego suave, añadir la pasta cocida y mezclarlo todo durante 1 minuto para que la pasta absorba bien la salsa.",
-      "fuego": "suave",
-      "min": 1
+      "texto": "Para la salsa: en un vaso o bol pequeño, mezclar el yogur natural con el pepino rallado y una pizca de sal.",
+      "usa": [
+       "1/2 pepino (100 g)",
+       "1 yogur natural no edulcorado (125 g)",
+       "1 pizca de sal (2 g)"
+      ]
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Con las manos limpias, formar hamburguesitas pequeñas (tamaño de una ciruela pequeña). Para el niño, hacerlas bien pequeñas, del tamaño de monedas grandes."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Poner una sartén a fuego medio con 1 cucharada de aceite de oliva. Dorar las hamburguesitas durante 3-4 minutos por lado hasta que tengan un bonito color dorado.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra (10 ml)"
+      ],
+      "fuego": "medio",
+      "min": 7,
+      "consejo": "Manejar con cuidado al darles la vuelta con una espátula para que no se rompan."
      },
      {
       "icono": "emplatar",
-      "texto": "Servir la pasta en los platos. Espolvorear los 50 g de queso rallado por encima y permitir que el niño añada su parte de queso al suyo. Comprobar que no queme antes de servírselo al pequeño.",
+      "texto": "Servir las hamburguesas calientes acompañadas de los brotes de lechuga lavados y el cuenco de salsa de yogur para mojar. Las hamburguesitas del niño se presentan listas para mojar en la salsa.",
       "usa": [
-       "50 g de queso rallado suave"
+       "100 g de brotes de lechuga variados"
       ]
      }
-    ]
+    ],
+    "fotoAutorUrl": "https://unsplash.com/@janlandau?utm_source=cenas_en_casa&utm_medium=referral",
+    "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
    },
    {
-    "id": "udon-salteado-langostinos-verduras",
-    "titulo": "Udon salteado con langostinos y verduras",
-    "subtitulo": "Con brócoli, zanahoria y salsa de soja suave",
+    "id": "okonomiyaki-col-gambas-suave",
+    "titulo": "Okonomiyaki de col y gambas",
+    "subtitulo": "La tortita japonesa, en versión suave",
     "cocina": "Japonesa",
-    "imagen": "pasta",
+    "imagen": "tortilla",
     "peques": false,
     "healthy": false,
     "gourmet": false,
     "airfryer": false,
     "rapida": false,
-    "tiempo": 20,
+    "tiempo": 25,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
-     "verdura": 40,
+     "verdura": 45,
      "proteina": 30,
-     "hidratos": 30
+     "hidratos": 25
     },
-    "porque": "Marisco y verdura salteada para un toque japonés fácil, distinto del pollo del mediodía.",
-    "truco": "Corta los langostinos en trocitos y sírvele los fideos con unas gotas de soja baja en sal, sin más salsa.",
+    "porque": "Huevo, marisco y mucha col en una cena diferente y fácil.",
+    "truco": "Córtale su parte en triángulos de pizza y ponle solo un hilito de mayonesa: la salsa okonomiyaki aparte para los mayores.",
     "etiquetas": [
+     "Huevo",
      "Marisco",
-     "Sartén",
-     "Japonés"
+     "Sartén"
     ],
-    "foto": "https://images.pexels.com/photos/6646373/pexels-photo-6646373.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "fotoCredito": "Pexels",
+    "foto": "",
+    "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "400 g de fideos udon precocidos",
-     "200 g de langostinos crudos pelados",
-     "150 g de brócoli",
-     "1 zanahoria mediana (100 g)",
-     "1 cebolleta (80 g)",
-     "2 cucharadas de aceite de oliva (20 ml)",
-     "3 cucharadas de salsa de soja baja en sal (45 ml)",
-     "1 cucharadita de miel (7 g)",
-     "1/4 cucharadita de jengibre en polvo",
-     "50 ml de agua"
+     "3 huevos L",
+     "100 g de harina de trigo",
+     "100 ml de caldo de verduras (o agua)",
+     "200 g de col blanca picada muy fina",
+     "1 zanahoria grande rallada (100 g)",
+     "1 cebolleta pequeña picada (50 g)",
+     "150 g de gambas peladas y troceadas",
+     "2 cucharadas de aceite de oliva",
+     "2 cucharadas de kétchup",
+     "1 cucharada de salsa de soja baja en sal",
+     "1 cucharada de miel",
+     "3 cucharadas de mayonesa"
     ],
     "pasos": [
      {
       "icono": "cortar",
-      "texto": "Lavar el brócoli y cortarlo en ramitos muy pequeños. Pelar la zanahoria y cortarla en tiras finas (en bastoncillos). Cortar la cebolleta en rodajas finas.",
+      "texto": "Lava la col y la cebolleta. Pica la col en tiras extremadamente finas con un cuchillo bien afilado. Ralla la zanahoria, pica la cebolleta finita y trocea las gambas peladas en trozos pequeños.",
       "usa": [
-       "150 g de brócoli",
-       "1 zanahoria mediana (100 g)",
-       "1 cebolleta (80 g)"
+       "200 g de col blanca picada muy fina",
+       "1 zanahoria grande rallada (100 g)",
+       "1 cebolleta pequeña picada (50 g)",
+       "150 g de gambas peladas y troceadas"
       ]
      },
      {
       "icono": "mezclar",
-      "texto": "En un recipiente o vaso, mezclar 3 cucharadas de salsa de soja baja en sal, 1 cucharadita de miel, 1/4 cucharadita de jengibre en polvo y 50 ml de agua con una cuchara hasta disolver la miel.",
+      "texto": "En un bol grande, bate los 3 huevos con las varillas o un tenedor. Añade los 100 g de harina y los 100 ml de caldo de verduras poco a poco mientras mezclas hasta obtener una masa homogénea sin grumos.",
       "usa": [
-       "3 cucharadas de salsa de soja baja en sal (45 ml)",
-       "1 cucharadita de miel (7 g)",
-       "1/4 cucharadita de jengibre en polvo",
-       "50 ml de agua"
+       "3 huevos L",
+       "100 g de harina de trigo",
+       "100 ml de caldo de verduras (o agua)"
+      ]
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Incorpora al bol de la masa la col picada, la zanahoria rallada, la cebolleta y las gambas troceadas. Mezcla muy bien con una espátula para que todos los ingredientes queden integrados en la masa.",
+      "usa": [
+       "200 g de col blanca picada muy fina",
+       "1 zanahoria grande rallada (100 g)",
+       "1 cebolleta pequeña picada (50 g)",
+       "150 g de gambas peladas y troceadas"
+      ]
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Prepara la salsa okonomiyaki suave en un cuenco pequeño mezclando las 2 cucharadas de kétchup, la cucharada de salsa de soja baja en sal y la cucharada de miel. Remueve bien.",
+      "usa": [
+       "2 cucharadas de kétchup",
+       "1 cucharada de salsa de soja baja en sal",
+       "1 cucharada de miel"
       ]
      },
      {
       "icono": "sarten",
-      "texto": "En una sartén grande o wok a fuego medio, colocar los ramitos de brócoli y la zanahoria con 2 cucharadas de agua, tapar y dejar cocer al vapor 3 minutos para ablandarlos. Retirar y reservar en un plato.",
+      "texto": "Calienta una cucharada de aceite de oliva en una sartén antiadherente grande a fuego medio. Vierte la mitad de la masa formando una tortita gruesa y redonda. Tapa la sartén y cocina durante 5 minutos.",
       "usa": [
-       "150 g de brócoli",
-       "1 zanahoria mediana (100 g)"
+       "1 cucharada de aceite de oliva"
       ],
       "fuego": "medio",
-      "min": 3
+      "min": 5,
+      "consejo": "Tapar la sartén ayuda a que la col se cocine con su propio vapor y el interior no quede crudo."
      },
      {
       "icono": "sarten",
-      "texto": "En la misma sartén limpia a fuego fuerte, añadir 2 cucharadas de aceite de oliva. Cuando esté caliente, echar la cebolleta picada y los 200 g de langostinos pelados. Saltear (cocinar removiendo rápido) durante 2 minutos hasta que cambien a color rosado.",
+      "texto": "Con la ayuda de una espátula ancha o un plato, da la vuelta a la tortita con cuidado. Tapa de nuevo y cocina la otra cara durante 5 minutos más hasta que esté dorada. Repite el proceso con el resto de la masa y el aceite restante.",
       "usa": [
-       "2 cucharadas de aceite de oliva (20 ml)",
-       "1 cebolleta (80 g)",
-       "200 g de langostinos crudos pelados"
+       "1 cucharada de aceite de oliva"
       ],
-      "fuego": "fuerte",
-      "min": 2,
-      "consejo": "Los langostinos están listos cuando adoptan forma de 'C' y están totalmente rosados por fuera."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Añadir las verduras reservadas y los 400 g de fideos udon precocidos a la sartén. Saltear todo junto a fuego fuerte durante 1 minuto separando los fideos delicadamente con unas pinzas o cuchara.",
-      "usa": [
-       "400 g de fideos udon precocidos"
-      ],
-      "fuego": "fuerte",
-      "min": 1
-     },
-     {
-      "icono": "sarten",
-      "texto": "Verter la mezcla de salsa de soja dulce reservada sobre el wok. Saltear removiendo continuamente a fuego fuerte durante 2 minutos hasta que la salsa reduzca y envuelva los fideos.",
-      "fuego": "fuerte",
-      "min": 2
+      "fuego": "medio",
+      "min": 5,
+      "consejo": "Sabrás que está hecha si al pinchar el centro con un palillo, este sale limpio."
      },
      {
       "icono": "emplatar",
-      "texto": "Servir en los platos. Para la ración del niño, cortar los langostinos en trocitos pequeños fáciies de masticar y ofrecer los fideos bien templados."
+      "texto": "Sirve las tortitas calientes en los platos. Pinta por encima con la salsa okonomiyaki casera y añade la mayonesa formando hilos finos. Para el niño de 4 años: corta su ración en triángulos tipo pizza con solo un hilito suave de mayonesa, dejando la salsa aparte para los adultos.",
+      "usa": [
+       "3 cucharadas de mayonesa"
+      ]
      }
     ]
    },
    {
-    "id": "rollitos-lenguado-espinacas-azafran",
-    "titulo": "Rollitos de lenguado rellenos de espinacas",
-    "subtitulo": "Con salsa suave de azafrán y arroz basmati",
-    "cocina": "Mediterránea",
+    "id": "potaje-garbanzos-bacalao-espinacas",
+    "titulo": "Potaje de garbanzos con bacalao y espinacas",
+    "subtitulo": "Cuchara suave de toda la vida, en 30 minutos",
+    "cocina": "Española",
+    "imagen": "garbanzos",
+    "peques": false,
+    "healthy": false,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 30,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 40,
+     "proteina": 35,
+     "hidratos": 25
+    },
+    "porque": "Legumbre y pescado a la vez, para adelantar las dos cosas que faltan esta semana.",
+    "truco": "Aplasta un poco sus garbanzos con el tenedor en el caldo y revisa bien que el bacalao no tenga espinas.",
+    "etiquetas": [
+     "Legumbre",
+     "Pescado",
+     "Olla"
+    ],
+    "foto": "",
+    "fotoCredito": "",
+    "fotosUrl": "",
+    "ingredientes": [
+     "400 g de garbanzos cocidos en bote (lavados y escurridos)",
+     "200 g de migas de bacalao desalado y sin espinas",
+     "100 g de espinacas frescas",
+     "1 cebolla grande (150 g)",
+     "1 diente de ajo",
+     "2 tomates maduros rallados (200 g)",
+     "1 cucharadita de pimentón dulce",
+     "500 ml de caldo de verduras bajo en sal",
+     "2 cucharadas de aceite de oliva virgen extra",
+     "1 huevo L"
+    ],
+    "pasos": [
+     {
+      "icono": "olla",
+      "texto": "Coloca el huevo en un cazo pequeño con agua fría que lo cubra por completo. Lleva a ebullición y cocínalo durante 10 minutos. Retíralo, refréscalo en agua fría y reserva. Abre el bote de garbanzos, lávalos en un escurridor bajo el grifo y deja que escurran bien.",
+      "usa": [
+       "1 huevo L",
+       "400 g de garbanzos cocidos en bote (lavados y escurridos)"
+      ],
+      "fuego": "fuerte",
+      "min": 10
+     },
+     {
+      "icono": "cortar",
+      "texto": "Pica la cebolla y el diente de ajo en dados muy pequeñitos. Ralla los 2 tomates maduros con un rallador de cocina desechando la piel.",
+      "usa": [
+       "1 cebolla grande (150 g)",
+       "1 diente de ajo",
+       "2 tomates maduros rallados (200 g)"
+      ]
+     },
+     {
+      "icono": "olla",
+      "texto": "En una olla medana, vierte las 2 cucharadas de aceite de oliva a fuego suave. Añade la cebolla y el ajo picados y pocha (cocinar despacio hasta que esté transparente y blandita) durante 7 minutos.",
+      "usa": [
+       "2 cucharadas de aceite de oliva virgen extra",
+       "1 cebolla grande (150 g)",
+       "1 diente de ajo"
+      ],
+      "fuego": "suave",
+      "min": 7
+     },
+     {
+      "icono": "olla",
+      "texto": "Agrega el tomate rallado y cocina a fuego medio durante 5 minutos hasta que reduzca el agua. Añade la cucharadita de pimentón dulce, remueve rápido durante 10 segundos para que no se queme.",
+      "usa": [
+       "2 tomates maduros rallados (200 g)",
+       "1 cucharadita de pimentón dulce"
+      ],
+      "fuego": "medio",
+      "min": 5,
+      "consejo": "Cuidado con quemar el pimentón, si se quema amargará todo el guiso."
+     },
+     {
+      "icono": "olla",
+      "texto": "Vierte los garbanzos escurridos y los 500 ml de caldo de verduras en la olla. Tapa y cocina todo junto a fuego medio durante 10 minutos para que se mezclen los sabores.",
+      "usa": [
+       "400 g de garbanzos cocidos en bote (lavados y escurridos)",
+       "500 ml de caldo de verduras bajo en sal"
+      ],
+      "fuego": "medio",
+      "min": 10
+     },
+     {
+      "icono": "olla",
+      "texto": "Añade las espinacas frescas y las migas de bacalao desalado y sin espinas a la olla. Remueve suavemente y cocina a fuego suave durante 5 minutos más hasta que las espinacas bajen de volumen y el bacalao esté en su punto.",
+      "usa": [
+       "100 g de espinacas frescas",
+       "200 g de migas de bacalao desalado y sin espinas"
+      ],
+      "fuego": "suave",
+      "min": 5,
+      "consejo": "Revisa con los dedos el bacalao antes de echarlo para asegurar que no queda ninguna pequeña espina."
+     },
+     {
+      "icono": "cortar",
+      "texto": "Pela el huevo duro que cociste al principio y pícalo en trocitos pequeños sobre una tabla."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Sirve el potaje bien caliente en platos hondos y reparte el huevo picado por encima. Para el niño de 4 años: aplasta ligeramente sus garbanzos con un tenedor en su plato para facilitar la masticación y revisa minuciosamente que los trozos de bacalao estén limpios de espinas."
+     }
+    ]
+   },
+   {
+    "id": "merluza-salsa-verde-almejas",
+    "titulo": "Merluza en salsa verde con almejas",
+    "subtitulo": "El clásico vasco, con espárragos y huevo",
+    "cocina": "Española",
     "imagen": "pescado",
     "peques": false,
     "healthy": false,
     "gourmet": true,
     "airfryer": false,
     "rapida": false,
-    "tiempo": 45,
+    "tiempo": 40,
     "dificultad": "Media",
     "raciones": 3,
     "plato": {
      "verdura": 35,
-     "proteina": 40,
-     "hidratos": 25
+     "proteina": 45,
+     "hidratos": 20
     },
-    "porque": "Un pescado fino y bien presentado para una noche con ganas de cocinar.",
-    "truco": "Sírvele un rollito cortado en rodajas con la salsa aparte, y el arroz para que lo mezcle.",
+    "porque": "Un pescado de capricho para sumar a la semana, con una salsa suave que gusta a todos.",
+    "truco": "Sírvele la merluza sin piel, sin espinas y sin almejas, con un poco de salsa y el huevo picado por encima.",
     "etiquetas": [
      "Pescado",
-     "Horno",
-     "Capricho"
+     "Marisco",
+     "Cazuela"
     ],
     "foto": "",
     "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "6 filetes de lenguado limpios sin piel ni espinas (450 g)",
-     "150 g de espinacas frescas",
-     "1 diente de ajo pequeño (4 g)",
-     "60 g de queso crema",
-     "150 g de arroz basmati",
-     "200 ml de caldo de pescado",
+     "600 g de lomos de merluza sin espinas",
+     "200 g de almejas frescas",
+     "2 dientes de ajo",
+     "1 cucharada de harina de trigo",
      "50 ml de vino blanco",
-     "100 ml de nata ligera para cocinar",
-     "8 hebras de azafrán",
-     "2 cucharadas de aceite de oliva (20 ml)",
-     "1 pizca de sal"
+     "300 ml de caldo de pescado bajo en sal",
+     "1 manojo de perejil fresco picado (15 g)",
+     "3 cucharadas de aceite de oliva virgen extra",
+     "1 huevo L",
+     "6 espárragos blancos en conserva",
+     "1 barra de pan"
     ],
     "pasos": [
      {
-      "icono": "horno",
-      "texto": "Precalentar el horno a 190 °C con calor arriba y abajo. En una cazuela, poner los 150 g de arroz basmati con 300 ml de agua y una pizca de sal a fuego fuerte; cuando hierva, bajar a fuego suave, tapar y cocer 12 minutos.",
+      "icono": "olla",
+      "texto": "Pon las almejas en un bol con abundante agua fría y una cucharada de sal gorda durante 30 minutos para que suelten la arena. Pon el huevo a cocer en un cazo con agua hirviendo durante 10 minutos, pélalo y reserva.",
       "usa": [
-       "150 g de arroz basmati",
-       "1 pizca de sal"
+       "200 g de almejas frescas",
+       "1 huevo L"
       ],
-      "fuego": "suave",
-      "min": 12
+      "fuego": "fuerte",
+      "min": 10
      },
      {
-      "icono": "sarten",
-      "texto": "Picar el diente de ajo muy finito. En una sartén con 1 cucharada de aceite a fuego suave, dorar el ajo 1 minuto sin que se queme, añadir los 150 g de espinacas frescas y cocinar 3 minutos hasta que reduzcan de tamaño.",
+      "icono": "cortar",
+      "texto": "Pela los 2 dientes de ajo y córtalos en láminas finas. Lava el perejil, sécalo con papel de cocina y pícalo muy fino con un cuchillo.",
       "usa": [
-       "150 g de espinacas frescas",
-       "1 diente de ajo pequeño (4 g)",
-       "2 cucharadas de aceite de oliva (20 ml)"
-      ],
-      "fuego": "suave",
-      "min": 4
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Apartar la sartén del fuego y añadir los 60 g de queso crema junto a las espinacas salteadas. Mezclar bien con una cuchara hasta obtener un relleno uniforme.",
-      "usa": [
-       "60 g de queso crema"
+       "2 dientes de ajo",
+       "1 manojo de perejil fresco picado (15 g)"
       ]
      },
      {
-      "icono": "envolver",
-      "texto": "Estender sobre una tabla los 6 filetes de lenguado limpios. Repartir sobre cada uno una cucharada del relleno de espinacas, enrollar el pescado desde la zona ancha a la punta y fijar cada rollito atravesándolo con un palillo de madera.",
+      "icono": "sarten",
+      "texto": "En una cazuela ancha y baja, añade las 3 cucharadas de aceite de oliva y los ajos laminados. Cocina a fuego suave durante 3 minutos hasta que los ajos empiecen a bailotear sin dorarse demasiado.",
       "usa": [
-       "6 filetes de lenguado limpios sin piel ni espinas (450 g)"
-      ],
-      "consejo": "Asegúrate bien de revisar con las yemas de los dedos que los filetes no contengan ninguna espina."
-     },
-     {
-      "icono": "horno",
-      "texto": "Colocar los rollitos de lenguado de pie en una fuente apta para horno. Regar por encima con 50 ml de vino blanco y 200 ml de caldo de pescado. Hornear a 190 °C durante 15 minutos.",
-      "usa": [
-       "200 ml de caldo de pescado",
-       "50 ml de vino blanco"
-      ],
-      "min": 15,
-      "consejo": "El pescado estará listo cuando su carne sea de color blanco opaco y el tenedor entre con mucha facilidad."
-     },
-     {
-      "icono": "olla",
-      "texto": "Retirar la fuente del horno. Verter el líquido resultante del horneado en un cazo pequeño a fuego medio, añadir las 8 hebras de azafrán y los 100 ml de nata ligera. Dejar hervir a fuego suave 5 minutos removiendo con varillas hasta que espese y tome un color amarillento.",
-      "usa": [
-       "100 ml de nata ligera para cocinar",
-       "8 hebras de azafrán"
+       "3 cucharadas de aceite de oliva virgen extra",
+       "2 dientes de ajo"
       ],
       "fuego": "suave",
-      "min": 5
+      "min": 3
+     },
+     {
+      "icono": "sarten",
+      "texto": "Añade la cucharada de harina y remueve bien con una cuchara de madera durante 1 minuto a fuego suave para cocinarla y eliminar el sabor a harina cruda.",
+      "usa": [
+       "1 cucharada de harina de trigo"
+      ],
+      "fuego": "suave",
+      "min": 1
+     },
+     {
+      "icono": "sarten",
+      "texto": "Vierte los 50 ml de vino blanco y deja reducir 1 minuto. Incorpora los 300 ml de caldo de pescado y remueve con varillas para integrar la salsa sin que queden grumos. Cocina a fuego medio durante 2 minutos hasta que comience a espesarse.",
+      "usa": [
+       "50 ml de vino blanco",
+       "300 ml de caldo de pescado bajo en sal"
+      ],
+      "fuego": "medio",
+      "min": 3
+     },
+     {
+      "icono": "sarten",
+      "texto": "Sazona ligeramente los lomos de merluza con una pizca de sal. Colócalos en la cazuela con la piel hacia arriba junto con el perejil picado. Cocina a fuego medio durante 4 minutos moviendo la cazuela en círculos desde las asas para que la salsa ligue (se espese homogéneamente).",
+      "usa": [
+       "600 g de lomos de merluza sin espinas",
+       "1 manojo de perejil fresco picado (15 g)"
+      ],
+      "fuego": "medio",
+      "min": 4,
+      "consejo": "El movimiento constante en vaivén es el secreto para que la grasa del pescado y el aceite formen una salsa verde cremosa."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Escurre y aclara las almejas. Añádelas a la cazuela, tapa y cocina durante 3 minutos hasta que todas las almejas se abran. Desecha las almejas que permanezcan cerradas.",
+      "usa": [
+       "200 g de almejas frescas"
+      ],
+      "fuego": "medio",
+      "min": 3
+     },
+     {
+      "icono": "sarten",
+      "texto": "Incorpora los 6 espárragos blancos y el huevo duro cortado en cuartos a la cazuela. Cocina todo junto a fuego suave durante 1 minuto adicional solo para calentar los espárragos.",
+      "usa": [
+       "6 espárragos blancos en conserva"
+      ],
+      "fuego": "suave",
+      "min": 1
      },
      {
       "icono": "emplatar",
-      "texto": "Retirar y tirar con cuidado todos los palillos de madera de los rollitos de pescado. Servir los rollitos junto al arroz basmati cocido. Para el niño de 4 años, cortar un rollito en rodajitas finas, servir el arroz en su plato y poner la salsa suave de azafrán en un cuenquito aparte."
+      "texto": "Sirve un lomo de merluza por ración cubierto con salsa verde, almejas, espárragos y huevo. Acompaña con rodajas de la barra de pan. Para el niño de 4 años: retírale la piel al pescado, no le pongas almejas en su plato, trocea su merluza verificando que no tenga espinas y ponle un poco de salsa con huevo duro picado por encima.",
+      "usa": [
+       "1 barra de pan"
+      ]
      }
     ]
    }

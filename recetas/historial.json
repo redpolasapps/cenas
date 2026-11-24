@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23T06:09:19+01:00",
+ "actualizado": "2026-11-24T06:06:20+01:00",
  "recetas": [
   {
    "id": "tortilla-patata-espinacas",
@@ -5852,6 +5852,725 @@
     {
      "fecha": "2026-11-29",
      "dia": "Domingo",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "dorada-airfryer-judias-zanahoria",
+   "titulo": "Lomos de dorada en air fryer",
+   "subtitulo": "Con judías verdes y zanahoria salteadas",
+   "cocina": "Mediterránea",
+   "imagen": "pescado",
+   "peques": false,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": true,
+   "rapida": false,
+   "tiempo": 20,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 50,
+    "proteina": 40,
+    "hidratos": 10
+   },
+   "porque": "Pescado blanco y verdura, con muy poco hidrato después de la patata del mediodía.",
+   "truco": "Desmenúzale la dorada en trocitos comprobando que no quede ninguna espina y ponle la zanahoria en bastoncitos para comer con los dedos.",
+   "etiquetas": [
+    "Pescado",
+    "Air fryer",
+    "Verdura"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "3 lomos de dorada limpios y sin espinas (450 g)",
+    "200 g de judías verdes redondas",
+    "2 zanahorias medianas (150 g)",
+    "2 cucharadas de aceite de oliva virgen extra (20 ml)",
+    "1 pizca de sal suave (2 g)",
+    "1/2 cucharadita de ajo en polvo",
+    "1 cucharadita de perejil picado",
+    "50 ml de agua",
+    "1 limón"
+   ],
+   "pasos": [
+    {
+     "icono": "lavar",
+     "texto": "Lavar bien las judías verdes y las zanahorias. Precalentar la freidora de aire a 180 °C durante 3 minutos.",
+     "min": 3
+    },
+    {
+     "icono": "cortar",
+     "texto": "Cortar las puntas de las judías verdes y trocearlas por la mitad. Pelar las zanahorias con un pelador de patatas y cortarlas en bastoncitos finos de unos 4 cm.",
+     "usa": [
+      "200 g de judías verdes redondas",
+      "2 zanahorias medianas (150 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Sazonar los lomos de dorada agregando por ambos lados una pizca de sal suave, el ajo en polvo, el perejil picado y una cucharada de aceite de oliva (en spray o pincelado).",
+     "usa": [
+      "3 lomos de dorada limpios y sin espinas (450 g)",
+      "1 pizca de sal suave (2 g)",
+      "1/2 cucharadita de ajo en polvo",
+      "1 cucharadita de perejil picado",
+      "1 cucharada de aceite de oliva virgen extra (10 ml)"
+     ]
+    },
+    {
+     "icono": "airfryer",
+     "texto": "Colocar los lomos de dorada en la cesta de la freidora de aire con la piel hacia abajo, sin que se monten unos sobre otros. Cocinar a 180 °C durante 9-10 minutos.",
+     "usa": [
+      "3 lomos de dorada limpios y sin espinas (450 g)"
+     ],
+     "min": 10,
+     "consejo": "Sabrás que está lista cuando la carne del pescado se vea opaca, blanca y se separe fácilmente con un tenedor."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Mientras se hace el pescado, poner una sartén a fuego medio con una cucharada de aceite de oliva. Añadir las judías y las zanahorias y remover durante 2 minutos.",
+     "usa": [
+      "1 cucharada de aceite de oliva virgen extra (10 ml)",
+      "200 g de judías verdes redondas",
+      "2 zanahorias medianas (150 g)"
+     ],
+     "fuego": "medio",
+     "min": 2
+    },
+    {
+     "icono": "sarten",
+     "texto": "Añadir los 50 ml de agua a la sartén, tapar con una tapadera y dejar cocinar a fuego suave durante 8 minutos hasta que las verduras estén tiernas al pincharlas.",
+     "usa": [
+      "50 ml de agua"
+     ],
+     "fuego": "suave",
+     "min": 8,
+     "consejo": "Si el agua se evapora antes de tiempo y la verdura sigue dura, añade 2 cucharadas más de agua."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Servir la dorada con la verdura salteada al lado y unos gajos de limón. Para el niño de 4 años, desmenuzar su ración de dorada pasando los dedos para comprobar que no queda ninguna espina y ponerle la zanahoria en bastoncitos para comer con los dedos.",
+     "usa": [
+      "1 limón"
+     ]
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-24",
+     "dia": "Entre semana",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "mini-frittatas-verduras-molde-magdalenas",
+   "titulo": "Mini frittatas de verduras",
+   "subtitulo": "Al horno en molde de magdalenas, con ensalada",
+   "cocina": "Italiana",
+   "imagen": "tortilla",
+   "peques": true,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 25,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 45,
+    "proteina": 40,
+    "hidratos": 15
+   },
+   "porque": "Huevo con verdura escondida, ligero y con poco hidrato.",
+   "truco": "Que él reparta el queso rallado en cada hueco del molde antes de hornear: tamaño magdalena, se come con la mano.",
+   "etiquetas": [
+    "Huevo",
+    "Horno",
+    "Verdura"
+   ],
+   "foto": "https://images.unsplash.com/photo-1518310532637-f5225f94f3c3?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8MXx8ZWdnJTIwbXVmZmlucyUyMHZlZ2V0YWJsZXN8ZW58MXwwfHx8MTc5NTQ5NjI3NXww&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
+   "fotoCredito": "Kaitlyn Chow / Unsplash",
+   "fotosUrl": "",
+   "ingredientes": [
+    "6 huevos grandes",
+    "30 ml de leche",
+    "1/2 pimiento rojo (80 g)",
+    "1/2 calabacín pequeño (100 g)",
+    "50 g de espinacas frescas",
+    "60 g de queso rallado suave",
+    "2 cucharadas de aceite de oliva virgen extra (20 ml)",
+    "1 pizca de sal (2 g)",
+    "100 g de lechuga variada",
+    "1 tomate grande (150 g)"
+   ],
+   "pasos": [
+    {
+     "icono": "horno",
+     "texto": "Enfrentar la preparación encendiendo el horno a 180 °C con calor arriba y abajo para precalentar. Pincelar los huecos de un molde para magdalenas con una cucharada de aceite de oliva para que no se peguen.",
+     "usa": [
+      "1 cucharada de aceite de oliva virgen extra (10 ml)"
+     ]
+    },
+    {
+     "icono": "cortar",
+     "texto": "Lavar el pimiento, el calabacín y las espinacas. Picar todo en trocitos muy pequeñitos con un cuchillo fino.",
+     "usa": [
+      "1/2 pimiento rojo (80 g)",
+      "1/2 calabacín pequeño (100 g)",
+      "50 g de espinacas frescas"
+     ]
+    },
+    {
+     "icono": "sarten",
+     "texto": "Poner una sartén a fuego medio con una cucharada de aceite de oliva y rehogar las verduras picadas durante 5 minutos. Rehogar: cocinar las verduras moviéndolas con una cuchara de madera hasta que se ablanden.",
+     "usa": [
+      "1 cucharada de aceite de oliva virgen extra (10 ml)",
+      "1/2 pimiento rojo (80 g)",
+      "1/2 calabacín pequeño (100 g)",
+      "50 g de espinacas frescas"
+     ],
+     "fuego": "medio",
+     "min": 5
+    },
+    {
+     "icono": "mezclar",
+     "texto": "En un bol grande, cascar los 6 huevos, añadir los 30 ml de leche y la pizca de sal. Batir bien con un tenedor hasta que quede homogéneo. Incorporar las verduras rehogadas y mezclar.",
+     "usa": [
+      "6 huevos grandes",
+      "30 ml de leche",
+      "1 pizca de sal (2 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Repartir la mezcla de huevo y verduras en los huecos del molde de magdalenas. Pedir al niño que ayude repartiendo el queso rallado suave por encima de cada hueco.",
+     "usa": [
+      "60 g de queso rallado suave"
+     ]
+    },
+    {
+     "icono": "horno",
+     "texto": "Meter el molde en el horno a 180 °C (arriba y abajo) durante 15-18 minutos.",
+     "min": 16,
+     "consejo": "Estarán listas cuando al clavar un palillo en el centro de una frittata, este salga completamente limpio y seco."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Mientras se hornean, lavar la lechuga y el tomate. Cortar el tomate en dados medianos y mezclarlo todo en un bol de ensalada.",
+     "usa": [
+      "100 g de lechuga variada",
+      "1 tomate grande (150 g)"
+     ]
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sacar el molde del horno, dejar templar 3 minutos para no quemarse y desmoldar con cuidado. Servir junto a la ensalada. Para el niño, presentar sus mini frittatas como magdalenas de huevo para comer con la mano."
+    }
+   ],
+   "fotoAutorUrl": "https://unsplash.com/@kaitlynraeann?utm_source=cenas_en_casa&utm_medium=referral",
+   "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral",
+   "usos": [
+    {
+     "fecha": "2026-11-24",
+     "dia": "Entre semana",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "hamburguesitas-lentejas-zanahoria-yogur",
+   "titulo": "Hamburguesitas de lentejas y zanahoria",
+   "subtitulo": "Con salsa suave de yogur y pepino",
+   "cocina": "Casera",
+   "imagen": "hamburguesa",
+   "peques": true,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 40,
+    "proteina": 30,
+    "hidratos": 30
+   },
+   "porque": "Suma legumbre a la semana en un formato que le gusta, con la verdura escondida.",
+   "truco": "Hazlas pequeñitas como monedas grandes y que él las moje en la salsa de yogur.",
+   "etiquetas": [
+    "Legumbre",
+    "Sartén"
+   ],
+   "foto": "https://images.unsplash.com/photo-1600802084641-ed4c8d984fb9?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8MXx8bGVudGlsJTIwcGF0dGllcyUyMHlvZ3VydCUyMHNhdWNlfGVufDF8MHx8fDE3OTU0OTYyNzV8MA&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
+   "fotoCredito": "Jan Landau / Unsplash",
+   "fotosUrl": "",
+   "ingredientes": [
+    "400 g de lentejas cocidas en conserva (1 bote escurrido)",
+    "1 zanahoria grande (100 g)",
+    "1/2 cebolla pequeña (50 g)",
+    "1 huevo",
+    "40 g de pan rallado",
+    "40 g de queso rallado suave",
+    "2 cucharadas de aceite de oliva virgen extra (20 ml)",
+    "1/2 pepino (100 g)",
+    "1 yogur natural no edulcorado (125 g)",
+    "1 pizca de sal (2 g)",
+    "100 g de brotes de lechuga variados"
+   ],
+   "pasos": [
+    {
+     "icono": "sarten",
+     "texto": "Picar la cebolla en trocitos muy pequeños. Poner una sartén a fuego suave con 1 cucharada de aceite y pochar la cebolla durante 5 minutos. Pochar: cocinar lentamente hasta que la cebolla esté transparente y suave.",
+     "usa": [
+      "1/2 cebolla pequeña (50 g)",
+      "1 cucharada de aceite de oliva virgen extra (10 ml)"
+     ],
+     "fuego": "suave",
+     "min": 5
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pelar la zanahoria y el medio pepino. Rallar la zanahoria fina y el pepino con la parte fina del rallador. Reservar el pepino picado aparte.",
+     "usa": [
+      "1 zanahoria grande (100 g)",
+      "1/2 pepino (100 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Volcar el bote de lentejas en un colador, lavarlas con agua del grifo y escurrirlas bien. Ponerlas en un bol grande y aplastarlas bien con un tenedor hasta tener una pasta grumosa.",
+     "usa": [
+      "400 g de lentejas cocidas en conserva (1 bote escurrido)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Añadir al bol de las lentejas la zanahoria rallada, la cebolla pochada, el huevo, el queso rallado y el pan rallado. Mezclar con una cuchara hasta tener una masa firme.",
+     "usa": [
+      "1 zanahoria grande (100 g)",
+      "1 cebolla pequeña (50 g)",
+      "1 huevo",
+      "40 g de queso rallado suave",
+      "40 g de pan rallado"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Para la salsa: en un vaso o bol pequeño, mezclar el yogur natural con el pepino rallado y una pizca de sal.",
+     "usa": [
+      "1/2 pepino (100 g)",
+      "1 yogur natural no edulcorado (125 g)",
+      "1 pizca de sal (2 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Con las manos limpias, formar hamburguesitas pequeñas (tamaño de una ciruela pequeña). Para el niño, hacerlas bien pequeñas, del tamaño de monedas grandes."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Poner una sartén a fuego medio con 1 cucharada de aceite de oliva. Dorar las hamburguesitas durante 3-4 minutos por lado hasta que tengan un bonito color dorado.",
+     "usa": [
+      "1 cucharada de aceite de oliva virgen extra (10 ml)"
+     ],
+     "fuego": "medio",
+     "min": 7,
+     "consejo": "Manejar con cuidado al darles la vuelta con una espátula para que no se rompan."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Servir las hamburguesas calientes acompañadas de los brotes de lechuga lavados y el cuenco de salsa de yogur para mojar. Las hamburguesitas del niño se presentan listas para mojar en la salsa.",
+     "usa": [
+      "100 g de brotes de lechuga variados"
+     ]
+    }
+   ],
+   "fotoAutorUrl": "https://unsplash.com/@janlandau?utm_source=cenas_en_casa&utm_medium=referral",
+   "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral",
+   "usos": [
+    {
+     "fecha": "2026-11-24",
+     "dia": "Entre semana",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "okonomiyaki-col-gambas-suave",
+   "titulo": "Okonomiyaki de col y gambas",
+   "subtitulo": "La tortita japonesa, en versión suave",
+   "cocina": "Japonesa",
+   "imagen": "tortilla",
+   "peques": false,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 25,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 45,
+    "proteina": 30,
+    "hidratos": 25
+   },
+   "porque": "Huevo, marisco y mucha col en una cena diferente y fácil.",
+   "truco": "Córtale su parte en triángulos de pizza y ponle solo un hilito de mayonesa: la salsa okonomiyaki aparte para los mayores.",
+   "etiquetas": [
+    "Huevo",
+    "Marisco",
+    "Sartén"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "3 huevos L",
+    "100 g de harina de trigo",
+    "100 ml de caldo de verduras (o agua)",
+    "200 g de col blanca picada muy fina",
+    "1 zanahoria grande rallada (100 g)",
+    "1 cebolleta pequeña picada (50 g)",
+    "150 g de gambas peladas y troceadas",
+    "2 cucharadas de aceite de oliva",
+    "2 cucharadas de kétchup",
+    "1 cucharada de salsa de soja baja en sal",
+    "1 cucharada de miel",
+    "3 cucharadas de mayonesa"
+   ],
+   "pasos": [
+    {
+     "icono": "cortar",
+     "texto": "Lava la col y la cebolleta. Pica la col en tiras extremadamente finas con un cuchillo bien afilado. Ralla la zanahoria, pica la cebolleta finita y trocea las gambas peladas en trozos pequeños.",
+     "usa": [
+      "200 g de col blanca picada muy fina",
+      "1 zanahoria grande rallada (100 g)",
+      "1 cebolleta pequeña picada (50 g)",
+      "150 g de gambas peladas y troceadas"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "En un bol grande, bate los 3 huevos con las varillas o un tenedor. Añade los 100 g de harina y los 100 ml de caldo de verduras poco a poco mientras mezclas hasta obtener una masa homogénea sin grumos.",
+     "usa": [
+      "3 huevos L",
+      "100 g de harina de trigo",
+      "100 ml de caldo de verduras (o agua)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Incorpora al bol de la masa la col picada, la zanahoria rallada, la cebolleta y las gambas troceadas. Mezcla muy bien con una espátula para que todos los ingredientes queden integrados en la masa.",
+     "usa": [
+      "200 g de col blanca picada muy fina",
+      "1 zanahoria grande rallada (100 g)",
+      "1 cebolleta pequeña picada (50 g)",
+      "150 g de gambas peladas y troceadas"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Prepara la salsa okonomiyaki suave en un cuenco pequeño mezclando las 2 cucharadas de kétchup, la cucharada de salsa de soja baja en sal y la cucharada de miel. Remueve bien.",
+     "usa": [
+      "2 cucharadas de kétchup",
+      "1 cucharada de salsa de soja baja en sal",
+      "1 cucharada de miel"
+     ]
+    },
+    {
+     "icono": "sarten",
+     "texto": "Calienta una cucharada de aceite de oliva en una sartén antiadherente grande a fuego medio. Vierte la mitad de la masa formando una tortita gruesa y redonda. Tapa la sartén y cocina durante 5 minutos.",
+     "usa": [
+      "1 cucharada de aceite de oliva"
+     ],
+     "fuego": "medio",
+     "min": 5,
+     "consejo": "Tapar la sartén ayuda a que la col se cocine con su propio vapor y el interior no quede crudo."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Con la ayuda de una espátula ancha o un plato, da la vuelta a la tortita con cuidado. Tapa de nuevo y cocina la otra cara durante 5 minutos más hasta que esté dorada. Repite el proceso con el resto de la masa y el aceite restante.",
+     "usa": [
+      "1 cucharada de aceite de oliva"
+     ],
+     "fuego": "medio",
+     "min": 5,
+     "consejo": "Sabrás que está hecha si al pinchar el centro con un palillo, este sale limpio."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve las tortitas calientes en los platos. Pinta por encima con la salsa okonomiyaki casera y añade la mayonesa formando hilos finos. Para el niño de 4 años: corta su ración en triángulos tipo pizza con solo un hilito suave de mayonesa, dejando la salsa aparte para los adultos.",
+     "usa": [
+      "3 cucharadas de mayonesa"
+     ]
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-24",
+     "dia": "Entre semana",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "potaje-garbanzos-bacalao-espinacas",
+   "titulo": "Potaje de garbanzos con bacalao y espinacas",
+   "subtitulo": "Cuchara suave de toda la vida, en 30 minutos",
+   "cocina": "Española",
+   "imagen": "garbanzos",
+   "peques": false,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 40,
+    "proteina": 35,
+    "hidratos": 25
+   },
+   "porque": "Legumbre y pescado a la vez, para adelantar las dos cosas que faltan esta semana.",
+   "truco": "Aplasta un poco sus garbanzos con el tenedor en el caldo y revisa bien que el bacalao no tenga espinas.",
+   "etiquetas": [
+    "Legumbre",
+    "Pescado",
+    "Olla"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "400 g de garbanzos cocidos en bote (lavados y escurridos)",
+    "200 g de migas de bacalao desalado y sin espinas",
+    "100 g de espinacas frescas",
+    "1 cebolla grande (150 g)",
+    "1 diente de ajo",
+    "2 tomates maduros rallados (200 g)",
+    "1 cucharadita de pimentón dulce",
+    "500 ml de caldo de verduras bajo en sal",
+    "2 cucharadas de aceite de oliva virgen extra",
+    "1 huevo L"
+   ],
+   "pasos": [
+    {
+     "icono": "olla",
+     "texto": "Coloca el huevo en un cazo pequeño con agua fría que lo cubra por completo. Lleva a ebullición y cocínalo durante 10 minutos. Retíralo, refréscalo en agua fría y reserva. Abre el bote de garbanzos, lávalos en un escurridor bajo el grifo y deja que escurran bien.",
+     "usa": [
+      "1 huevo L",
+      "400 g de garbanzos cocidos en bote (lavados y escurridos)"
+     ],
+     "fuego": "fuerte",
+     "min": 10
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pica la cebolla y el diente de ajo en dados muy pequeñitos. Ralla los 2 tomates maduros con un rallador de cocina desechando la piel.",
+     "usa": [
+      "1 cebolla grande (150 g)",
+      "1 diente de ajo",
+      "2 tomates maduros rallados (200 g)"
+     ]
+    },
+    {
+     "icono": "olla",
+     "texto": "En una olla medana, vierte las 2 cucharadas de aceite de oliva a fuego suave. Añade la cebolla y el ajo picados y pocha (cocinar despacio hasta que esté transparente y blandita) durante 7 minutos.",
+     "usa": [
+      "2 cucharadas de aceite de oliva virgen extra",
+      "1 cebolla grande (150 g)",
+      "1 diente de ajo"
+     ],
+     "fuego": "suave",
+     "min": 7
+    },
+    {
+     "icono": "olla",
+     "texto": "Agrega el tomate rallado y cocina a fuego medio durante 5 minutos hasta que reduzca el agua. Añade la cucharadita de pimentón dulce, remueve rápido durante 10 segundos para que no se queme.",
+     "usa": [
+      "2 tomates maduros rallados (200 g)",
+      "1 cucharadita de pimentón dulce"
+     ],
+     "fuego": "medio",
+     "min": 5,
+     "consejo": "Cuidado con quemar el pimentón, si se quema amargará todo el guiso."
+    },
+    {
+     "icono": "olla",
+     "texto": "Vierte los garbanzos escurridos y los 500 ml de caldo de verduras en la olla. Tapa y cocina todo junto a fuego medio durante 10 minutos para que se mezclen los sabores.",
+     "usa": [
+      "400 g de garbanzos cocidos en bote (lavados y escurridos)",
+      "500 ml de caldo de verduras bajo en sal"
+     ],
+     "fuego": "medio",
+     "min": 10
+    },
+    {
+     "icono": "olla",
+     "texto": "Añade las espinacas frescas y las migas de bacalao desalado y sin espinas a la olla. Remueve suavemente y cocina a fuego suave durante 5 minutos más hasta que las espinacas bajen de volumen y el bacalao esté en su punto.",
+     "usa": [
+      "100 g de espinacas frescas",
+      "200 g de migas de bacalao desalado y sin espinas"
+     ],
+     "fuego": "suave",
+     "min": 5,
+     "consejo": "Revisa con los dedos el bacalao antes de echarlo para asegurar que no queda ninguna pequeña espina."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pela el huevo duro que cociste al principio y pícalo en trocitos pequeños sobre una tabla."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve el potaje bien caliente en platos hondos y reparte el huevo picado por encima. Para el niño de 4 años: aplasta ligeramente sus garbanzos con un tenedor en su plato para facilitar la masticación y revisa minuciosamente que los trozos de bacalao estén limpios de espinas."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-24",
+     "dia": "Entre semana",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "merluza-salsa-verde-almejas",
+   "titulo": "Merluza en salsa verde con almejas",
+   "subtitulo": "El clásico vasco, con espárragos y huevo",
+   "cocina": "Española",
+   "imagen": "pescado",
+   "peques": false,
+   "healthy": false,
+   "gourmet": true,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 40,
+   "dificultad": "Media",
+   "raciones": 3,
+   "plato": {
+    "verdura": 35,
+    "proteina": 45,
+    "hidratos": 20
+   },
+   "porque": "Un pescado de capricho para sumar a la semana, con una salsa suave que gusta a todos.",
+   "truco": "Sírvele la merluza sin piel, sin espinas y sin almejas, con un poco de salsa y el huevo picado por encima.",
+   "etiquetas": [
+    "Pescado",
+    "Marisco",
+    "Cazuela"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "600 g de lomos de merluza sin espinas",
+    "200 g de almejas frescas",
+    "2 dientes de ajo",
+    "1 cucharada de harina de trigo",
+    "50 ml de vino blanco",
+    "300 ml de caldo de pescado bajo en sal",
+    "1 manojo de perejil fresco picado (15 g)",
+    "3 cucharadas de aceite de oliva virgen extra",
+    "1 huevo L",
+    "6 espárragos blancos en conserva",
+    "1 barra de pan"
+   ],
+   "pasos": [
+    {
+     "icono": "olla",
+     "texto": "Pon las almejas en un bol con abundante agua fría y una cucharada de sal gorda durante 30 minutos para que suelten la arena. Pon el huevo a cocer en un cazo con agua hirviendo durante 10 minutos, pélalo y reserva.",
+     "usa": [
+      "200 g de almejas frescas",
+      "1 huevo L"
+     ],
+     "fuego": "fuerte",
+     "min": 10
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pela los 2 dientes de ajo y córtalos en láminas finas. Lava el perejil, sécalo con papel de cocina y pícalo muy fino con un cuchillo.",
+     "usa": [
+      "2 dientes de ajo",
+      "1 manojo de perejil fresco picado (15 g)"
+     ]
+    },
+    {
+     "icono": "sarten",
+     "texto": "En una cazuela ancha y baja, añade las 3 cucharadas de aceite de oliva y los ajos laminados. Cocina a fuego suave durante 3 minutos hasta que los ajos empiecen a bailotear sin dorarse demasiado.",
+     "usa": [
+      "3 cucharadas de aceite de oliva virgen extra",
+      "2 dientes de ajo"
+     ],
+     "fuego": "suave",
+     "min": 3
+    },
+    {
+     "icono": "sarten",
+     "texto": "Añade la cucharada de harina y remueve bien con una cuchara de madera durante 1 minuto a fuego suave para cocinarla y eliminar el sabor a harina cruda.",
+     "usa": [
+      "1 cucharada de harina de trigo"
+     ],
+     "fuego": "suave",
+     "min": 1
+    },
+    {
+     "icono": "sarten",
+     "texto": "Vierte los 50 ml de vino blanco y deja reducir 1 minuto. Incorpora los 300 ml de caldo de pescado y remueve con varillas para integrar la salsa sin que queden grumos. Cocina a fuego medio durante 2 minutos hasta que comience a espesarse.",
+     "usa": [
+      "50 ml de vino blanco",
+      "300 ml de caldo de pescado bajo en sal"
+     ],
+     "fuego": "medio",
+     "min": 3
+    },
+    {
+     "icono": "sarten",
+     "texto": "Sazona ligeramente los lomos de merluza con una pizca de sal. Colócalos en la cazuela con la piel hacia arriba junto con el perejil picado. Cocina a fuego medio durante 4 minutos moviendo la cazuela en círculos desde las asas para que la salsa ligue (se espese homogéneamente).",
+     "usa": [
+      "600 g de lomos de merluza sin espinas",
+      "1 manojo de perejil fresco picado (15 g)"
+     ],
+     "fuego": "medio",
+     "min": 4,
+     "consejo": "El movimiento constante en vaivén es el secreto para que la grasa del pescado y el aceite formen una salsa verde cremosa."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Escurre y aclara las almejas. Añádelas a la cazuela, tapa y cocina durante 3 minutos hasta que todas las almejas se abran. Desecha las almejas que permanezcan cerradas.",
+     "usa": [
+      "200 g de almejas frescas"
+     ],
+     "fuego": "medio",
+     "min": 3
+    },
+    {
+     "icono": "sarten",
+     "texto": "Incorpora los 6 espárragos blancos y el huevo duro cortado en cuartos a la cazuela. Cocina todo junto a fuego suave durante 1 minuto adicional solo para calentar los espárragos.",
+     "usa": [
+      "6 espárragos blancos en conserva"
+     ],
+     "fuego": "suave",
+     "min": 1
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve un lomo de merluza por ración cubierto con salsa verde, almejas, espárragos y huevo. Acompaña con rodajas de la barra de pan. Para el niño de 4 años: retírale la piel al pescado, no le pongas almejas en su plato, trocea su merluza verificando que no tenga espinas y ponle un poco de salsa con huevo duro picado por encima.",
+     "usa": [
+      "1 barra de pan"
+     ]
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-24",
+     "dia": "Entre semana",
      "momento": "Cena"
     }
    ]
