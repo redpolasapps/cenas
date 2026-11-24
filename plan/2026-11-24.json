@@ -1,0 +1,98 @@
+{
+ "fecha": "2026-11-24",
+ "autor": "claude",
+ "hoy": {
+  "cole": {
+   "platos": ["Crema de calabacín con aceite de albahaca", "Fricandó de filete vegetal", "Patatas en dados", "Fruta de temporada"]
+  },
+  "consejo": "Hoy ha comido crema de calabacín y fricandó de filete vegetal con patatas: para cenar, pescado, huevo o legumbre, con mucha verdura y poco hidrato.",
+  "explicacion": "Al mediodía ha tomado proteína vegetal con patata, así que las cenas tiran de pescado, huevo y legumbre con verdura y poco hidrato. Esta semana el cole trae pescado solo el miércoles (salmón), legumbre y huevo el viernes y carne de cerdo el jueves, así que en casa conviene sumar pescado y huevo y no hace falta carne roja. Todas las cenas de hoy son nuevas: ninguna receta del recetario lleva aún 14 días sin salir.",
+  "cenas": [
+   {
+    "id": "dorada-airfryer-judias-zanahoria",
+    "titulo": "Lomos de dorada en air fryer",
+    "subtitulo": "Con judías verdes y zanahoria salteadas",
+    "cocina": "Mediterránea", "imagen": "pescado",
+    "peques": false, "healthy": true, "gourmet": false, "airfryer": true, "rapida": false,
+    "tiempo": 20, "dificultad": "Fácil", "raciones": 3,
+    "plato": { "verdura": 50, "proteina": 40, "hidratos": 10 },
+    "porque": "Pescado blanco y verdura, con muy poco hidrato después de la patata del mediodía.",
+    "truco": "Desmenúzale la dorada en trocitos comprobando que no quede ninguna espina y ponle la zanahoria en bastoncitos para comer con los dedos.",
+    "etiquetas": ["Pescado", "Air fryer", "Verdura"],
+    "guia": "Lomos de dorada limpios y sin espinas, con aceite, sal suave, ajo en polvo y perejil, en la air fryer a 180 °C unos 9-10 min con la piel abajo. Mientras, judías verdes redondas y zanahoria en bastoncitos salteadas en sartén con un poco de aceite y un chorrito de agua. Limón aparte.",
+    "busqueda_foto": "sea bream fillet vegetables"
+   },
+   {
+    "id": "mini-frittatas-verduras-molde-magdalenas",
+    "titulo": "Mini frittatas de verduras",
+    "subtitulo": "Al horno en molde de magdalenas, con ensalada",
+    "cocina": "Italiana", "imagen": "tortilla",
+    "peques": true, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false,
+    "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+    "plato": { "verdura": 45, "proteina": 40, "hidratos": 15 },
+    "porque": "Huevo con verdura escondida, ligero y con poco hidrato.",
+    "truco": "Que él reparta el queso rallado en cada hueco del molde antes de hornear: tamaño magdalena, se come con la mano.",
+    "etiquetas": ["Huevo", "Horno", "Verdura"],
+    "guia": "6 huevos batidos con un poco de leche, pimiento rojo, calabacín y espinacas picados muy finos (rehogados 5 min antes) y queso rallado suave; en molde de magdalenas engrasado, al horno a 180 °C arriba y abajo 15-18 min. Con ensalada de lechuga y tomate en dados.",
+    "busqueda_foto": "egg muffins vegetables"
+   },
+   {
+    "id": "hamburguesitas-lentejas-zanahoria-yogur",
+    "titulo": "Hamburguesitas de lentejas y zanahoria",
+    "subtitulo": "Con salsa suave de yogur y pepino",
+    "cocina": "Casera", "imagen": "hamburguesa",
+    "peques": true, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false,
+    "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+    "plato": { "verdura": 40, "proteina": 30, "hidratos": 30 },
+    "porque": "Suma legumbre a la semana en un formato que le gusta, con la verdura escondida.",
+    "truco": "Hazlas pequeñitas como monedas grandes y que él las moje en la salsa de yogur.",
+    "etiquetas": ["Legumbre", "Sartén"],
+    "guia": "Lentejas cocidas de bote bien escurridas y aplastadas con zanahoria rallada fina, cebolla rehogada, 1 huevo, pan rallado y un poco de queso; formar hamburguesitas pequeñas y dorarlas en sartén con poco aceite 3-4 min por lado. Salsa de yogur natural con pepino rallado sin piel y una pizca de sal. Acompañar con ensalada.",
+    "busqueda_foto": "lentil patties yogurt sauce"
+   },
+   {
+    "id": "okonomiyaki-col-gambas-suave",
+    "titulo": "Okonomiyaki de col y gambas",
+    "subtitulo": "La tortita japonesa, en versión suave",
+    "cocina": "Japonesa", "imagen": "tortilla",
+    "peques": false, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false,
+    "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+    "plato": { "verdura": 45, "proteina": 30, "hidratos": 25 },
+    "porque": "Huevo, marisco y mucha col en una cena diferente y fácil.",
+    "truco": "Córtale su parte en triángulos de pizza y ponle solo un hilito de mayonesa: la salsa okonomiyaki aparte para los mayores.",
+    "etiquetas": ["Huevo", "Marisco", "Sartén"],
+    "guia": "Masa de 3 huevos, 100 g de harina y agua o caldo; mezclar con col blanca picada muy fina, zanahoria rallada, cebolleta y gambas peladas troceadas. Hacer 2-3 tortitas gruesas en sartén antiadherente a fuego medio, 5 min por lado con tapa. Por encima salsa okonomiyaki comprada (o kétchup con salsa de soja y miel) y mayonesa en hilo. Sin picante.",
+    "busqueda_foto": "okonomiyaki"
+   },
+   {
+    "id": "potaje-garbanzos-bacalao-espinacas",
+    "titulo": "Potaje de garbanzos con bacalao y espinacas",
+    "subtitulo": "Cuchara suave de toda la vida, en 30 minutos",
+    "cocina": "Española", "imagen": "garbanzos",
+    "peques": false, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false,
+    "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+    "plato": { "verdura": 40, "proteina": 35, "hidratos": 25 },
+    "porque": "Legumbre y pescado a la vez, para adelantar las dos cosas que faltan esta semana.",
+    "truco": "Aplasta un poco sus garbanzos con el tenedor en el caldo y revisa bien que el bacalao no tenga espinas.",
+    "etiquetas": ["Legumbre", "Pescado", "Olla"],
+    "guia": "Sofrito suave de cebolla, ajo y tomate rallado con pimentón dulce (nada de picante); añadir garbanzos cocidos de bote y caldo de verduras, cocer 10 min, añadir espinacas frescas y migas de bacalao desalado sin espinas los últimos 5 min. Opcional un huevo duro picado por encima. Poca sal.",
+    "busqueda_foto": "chickpea cod stew spinach"
+   },
+   {
+    "id": "merluza-salsa-verde-almejas",
+    "titulo": "Merluza en salsa verde con almejas",
+    "subtitulo": "El clásico vasco, con espárragos y huevo",
+    "cocina": "Española", "imagen": "pescado",
+    "peques": false, "healthy": false, "gourmet": true, "airfryer": false, "rapida": false,
+    "tiempo": 40, "dificultad": "Media", "raciones": 3,
+    "plato": { "verdura": 35, "proteina": 45, "hidratos": 20 },
+    "porque": "Un pescado de capricho para sumar a la semana, con una salsa suave que gusta a todos.",
+    "truco": "Sírvele la merluza sin piel, sin espinas y sin almejas, con un poco de salsa y el huevo picado por encima.",
+    "etiquetas": ["Pescado", "Marisco", "Cazuela"],
+    "guia": "Lomos de merluza sin espinas en cazuela baja: ajo laminado pochado en aceite, una cucharada de harina, vino blanco y caldo de pescado, mucho perejil picado; cocer la merluza 6-8 min moviendo la cazuela para ligar la salsa; almejas (purgadas en agua con sal) hasta que se abran; terminar con espárragos blancos o trigueros y huevo duro. Pan aparte para mojar.",
+    "busqueda_foto": "hake green sauce clams"
+   }
+  ]
+ },
+ "finde": null
+}
