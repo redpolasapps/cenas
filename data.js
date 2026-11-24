@@ -41,8 +41,8 @@ window.MENU_DATA = {
      "Air fryer",
      "Verdura"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/11653557/pexels-photo-11653557.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "3 lomos de dorada limpios y sin espinas (450 g)",
