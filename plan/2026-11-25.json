@@ -1,0 +1,71 @@
+{
+  "fecha": "2026-11-25",
+  "hoy": {
+    "cole": { "platos": ["Macarrones integrales con crema de albahaca", "Salmón al horno con verduras", "Yogur"] },
+    "consejo": "Al mediodía ha comido pasta y salmón: esta noche toca huevo, carne blanca o legumbre, poco hidrato y mucha verdura.",
+    "explicacion": "Hoy en el cole ha habido macarrones y salmón, así que el pescado y la pasta ya están cubiertos. En lo que va de semana el cole lleva 1 de pescado, 1 de legumbre (guisantes) y aún ningún huevo, así que las cenas tiran de huevo, legumbre y carne blanca, con poco hidrato y mucha verdura. Para la noche cansada de miércoles hay una tortilla francesa con espinacas lista en 10 minutos.",
+    "cenas": [
+      {
+        "id": "calabacines-rellenos-pavo-gratinados", "titulo": "Calabacines rellenos de pavo", "subtitulo": "Gratinados con tomate y queso", "cocina": "Mediterránea", "imagen": "generico",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 55, "proteina": 35, "hidratos": 10 },
+        "porque": "Carne blanca y mucha verdura, sin hidrato, para compensar la pasta del mediodía.",
+        "truco": "Ponle a él medio calabacín como una 'barquita' y que reparta el queso por encima antes de gratinar.",
+        "etiquetas": ["Pavo", "Horno"],
+        "guia": "3 calabacines partidos a lo largo y vaciados; la pulpa picada se sofríe con cebolla y 300 g de carne picada de pavo, con tomate triturado; se rellenan, queso rallado por encima y horno a 200 ºC unos 15-18 min hasta gratinar. Sin picante.",
+        "busqueda_foto": "stuffed zucchini boats"
+      },
+      {
+        "id": "tortilla-francesa-espinacas-tomate-rapida", "titulo": "Tortilla francesa de espinacas", "subtitulo": "Con tomate rallado y pan integral", "cocina": "Española", "imagen": "tortilla",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": true, "tiempo": 10, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 45, "proteina": 40, "hidratos": 15 },
+        "porque": "Huevo, que aún no ha salido esta semana, y verdura en 10 minutos para una noche de cansancio.",
+        "truco": "Enróllale su tortilla como un 'canuto' y que la moje en el tomate.",
+        "etiquetas": ["Huevo", "Sartén", "Súper rápida"],
+        "guia": "Súper rápida, como mucho 5 pasos: espinacas frescas baby de bolsa salteadas 1 min en la sartén, se añaden 6 huevos batidos con una pizca de sal y se hacen tortillas francesas jugosas; se sirven con tomate rallado y una rebanada fina de pan integral tostado.",
+        "busqueda_foto": "spinach omelette"
+      },
+      {
+        "id": "bocaditos-brocoli-queso-airfryer", "titulo": "Bocaditos de brócoli y queso", "subtitulo": "En air fryer, con salsa de yogur", "cocina": "Casera", "imagen": "generico",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": true, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 30, "hidratos": 20 },
+        "porque": "Verdura escondida en un formato de picoteo que gusta a los niños, con huevo y queso como proteína.",
+        "truco": "Dales forma de bolitas o de 'nuggets' y que él los moje en la salsa de yogur.",
+        "etiquetas": ["Verdura", "Huevo", "Air fryer"],
+        "guia": "1 brócoli cocido al microondas o al vapor y picado muy fino, mezclado con 2 huevos, 100 g de queso rallado y 4 cucharadas de pan rallado; se forman bocaditos aplanados, se pincelan con aceite y van a la air fryer a 190 ºC 10-12 min, dándoles la vuelta a mitad. Salsa de yogur natural con un poco de limón. Acompañar de zanahoria en bastones.",
+        "busqueda_foto": "broccoli cheese bites"
+      },
+      {
+        "id": "albondigas-garbanzos-tomate-horno", "titulo": "Albóndigas de garbanzos", "subtitulo": "Al horno, en salsa de tomate suave", "cocina": "Mediterránea", "imagen": "garbanzos",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 40, "proteina": 30, "hidratos": 30 },
+        "porque": "Suma legumbre a la semana en un formato de albóndiga que el peque reconoce.",
+        "truco": "Llámalas 'albóndigas mágicas' y que él ayude a hacer las bolitas con las manos.",
+        "etiquetas": ["Legumbre", "Horno"],
+        "guia": "1 bote de garbanzos cocidos (400 g) escurridos y triturados con zanahoria rallada, 1 huevo, un poco de pan rallado, perejil y comino suave; bolitas al horno a 200 ºC 15 min y luego en salsa de tomate triturado con cebolla pochada (sin picante) 5 min. Acompañar con judías verdes.",
+        "busqueda_foto": "chickpea balls tomato sauce"
+      },
+      {
+        "id": "sandwich-club-pollo-plancha", "titulo": "Sándwich club de pollo", "subtitulo": "Con lechuga, tomate y huevo", "cocina": "Americana", "imagen": "generico",
+        "peques": false, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 35, "proteina": 35, "hidratos": 30 },
+        "porque": "Un capricho americano sencillo con carne blanca, para variar del pescado del mediodía.",
+        "truco": "Córtale el suyo en triángulos pequeños pinchados con un palillo sin punta, y sin la lechuga si no la quiere (dásela aparte).",
+        "etiquetas": ["Pollo", "Sartén"],
+        "guia": "Pechuga de pollo en filetes finos a la plancha con un poco de sal; pan de molde integral tostado en tres pisos con lechuga, tomate en rodajas finas, huevo cocido en rodajas, una loncha de queso y un poco de mayonesa ligera. Sin bacon. Acompañar con bastones de pepino y zanahoria.",
+        "busqueda_foto": "chicken club sandwich"
+      },
+      {
+        "id": "milhojas-verduras-asadas-queso-cabra", "titulo": "Milhojas de verduras asadas", "subtitulo": "Con queso de cabra, jamón crujiente y tomate asado", "cocina": "Mediterránea", "imagen": "generico",
+        "peques": false, "healthy": false, "gourmet": true, "airfryer": false, "rapida": false, "tiempo": 50, "dificultad": "Media", "raciones": 3,
+        "plato": { "verdura": 60, "proteina": 30, "hidratos": 10 },
+        "porque": "Un plato bonito y ligero de verdura con queso, ideal para compensar un mediodía con mucho hidrato.",
+        "truco": "Monta la suya solo con berenjena, calabacín y queso fresco suave, y ponle el jamón crujiente por encima como si fueran 'virutas'.",
+        "etiquetas": ["Verdura", "Queso", "Horno"],
+        "guia": "Berenjena, calabacín y tomate en rodajas de 1 cm asados al horno a 200 ºC con aceite y sal unos 20-25 min; se montan en torres alternando con rodajas de rulo de queso de cabra suave, se gratinan 3-4 min; por encima jamón ibérico tostado al horno hasta crujiente y desmigado, y un hilo de salsa de tomate asado triturado con albahaca. Sin picante.",
+        "busqueda_foto": "grilled vegetable stack goat cheese"
+      }
+    ]
+  },
+  "finde": null
+}
