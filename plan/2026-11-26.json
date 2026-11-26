@@ -1,0 +1,98 @@
+{
+  "fecha": "2026-11-26",
+  "autor": "claude",
+  "hoy": {
+    "cole": {
+      "platos": ["Arroz tres delicias", "Estofado de cerdo", "Tomate aliñado", "Fruta de temporada"]
+    },
+    "consejo": "Al mediodía ha comido arroz y estofado de cerdo: mucho hidrato y carne, así que esta noche toca pescado o huevo, poco hidrato y mucha verdura.",
+    "explicacion": "Hoy en el cole ha habido arroz tres delicias y estofado de cerdo, así que la carne roja de la semana ya está cubierta. Entre el cole de lunes a viernes la semana lleva 1 de pescado (el salmón del miércoles), 2 de legumbre (guisantes y las alubias de mañana) y 1 de huevo (la tortilla de mañana), por eso las cenas tiran de pescado, huevo y legumbre, con muy poco hidrato y mucha verdura.",
+    "cenas": [
+      {
+        "id": "sepia-plancha-verduritas-ajo-perejil",
+        "titulo": "Sepia a la plancha con verduritas",
+        "subtitulo": "Con ajo, perejil y calabacín salteado",
+        "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false,
+        "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 55, "proteina": 40, "hidratos": 5 },
+        "porque": "Pescado ligero y sin espinas para compensar la carne y el arroz del mediodía.",
+        "truco": "Córtale la sepia en tiras finitas y sírvela con un chorrito de limón para que la moje como si fueran 'patatas'.",
+        "etiquetas": ["Pescado", "Sartén"],
+        "guia": "Sepia limpia (de pescadería o congelada) cortada en tiras finas, a la plancha a fuego fuerte 3-4 min con un majado suave de ajo y perejil (sin picante); aparte, salteado de calabacín, pimiento rojo y cebolla en dados pequeños. Sin pan ni patata.",
+        "busqueda_foto": "grilled cuttlefish vegetables"
+      },
+      {
+        "id": "nidos-huevo-verduras-horno",
+        "titulo": "Nidos de huevo con verduras al horno",
+        "subtitulo": "Calabacín, pimiento y un toque de queso",
+        "cocina": "Casera", "imagen": "tortilla",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false,
+        "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 55, "proteina": 35, "hidratos": 10 },
+        "porque": "Huevo y mucha verdura, una cena ligera para un día de mucho hidrato.",
+        "truco": "Que él haga el 'nido' con la cuchara y ponga el queso rallado por encima antes de meterlo al horno.",
+        "etiquetas": ["Huevo", "Horno"],
+        "guia": "Calabacín, pimiento rojo y cebolla en dados pequeños salteados 8 min y repartidos en una fuente o cazuelitas; se hace un hueco por ración, se casca un huevo en cada uno, un poco de queso rallado y al horno a 190 ºC arriba y abajo 10-12 min hasta que la clara cuaje y la yema quede algo jugosa (la del niño, más hecha).",
+        "busqueda_foto": "baked eggs vegetables skillet"
+      },
+      {
+        "id": "crema-guisantes-puerro-quesito",
+        "titulo": "Crema de guisantes y puerro con quesito",
+        "subtitulo": "Con daditos de jamón cocido",
+        "cocina": "Casera", "imagen": "crema",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false,
+        "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 55, "proteina": 25, "hidratos": 20 },
+        "porque": "Suma una ración de legumbre a la semana en un formato suave que le encanta a los peques.",
+        "truco": "Ponle los daditos de jamón por encima para que los 'pesque' con la cuchara, y la crema bien fina y tibia.",
+        "etiquetas": ["Legumbre", "Olla"],
+        "guia": "Guisantes congelados, puerro y una zanahoria pochados en la olla, cubiertos con caldo de verduras 12 min, triturados con 2 quesitos hasta que quede muy fina. Sin menta ni especias. Se sirve con daditos de jamón cocido salteados.",
+        "busqueda_foto": "green pea soup"
+      },
+      {
+        "id": "croquetas-atun-patata-airfryer",
+        "titulo": "Croquetas de atún y patata en air fryer",
+        "subtitulo": "Crujientes por fuera, con ensalada de lechuga y zanahoria",
+        "cocina": "Casera", "imagen": "generico",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": true, "rapida": false,
+        "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 30, "proteina": 35, "hidratos": 35 },
+        "porque": "Pescado en un formato de croqueta que los niños aceptan sin pensarlo.",
+        "truco": "Hazle las suyas en forma de bolitas pequeñas y que las moje en un poco de tomate natural triturado.",
+        "etiquetas": ["Pescado", "Air fryer"],
+        "guia": "Patata cocida (microondas) chafada con atún al natural escurrido, un huevo, zanahoria rallada fina y perejil; se forman croquetas, se pasan por pan rallado, se pulverizan con aceite y van a la air fryer a 190 ºC 10-12 min, dándoles la vuelta a mitad. Con ensalada de lechuga y zanahoria rallada.",
+        "busqueda_foto": "tuna croquettes"
+      },
+      {
+        "id": "pollo-teriyaki-brocoli-sesamo",
+        "titulo": "Pollo teriyaki con brócoli",
+        "subtitulo": "Salteado suave con sésamo",
+        "cocina": "Japonesa", "imagen": "pollo-horno",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false,
+        "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 40, "hidratos": 10 },
+        "porque": "Carne blanca con mucha verdura y sin arroz, porque el arroz ya lo ha comido al mediodía.",
+        "truco": "Dale los trozos de pollo brillantes 'de caramelo' y el brócoli en arbolitos pequeños para mojar en la salsa.",
+        "etiquetas": ["Pollo", "Sartén"],
+        "guia": "Contramuslo o pechuga de pollo sin piel en dados, dorado en sartén y glaseado con una salsa teriyaki casera suave (salsa de soja baja en sal, un poco de miel, agua y maicena), con brócoli en ramitos pequeños escaldado y zanahoria en rodajitas finas salteados al final. Sésamo por encima solo para los adultos o muy poco. Sin arroz.",
+        "busqueda_foto": "teriyaki chicken broccoli"
+      },
+      {
+        "id": "corvina-horno-salsa-cava-langostinos",
+        "titulo": "Corvina al horno con salsa de cava y langostinos",
+        "subtitulo": "Sobre cama de puerro y espárragos verdes",
+        "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "healthy": false, "gourmet": true, "airfryer": false, "rapida": false,
+        "tiempo": 45, "dificultad": "Media", "raciones": 3,
+        "plato": { "verdura": 45, "proteina": 45, "hidratos": 10 },
+        "porque": "Una cena de pescado especial para cerrar un día con carne y arroz al mediodía.",
+        "truco": "Sírvele su trozo de corvina sin salsa (o con la salsa aparte, ya sin alcohol) y un langostino pelado encima como 'premio'.",
+        "etiquetas": ["Pescado", "Horno"],
+        "guia": "Lomos de corvina sin espinas al horno a 200 ºC 12-14 min sobre una cama de puerro pochado y espárragos verdes; salsa en sartén con chalota, un vaso de cava reducido (que hierva bien para que se evapore el alcohol), un poco de nata ligera o caldo de pescado, y langostinos pelados salteados. Emplatado bonito con la salsa por encima.",
+        "busqueda_foto": "baked fish fillet prawns sauce"
+      }
+    ]
+  },
+  "finde": null
+}
