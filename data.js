@@ -346,8 +346,8 @@ window.MENU_DATA = {
      "Pescado",
      "Air fryer"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/7986612/pexels-photo-7986612.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "400 g de patatas (2 patatas medianas)",
