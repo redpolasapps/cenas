@@ -1,0 +1,59 @@
+{
+  "fecha": "2026-11-27",
+  "hoy": {
+    "cole": { "platos": ["Alubias blancas guisadas con zanahoria", "Tortilla de patatas", "Lechuga y col lombarda", "Fruta de temporada"] },
+    "consejo": "Hoy ha comido legumbre y huevo con patata: para cenar va mejor pescado o carne blanca con mucha verdura y poco hidrato.",
+    "explicacion": "Al mediodía han caído alubias y tortilla de patatas, así que hoy legumbre y huevo ya están. En el cole esta semana lleva 1 de pescado, 2 de legumbre, 1 de huevo y 1 de carne roja (el cerdo del jueves), por eso las cenas tiran de pescado y marisco, pavo y pollo, con verdura en todas y poco hidrato. Es viernes, así que hay una sopa súper rápida para la noche de cansancio.",
+    "cenas": [
+      {
+        "id": "lubina-plancha-calabacin-zanahoria-limon", "titulo": "Lubina a la plancha con calabacín y zanahoria", "subtitulo": "Verduritas salteadas y un toque de limón", "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 20, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 55, "proteina": 35, "hidratos": 10 },
+        "porque": "Pescado blanco ligero para completar un día de legumbre y patata.", "truco": "Desmígale la lubina, comprobando que no quede ninguna espina, y mézclala con las verduritas en tiras finas.", "etiquetas": ["Pescado", "Sartén"],
+        "guia": "Lomos de lubina sin espinas a la plancha, primero por la piel; calabacín y zanahoria en tiras finas (tipo tallarín) salteados en la misma sartén con un poco de ajo; unas gotas de limón al servir. Sin patata ni arroz.",
+        "busqueda_foto": "grilled sea bass vegetables"
+      },
+      {
+        "id": "brochetas-pavo-pimiento-calabacin-airfryer", "titulo": "Brochetas de pavo y verduras en air fryer", "subtitulo": "Con yogur de hierbas para mojar", "cocina": "Casera", "imagen": "pollo-horno",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": true, "rapida": false, "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 40, "hidratos": 10 },
+        "porque": "Carne blanca magra con verdura y nada de hidrato, justo lo que pide hoy.", "truco": "Que él ensarte las piezas en palitos cortos (sin punta) y moje en el yogur.", "etiquetas": ["Pavo", "Air fryer"],
+        "guia": "Dados de pechuga de pavo marinados con aceite, pimentón dulce y orégano, ensartados con pimiento rojo, calabacín y cebolla; air fryer a 190 °C unos 12 minutos dándoles la vuelta a mitad. Salsa de yogur natural con perejil y unas gotas de limón.",
+        "busqueda_foto": "turkey vegetable skewers"
+      },
+      {
+        "id": "sopa-rapida-pollo-fideos-verduritas", "titulo": "Sopa rápida de pollo con fideos y verduritas", "subtitulo": "Lista en 10 minutos", "cocina": "Casera", "imagen": "sopa",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": false, "rapida": true, "tiempo": 12, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 40, "proteina": 30, "hidratos": 30 },
+        "porque": "Para la noche del viernes: caliente, suave y con proteína sin cocinar casi nada.", "truco": "Sírvele la suya con fideos de letras o estrellitas y que busque las 'verduras escondidas'.", "etiquetas": ["Pollo", "Olla", "Rápida"],
+        "guia": "Caldo de pollo envasado bajo en sal a hervir con un puñado de verduras de bolsa en trocitos (zanahoria, judía, guisante), un puñado pequeño de fideos finos y pollo asado ya hecho desmigado sin piel. Como mucho 5 pasos.",
+        "busqueda_foto": "chicken noodle soup"
+      },
+      {
+        "id": "pizzetas-berenjena-york-mozzarella", "titulo": "Pizzetas de berenjena con york y mozzarella", "subtitulo": "La base es la propia berenjena", "cocina": "Italiana", "imagen": "pizza",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 30, "hidratos": 20 },
+        "porque": "Formato pizza que le encanta, pero sin masa para no sumar más hidrato al de mediodía.", "truco": "Que él ponga el tomate, el jamón en trocitos y el queso en su pizzeta.", "etiquetas": ["Verdura", "Horno"],
+        "guia": "Rodajas gruesas de berenjena (1,5 cm) al horno a 200 °C con un poco de aceite hasta que estén tiernas; luego tomate triturado suave, jamón york en trocitos, mozzarella rallada y orégano, y gratinar unos minutos.",
+        "busqueda_foto": "eggplant pizza bites"
+      },
+      {
+        "id": "gambas-salteadas-judias-verdes-ajo-suave", "titulo": "Gambas salteadas con judías verdes", "subtitulo": "Al ajo suave con perejil", "cocina": "Española", "imagen": "generico",
+        "peques": false, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 20, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 55, "proteina": 35, "hidratos": 10 },
+        "porque": "Marisco fácil y mucha verdura verde para cerrar la semana con ligereza.", "truco": "A él dale las gambas troceadas mezcladas con las judías cortadas pequeñitas y un poco de pan para mojar.", "etiquetas": ["Marisco", "Sartén"],
+        "guia": "Judías verdes planas cocidas (o al vapor) cortadas en trozos, salteadas con ajo laminado a fuego suave (sin que se queme ni pique) y gambas peladas; perejil picado al final. Sin guindilla.",
+        "busqueda_foto": "shrimp green beans"
+      },
+      {
+        "id": "rape-horno-verduritas-salsa-azafran", "titulo": "Rape al horno con verduritas y salsa de azafrán", "subtitulo": "Un pescado de fiesta para el viernes", "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "healthy": false, "gourmet": true, "airfryer": false, "rapida": false, "tiempo": 45, "dificultad": "Media", "raciones": 3,
+        "plato": { "verdura": 45, "proteina": 40, "hidratos": 15 },
+        "porque": "Para el viernes con ganas de cocinar: pescado firme sin espinas y una salsa suave y elegante.", "truco": "Sírvele el rape en dados con la salsa aparte, para que moje si quiere.", "etiquetas": ["Pescado", "Horno"],
+        "guia": "Medallones de rape limpio (sin espina central) sobre una cama de puerro, zanahoria y pimiento en juliana pochados; al horno a 190 °C unos 15 minutos. Salsa de azafrán: sofrito de chalota, un chorrito de vino blanco y caldo de pescado con unas hebras de azafrán, reducida y ligada con una cucharadita de maicena. Emplatado con la salsa en el fondo.",
+        "busqueda_foto": "monkfish saffron sauce"
+      }
+    ]
+  },
+  "finde": null
+}
