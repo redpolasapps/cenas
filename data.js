@@ -1,308 +1,120 @@
 // Lo genera scripts/expandir.mjs a partir del plan de Claude. Ver AGENTE.md
 window.MENU_DATA = {
- "actualizado": "2026-11-27T05:53:28+01:00",
- "plan": "2026-11-27.json",
+ "actualizado": "2026-11-28T05:53:48+01:00",
+ "plan": "2026-11-28.json",
  "hoy": {
-  "fecha": "2026-11-27",
-  "cole": {
-   "platos": [
-    "Alubias blancas guisadas con zanahoria",
-    "Tortilla de patatas",
-    "Lechuga y col lombarda",
-    "Fruta de temporada"
-   ]
-  },
-  "consejo": "Hoy ha comido legumbre y huevo con patata: para cenar va mejor pescado o carne blanca con mucha verdura y poco hidrato.",
-  "explicacion": "Al mediodía han caído alubias y tortilla de patatas, así que hoy legumbre y huevo ya están. En el cole esta semana lleva 1 de pescado, 2 de legumbre, 1 de huevo y 1 de carne roja (el cerdo del jueves), por eso las cenas tiran de pescado y marisco, pavo y pollo, con verdura en todas y poco hidrato. Es viernes, así que hay una sopa súper rápida para la noche de cansancio.",
+  "fecha": "2026-11-28",
+  "cole": {},
+  "consejo": "Hoy es sábado y no hay cole: cena libre, con alguna opción ligera de pescado, pollo o huevo y mucha verdura para compensar un día de fin de semana.",
+  "explicacion": "Es sábado, así que no hay menú del cole ni cuentas de la semana. Repito dos de las cenas del plan del fin de semana (la pizza casera y el solomillo con salsa de queso) y añado cuatro nuevas: tres más ligeras de salmón, pollo y huevo con mucha verdura, y un arroz tres delicias casero que suele gustar a los peques.",
   "cenas": [
    {
-    "id": "lubina-plancha-calabacin-zanahoria-limon",
-    "titulo": "Lubina a la plancha con calabacín y zanahoria",
-    "subtitulo": "Verduritas salteadas y un toque de limón",
-    "cocina": "Mediterránea",
-    "imagen": "pescado",
-    "peques": false,
-    "healthy": true,
+    "id": "pizza-casera-york-champinones",
+    "titulo": "Pizza casera de jamón york y champiñones",
+    "subtitulo": "Masa fina con tomate y mozzarella",
+    "cocina": "Italiana",
+    "imagen": "pizza",
+    "peques": true,
+    "healthy": false,
     "gourmet": false,
     "airfryer": false,
     "rapida": false,
-    "tiempo": 20,
+    "tiempo": 35,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
-     "verdura": 55,
+     "verdura": 25,
      "proteina": 35,
-     "hidratos": 10
+     "hidratos": 40
     },
-    "porque": "Pescado blanco ligero para completar un día de legumbre y patata.",
-    "truco": "Desmígale la lubina, comprobando que no quede ninguna espina, y mézclala con las verduritas en tiras finas.",
+    "porque": "Es una de las cenas previstas para este sábado.",
+    "truco": "Que él decore su porción con el jamón y los champiñones.",
     "etiquetas": [
-     "Pescado",
-     "Sartén"
+     "Pizza",
+     "Horno",
+     "Peques"
     ],
-    "foto": "https://images.unsplash.com/photo-1598577103844-cdba3b2bf259?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8Nnx8Z3JpbGxlZCUyMHNlYSUyMGJhc3MlMjB2ZWdldGFibGVzfGVufDF8MHx8fDE3OTU3NTUxNjB8MA&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
-    "fotoCredito": "Hanxiao Xu / Unsplash",
+    "foto": "https://images.unsplash.com/photo-1724116382291-02878f4a13e5?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8Nnx8UGl6emElMjBjYXNlcmElMjBkZSUyMGphbSVDMyVCM24lMjB5b3JrJTIweSUyMGNoYW1waSVDMyVCMW9uZXN8ZW58MXwwfHx8MTc5NTg0MTU1MHww&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
+    "fotoCredito": "Gina's Auckland / Unsplash",
     "fotosUrl": "",
     "ingredientes": [
-     "3 lomos de lubina sin espinas (450 g)",
-     "1 calabacín mediano (250 g)",
-     "2 zanahorias medianas (150 g)",
-     "1 diente de ajo",
-     "2 cucharadas de aceite de oliva virgen extra para las verduras (20 ml)",
-     "1 cucharada de aceite de oliva virgen extra para la lubina (10 ml)",
-     "1 pizca de sal (1 g)",
-     "Medio limón"
+     "1 masa fresca de pizza (redonda o rectangular, aprox. 260 g)",
+     "5 cucharadas de tomate triturado natural (aprox. 80 g)",
+     "1 cucharadita de orégano seco",
+     "1 cucharada de aceite de oliva virgen extra",
+     "1 pizca de sal",
+     "150 g de queso mozzarella rallado",
+     "100 g de jamón york de calidad en lonchas o taquitos",
+     "80 g de champiñones frescos limpios"
     ],
     "pasos": [
      {
-      "icono": "lavar",
-      "texto": "Lava muy bien el calabacín y las 2 zanahorias bajo el grifo de agua fría para quitar cualquier resto de tierra.",
-      "usa": [
-       "1 calabacín mediano (250 g)",
-       "2 zanahorias medianas (150 g)"
-      ]
+      "icono": "horno",
+      "texto": "Enciende el horno a 230 °C con calor arriba y abajo. Coloca la rejilla en la parte más baja del horno para que la base quede bien crujiente.",
+      "min": 10,
+      "consejo": "Precalentar bien el horno es el secreto para que la masa no quede blanda ni gomosa."
      },
      {
       "icono": "cortar",
-      "texto": "Pela las zanahorias y el diente de ajo. Con el mismo pelador de patatas o un cuchillo, corta el calabacín y las zanahorias en tiras finas y alargadas tipo tallarines. Pica el ajo muy pequeñito.",
+      "texto": "Corta los champiñones limpios en láminas muy finas con un cuchillo. Corta el jamón york en tiras o cuadraditos pequeños de tamaño adecuado para que el niño los mastique bien.",
       "usa": [
-       "1 diente de ajo"
-      ],
-      "consejo": "Usar el pelador para sacar tiras de verdura es facilísimo y a los peques les encanta la textura porque parece pasta."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Pon una sartén grande a fuego medio con 2 cucharadas de aceite de oliva. Añade el ajo picado, las tiras de calabacín y de zanahoria, y una pizca de sal muy pequeña. Saltea (cocinar removiendo de vez en cuando) durante unos 5 minutos hasta que estén tiernas.",
-      "usa": [
-       "2 cucharadas de aceite de oliva virgen extra para las verduras (20 ml)",
-       "1 pizca de sal (1 g)"
-      ],
-      "fuego": "medio",
-      "min": 5,
-      "consejo": "Sabrás que están listas cuando la zanahoria esté flexible y se doble sin romperse."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Retira las verduras de la sartén y colócalas en un plato aparte para mantenerlas calientes mientras haces el pescado."
-     },
-     {
-      "icono": "sarten",
-      "texto": "En la misma sartén, añade 1 cucharada de aceite a fuego fuerte. Coloca los lomos de lubina con la piel hacia abajo y déjalos sin mover durante 3 minutos.",
-      "usa": [
-       "1 cucharada de aceite de oliva virgen extra para la lubina (10 ml)",
-       "3 lomos de lubina sin espinas (450 g)"
-      ],
-      "fuego": "fuerte",
-      "min": 3,
-      "consejo": "Poner primero la piel hace que quede crujiente y evita que el pescado se deshaga."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Baja el fuego a medio. Con una espátula de cocina, dale la vuelta a los lomos con cuidado y cocina por el lado de la carne durante otros 2 minutos.",
-      "fuego": "medio",
-      "min": 2,
-      "consejo": "La lubina está en su punto cuando la carne pasa de transparente a un blanco opaco y se separa con facilidad."
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Sirve en los platos una cama con las verduras y un lomo de lubina encima, añadiendo unas gotas de zumo de limón exprimido. Para el niño de 4 años, desmiga su ración de lubina con los dedos para asegurar que no quede ninguna espina y mézclala bien con sus tallarines de verdura.",
-      "usa": [
-       "Medio limón"
-      ]
-     }
-    ],
-    "fotoAutorUrl": "https://unsplash.com/@hanxiaoyaaaaa?utm_source=cenas_en_casa&utm_medium=referral",
-    "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
-   },
-   {
-    "id": "brochetas-pavo-pimiento-calabacin-airfryer",
-    "titulo": "Brochetas de pavo y verduras en air fryer",
-    "subtitulo": "Con yogur de hierbas para mojar",
-    "cocina": "Casera",
-    "imagen": "pollo-horno",
-    "peques": false,
-    "healthy": true,
-    "gourmet": false,
-    "airfryer": true,
-    "rapida": false,
-    "tiempo": 25,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 50,
-     "proteina": 40,
-     "hidratos": 10
-    },
-    "porque": "Carne blanca magra con verdura y nada de hidrato, justo lo que pide hoy.",
-    "truco": "Que él ensarte las piezas en palitos cortos (sin punta) y moje en el yogur.",
-    "etiquetas": [
-     "Pavo",
-     "Air fryer"
-    ],
-    "foto": "https://images.unsplash.com/photo-1598514983318-2f64f8f4796c?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8Mnx8dHVya2V5JTIwdmVnZXRhYmxlJTIwc2tld2Vyc3xlbnwxfDB8fHwxNzk1NzU1MTYxfDA&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
-    "fotoCredito": "Sam Moghadam / Unsplash",
-    "fotosUrl": "",
-    "ingredientes": [
-     "450 g de pechuga de pavo limpia en dados",
-     "1 pimiento rojo mediano (150 g)",
-     "1 calabacín pequeño (150 g)",
-     "1 cebolla dulce pequeña (100 g)",
-     "2 cucharadas de aceite de oliva virgen extra (20 ml)",
-     "1 cucharadita de pimentón dulce (3 g)",
-     "1 cucharadita de orégano seco (1 g)",
-     "1 pizca de sal (1 g)",
-     "1 yogur natural sin azúcar (125 g)",
-     "1 cucharadita de perejil fresco picado (2 g)",
-     "1 cucharadita de zumo de limón (5 ml)"
-    ],
-    "pasos": [
-     {
-      "icono": "lavar",
-      "texto": "Lava bajo el grifo el pimiento rojo y el calabacín, y sécalos con papel de cocina.",
-      "usa": [
-       "1 pimiento rojo mediano (150 g)",
-       "1 calabacín pequeño (150 g)"
-      ]
-     },
-     {
-      "icono": "cortar",
-      "texto": "Corta el pimiento (quitándole las pepitas blancas del interior), el calabacín y la cebolla en trozos cuadrados de unos 2 a 3 centímetros, de tamaño parecido a los dados de pavo.",
-      "usa": [
-       "1 cebolla dulce pequeña (100 g)"
-      ],
-      "consejo": "Cortar todo a un tamaño similar ayuda a que se cocine todo por igual en la freidora de aire."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "En un bol hondo, pon los dados de pavo junto con 2 cucharadas de aceite de oliva, el pimentón dulce, el orégano seco y una pizca de sal. Remueve bien con una cuchara para que toda la carne quede impregnada y deja reposar 5 minutos.",
-      "usa": [
-       "450 g de pechuga de pavo limpia en dados",
-       "2 cucharadas de aceite de oliva virgen extra (20 ml)",
-       "1 cucharadita de pimentón dulce (3 g)",
-       "1 cucharadita de orégano seco (1 g)",
-       "1 pizca de sal (1 g)"
+       "80 g de champiñones frescos limpios",
+       "100 g de jamón york de calidad en lonchas o taquitos"
       ],
       "min": 5
      },
      {
       "icono": "mezclar",
-      "texto": "Ensarta en palitos de brocheta trozos alternos de pavo, pimiento, calabacín y cebolla hasta completar unas 6 brochetas. Para el niño, puedes usar palitos cortos y sin punta para mayor seguridad y dejar que te ayude a montarla."
+      "texto": "En un cuenco pequeño, mezcla el tomate triturado con una pizca suave de sal, la cucharadita de orégano y la cucharada de aceite de oliva.",
+      "usa": [
+       "5 cucharadas de tomate triturado natural (aprox. 80 g)",
+       "1 cucharadita de orégano seco",
+       "1 cucharada de aceite de oliva virgen extra",
+       "1 pizca de sal"
+      ],
+      "min": 2
      },
      {
-      "icono": "airfryer",
-      "texto": "Enciende y precalienta la freidora de aire a 190 °C durante 3 minutos vacía.",
+      "icono": "envolver",
+      "texto": "Desenrolla la masa de pizza sobre la bandeja del horno usando el propio papel de hornear que trae. Extiende la salsa de tomate por encima con el dorso de una cuchara, dejando un dedo libre alrededor en los bordes.",
+      "usa": [
+       "1 masa fresca de pizza (redonda o rectangular, aprox. 260 g)"
+      ],
       "min": 3
      },
      {
-      "icono": "airfryer",
-      "texto": "Coloca las brochetas en la cesta de la freidora de aire en una sola capa sin amontonarlas (si no caben, hazlas en dos tandas). Cocina a 190 °C durante 12 minutos en total, abriendo a los 6 minutos para darles la vuelta con unas pinzas.",
-      "min": 12,
-      "consejo": "El pavo debe verse blanquito por dentro y ligeramente dorado por fuera, nunca seco."
+      "icono": "mezclar",
+      "texto": "Reparte la mozzarella rallada por toda la superficie. Añade las tiras de jamón york y las láminas de champiñón bien repartidas (puedes dejar que el niño coloque su propia parte).",
+      "usa": [
+       "150 g de queso mozzarella rallado"
+      ],
+      "min": 4,
+      "consejo": "Involucrar al niño en poner los ingredientes sobre su trozo hace que luego coma con más ilusión."
      },
      {
-      "icono": "mezclar",
-      "texto": "Mientras se cocinan las brochetas, prepara la salsa mezclando en un cuenco pequeño el yogur natural, el perejil fresco picado y la cucharadita de zumo de limón.",
-      "usa": [
-       "1 yogur natural sin azúcar (125 g)",
-       "1 cucharadita de perejil fresco picado (2 g)",
-       "1 cucharadita de zumo de limón (5 ml)"
-      ]
+      "icono": "horno",
+      "texto": "Mete la bandeja en la parte baja del horno a 230 °C. Hornea durante 12 a 15 minutos, hasta que los bordes estén dorados y el queso esté burbujeante y fundido.",
+      "min": 14,
+      "consejo": "Mira la base levantando una esquina con una espátula; debe verse dorada y no blanquecina."
      },
      {
       "icono": "emplatar",
-      "texto": "Sirve dos brochetas por plato acompañadas del cuenco de salsa de yogur. Para el niño, saca los trozos del palillo a su plato para que pueda pincharlos con el tenedor o cogerlos con los dedos y mojarlos en la salsa."
-     }
-    ],
-    "fotoAutorUrl": "https://unsplash.com/@sammoghadam?utm_source=cenas_en_casa&utm_medium=referral",
-    "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
-   },
-   {
-    "id": "sopa-rapida-pollo-fideos-verduritas",
-    "titulo": "Sopa rápida de pollo con fideos y verduritas",
-    "subtitulo": "Lista en 10 minutos",
-    "cocina": "Casera",
-    "imagen": "sopa",
-    "peques": true,
-    "healthy": false,
-    "gourmet": false,
-    "airfryer": false,
-    "rapida": true,
-    "tiempo": 12,
-    "dificultad": "Fácil",
-    "raciones": 3,
-    "plato": {
-     "verdura": 40,
-     "proteina": 30,
-     "hidratos": 30
-    },
-    "porque": "Para la noche del viernes: caliente, suave y con proteína sin cocinar casi nada.",
-    "truco": "Sírvele la suya con fideos de letras o estrellitas y que busque las 'verduras escondidas'.",
-    "etiquetas": [
-     "Pollo",
-     "Olla",
-     "Rápida"
-    ],
-    "foto": "https://images.unsplash.com/photo-1512003867696-6d5ce6835040?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8M3x8Y2hpY2tlbiUyMG5vb2RsZSUyMHNvdXB8ZW58MXwwfHx8MTc5NTc1NTE2MXww&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
-    "fotoCredito": "Stacey Doyle / Unsplash",
-    "fotosUrl": "",
-    "ingredientes": [
-     "1000 ml de caldo de pollo envasado bajo en sal",
-     "150 g de mezcla de verduras en trocitos (zanahoria, judías verdes y guisantes)",
-     "90 g de fideos finos",
-     "150 g de pollo asado desmigado sin piel ni huesos"
-    ],
-    "pasos": [
-     {
-      "icono": "olla",
-      "texto": "Vertemos el caldo de pollo envasado bajo en sal en una olla mediana y la ponemos a fuego fuerte hasta que rompa a hervir (que salgan burbujas grandes en la superficie).",
-      "usa": [
-       "1000 ml de caldo de pollo envasado bajo en sal"
-      ],
-      "fuego": "fuerte",
-      "min": 4
-     },
-     {
-      "icono": "olla",
-      "texto": "Cuando el caldo esté hirviendo, añadimos la mezcla de verduras picadas en trocitos. Bajamos el fuego a intensidad media y cocinamos durante 3 minutos para que se ablanden.",
-      "usa": [
-       "150 g de mezcla de verduras en trocitos (zanahoria, judías verdes y guisantes)"
-      ],
-      "fuego": "medio",
+      "texto": "Saca la pizza con cuidado de no quemarte, córtala en porciones sobre una tabla y sirve templada. Corta la ración del peque en trocitos pequeños fáciles de agarrar.",
       "min": 3,
-      "consejo": "Asegúrate de que la verdura esté cortada en trocitos muy pequeños para que se cocine rápido y el niño la coma fácilmente."
-     },
-     {
-      "icono": "mezclar",
-      "texto": "Incorporamos los fideos finos y el pollo asado desmigado libre de pieles y huesos. Removemos todo despacio con una cuchara de madera para integrar los ingredientes.",
-      "usa": [
-       "90 g de fideos finos",
-       "150 g de pollo asado desmigado sin piel ni huesos"
-      ],
-      "fuego": "medio",
-      "min": 3
-     },
-     {
-      "icono": "olla",
-      "texto": "Apagamos el fuego por completo y dejamos reposar la olla tapada durante 2 minutos. Los fideos terminarán de ablandarse con el calor del propio caldo sobrante.",
-      "min": 2,
-      "consejo": "Prueba una cucharadita de caldo antes de servir para asegurarte de que la temperatura sea agradable y no queme."
-     },
-     {
-      "icono": "emplatar",
-      "texto": "Servimos la sopa en platos hondos. Para el plato del niño de 4 años, usa fideos de letras o estrellitas para invitarle a jugar a buscar las 'verduras escondidas' mientras se enfría un poco."
+      "consejo": "Espera un par de minutos antes de cortarla para que el queso no se desparrame."
      }
     ],
-    "fotoAutorUrl": "https://unsplash.com/@hippiefarmgirl?utm_source=cenas_en_casa&utm_medium=referral",
+    "fotoAutorUrl": "https://unsplash.com/@ginasauckland?utm_source=cenas_en_casa&utm_medium=referral",
     "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
    },
    {
-    "id": "pizzetas-berenjena-york-mozzarella",
-    "titulo": "Pizzetas de berenjena con york y mozzarella",
-    "subtitulo": "La base es la propia berenjena",
-    "cocina": "Italiana",
-    "imagen": "pizza",
-    "peques": true,
-    "healthy": false,
+    "id": "salmon-horno-esparragos-calabaza",
+    "titulo": "Salmón al horno con espárragos y calabaza",
+    "subtitulo": "Todo en la misma bandeja",
+    "cocina": "Mediterránea",
+    "imagen": "pescado",
+    "peques": false,
+    "healthy": true,
     "gourmet": false,
     "airfryer": false,
     "rapida": false,
@@ -311,290 +123,507 @@ window.MENU_DATA = {
     "raciones": 3,
     "plato": {
      "verdura": 50,
-     "proteina": 30,
-     "hidratos": 20
+     "proteina": 40,
+     "hidratos": 10
     },
-    "porque": "Formato pizza que le encanta, pero sin masa para no sumar más hidrato al de mediodía.",
-    "truco": "Que él ponga el tomate, el jamón en trocitos y el queso en su pizzeta.",
+    "porque": "Pescado azul con verdura asada para una cena de sábado ligera.",
+    "truco": "Desmígale el salmón comprobando que no quede ninguna espina y sírvele la calabaza en daditos dulces al lado.",
     "etiquetas": [
-     "Verdura",
+     "Pescado",
      "Horno"
     ],
     "foto": "",
     "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "2 berenjenas grandes (600 g)",
-     "30 ml de aceite de oliva (3 cucharadas)",
-     "1 g de sal",
-     "150 g de tomate triturado natural suave",
-     "100 g de jamón york",
-     "150 g de queso mozzarella rallado",
-     "1 g de orégano seco"
+     "3 lomos de salmón sin piel ni espinas (unos 400 g)",
+     "300 g de calabaza limpia",
+     "1 manojo de espárragos verdes (unos 200 g)",
+     "3 cucharadas de aceite de oliva virgen extra",
+     "1 pizca de sal",
+     "Medio limón para exprimir",
+     "1 cucharadita de perejil fresco picado o eneldo"
     ],
     "pasos": [
      {
       "icono": "horno",
-      "texto": "Precalentar el horno a 200 °C con calor arriba y abajo. Lavar 2 berenjenas grandes (600 g) con agua tibia y secarlas bien con papel absorbente.",
-      "usa": [
-       "2 berenjenas grandes (600 g)"
-      ]
+      "texto": "Enciende el horno a 200 °C con calor arriba y abajo para que se vaya calentando mientras preparas los ingredientes. Coloca una hoja de papel vegetal sobre la bandeja del horno.",
+      "consejo": "El papel de horno evita que la verdura y el pescado se peguen y ayuda a limpiar más rápido."
      },
      {
       "icono": "cortar",
-      "texto": "Cortar las berenjenas en rodajas gruesas de 1,5 cm de grosor sobre una tabla de cortar firme.",
+      "texto": "Corta la calabaza limpia en daditos pequeños de aproximadamente 1 centímetro. Dobla los espárragos por la base con las manos: se romperán solos por donde empieza la parte tierna. Tira la parte dura del tallo y corta el resto en trozos de unos 3 centímetros.",
       "usa": [
-       "2 berenjenas grandes (600 g)"
-      ]
-     },
-     {
-      "icono": "horno",
-      "texto": "Colocar las rodajas en una bandeja de horno cubierta con papel vegetal. Pincelar la superficie de las rodajas con 30 ml de aceite de oliva (3 cucharadas) y añadir 1 g de sal. Hornear a 200 °C durante 15 minutos hasta que estén tiernas.",
-      "usa": [
-       "30 ml de aceite de oliva (3 cucharadas)",
-       "1 g de sal"
-      ],
-      "min": 15,
-      "consejo": "Pincha el centro de una rodaja con un tenedor; si entra sin resistencia, están listas."
-     },
-     {
-      "icono": "cortar",
-      "texto": "Mientras las berenjenas se hornean, cortar 100 g de jamón york en trocitos pequeños.",
-      "usa": [
-       "100 g de jamón york"
+       "300 g de calabaza limpia",
+       "1 manojo de espárragos verdes (unos 200 g)"
       ]
      },
      {
       "icono": "mezclar",
-      "texto": "Sacar la bandeja del horno con cuidado. Repartir sobre cada rodaja 150 g de tomate triturado natural suave, los 100 g de jamón york picado, 150 g de queso mozzarella rallado y espolvorear 1 g de orégano seco.",
+      "texto": "Pon los dados de calabaza y los trozos de espárragos en la bandeja del horno. Añade 2 cucharadas de aceite de oliva y una pizca suave de sal, y mezcla con las manos para que toda la verdura quede bien impregnada.",
       "usa": [
-       "150 g de tomate triturado natural suave",
-       "100 g de jamón york",
-       "150 g de queso mozzarella rallado",
-       "1 g de orégano seco"
+       "2 cucharadas de aceite de oliva virgen extra",
+       "1 pizca de sal"
       ]
      },
      {
       "icono": "horno",
-      "texto": "Meter de nuevo la bandeja al horno a 200 °C y gratinar durante 5 minutos hasta que el queso esté derretido y ligeramente dorado. Gratinar significa dorar la superficie con el calor superior del horno.",
-      "min": 5
+      "texto": "Mete la bandeja en el horno a 200 °C y hornea durante 15 minutos para que la verdura empiece a ablandarse.",
+      "min": 15,
+      "consejo": "Comprueba pinchando un dado de calabaza con la punta del cuchillo: debe entrar casi blando."
+     },
+     {
+      "icono": "horno",
+      "texto": "Saca la bandeja con cuidado de no quemarte. Haz un hueco entre las verduras y coloca los 3 lomos de salmón. Píntalos por encima con la cucharada restante de aceite de oliva.",
+      "usa": [
+       "3 lomos de salmón sin piel ni espinas (unos 400 g)",
+       "1 cucharada de aceite de oliva virgen extra"
+      ]
+     },
+     {
+      "icono": "horno",
+      "texto": "Vuelve a meter la bandeja al horno a 200 °C durante 12 minutos más, hasta que el salmón cambie a un color rosa claro uniforme.",
+      "min": 12,
+      "consejo": "Para saber si el salmón está listo, ábrelo un poco por el centro: las lascas deben separarse con facilidad sin verse oscuras o crudas."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Saca la bandeja del horno y riega todo con unas gotas de zumo de limón fresco y el perejil o eneldo picado por encima.",
+      "usa": [
+       "Medio limón para exprimir",
+       "1 cucharadita de perejil fresco picado o eneldo"
+      ]
      },
      {
       "icono": "emplatar",
-      "texto": "Servir las pizzetas en los platos. Para el niño de 4 años, deja que él mismo coloque el tomate, el jamón y el queso en su rodaja antes del gratinado final, y sírvesela entibiada y cortada en bocados pequeños."
+      "texto": "Sirve en los platos. Para el peque, desmiga su trozo de salmón con un tenedor revisando con los dedos que no tenga ninguna espina rebelde, y ponle al lado los daditos tiernos de calabaza.",
+      "consejo": "La calabaza asada tiene un sabor dulce natural que les encanta a los niños."
      }
     ]
    },
    {
-    "id": "gambas-salteadas-judias-verdes-ajo-suave",
-    "titulo": "Gambas salteadas con judías verdes",
-    "subtitulo": "Al ajo suave con perejil",
-    "cocina": "Española",
-    "imagen": "generico",
+    "id": "pollo-relleno-espinacas-queso-airfryer",
+    "titulo": "Pechuga rellena de espinacas y queso en air fryer",
+    "subtitulo": "Con ensalada de tomate y pepino",
+    "cocina": "Casera",
+    "imagen": "pollo-horno",
     "peques": false,
-    "healthy": false,
+    "healthy": true,
     "gourmet": false,
-    "airfryer": false,
+    "airfryer": true,
     "rapida": false,
-    "tiempo": 20,
+    "tiempo": 30,
     "dificultad": "Fácil",
     "raciones": 3,
     "plato": {
-     "verdura": 55,
-     "proteina": 35,
+     "verdura": 45,
+     "proteina": 45,
      "hidratos": 10
     },
-    "porque": "Marisco fácil y mucha verdura verde para cerrar la semana con ligereza.",
-    "truco": "A él dale las gambas troceadas mezcladas con las judías cortadas pequeñitas y un poco de pan para mojar.",
+    "porque": "Carne blanca magra con verdura dentro y fuera, sin hidrato.",
+    "truco": "Córtasela en rodajas para que vea la 'espiral verde' del relleno con el queso fundido.",
     "etiquetas": [
-     "Marisco",
-     "Sartén"
+     "Pollo",
+     "Air fryer"
     ],
     "foto": "",
     "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "400 g de judías verdes planas frescas",
-     "250 g de gambas peladas",
-     "2 dientes de ajo (10 g)",
-     "30 ml de aceite de oliva (3 cucharadas)",
-     "1 g de sal",
-     "2 ramitas de perejil fresco (5 g)",
-     "90 g de pan integral (3 rebanadas)"
+     "2 pechugas de pollo enteras limpias (unos 500 g)",
+     "100 g de espinacas frescas",
+     "4 lonchas de queso mozzarella o havarti (unos 80 g)",
+     "2 cucharaditas de aceite de oliva virgen extra",
+     "Media cucharadita de pimentón dulce",
+     "1 pizca de sal",
+     "2 tomates medianos maduros (unos 300 g)",
+     "1 pepino mediano (unos 150 g)"
     ],
     "pasos": [
      {
-      "icono": "lavar",
-      "texto": "Lavar 400 g de judías verdes planas con agua del grifo. Cortar las puntas con un cuchillo y trocearlas en tramos de unos 3 cm. Lavar y picar muy fino 5 g de perejil fresco.",
+      "icono": "sarten",
+      "texto": "Pon una sartén a fuego medio con 1 cucharadita de aceite de oliva. Añade las espinacas frescas con una pizca mínima de sal y saltea removiendo durante 1 o 2 minutos hasta que reduzcan de tamaño y queden tiernas. Retíralas a un plato.",
       "usa": [
-       "400 g de judías verdes planas frescas",
-       "2 ramitas de perejil fresco (5 g)"
-      ]
-     },
-     {
-      "icono": "olla",
-      "texto": "En una olla grande con 1,5 litros de agua hirviendo y 1 g de sal, cocer las judías verdes a fuego medio durante 12 minutos hasta que estén tiernas pero firmes. Escurrir y reservar.",
-      "usa": [
-       "1 g de sal"
+       "100 g de espinacas frescas",
+       "1 cucharadita de aceite de oliva virgen extra",
+       "1 pizca de sal"
       ],
       "fuego": "medio",
-      "min": 12
+      "min": 2,
+      "consejo": "Saltear significa cocinarlas rápidamente moviéndolas con una cuchara de madera."
      },
      {
       "icono": "cortar",
-      "texto": "Pelar 2 dientes de ajo (10 g) y cortarlos en láminas muy finitas sobre una tabla.",
+      "texto": "Abre las pechugas de pollo por la mitad a lo largo con un cuchillo afilado, sin llegar a cortar el borde final, para abrirlas como si fueran un libro. Si lo prefieres, pide en la carnicería que te las abran en libro.",
       "usa": [
-       "2 dientes de ajo (10 g)"
+       "2 pechugas de pollo enteras limpias (unos 500 g)"
       ]
      },
      {
-      "icono": "sarten",
-      "texto": "Calentar 30 ml de aceite de oliva (3 cucharadas) en una sartén amplia a fuego suave. Añadir las láminas de ajo y cocinar durante 2 minutos a fuego suave, sin que lleguen a dorarse para evitar que picos o amarguen.",
+      "icono": "envolver",
+      "texto": "Coloca en el interior de cada pechuga abierta 2 lonchas de queso y reparte las espinacas salteadas. Ciérralas sobre sí mismas apretando un poco y sujeta los bordes abiertos con 2 o 3 palillos de madera para que no se escape el relleno.",
       "usa": [
-       "30 ml de aceite de oliva (3 cucharadas)",
-       "2 dientes de ajo (10 g)"
+       "4 lonchas de queso mozzarella o havarti (unos 80 g)"
       ],
-      "fuego": "suave",
-      "min": 2,
-      "consejo": "Mantén el fuego bajo para que el ajo suelte aroma sin quemarse."
+      "consejo": "Asegúrate de clavar los palillos planos para que las pechugas entren bien en la freidora."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Pinta el exterior de las pechugas con 1 cucharadita de aceite de oliva y espolvorea por encima el pimentón dulce de manera homogénea.",
+      "usa": [
+       "1 cucharadita de aceite de oliva virgen extra",
+       "Media cucharadita de pimentón dulce"
+      ]
+     },
+     {
+      "icono": "airfryer",
+      "texto": "Precalienta la freidora de aire a 185 °C durante 3 minutos. Coloca las pechugas en la cesta sin que se monten una encima de otra y programa 18 minutos a 185 °C.",
+      "min": 18,
+      "consejo": "A los 9 minutos (la mitad del tiempo), abre la cesta y dales la vuelta con unas pinzas con cuidado para que se doren igual por ambos lados."
+     },
+     {
+      "icono": "cortar",
+      "texto": "Mientras se cocina el pollo, pela los 2 tomates y el pepino. Córtalos en daditos pequeños y mézclalos en un cuenco para tener lista la ensalada de acompañamiento.",
+      "usa": [
+       "2 tomates medianos maduros (unos 300 g)",
+       "1 pepino mediano (unos 150 g)"
+      ]
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Saca las pechugas de la freidora y retira todos los palillos de madera con mucho cuidado antes de servir. Corta la carne en rodajas gruesas para que se vea el relleno enrollado de queso fundido y espinacas, y acompáñala con la ensalada fresca.",
+      "consejo": "Para el niño, muéstrale la divertida espiral verde y asegúrate de comprobar dos veces que no quede ningún resto de palillo."
+     }
+    ]
+   },
+   {
+    "id": "arroz-tres-delicias-casero-gambas",
+    "titulo": "Arroz tres delicias casero con gambas",
+    "subtitulo": "Con huevo, guisantes y zanahoria",
+    "cocina": "Asiática",
+    "imagen": "arroz",
+    "peques": true,
+    "healthy": false,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 35,
+     "proteina": 30,
+     "hidratos": 35
+    },
+    "porque": "Un clásico de sábado que se hace en una sartén y lleva la verdura en trocitos.",
+    "truco": "Corta las gambas en trocitos pequeños y deja que él mezcle la tortilla troceada con el arroz.",
+    "etiquetas": [
+     "Arroz",
+     "Gambas",
+     "Sartén"
+    ],
+    "foto": "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8Mnx8ZnJpZWQlMjByaWNlJTIwc2hyaW1wJTIwZWdnfGVufDF8MHx8fDE3OTU4NDE1NTF8MA&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
+    "fotoCredito": "Mae Mu / Unsplash",
+    "fotosUrl": "",
+    "ingredientes": [
+     "300 g de arroz blanco cocido (del día anterior o 2 vasitos de arroz para microondas calentados)",
+     "2 huevos medianos",
+     "150 g de gambas peladas crudas o descongeladas",
+     "1 zanahoria mediana (unos 100 g)",
+     "80 g de guisantes congelados o cocidos",
+     "2 cucharadas de aceite de oliva virgen extra",
+     "1 cucharada de salsa de soja baja en sal",
+     "1 pizca de sal"
+    ],
+    "pasos": [
+     {
+      "icono": "cortar",
+      "texto": "Pela la zanahoria y córtala en daditos muy pequeños, del tamaño aproximado de un guisante. Corta las gambas peladas en 2 o 3 trozos pequeños cada una.",
+      "usa": [
+       "1 zanahoria mediana (unos 100 g)",
+       "150 g de gambas peladas crudas o descongeladas"
+      ],
+      "consejo": "Al cortar la zanahoria bien menuda, se cocinará rápido en la sartén y quedará tierna para el niño."
      },
      {
       "icono": "sarten",
-      "texto": "Añadir 250 g de gambas peladas a la sartén y saltear a fuego medio durante 2 minutos hasta que cambien de color grisáceo a un tono rosado.",
+      "texto": "Bate los 2 huevos en un plato hondo con una pizca pequeña de sal. Pon una sartén grande a fuego medio con media cucharada de aceite y vierte el huevo para cuajar una tortilla francesa fina por ambos lados (1 minuto por lado).",
       "usa": [
-       "250 g de gambas peladas"
+       "2 huevos medianos",
+       "Media cucharada de aceite de oliva virgen extra",
+       "1 pizca de sal"
       ],
       "fuego": "medio",
       "min": 2
      },
      {
+      "icono": "cortar",
+      "texto": "Pasa la tortilla a una tabla, córtala en tiras finas y luego en trocitos pequeños. Reserva en un plato."
+     },
+     {
       "icono": "sarten",
-      "texto": "Agregar las judías verdes cocidas reservadas a la sartén y remover todo suavemente durante 3 minutos a fuego medio. Espolvorear las 2 ramitas de perejil fresco (5 g) picado al final.",
+      "texto": "En la misma sartén grande, añade 1 cucharada y media de aceite de oliva a fuego medio. Echa los daditos de zanahoria y los guisantes y saltea durante 4 minutos hasta que la zanahoria empiece a estar tierna.",
       "usa": [
-       "2 ramitas de perejil fresco (5 g)"
+       "1 cucharada y media de aceite de oliva virgen extra",
+       "80 g de guisantes congelados o cocidos"
       ],
       "fuego": "medio",
-      "min": 3
+      "min": 4
+     },
+     {
+      "icono": "sarten",
+      "texto": "Añade a la sartén las gambas troceadas y cocina durante 2 minutos más junto con las verduras, removiendo continuamente hasta que las gambas se vuelvan rosadas y opacas.",
+      "fuego": "medio",
+      "min": 2,
+      "consejo": "Las gambas se hacen enseguida; en cuanto cambien de color gris a rosa ya no están crudas."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Incorpora el arroz blanco cocido desgranándolo con las manos o con la cuchara para que no forme bolas, y agrega la tortilla en tiras. Saltea todo junto durante 2 minutos para que coja calor.",
+      "usa": [
+       "300 g de arroz blanco cocido (del día anterior o 2 vasitos de arroz para microondas calentados)"
+      ],
+      "fuego": "medio",
+      "min": 2
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Riega con 1 cucharada de salsa de soja baja en sal y mezcla bien durante 1 minuto a fuego suave para repartir el sabor y el color sin que quede fuerte ni salado.",
+      "usa": [
+       "1 cucharada de salsa de soja baja en sal"
+      ],
+      "fuego": "suave",
+      "min": 1
      },
      {
       "icono": "emplatar",
-      "texto": "Servir el salteado en los platos junto con 90 g de pan integral (3 rebanadas). Para el niño de 4 años, trocea las gambas y las judías en trozos muy pequeños e integra bien con un poquito de pan para mojar.",
+      "texto": "Sirve el arroz en los platos. Deja que el peque participe en la mesa mezclando su ración con la cuchara y comprueba que las gambas estén en trozos cómodos para él."
+     }
+    ],
+    "fotoAutorUrl": "https://unsplash.com/@picoftasty?utm_source=cenas_en_casa&utm_medium=referral",
+    "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
+   },
+   {
+    "id": "huevos-plato-guisantes-jamon",
+    "titulo": "Huevos al plato con guisantes y jamón",
+    "subtitulo": "En cazuelitas al horno con tomate",
+    "cocina": "Española",
+    "imagen": "tortilla",
+    "peques": true,
+    "healthy": true,
+    "gourmet": false,
+    "airfryer": false,
+    "rapida": false,
+    "tiempo": 25,
+    "dificultad": "Fácil",
+    "raciones": 3,
+    "plato": {
+     "verdura": 45,
+     "proteina": 45,
+     "hidratos": 10
+    },
+    "porque": "Huevo con legumbre verde y tomate, ligero y muy de casa.",
+    "truco": "Que moje un trocito de pan en la yema, y que él eche los guisantes en su cazuelita.",
+    "etiquetas": [
+     "Huevo",
+     "Horno"
+    ],
+    "foto": "",
+    "fotoCredito": "",
+    "fotosUrl": "",
+    "ingredientes": [
+     "1 cebolla pequeña (100 g)",
+     "2 cucharadas de aceite de oliva virgen extra (30 ml)",
+     "250 g de tomate triturado",
+     "1 pizca de sal",
+     "150 g de guisantes congelados",
+     "75 g de taquitos de jamón serrano",
+     "5 huevos"
+    ],
+    "pasos": [
+     {
+      "icono": "horno",
+      "texto": "Enciende el horno a 200 °C con calor arriba y abajo para que vaya cogiendo temperatura. Prepara tres cazuelitas individuales de barro o recipientes aptos para horno sobre una bandeja.",
+      "consejo": "Si usas cazuelas de barro tradicionales, asegúrate de que sean aptas para horno."
+     },
+     {
+      "icono": "cortar",
+      "texto": "Pela la cebolla y córtala en trocitos muy pequeños (lo más fino posible para que se deshaga en la boca del peque).",
       "usa": [
-       "90 g de pan integral (3 rebanadas)"
+       "1 cebolla pequeña (100 g)"
       ]
+     },
+     {
+      "icono": "sarten",
+      "texto": "Pon una sartén a fuego medio con el aceite de oliva. Añade la cebolla picada y póchala (cocínala despacio removiendo de vez en cuando hasta que esté blandita y transparente, sin quemarse).",
+      "usa": [
+       "2 cucharadas de aceite de oliva virgen extra (30 ml)"
+      ],
+      "fuego": "medio",
+      "min": 5,
+      "consejo": "Si ves que coge color demasiado rápido, baja un punto el fuego."
+     },
+     {
+      "icono": "sarten",
+      "texto": "Añade el tomate triturado y una pizca mínima de sal a la sartén. Remueve y deja que se cocine a fuego suave para que pierda el agua y espese ligeramente.",
+      "usa": [
+       "250 g de tomate triturado",
+       "1 pizca de sal"
+      ],
+      "fuego": "suave",
+      "min": 5,
+      "consejo": "Pon muy poca sal, ya que el jamón serrano aportará bastante sabor salado después."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Incorpora los guisantes directamente congelados a la sartén. Remueve todo junto durante un par de minutos para que se integren bien con la salsa de tomate.",
+      "usa": [
+       "150 g de guisantes congelados"
+      ],
+      "fuego": "medio",
+      "min": 2
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Reparte la mezcla de tomate y guisantes de manera uniforme en el fondo de las tres cazuelitas. Aquí el niño puede ayudarte echando algunos guisantes en su propio plato."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Distribuye los taquitos de jamón serrano por encima de la capa de tomate y guisantes en cada cazuela.",
+      "usa": [
+       "75 g de taquitos de jamón serrano"
+      ],
+      "consejo": "Elige taquitos de jamón pequeñitos y tiernos para que el niño los mastique con facilidad."
+     },
+     {
+      "icono": "mezclar",
+      "texto": "Casca los huevos con cuidado encima de cada cazuela: pon 2 huevos en cada cazuela de adulto y 1 huevo en la del niño. Intenta que la yema no se rompa al caer.",
+      "usa": [
+       "5 huevos"
+      ],
+      "consejo": "Casca cada huevo primero en una taza o vaso pequeño antes de volcarlo en la cazuela; así evitarás que caigan trozos de cáscara."
+     },
+     {
+      "icono": "horno",
+      "texto": "Introduce la bandeja con las cazuelas en el horno a media altura y hornea a 200 °C durante unos 10 a 12 minutos, hasta que las claras se vean completamente blancas y cuajadas.",
+      "min": 11,
+      "consejo": "Para la cazuela del peque, pincha ligeramente la yema y déjala 2 minutos extra para que quede bien cocinada y segura."
+     },
+     {
+      "icono": "emplatar",
+      "texto": "Saca las cazuelas del horno con manoplas protectoras porque quemarán mucho. Deja reposar 3 minutos para que pierdan el calor fuerte y sirve con una rebanada de pan tierno para que el peque pueda mojar.",
+      "min": 3,
+      "consejo": "Avisa al niño de que la cazuela de barro quema mucho en los bordes; si lo prefieres, pasa su ración a su plato infantil habitual."
      }
     ]
    },
    {
-    "id": "rape-horno-verduritas-salsa-azafran",
-    "titulo": "Rape al horno con verduritas y salsa de azafrán",
-    "subtitulo": "Un pescado de fiesta para el viernes",
+    "id": "solomillo-ternera-salsa-queso-verduras",
+    "titulo": "Solomillo de ternera con salsa suave de queso",
+    "subtitulo": "Con espárragos trigueros y puré de patata",
     "cocina": "Mediterránea",
-    "imagen": "pescado",
+    "imagen": "generico",
     "peques": false,
     "healthy": false,
     "gourmet": true,
     "airfryer": false,
     "rapida": false,
-    "tiempo": 45,
+    "tiempo": 40,
     "dificultad": "Media",
     "raciones": 3,
     "plato": {
-     "verdura": 45,
+     "verdura": 30,
      "proteina": 40,
-     "hidratos": 15
+     "hidratos": 30
     },
-    "porque": "Para el viernes con ganas de cocinar: pescado firme sin espinas y una salsa suave y elegante.",
-    "truco": "Sírvele el rape en dados con la salsa aparte, para que moje si quiere.",
+    "porque": "La cena de capricho prevista para este sábado.",
+    "truco": "Córtale la carne en tiras finas, bien hecha por dentro, con el puré y la salsa aparte.",
     "etiquetas": [
-     "Pescado",
-     "Horno"
+     "Carne",
+     "Sartén",
+     "Capricho"
     ],
-    "foto": "https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8NXx8bW9ua2Zpc2glMjBzYWZmcm9uJTIwc2F1Y2V8ZW58MXwwfHx8MTc5NTc1NTE2Mnww&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
-    "fotoCredito": "Sebastian Coman Photography / Unsplash",
+    "foto": "",
+    "fotoCredito": "",
     "fotosUrl": "",
     "ingredientes": [
-     "500 g de lomo de rape limpio sin espinas",
-     "1 puerro mediano (100 g)",
-     "2 zanahorias medianas (150 g)",
-     "1 pimiento verde mediano (100 g)",
-     "2 chalotas (50 g)",
-     "40 ml de aceite de oliva (4 cucharadas)",
-     "50 ml de vino blanco",
-     "200 ml de caldo de pescado",
-     "8 hebras de azafrán",
-     "5 g de maicena (1 cucharadita)",
-     "1 g de sal"
+     "3 medallones de solomillo de ternera de 3 cm de grosor (aprox. 150 g cada uno, uno de ellos de 100 g para el niño)",
+     "3 patatas medianas para cocer (aprox. 500 g)",
+     "30 g de mantequilla",
+     "60 ml de leche entera tibia",
+     "1 manojo de espárragos trigueros finos (aprox. 250 g)",
+     "3 cucharadas de aceite de oliva virgen extra",
+     "70 g de queso suave tipo azul suave o crema de queso torta suave",
+     "150 ml de nata líquida ligera de cocina (18% M.G.)",
+     "1 cucharadita de sal"
     ],
     "pasos": [
      {
-      "icono": "horno",
-      "texto": "Precalentar el horno a 190 °C con calor arriba y abajo. Lavar bajo el grifo 1 puerro (100 g), 2 zanahorias (150 g) y 1 pimiento verde (100 g).",
+      "icono": "olla",
+      "texto": "Pela las patatas y córtalas en dados de 2 o 3 cm. Ponlas en una olla cubiertas con agua fría y media cucharadita de sal a fuego medio-fuerte durante 18-20 minutos hasta que estén tiernas.",
       "usa": [
-       "1 puerro mediano (100 g)",
-       "2 zanahorias medianas (150 g)",
-       "1 pimiento verde mediano (100 g)"
-      ]
-     },
-     {
-      "icono": "cortar",
-      "texto": "Cortar el puerro, las zanahorias y el pimiento verde en juliana (en tiras finas y alargadas de unos 4 cm). Pelar y picar muy fino 2 chalotas (50 g).",
-      "usa": [
-       "1 puerro mediano (100 g)",
-       "2 zanahorias medianas (150 g)",
-       "1 pimiento verde mediano (100 g)",
-       "2 chalotas (50 g)"
-      ]
-     },
-     {
-      "icono": "sarten",
-      "texto": "Calentar 20 ml de aceite de oliva (2 cucharadas) en una sartén a fuego medio y pochar las verduras cortadas en juliana con 0,5 g de sal durante 8 minutos. Pochar es cocinar suavemente hasta que la verdura esté blanda y transparente.",
-      "usa": [
-       "20 ml de aceite de oliva (2 cucharadas)",
-       "0,5 g de sal"
+       "3 patatas medianas para cocer (aprox. 500 g)",
+       "1 cucharadita de sal"
       ],
       "fuego": "medio",
-      "min": 8
+      "min": 20,
+      "consejo": "Para saber si están listas, pínchalas con la punta de un cuchillo: deben deshacerse con facilidad."
      },
      {
-      "icono": "horno",
-      "texto": "Colocar las verduras pochadas en una fuente para horno formando una cama. Disponer encima 500 g de lomo de rape en medallones, añadir 0,5 g de sal y regar con 10 ml de aceite de oliva (1 cucharada). Hornear a 190 °C durante 15 minutos.",
+      "icono": "mezclar",
+      "texto": "Escurre las patatas, devuélvelas a la olla templada y cháfalas con un tenedor o pasapurés. Añade la mantequilla y la leche tibia, batiendo con una cuchara hasta conseguir un puré suave y sin grumos.",
       "usa": [
-       "500 g de lomo de rape limpio sin espinas",
-       "0,5 g de sal",
-       "10 ml de aceite de oliva (1 cucharada)"
+       "30 g de mantequilla",
+       "60 ml de leche entera tibia"
       ],
-      "min": 15,
-      "consejo": "El rape estará listo cuando la carne se vea blanca opaca y firme al tacto."
-     },
-     {
-      "icono": "sarten",
-      "texto": "Para la salsa, calentar 10 ml de aceite de oliva (1 cucharada) en un cazo pequeño a fuego suave, añadir las chalotas picadas y pochar durante 4 minutos. Verter 50 ml de vino blanco y dejar hervir 2 minutos para que se evapore el alcohol.",
-      "usa": [
-       "10 ml de aceite de oliva (1 cucharada)",
-       "50 ml de vino blanco"
-      ],
-      "fuego": "suave",
-      "min": 6
-     },
-     {
-      "icono": "sarten",
-      "texto": "Añadir al cazo 200 ml de caldo de pescado y 8 hebras de azafrán. Disolver 5 g de maicena en 15 ml de agua fría, incorporarla al cazo y remover a fuego suave durante 4 minutos hasta que la salsa espese suavemente.",
-      "usa": [
-       "200 ml de caldo de pescado",
-       "8 hebras de azafrán",
-       "5 g de maicena (1 cucharadita)"
-      ],
-      "fuego": "suave",
       "min": 4
      },
      {
+      "icono": "cortar",
+      "texto": "Lava los espárragos y desecha la parte inferior más dura doblándolos con las manos (se romperán solos por donde empieza la parte tierna).",
+      "usa": [
+       "1 manojo de espárragos trigueros finos (aprox. 250 g)"
+      ],
+      "min": 3
+     },
+     {
+      "icono": "olla",
+      "texto": "En un cazo pequeño a fuego suave, calienta la nata ligera junto con el queso troceado. Remueve con varillas o cuchara de madera durante 4-5 minutos hasta que el queso se disuelva y quede una crema lisa.",
+      "usa": [
+       "70 g de queso suave tipo azul suave o crema de queso torta suave",
+       "150 ml de nata líquida ligera de cocina (18% M.G.)"
+      ],
+      "fuego": "suave",
+      "min": 5,
+      "consejo": "Mantén el fuego suave para que la nata no hierva a borbotones ni se corte la salsa."
+     },
+     {
+      "icono": "sarten",
+      "texto": "En una sartén grande a fuego medio con 1 cucharada de aceite, cocina los espárragos con una pizca de sal durante 6-7 minutos, girándolos hasta que estén tiernos y ligeramente dorados. Retíralos y resérvalos en un plato.",
+      "usa": [
+       "1 cucharada de aceite de oliva virgen extra"
+      ],
+      "fuego": "medio",
+      "min": 7
+     },
+     {
+      "icono": "sarten",
+      "texto": "En la misma sartén muy caliente a fuego fuerte con 2 cucharadas de aceite, coloca los medallones de carne. Cocina 2-3 minutos por lado para los adultos (la ración del niño déjala 2 minutos extra a fuego medio para que quede bien hecha por dentro). Retira y deja reposar 2 minutos.",
+      "usa": [
+       "3 medallones de solomillo de ternera de 3 cm de grosor (aprox. 150 g cada uno, uno de ellos de 100 g para el niño)",
+       "2 cucharadas de aceite de oliva virgen extra"
+      ],
+      "fuego": "fuerte",
+      "min": 6,
+      "consejo": "Reposar la carne 2 minutos sobre una tabla permite que los jugos se asienten y no se pierdan al cortarla."
+     },
+     {
       "icono": "emplatar",
-      "texto": "Napar el fondo del plato con la salsa de azafrán, colocar encima la cama de verduritas y los medallones de rape. Para el niño de 4 años, sirve el rape cortado en dados sin espinas con las verduras y ponle la salsa en un cuenquito aparte para que moje si quiere."
+      "texto": "Emplata los medallones de los adultos regados con la salsa de queso, acompañados del puré y los espárragos. Para el niño, corta su carne en tiras finas bien cocinadas, añade una ración de puré y pon la salsita y las puntas tiernas de espárrago a su lado.",
+      "min": 4,
+      "consejo": "Cortar la ternera en tiras transversales a la fibra hace que sea facilísima de masticar para un niño pequeño."
      }
-    ],
-    "fotoAutorUrl": "https://unsplash.com/@sebastiancoman?utm_source=cenas_en_casa&utm_medium=referral",
-    "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral"
+    ]
    }
   ]
  },

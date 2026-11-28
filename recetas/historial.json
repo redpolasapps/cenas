@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T05:53:28+01:00",
+ "actualizado": "2026-11-28T05:53:48+01:00",
  "recetas": [
   {
    "id": "tortilla-patata-espinacas",
@@ -8506,6 +8506,444 @@
     {
      "fecha": "2026-11-27",
      "dia": "Entre semana",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "salmon-horno-esparragos-calabaza",
+   "titulo": "Salmón al horno con espárragos y calabaza",
+   "subtitulo": "Todo en la misma bandeja",
+   "cocina": "Mediterránea",
+   "imagen": "pescado",
+   "peques": false,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 50,
+    "proteina": 40,
+    "hidratos": 10
+   },
+   "porque": "Pescado azul con verdura asada para una cena de sábado ligera.",
+   "truco": "Desmígale el salmón comprobando que no quede ninguna espina y sírvele la calabaza en daditos dulces al lado.",
+   "etiquetas": [
+    "Pescado",
+    "Horno"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "3 lomos de salmón sin piel ni espinas (unos 400 g)",
+    "300 g de calabaza limpia",
+    "1 manojo de espárragos verdes (unos 200 g)",
+    "3 cucharadas de aceite de oliva virgen extra",
+    "1 pizca de sal",
+    "Medio limón para exprimir",
+    "1 cucharadita de perejil fresco picado o eneldo"
+   ],
+   "pasos": [
+    {
+     "icono": "horno",
+     "texto": "Enciende el horno a 200 °C con calor arriba y abajo para que se vaya calentando mientras preparas los ingredientes. Coloca una hoja de papel vegetal sobre la bandeja del horno.",
+     "consejo": "El papel de horno evita que la verdura y el pescado se peguen y ayuda a limpiar más rápido."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Corta la calabaza limpia en daditos pequeños de aproximadamente 1 centímetro. Dobla los espárragos por la base con las manos: se romperán solos por donde empieza la parte tierna. Tira la parte dura del tallo y corta el resto en trozos de unos 3 centímetros.",
+     "usa": [
+      "300 g de calabaza limpia",
+      "1 manojo de espárragos verdes (unos 200 g)"
+     ]
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Pon los dados de calabaza y los trozos de espárragos en la bandeja del horno. Añade 2 cucharadas de aceite de oliva y una pizca suave de sal, y mezcla con las manos para que toda la verdura quede bien impregnada.",
+     "usa": [
+      "2 cucharadas de aceite de oliva virgen extra",
+      "1 pizca de sal"
+     ]
+    },
+    {
+     "icono": "horno",
+     "texto": "Mete la bandeja en el horno a 200 °C y hornea durante 15 minutos para que la verdura empiece a ablandarse.",
+     "min": 15,
+     "consejo": "Comprueba pinchando un dado de calabaza con la punta del cuchillo: debe entrar casi blando."
+    },
+    {
+     "icono": "horno",
+     "texto": "Saca la bandeja con cuidado de no quemarte. Haz un hueco entre las verduras y coloca los 3 lomos de salmón. Píntalos por encima con la cucharada restante de aceite de oliva.",
+     "usa": [
+      "3 lomos de salmón sin piel ni espinas (unos 400 g)",
+      "1 cucharada de aceite de oliva virgen extra"
+     ]
+    },
+    {
+     "icono": "horno",
+     "texto": "Vuelve a meter la bandeja al horno a 200 °C durante 12 minutos más, hasta que el salmón cambie a un color rosa claro uniforme.",
+     "min": 12,
+     "consejo": "Para saber si el salmón está listo, ábrelo un poco por el centro: las lascas deben separarse con facilidad sin verse oscuras o crudas."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Saca la bandeja del horno y riega todo con unas gotas de zumo de limón fresco y el perejil o eneldo picado por encima.",
+     "usa": [
+      "Medio limón para exprimir",
+      "1 cucharadita de perejil fresco picado o eneldo"
+     ]
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve en los platos. Para el peque, desmiga su trozo de salmón con un tenedor revisando con los dedos que no tenga ninguna espina rebelde, y ponle al lado los daditos tiernos de calabaza.",
+     "consejo": "La calabaza asada tiene un sabor dulce natural que les encanta a los niños."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-28",
+     "dia": "Sábado",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "pollo-relleno-espinacas-queso-airfryer",
+   "titulo": "Pechuga rellena de espinacas y queso en air fryer",
+   "subtitulo": "Con ensalada de tomate y pepino",
+   "cocina": "Casera",
+   "imagen": "pollo-horno",
+   "peques": false,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": true,
+   "rapida": false,
+   "tiempo": 30,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 45,
+    "proteina": 45,
+    "hidratos": 10
+   },
+   "porque": "Carne blanca magra con verdura dentro y fuera, sin hidrato.",
+   "truco": "Córtasela en rodajas para que vea la 'espiral verde' del relleno con el queso fundido.",
+   "etiquetas": [
+    "Pollo",
+    "Air fryer"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "2 pechugas de pollo enteras limpias (unos 500 g)",
+    "100 g de espinacas frescas",
+    "4 lonchas de queso mozzarella o havarti (unos 80 g)",
+    "2 cucharaditas de aceite de oliva virgen extra",
+    "Media cucharadita de pimentón dulce",
+    "1 pizca de sal",
+    "2 tomates medianos maduros (unos 300 g)",
+    "1 pepino mediano (unos 150 g)"
+   ],
+   "pasos": [
+    {
+     "icono": "sarten",
+     "texto": "Pon una sartén a fuego medio con 1 cucharadita de aceite de oliva. Añade las espinacas frescas con una pizca mínima de sal y saltea removiendo durante 1 o 2 minutos hasta que reduzcan de tamaño y queden tiernas. Retíralas a un plato.",
+     "usa": [
+      "100 g de espinacas frescas",
+      "1 cucharadita de aceite de oliva virgen extra",
+      "1 pizca de sal"
+     ],
+     "fuego": "medio",
+     "min": 2,
+     "consejo": "Saltear significa cocinarlas rápidamente moviéndolas con una cuchara de madera."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Abre las pechugas de pollo por la mitad a lo largo con un cuchillo afilado, sin llegar a cortar el borde final, para abrirlas como si fueran un libro. Si lo prefieres, pide en la carnicería que te las abran en libro.",
+     "usa": [
+      "2 pechugas de pollo enteras limpias (unos 500 g)"
+     ]
+    },
+    {
+     "icono": "envolver",
+     "texto": "Coloca en el interior de cada pechuga abierta 2 lonchas de queso y reparte las espinacas salteadas. Ciérralas sobre sí mismas apretando un poco y sujeta los bordes abiertos con 2 o 3 palillos de madera para que no se escape el relleno.",
+     "usa": [
+      "4 lonchas de queso mozzarella o havarti (unos 80 g)"
+     ],
+     "consejo": "Asegúrate de clavar los palillos planos para que las pechugas entren bien en la freidora."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Pinta el exterior de las pechugas con 1 cucharadita de aceite de oliva y espolvorea por encima el pimentón dulce de manera homogénea.",
+     "usa": [
+      "1 cucharadita de aceite de oliva virgen extra",
+      "Media cucharadita de pimentón dulce"
+     ]
+    },
+    {
+     "icono": "airfryer",
+     "texto": "Precalienta la freidora de aire a 185 °C durante 3 minutos. Coloca las pechugas en la cesta sin que se monten una encima de otra y programa 18 minutos a 185 °C.",
+     "min": 18,
+     "consejo": "A los 9 minutos (la mitad del tiempo), abre la cesta y dales la vuelta con unas pinzas con cuidado para que se doren igual por ambos lados."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Mientras se cocina el pollo, pela los 2 tomates y el pepino. Córtalos en daditos pequeños y mézclalos en un cuenco para tener lista la ensalada de acompañamiento.",
+     "usa": [
+      "2 tomates medianos maduros (unos 300 g)",
+      "1 pepino mediano (unos 150 g)"
+     ]
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Saca las pechugas de la freidora y retira todos los palillos de madera con mucho cuidado antes de servir. Corta la carne en rodajas gruesas para que se vea el relleno enrollado de queso fundido y espinacas, y acompáñala con la ensalada fresca.",
+     "consejo": "Para el niño, muéstrale la divertida espiral verde y asegúrate de comprobar dos veces que no quede ningún resto de palillo."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-28",
+     "dia": "Sábado",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "arroz-tres-delicias-casero-gambas",
+   "titulo": "Arroz tres delicias casero con gambas",
+   "subtitulo": "Con huevo, guisantes y zanahoria",
+   "cocina": "Asiática",
+   "imagen": "arroz",
+   "peques": true,
+   "healthy": false,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 25,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 35,
+    "proteina": 30,
+    "hidratos": 35
+   },
+   "porque": "Un clásico de sábado que se hace en una sartén y lleva la verdura en trocitos.",
+   "truco": "Corta las gambas en trocitos pequeños y deja que él mezcle la tortilla troceada con el arroz.",
+   "etiquetas": [
+    "Arroz",
+    "Gambas",
+    "Sartén"
+   ],
+   "foto": "https://images.unsplash.com/photo-1551326844-4df70f78d0e9?ixid=M3wxMTQxMzk5fDB8MXxzZWFyY2h8Mnx8ZnJpZWQlMjByaWNlJTIwc2hyaW1wJTIwZWdnfGVufDF8MHx8fDE3OTU4NDE1NTF8MA&ixlib=rb-4.1.0&fm=jpg&q=70&w=600&h=400&fit=crop",
+   "fotoCredito": "Mae Mu / Unsplash",
+   "fotosUrl": "",
+   "ingredientes": [
+    "300 g de arroz blanco cocido (del día anterior o 2 vasitos de arroz para microondas calentados)",
+    "2 huevos medianos",
+    "150 g de gambas peladas crudas o descongeladas",
+    "1 zanahoria mediana (unos 100 g)",
+    "80 g de guisantes congelados o cocidos",
+    "2 cucharadas de aceite de oliva virgen extra",
+    "1 cucharada de salsa de soja baja en sal",
+    "1 pizca de sal"
+   ],
+   "pasos": [
+    {
+     "icono": "cortar",
+     "texto": "Pela la zanahoria y córtala en daditos muy pequeños, del tamaño aproximado de un guisante. Corta las gambas peladas en 2 o 3 trozos pequeños cada una.",
+     "usa": [
+      "1 zanahoria mediana (unos 100 g)",
+      "150 g de gambas peladas crudas o descongeladas"
+     ],
+     "consejo": "Al cortar la zanahoria bien menuda, se cocinará rápido en la sartén y quedará tierna para el niño."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Bate los 2 huevos en un plato hondo con una pizca pequeña de sal. Pon una sartén grande a fuego medio con media cucharada de aceite y vierte el huevo para cuajar una tortilla francesa fina por ambos lados (1 minuto por lado).",
+     "usa": [
+      "2 huevos medianos",
+      "Media cucharada de aceite de oliva virgen extra",
+      "1 pizca de sal"
+     ],
+     "fuego": "medio",
+     "min": 2
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pasa la tortilla a una tabla, córtala en tiras finas y luego en trocitos pequeños. Reserva en un plato."
+    },
+    {
+     "icono": "sarten",
+     "texto": "En la misma sartén grande, añade 1 cucharada y media de aceite de oliva a fuego medio. Echa los daditos de zanahoria y los guisantes y saltea durante 4 minutos hasta que la zanahoria empiece a estar tierna.",
+     "usa": [
+      "1 cucharada y media de aceite de oliva virgen extra",
+      "80 g de guisantes congelados o cocidos"
+     ],
+     "fuego": "medio",
+     "min": 4
+    },
+    {
+     "icono": "sarten",
+     "texto": "Añade a la sartén las gambas troceadas y cocina durante 2 minutos más junto con las verduras, removiendo continuamente hasta que las gambas se vuelvan rosadas y opacas.",
+     "fuego": "medio",
+     "min": 2,
+     "consejo": "Las gambas se hacen enseguida; en cuanto cambien de color gris a rosa ya no están crudas."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Incorpora el arroz blanco cocido desgranándolo con las manos o con la cuchara para que no forme bolas, y agrega la tortilla en tiras. Saltea todo junto durante 2 minutos para que coja calor.",
+     "usa": [
+      "300 g de arroz blanco cocido (del día anterior o 2 vasitos de arroz para microondas calentados)"
+     ],
+     "fuego": "medio",
+     "min": 2
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Riega con 1 cucharada de salsa de soja baja en sal y mezcla bien durante 1 minuto a fuego suave para repartir el sabor y el color sin que quede fuerte ni salado.",
+     "usa": [
+      "1 cucharada de salsa de soja baja en sal"
+     ],
+     "fuego": "suave",
+     "min": 1
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Sirve el arroz en los platos. Deja que el peque participe en la mesa mezclando su ración con la cuchara y comprueba que las gambas estén en trozos cómodos para él."
+    }
+   ],
+   "fotoAutorUrl": "https://unsplash.com/@picoftasty?utm_source=cenas_en_casa&utm_medium=referral",
+   "fotoFuenteUrl": "https://unsplash.com/?utm_source=cenas_en_casa&utm_medium=referral",
+   "usos": [
+    {
+     "fecha": "2026-11-28",
+     "dia": "Sábado",
+     "momento": "Cena"
+    }
+   ]
+  },
+  {
+   "id": "huevos-plato-guisantes-jamon",
+   "titulo": "Huevos al plato con guisantes y jamón",
+   "subtitulo": "En cazuelitas al horno con tomate",
+   "cocina": "Española",
+   "imagen": "tortilla",
+   "peques": true,
+   "healthy": true,
+   "gourmet": false,
+   "airfryer": false,
+   "rapida": false,
+   "tiempo": 25,
+   "dificultad": "Fácil",
+   "raciones": 3,
+   "plato": {
+    "verdura": 45,
+    "proteina": 45,
+    "hidratos": 10
+   },
+   "porque": "Huevo con legumbre verde y tomate, ligero y muy de casa.",
+   "truco": "Que moje un trocito de pan en la yema, y que él eche los guisantes en su cazuelita.",
+   "etiquetas": [
+    "Huevo",
+    "Horno"
+   ],
+   "foto": "",
+   "fotoCredito": "",
+   "fotosUrl": "",
+   "ingredientes": [
+    "1 cebolla pequeña (100 g)",
+    "2 cucharadas de aceite de oliva virgen extra (30 ml)",
+    "250 g de tomate triturado",
+    "1 pizca de sal",
+    "150 g de guisantes congelados",
+    "75 g de taquitos de jamón serrano",
+    "5 huevos"
+   ],
+   "pasos": [
+    {
+     "icono": "horno",
+     "texto": "Enciende el horno a 200 °C con calor arriba y abajo para que vaya cogiendo temperatura. Prepara tres cazuelitas individuales de barro o recipientes aptos para horno sobre una bandeja.",
+     "consejo": "Si usas cazuelas de barro tradicionales, asegúrate de que sean aptas para horno."
+    },
+    {
+     "icono": "cortar",
+     "texto": "Pela la cebolla y córtala en trocitos muy pequeños (lo más fino posible para que se deshaga en la boca del peque).",
+     "usa": [
+      "1 cebolla pequeña (100 g)"
+     ]
+    },
+    {
+     "icono": "sarten",
+     "texto": "Pon una sartén a fuego medio con el aceite de oliva. Añade la cebolla picada y póchala (cocínala despacio removiendo de vez en cuando hasta que esté blandita y transparente, sin quemarse).",
+     "usa": [
+      "2 cucharadas de aceite de oliva virgen extra (30 ml)"
+     ],
+     "fuego": "medio",
+     "min": 5,
+     "consejo": "Si ves que coge color demasiado rápido, baja un punto el fuego."
+    },
+    {
+     "icono": "sarten",
+     "texto": "Añade el tomate triturado y una pizca mínima de sal a la sartén. Remueve y deja que se cocine a fuego suave para que pierda el agua y espese ligeramente.",
+     "usa": [
+      "250 g de tomate triturado",
+      "1 pizca de sal"
+     ],
+     "fuego": "suave",
+     "min": 5,
+     "consejo": "Pon muy poca sal, ya que el jamón serrano aportará bastante sabor salado después."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Incorpora los guisantes directamente congelados a la sartén. Remueve todo junto durante un par de minutos para que se integren bien con la salsa de tomate.",
+     "usa": [
+      "150 g de guisantes congelados"
+     ],
+     "fuego": "medio",
+     "min": 2
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Reparte la mezcla de tomate y guisantes de manera uniforme en el fondo de las tres cazuelitas. Aquí el niño puede ayudarte echando algunos guisantes en su propio plato."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Distribuye los taquitos de jamón serrano por encima de la capa de tomate y guisantes en cada cazuela.",
+     "usa": [
+      "75 g de taquitos de jamón serrano"
+     ],
+     "consejo": "Elige taquitos de jamón pequeñitos y tiernos para que el niño los mastique con facilidad."
+    },
+    {
+     "icono": "mezclar",
+     "texto": "Casca los huevos con cuidado encima de cada cazuela: pon 2 huevos en cada cazuela de adulto y 1 huevo en la del niño. Intenta que la yema no se rompa al caer.",
+     "usa": [
+      "5 huevos"
+     ],
+     "consejo": "Casca cada huevo primero en una taza o vaso pequeño antes de volcarlo en la cazuela; así evitarás que caigan trozos de cáscara."
+    },
+    {
+     "icono": "horno",
+     "texto": "Introduce la bandeja con las cazuelas en el horno a media altura y hornea a 200 °C durante unos 10 a 12 minutos, hasta que las claras se vean completamente blancas y cuajadas.",
+     "min": 11,
+     "consejo": "Para la cazuela del peque, pincha ligeramente la yema y déjala 2 minutos extra para que quede bien cocinada y segura."
+    },
+    {
+     "icono": "emplatar",
+     "texto": "Saca las cazuelas del horno con manoplas protectoras porque quemarán mucho. Deja reposar 3 minutos para que pierdan el calor fuerte y sirve con una rebanada de pan tierno para que el peque pueda mojar.",
+     "min": 3,
+     "consejo": "Avisa al niño de que la cazuela de barro quema mucho en los bordes; si lo prefieres, pasa su ración a su plato infantil habitual."
+    }
+   ],
+   "usos": [
+    {
+     "fecha": "2026-11-28",
+     "dia": "Sábado",
      "momento": "Cena"
     }
    ]
