@@ -226,8 +226,8 @@ window.MENU_DATA = {
      "Pollo",
      "Air fryer"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/6358977/pexels-photo-6358977.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "2 pechugas de pollo enteras limpias (unos 500 g)",
@@ -543,8 +543,8 @@ window.MENU_DATA = {
      "Sartén",
      "Capricho"
     ],
-    "foto": "",
-    "fotoCredito": "",
+    "foto": "https://images.pexels.com/photos/14077455/pexels-photo-14077455.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "fotoCredito": "Pexels",
     "fotosUrl": "",
     "ingredientes": [
      "3 medallones de solomillo de ternera de 3 cm de grosor (aprox. 150 g cada uno, uno de ellos de 100 g para el niño)",
@@ -1224,8 +1224,8 @@ window.MENU_DATA = {
        "Sartén",
        "Capricho"
       ],
-      "foto": "",
-      "fotoCredito": "",
+      "foto": "https://images.pexels.com/photos/14077455/pexels-photo-14077455.jpeg?auto=compress&cs=tinysrgb&w=600",
+      "fotoCredito": "Pexels",
       "fotosUrl": "",
       "ingredientes": [
        "3 medallones de solomillo de ternera de 3 cm de grosor (aprox. 150 g cada uno, uno de ellos de 100 g para el niño)",
