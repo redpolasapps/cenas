@@ -1,0 +1,45 @@
+{
+  "fecha": "2026-11-28",
+  "hoy": {
+    "cole": {},
+    "consejo": "Hoy es sábado y no hay cole: cena libre, con alguna opción ligera de pescado, pollo o huevo y mucha verdura para compensar un día de fin de semana.",
+    "explicacion": "Es sábado, así que no hay menú del cole ni cuentas de la semana. Repito dos de las cenas del plan del fin de semana (la pizza casera y el solomillo con salsa de queso) y añado cuatro nuevas: tres más ligeras de salmón, pollo y huevo con mucha verdura, y un arroz tres delicias casero que suele gustar a los peques.",
+    "cenas": [
+      { "reutilizar": "pizza-casera-york-champinones", "porque": "Es una de las cenas previstas para este sábado." },
+      {
+        "id": "salmon-horno-esparragos-calabaza", "titulo": "Salmón al horno con espárragos y calabaza", "subtitulo": "Todo en la misma bandeja", "cocina": "Mediterránea", "imagen": "pescado",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 50, "proteina": 40, "hidratos": 10 },
+        "porque": "Pescado azul con verdura asada para una cena de sábado ligera.", "truco": "Desmígale el salmón comprobando que no quede ninguna espina y sírvele la calabaza en daditos dulces al lado.", "etiquetas": ["Pescado", "Horno"],
+        "guia": "Lomos de salmón sin piel ni espinas al horno a 200 °C arriba y abajo unos 12 minutos, sobre una bandeja donde antes se han asado 15 minutos dados pequeños de calabaza y espárragos verdes troceados con aceite y una pizca de sal; un chorrito de limón y eneldo o perejil al servir.",
+        "busqueda_foto": "baked salmon asparagus"
+      },
+      {
+        "id": "pollo-relleno-espinacas-queso-airfryer", "titulo": "Pechuga rellena de espinacas y queso en air fryer", "subtitulo": "Con ensalada de tomate y pepino", "cocina": "Casera", "imagen": "pollo-horno",
+        "peques": false, "healthy": true, "gourmet": false, "airfryer": true, "rapida": false, "tiempo": 30, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 45, "proteina": 45, "hidratos": 10 },
+        "porque": "Carne blanca magra con verdura dentro y fuera, sin hidrato.", "truco": "Córtasela en rodajas para que vea la 'espiral verde' del relleno con el queso fundido.", "etiquetas": ["Pollo", "Air fryer"],
+        "guia": "2 pechugas abiertas en libro, rellenas de espinacas frescas salteadas un minuto y queso mozzarella o havarti en lonchas, cerradas con palillos y untadas con aceite y pimentón dulce; air fryer a 185 °C unos 18 minutos dándoles la vuelta a mitad (que el centro llegue bien hecho). Ensalada de tomate pelado y pepino en daditos aparte.",
+        "busqueda_foto": "stuffed chicken breast spinach"
+      },
+      {
+        "id": "arroz-tres-delicias-casero-gambas", "titulo": "Arroz tres delicias casero con gambas", "subtitulo": "Con huevo, guisantes y zanahoria", "cocina": "Asiática", "imagen": "arroz",
+        "peques": true, "healthy": false, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 35, "proteina": 30, "hidratos": 35 },
+        "porque": "Un clásico de sábado que se hace en una sartén y lleva la verdura en trocitos.", "truco": "Corta las gambas en trocitos pequeños y deja que él mezcle la tortilla troceada con el arroz.", "etiquetas": ["Arroz", "Gambas", "Sartén"],
+        "guia": "Arroz cocido del día anterior o de vaso, salteado en sartén grande con zanahoria en daditos muy pequeños, guisantes, tortilla de 2 huevos en tiras y gambas peladas troceadas; un chorrito de salsa de soja baja en sal al final, sin picante.",
+        "busqueda_foto": "fried rice shrimp egg"
+      },
+      {
+        "id": "huevos-plato-guisantes-jamon", "titulo": "Huevos al plato con guisantes y jamón", "subtitulo": "En cazuelitas al horno con tomate", "cocina": "Española", "imagen": "tortilla",
+        "peques": true, "healthy": true, "gourmet": false, "airfryer": false, "rapida": false, "tiempo": 25, "dificultad": "Fácil", "raciones": 3,
+        "plato": { "verdura": 45, "proteina": 45, "hidratos": 10 },
+        "porque": "Huevo con legumbre verde y tomate, ligero y muy de casa.", "truco": "Que moje un trocito de pan en la yema, y que él eche los guisantes en su cazuelita.", "etiquetas": ["Huevo", "Horno"],
+        "guia": "Sofrito suave de cebolla y tomate triturado con guisantes congelados, repartido en cazuelitas de barro; encima tacos de jamón serrano y 1 huevo por persona (2 para adultos); horno a 200 °C unos 10-12 minutos hasta que la clara esté cuajada. Para el niño, la yema bien hecha.",
+        "busqueda_foto": "baked eggs peas tomato"
+      },
+      { "reutilizar": "solomillo-ternera-salsa-queso-verduras", "porque": "La cena de capricho prevista para este sábado." }
+    ]
+  },
+  "finde": null
+}
